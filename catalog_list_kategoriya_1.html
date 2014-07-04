@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>tvkinoradio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jcf.js"></script>
+	<script src="js/jcf.file.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jcf.radio.js"></script>
+    <script src="js/jcf.checkbox.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/ckeditor/ckeditor.js"></script>
+	<script src="js/ckeditor/adapters/jquery.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/datepicker.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		// replace custom forms
+		jcf.lib.domReady(function(){
+			jcf.customForms.replaceAll();
+		});
+	</script>
+</head>
+
+<body>
+<a class="side-banner side-banner_old" href="#">
+    <span class="side-banner__inner" >
+        <span class="side-banner__text" >
+            <span class="side-banner__name">Старый дизайн</span>
+        </span>
+    </span>
+</a>
+<div class="container-fluid">
+	<div class="account">
+		<div class="case line">
+			<a class="account__exit" href="#">Выйти</a>
+			<div class="account__info line">
+				<a class="account__person" href="#">
+						<span class="account__photo">
+							<img src="img/avatar02.png" width="30" height="30" alt=""/>
+						</span>
+					<strong class="account__name">Константинопольская Олимпиада</strong>
+				</a>
+				<ul class="account__tools line">
+					<li class="account__tools-item">
+						<a class="account__tools-link account__tools-link_settings" href="#"><i class="ico ico_settings"></i></a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_message"></i>
+							<span class="account__tools-incoming">7</span>
+						</a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_comments"></i>
+							<span class="account__tools-incoming">2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="account__nav">
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Профиль</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Лента</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Фото</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Видео</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Мероприятия</a></li>
+				<li class="account__nav-item account__nav-item_active"><a class="account__nav-link" href="#">Друзья</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Сообщества</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="hdr">
+        <div class="case">
+			<div class="hdr__frame line">
+				<a class="logo logo_hdr" href="#">tvkinoradio</a>
+				<div class="form form_search">
+					<div class="input-i">
+						<input class="input" placeholder="Поиск" type="text"/>
+					</div>
+					<input class="btn_search" type="submit" value="Поиск"/>
+				</div>
+			</div>
+			<div class="navigation">
+				<ul class="nav line">
+					<li class="nav__item"><a class="nav__link" href="#">Оборудование</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Аудио</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Радиовещание</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видео</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">IT оборудование</a>
+										<div class="nav__drop nav__drop_right">
+											<div class="nav__drop-in">
+												<ul class="nav__drop-list">
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация вещания</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Хранение данных</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация производства</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оформление эфира</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видеомонтаж</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Профессиональные носители</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Измерительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Кабели, разъемы</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Системы служебной связи</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Осветительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оборудование DVB-C И DVB-T</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Студийная мебель</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item nav__item_active"><a class="nav__link" href="#">Работа</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Павильоны</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Статьи</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Новости</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Обзоры</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Слова</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Мнение</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">История</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Объект</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item"><a class="nav__link" href="#">События</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Компании</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Группы</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Люди</a></li>
+				</ul>
+			</div>
+        </div>
+    </div>
+    <div class="main line">
+        <div class="case">
+			<div class="cnt">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог оборудования</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Объективы</a></li>
+                </ul>
+				<h1 class="cnt__ttl">Видео</h1>
+				<div class="catalog catalog_top">
+                    <div class="catalog__block">
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Видеокамеры и камкордеры</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Камкордеры 3D</a></li>
+										<li><a class="catalog__link" href="#">AVCCAM</a></li>
+										<li><a class="catalog__link" href="#">P2 / P2 HD</a></li>
+										<li><a class="catalog__link" href="#">XDCAM</a></li>
+										<li><a class="catalog__link" href="#">EditCam3</a></li>
+										<li><a class="catalog__link" href="#">Оборудование серии GF</a></li>
+										<li><a class="catalog__link" href="#">Студийные камеры</a></li>
+										<li><a class="catalog__link" href="#">Мультизадачные камеры</a></li>
+										<li><a class="catalog__link" href="#">Высокоскоростные камеры</a></li>
+										<li><a class="catalog__link" href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Объективы</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Студийные и внестудийные объективы</a></li>
+										<li><a class="catalog__link" href="#">Объективы ТЖК</a></li>
+										<li><a class="catalog__link" href="#">Объективы со встроенной системой точной настройки фокуса</a></li>
+										<li><a class="catalog__link" href="#">Объективы с дистанционным управлением</a></li>
+										<li><a class="catalog__link" href="#">Объективы для кинематографии</a></li>
+										<li><a class="catalog__link" href="#">Объективы 3D</a></li>
+										<li><a class="catalog__link" href="#">Системы управления</a></li>
+										<li><a class="catalog__link" href="#">Аксессуары для объективов</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                    </div>
+                    <div class="catalog__block">
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Видеомагнитофоны</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Рекордеры для архивирования на LTO</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны MPEG IMX</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны Digital Betacam</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны и ридеры P2 HD</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны XDCAM</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны Edicam 3</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны AVCHD</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны HDCAM</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны HDCAM SR</a></li>
+										<li><a class="catalog__link" href="#">Видеомагнитофоны DVCAM</a></li>
+										<li><a class="catalog__link" href="#">Оборудование серии GF</a></li>
+										<li><a class="catalog__link" href="#">Магнитофоны на жесткий диск</a></li>
+										<li><a class="catalog__link" href="#">Рекордеры на Flash карты</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Видеомониторы и системы отображения</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Мониторы ТВ</a></li>
+										<li><a class="catalog__link" href="#">Системы полиэкранного отображения</a></li>
+										<li><a class="catalog__link" href="#">Системы Tally и подмониторные индикаторы</a></li>
+										<li><a class="catalog__link" href="#">Видеостены</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                    </div>
+                    <div class="catalog__block">
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Видеомикшеры, эфирные свитчеры</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Видеомикшеры</a></li>
+										<li><a class="catalog__link" href="#">Мобильные видеостудии</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Процессоры обработки</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Цветовые корректоры</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                    </div>
+                    <div class="catalog__block">
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Коммутационно-распределительное оборудование</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Коммутаторы и матричные коммутаторы сигнала</a></li>
+										<li><a class="catalog__link" href="#">Усилители-распределители сигналов</a></li>
+										<li><a class="catalog__link" href="#">Корректоры сигналов</a></li>
+										<li><a class="catalog__link" href="#">Синхрогенераторы</a></li>
+										<li><a class="catalog__link" href="#">Модульные системы</a></li>
+										<li><a class="catalog__link" href="#">Системы распределения электропитания</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Преобразование форматов</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Повышающие/понижающие/перекрестные конвертеры</a></li>
+										<li><a class="catalog__link" href="#">Преобразователи формата кадра</a></li>
+										<li><a class="catalog__link" href="#">Конвертеры, энкодеры, декодеры и транскодеры</a></li>
+										<li><a class="catalog__link" href="#">Эмбеддеры / деэмбеддеры</a></li>
+										<li><a class="catalog__link" href="#">Преобразователи сигналов для мониторинга</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                    </div>
+                    <div class="catalog__block">
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Операторское оборудование</a></strong>
+									<ul>
+										<li><a class="catalog__link" href="#">Штативы и пьедесталы</a></li>
+										<li><a class="catalog__link" href="#">Краны и тележки</a></li>
+										<li><a class="catalog__link" href="#">Системы стабилизации</a></li>
+										<li><a class="catalog__link" href="#">Компендиумы для камкордеров</a></li>
+										<li><a class="catalog__link" href="#">Источники питания, аккумуляторы и зарядные устройства</a></li>
+										<li><a class="catalog__link" href="#">Накамерные светильники</a></li>
+										<li><a class="catalog__link" href="#">Экипировка</a></li>
+									</ul>
+								</li>
+							</ul>
+                        </div>
+                        <div class="catalog__item">
+							<ul class="catalog__list">
+								<li><strong class="catalog__ttl"><a href="#">Телесуфлеры</a></strong></li>
+							</ul>
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+			<div class="sdbr">
+				<div class="widget widget_light">
+                    <div class="widget__top">У вас есть свой бизнес по продаже / аренде профессионального оборудования?</div>
+					<a class="btn btn_red" href="#"><span class="btn__inner">Присоединяйтесь</span></a>
+				</div>
+				<div class="widget widget_banner">
+					<div class="widget__banner">
+						<img src="img/banner240-400.jpg" width="240" height="400" alt=""/>
+					</div>
+                </div>
+                <div class="widget">
+                    <h3 class="widget__ttl">Топ-Производители</h3>
+                    <ul class="widget__list">
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                    </ul>
+                    <div class="widget__bottom">
+                        <a class="btn btn_green" href="#"><span class="btn__inner">Все производители</span></a>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="ftr">
+    <div class="case">
+		<div class="ftr__holder">
+			<p>Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что сомнение методологически дискредитирует гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения. Здравый смысл, как принято считать, индуцирует естественный закон исключённого третьего, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Апперцепция индуцирует позитивизм, открывая новые горизонты. Согласно мнению известных философов, гипотеза методологически трансформирует катарсис, ломая рамки привычных представлений. Суждение, следовательно, непредсказуемо. Язык образов заполняет неоднозначный гедонизм, открывая новые горизонты.</p>
+		</div>
+    </div>
+	<div class="ftr__frame">
+		<div class="case">
+			<div class="ftr__block">
+				<a class="logo logo_ftr" href="#">tvkinoradio</a>
+			</div>
+			<div class="ftr__columns line">
+				<div class="ftr__col03">
+					<ul class="ftr__social line">
+						<li><a class="ftr__social-link ftr__social-link_fb" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_vk" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_tw" href="#"></a></li>
+					</ul>
+					<div class="ftr__copy">
+						<div class="copy__logo line">
+							<strong>Разработка сайта</strong>
+							<a href="#" class="copy__logo-img">happylab digital agency</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="ftr__col01">
+					<p>&copy; Профессиональный портал для работников телевидения, кино и радиовещания TVKINORADIO.ru, 2010–2012. Все права защищены и охраняются законом. При полном или частичном использовании материалов ссылка на tvkinoradio.ru обязательна.</p>
+				</div>
+				<div class="ftr__col02 line">
+					<div class="ftr__nav">
+						<ul class="ftr__nav-list">
+							<li><a class="ftr__nav-link" href="#">Контакты</a></li>
+							<li><a class="ftr__nav-link" href="#">О проекте</a></li>
+							<li><a class="ftr__nav-link" href="#">Реклама</a></li>
+						</ul>
+						<ul class="ftr__nav-list ftr__nav-list_large">
+							<li><a class="ftr__nav-link" href="#">Обратная связь</a></li>
+							<li><a class="ftr__nav-link" href="#">Пользовательское соглашение</a></li>
+							<li><a class="ftr__nav-link" href="#">Хотите стать нашим автором?</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="top_scroll"></div>
+</body>
+</html>

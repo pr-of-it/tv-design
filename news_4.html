@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>tvkinoradio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jcf.js"></script>
+	<script src="js/jcf.file.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jcf.radio.js"></script>
+    <script src="js/jcf.checkbox.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/ckeditor/ckeditor.js"></script>
+	<script src="js/ckeditor/adapters/jquery.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/datepicker.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		// replace custom forms
+		jcf.lib.domReady(function(){
+			jcf.customForms.replaceAll();
+		});
+	</script>
+</head>
+
+<body>
+<a class="side-banner side-banner_old" href="#">
+    <span class="side-banner__inner" >
+        <span class="side-banner__text" >
+            <span class="side-banner__name">Старый дизайн</span>
+        </span>
+    </span>
+</a>
+<div class="container-fluid">
+	<div class="account">
+		<div class="case line">
+			<a class="account__exit" href="#">Выйти</a>
+			<div class="account__info line">
+				<a class="account__person" href="#">
+					<span class="account__photo">
+						<img src="img/avatar02.png" width="30" height="30" alt=""/>
+					</span>
+					<strong class="account__name">Константинопольская Олимпиада</strong>
+				</a>
+				<ul class="account__tools line">
+					<li class="account__tools-item">
+						<a class="account__tools-link account__tools-link_settings" href="#"><i class="ico ico_settings"></i></a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_message"></i>
+							<span class="account__tools-incoming">7</span>
+						</a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_comments"></i>
+							<span class="account__tools-incoming">2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="account__nav">
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Профиль</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Лента</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Фото</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Видео</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Мероприятия</a></li>
+				<li class="account__nav-item account__nav-item_active"><a class="account__nav-link" href="#">Друзья</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Сообщества</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="hdr">
+		<div class="case">
+			<div class="hdr__frame line">
+				<a class="logo logo_hdr" href="#">tvkinoradio</a>
+				<div class="form form_search">
+					<div class="input-i">
+						<input class="input" placeholder="Поиск" type="text"/>
+					</div>
+					<input class="btn_search" type="submit" value="Поиск"/>
+				</div>
+			</div>
+			<div class="navigation">
+				<ul class="nav line">
+					<li class="nav__item"><a class="nav__link" href="#">Оборудование</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Аудио</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Радиовещание</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видео</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">IT оборудование</a>
+										<div class="nav__drop nav__drop_right">
+											<div class="nav__drop-in">
+												<ul class="nav__drop-list">
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация вещания</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Хранение данных</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация производства</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оформление эфира</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видеомонтаж</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Профессиональные носители</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Измерительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Кабели, разъемы</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Системы служебной связи</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Осветительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оборудование DVB-C И DVB-T</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Студийная мебель</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item nav__item_active"><a class="nav__link" href="#">Работа</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Павильоны</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Статьи</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Новости</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Обзоры</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Слова</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Мнение</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">История</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Объект</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item"><a class="nav__link" href="#">События</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Компании</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Группы</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Люди</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="main line">
+        <div class="case">
+			<div class="cnt">
+				<ul class="breadcrumbs">
+					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Статьи</a></li>
+					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Новости</a></li>
+				</ul>
+                <div class="article b-wysiwyg">
+                    <div class="line">
+                        <h2 class="article__ttl">Фестивали короткометражного кино –это кузница новых кадров</h2>
+                        <span class="article__date">16 сентября</span>
+                    </div>
+                    <div class="article__note">В Москве прошла крупнейшая выставка профессионального оборудования и технологий для теле-, радио-, интернет вещания и кинопроизводства.</div>
+                    <div class="social">
+                        <img src="img/social.jpg" alt="" />
+                    </div>
+                    <div class="article__author">
+                        <span class="article__author-pic">
+							<img src="img/avatar07.jpg" width="40" height="40" alt=""/>
+                        </span>
+                        <span class="article__author-name">Павел Орлов</span>
+                    </div>
+                    <p>С 6 по 8 ноября 2012 года в МосЭкспо (ВВЦ) состоялось значимое мероприятие для профессионаловв области телевидения, радиовещания и киноиндустрии — <a class="b-link" href="#"><span class="b-link__inner">NATEXPO</span></a>.</p>
+                    <p>Национальная Ассоциация Телерадиовещателей (НАТ), при поддержке Федерального агентства по печати и массовым коммуникациям, провела крупнейшую международную выставку <a class="b-link" href="#"><span class="b-link__inner">NATEXPO</span></a>. Параллельно с ней проходил и XVI Международный конгресс НАТ под девизом «Телевидение и радио в цифровом мире: глобальные тенденции и национальные особенности».</p>
+                    <div class="slider line">
+                        <div class="slider__holder">
+							<div class="slider__slide">
+								<img src="img/slide01.jpg" width="620" height="410" alt="" />
+							</div>
+							<div class="slider__slide">
+								<img src="img/slide01.jpg" width="620" height="410" alt="" />
+							</div>
+							<div class="slider__slide">
+								<img src="img/slide01.jpg" width="620" height="410" alt="" />
+							</div>
+							<div class="slider__slide">
+								<img src="img/slide01.jpg" width="620" height="410" alt="" />
+							</div>
+							<div class="slider__slide">
+								<img src="img/slide01.jpg" width="620" height="410" alt="" />
+							</div>
+							<div class="slider__slide">
+								<img src="img/slide01.jpg" width="620" height="410" alt="" />
+							</div>
+							<div class="slider__slide">
+								<img src="img/slide01.jpg" width="620" height="410" alt="" />
+							</div>
+						</div>
+                        <div class="slider__pagination">
+                            <a class="slider__prev slider__prev_dsbl" href="#"></a>
+                            <span id="slider_log">1 из 7</span>
+                            <a class="slider__next" href="#"></a>
+                        </div>
+                    </div>
+					<h5>Интересные факты биографии:</h5>
+					<ul>
+						<li>Работать в кино Гильермо дель Торо, по его собственным словам, начал в возрасте 8 лет.</li>
+						<li> Прежде чем обратиться к кинорежиссуре дель Торо более десяти лет работал художником по гриму, занимался визуальными эффектами, а также кинокритикой. Среди написанных им работ – книга по творчеству Альфреда Хичкока.</li>
+						<li>Мастерству художника по гриму дель Торо учился у «крестного отца грима в кино» Дика Смита, работавшего над фильмами «Изгоняющий дьявола», «Таксист», «Амадей».</li>
+						<li> В 1997 году злоумышленники похитили отца дель Торо, которого удерживали более месяца до тех пор, пока не был выплачен выкуп. После этого инцидента режиссёр предпочёл перебраться вместе с семьей из Мексики в США.</li>
+						<li>Свой первый голливудский фильм «Мутанты» 1997 года дель Торо считает своей самой неудачной работой.</li>
+					</ul>
+                    <div class="picture-wrap">
+                        <img src="img/img03.jpg" alt="" />
+                        Light Technology — профессиональный свет «Под ключ»
+                    </div>
+                    <p><a class="b-link" href="#"><span class="b-link__inner">NATEXPO</span></a> — это уникальный проект, который собирает «под одной крышей» производителей специализированного оборудования и разработчиков новых технологий, а также компании, работающие в смежных отраслях: спутниковое и кабельное телевидение, широкополосные сети вещания, цифровой кинематограф.</p>
+                    <div class="list-wrap list-wrap_border">
+                        <ul>
+                            <li><strong>Идея картины «Роль» возникла у Вас ещё в 80-е годы. Что так долго мешало реализации проекта?</strong></li>
+                            <li>Первый вариант сценария был написан Павлом Константиновичем Финном и доработан мной около 30 лет назад. Правда, история там была несколько другая, но о той же эпохе. В 1982 году сценарий по цензурным соображениям был закрыт. Потом свою роль сыграла коммерческая цензура. Сценарий перерабатывался, и один из вариантов был опубликован в 2003 году в журнале «Искусство кино». Что-то, однако, не складывалось. Я интуитивно так чувствовал, что-то ещё не свершилось с этим замыслом. Плюс начались уже «Гадкие лебеди». И только после «Гадких лебедей» стало мне совершенно ясно, что внутренне меня сдерживало.</li>
+                        </ul>
+                    </div>
+                    <blockquote>
+                        Понятие конца света включает широкий комплекс разных идей, который меня интересовал всегда
+                    </blockquote>
+                    <div class="list-wrap">
+                        <ul>
+                            <li><strong>Большинство Ваших картин так или иначе связано с темой конца света. «Роль» - это уход от этой темы или новый взгляд на неё?</strong></li>
+                            <li>Понятие конца света включает широкий комплекс разных идей, который меня интересовал всегда. Но ранее этот интерес выражался в фантастическом материале или в философском. «Роль», казалось бы, впрямую не связана с этой тематикой, однако как посмотреть. Почитайте литературу того времени – очень многими та эпоха рассматривалась как некое преддверие конца света. То время было апокалипсическим для огромного количества людей, безусловно. </li>
+                        </ul>
+                    </div>
+                    <div class="list-wrap">
+                        <h5>На выставке было представлено:</h5>
+                        <ol>
+                            <li>мобильное ТВ;</li>
+                            <li>цифровое спутниковое ТВ;</li>
+                            <li>эфирное телерадиовещание;</li>
+                            <li>кабельные операторы;</li>
+                            <li>оборудование и технологии кинопроизводства;</li>
+                            <li>технологии создания спецэффектов и 3D графики;</li>
+                            <li>системы цифрового архивирования;</li>
+                            <li>интернет-технологии;</li>
+                            <li>оборудование для DSLR кинематографистов;</li>
+                            <li>профессиональный звук;</li>
+                            <li>цифровой кинематограф.</li>
+                        </ol>
+                    </div>
+                    <table class="article__table">
+                        <tr>
+                            <th class="first-col">Заголовок</th>
+                            <th class="second-col">Заголовок</th>
+                            <th class="third-col">Заголовок</th>
+                            <th class="fourth-col">Заголовок</th>
+                        </tr>
+                        <tr>
+                            <td class="first-col">1</td>
+                            <td class="second-col">системы цифрового архивирования</td>
+                            <td class="third-col">345</td>
+                            <td class="fourth-col">89%</td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">2</td>
+                            <td class="second-col">оборудование для DSLR кинематографистов</td>
+                            <td class="third-col">24</td>
+                            <td class="fourth-col">57,3%</td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">3</td>
+                            <td class="second-col">цифровой кинематограф</td>
+                            <td class="third-col">47</td>
+                            <td class="fourth-col">33,98%</td>
+                        </tr>
+                    </table>
+                    <div class="video-wrap">
+                        <img src="img/video.jpg" alt="" />
+                    </div>
+                    <h5>О выставке</h5>
+                    <div class="article__info line">
+                        <div class="article__info-pic">
+                            <img src="img/img10.jpg" alt="" />
+                        </div>
+                        <div class="article__info-text">
+							<p><a class="b-link" href="#"><span class="b-link__inner">NATEXPO</span></a> — одна из лидирующих выставок отрасли, своеобразный координатор  многочисленных и многослойных процессов, которые происходят в медиаиндустрии, и очень важно, что это мероприятие годот года увеличивает количество участников и расширяет свою программу.</p>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <img src="img/social.jpg" alt="" />
+                    </div>
+                    <h4>Теги</h4>
+                    <div class="tags">
+                        <a class="tags__link" href="#">Camera</a>
+                        <a class="tags__link" href="#">Новости</a>
+                        <a class="tags__link" href="#">Данил Козловский</a>
+                        <a class="tags__link" href="#">Camera</a>
+                        <a class="tags__link" href="#">Новости</a>
+                        <a class="tags__link" href="#">Данил Козловский</a>
+                        <a class="tags__link" href="#">Данил Козловский</a>
+                        <a class="tags__link" href="#">Новости</a>
+                    </div>
+                    <!--<div class="comments-wrap">
+                        <h4>Комментарии</h4>
+                        <ul class="comments">
+                            <li class="line">
+                                <div class="comments__photo"><img src="img/avatar01.jpg" alt="" /></div>
+                                <div class="comments__text">
+                                    <div class="comments__top line">
+                                        <a class="comments__name" href="#">Олимпиада Константинопольская</a>
+                                        <span class="comments__date">Сегодня, 15:30</span>
+                                    </div>
+                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida ььnibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate  cursus a sit amet mauris. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat Morbi accumsan ipsum velit.
+                                </div>
+                                <i class="ico ico_close"></i>
+                            </li>
+                            <li class="line">
+                                <div class="comments__photo"><img src="img/avatar01.jpg" alt="" /></div>
+                                <div class="comments__text">
+                                    <div class="comments__top line">
+                                        <a class="comments__name" href="#">Макар Кладов</a>
+                                        <span class="comments__date">Сегодня, 15:30</span>
+                                    </div>
+                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                                </div>
+                                <i class="ico ico_close"></i>
+                            </li>
+                            <li class="line">
+                                <div class="comments__text">
+                                    <div class="input-i">
+                                        <textarea class="ta ta_small" placeholder="Комментировать"></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="line">
+                                <div class="comments__photo"><img src="img/avatar01.jpg" alt="" /></div>
+                                <div class="comments__text">
+                                    <div class="input-i">
+                                        <textarea class="ta"></textarea>
+                                    </div>
+                                    <div class="comments__bottom">
+                                        <a class="btn btn_green" href="#"><span class="btn__inner">Отправить</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+			        </div>-->
+
+
+                    <div class="comments-wrap comments-wrap_news">
+                        <h4>Комментарии (3)</h4>
+
+                        <ul class="comments">
+                            <li class="line">
+                                <div class="comments__photo"><img src="img/avatar01.jpg" alt=""></div>
+                                <div class="comments__text">
+                                    <div class="input-i ">
+                                        <textarea class="ta "></textarea>
+                                    </div>
+                                    <div class="comments__bottom">
+                                        <a class="btn btn_green" href="#"><span class="btn__inner">Комментировать</span></a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="line">
+                                <div class="comments__photo"><img src="img/avatar01.jpg" alt=""></div>
+                                <div class="comments__text">
+                                    <div class="comments__top line">
+                                        <a class="comments__name" href="#">Олимпиада Константинопольская</a>
+                                        <span class="comments__date">Сегодня, 15:30</span>
+                                    </div>
+                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida ььnibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate  cursus a sit amet mauris. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat Morbi accumsan ipsum velit.</p>
+                                </div>
+                            </li><li class="line">
+                            <div class="comments__photo"><img src="img/avatar01.jpg" alt=""></div>
+                            <div class="comments__text">
+                                <div class="comments__top line">
+                                    <a class="comments__name" href="#">Олимпиада Константинопольская</a>
+                                    <span class="comments__date">Сегодня, 15:30</span>
+                                </div>
+                                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida ььnibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate  cursus a sit amet mauris. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat Morbi accumsan ipsum velit.</p>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+
+                    <div class="comments-wrap comments-wrap_news">
+                        <h4>Комментарии (3)</h4>
+                        <p><a class="b-link" href="#"><span class="b-link__inner">Войдите</span></a> или <a class="b-link" href="#"><span class="b-link__inner">зарегистрируйтесь</span></a>, чтобы оставить комментарий.</p>
+                        <ul class="comments">
+                            <li class="line">
+                                <div class="comments__photo"><img src="img/avatar01.jpg" alt=""></div>
+                                <div class="comments__text">
+                                    <div class="comments__top line">
+                                        <a class="comments__name" href="#">Олимпиада Константинопольская</a>
+                                        <span class="comments__date">Сегодня, 15:30</span>
+                                    </div>
+                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida ььnibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate  cursus a sit amet mauris. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat Morbi accumsan ipsum velit.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+			<div class="sdbr">
+				<!--<div class="widget widget_box"></div>-->
+				<div class="widget widget_banner">
+					<div class="widget__banner">
+						<img src="img/banner240-400.jpg" width="240" height="400" alt=""/>
+					</div>
+                </div>
+                <div class="widget">
+                    <h3 class="widget__ttl">Вакансии</h3>
+                    <ul class="widget__list">
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl" href="#">Режиссер документалист <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                            <p><a class="widget__list-desc" href="#"><i class="ico ico_mark"></i>Петропавловск-Камчатский</a></p>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl" href="#">Режиссер документалист <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                            <p><a class="widget__list-desc" href="#"><i class="ico ico_mark"></i>Петропавловск-Камчатский</a></p>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl" href="#">Режиссер документалист <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                            <p><a class="widget__list-desc" href="#"><i class="ico ico_mark"></i>Петропавловск-Камчатский</a></p>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl" href="#">Режиссер документалист <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                            <p><a class="widget__list-desc" href="#"><i class="ico ico_mark"></i>Петропавловск-Камчатский</a></p>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl" href="#">Режиссер документалист <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                            <p><a class="widget__list-desc" href="#"><i class="ico ico_mark"></i>Петропавловск-Камчатский</a></p>
+                        </li>
+                    </ul>
+                    <div class="widget__bottom">
+                        <a class="btn btn_green" href="#"><span class="btn__inner">Все вакансии</span></a>
+                    </div>
+                </div>
+                <div class="widget">
+                    <h3 class="widget__ttl">Производители</h3>
+                    <ul class="widget__list">
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                    </ul>
+                    <div class="widget__bottom">
+                        <a class="btn btn_green" href="#"><span class="btn__inner">Все производители</span></a>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="ftr">
+    <div class="case">
+		<div class="ftr__holder">
+			<p>Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что сомнение методологически дискредитирует гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения. Здравый смысл, как принято считать, индуцирует естественный закон исключённого третьего, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Апперцепция индуцирует позитивизм, открывая новые горизонты. Согласно мнению известных философов, гипотеза методологически трансформирует катарсис, ломая рамки привычных представлений. Суждение, следовательно, непредсказуемо. Язык образов заполняет неоднозначный гедонизм, открывая новые горизонты.</p>
+		</div>
+    </div>
+	<div class="ftr__frame">
+		<div class="case">
+			<div class="ftr__block">
+				<a class="logo logo_ftr" href="#">tvkinoradio</a>
+			</div>
+			<div class="ftr__columns line">
+				<div class="ftr__col03">
+					<ul class="ftr__social line">
+						<li><a class="ftr__social-link ftr__social-link_fb" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_vk" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_tw" href="#"></a></li>
+					</ul>
+					<div class="ftr__copy">
+						<div class="copy__logo line">
+							<strong>Разработка сайта</strong>
+							<a href="#" class="copy__logo-img">happylab digital agency</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="ftr__col01">
+					<p>&copy; Профессиональный портал для работников телевидения, кино и радиовещания TVKINORADIO.ru, 2010–2012. Все права защищены и охраняются законом. При полном или частичном использовании материалов ссылка на tvkinoradio.ru обязательна.</p>
+				</div>
+				<div class="ftr__col02 line">
+					<div class="ftr__nav">
+						<ul class="ftr__nav-list">
+							<li><a class="ftr__nav-link" href="#">Контакты</a></li>
+							<li><a class="ftr__nav-link" href="#">О проекте</a></li>
+							<li><a class="ftr__nav-link" href="#">Реклама</a></li>
+						</ul>
+						<ul class="ftr__nav-list ftr__nav-list_large">
+							<li><a class="ftr__nav-link" href="#">Обратная связь</a></li>
+							<li><a class="ftr__nav-link" href="#">Пользовательское соглашение</a></li>
+							<li><a class="ftr__nav-link" href="#">Хотите стать нашим автором?</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--</div>-->
+<div class="top_scroll"></div>
+</body>
+</html>

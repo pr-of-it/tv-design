@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>tvkinoradio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jcf.js"></script>
+	<script src="js/jcf.file.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jcf.radio.js"></script>
+    <script src="js/jcf.checkbox.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/ckeditor/ckeditor.js"></script>
+	<script src="js/ckeditor/adapters/jquery.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/datepicker.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		// replace custom forms
+		jcf.lib.domReady(function(){
+			jcf.customForms.replaceAll();
+		});
+	</script>
+</head>
+
+<body>
+<div class="popup" style="display:block;">
+    <div class="popup__data">
+        <div class="popup__top">
+            <img src="img/logo-hdr.png" alt="" />
+        </div>
+        <div class="popup__box">
+            <div class="reg-form__top line">
+                <h3 class="reg-form__ttl">Регистрация</h3>
+                <a class="b-link b-link_top" href="#"><span class="b-link__inner">Вход</span></a>
+            </div>
+            <div class="error">
+                Необходимо исправить следующие ошибки:
+                <ul class="error__list">
+                    <li>Вы не указали имя</li>
+                    <li>Вы не указали E-mail</li>
+                    <li>Неверный пароль</li>
+                </ul>
+            </div>
+            <div class="reg-form__row">
+                <label class="b-label" for="name">Имя</label>
+                <div class="input-i input-i_middle input-i_error">
+                    <input id="name" class="input input_small  " type="text">
+                </div>
+                <div class="error">Вы не указали имя</div>
+            </div>
+            <div class="reg-form__row">
+                <label class="b-label  " for="surname">Фамилия</label>
+                <div class="input-i input-i_middle ">
+                    <input id="surname" class="input input_small  " type="text">
+                </div>
+            </div>
+            <div class="reg-form__row">
+                <label class="b-label " for="email">E-mail</label>
+                <div class="input-i input-i_middle input-i_error">
+                    <input id="email" class="input input_small  " type="text">
+                </div>
+				<div class="error">Вы не указали E-mail</div>
+            </div>
+            <div class="reg-form__row">
+                <label class="b-label  " for="password">Пароль</label>
+                <div class="input-i input-i_middle  input-i_error">
+                    <input id="password" class="input input_small  " type="password">
+                </div>
+				<div class="error">Неверный пароль</div>
+            </div>
+            <div class="reg-form__row">
+                <label class="b-label" for="confirm">Подтверждение пароля</label>
+                <div class="input-i input-i_middle  ">
+                    <input id="confirm" class="input input_small  " type="password">
+                </div>
+            </div>
+            <div class="reg-form__row">
+                <div class="reg-form__text">
+                    Регистрируясь, вы подтверждаете свое согласие с условиями <a class="b-link" href="#"><span class="b-link__inner">Пользовательского соглашения</span></a>
+                </div>
+            </div>
+            <div class="reg-form__row">
+                <a class="btn btn_green" href="#"><span class="btn__inner">Войти</span></a>
+            </div>
+            <div class="reg-form__bottom">
+                <a class="btn btn_dark-blue" href="#"><i class="ico ico_fb-white"></i>Войти через Facebook</a>
+            </div>
+        </div>
+        <a class="ico ico_type_close jsClosePopup" href="#"></a>
+    </div>
+    <div class="popup__bg"></div>
+</div>
+<div class="top_scroll"></div>
+</body>
+</html>

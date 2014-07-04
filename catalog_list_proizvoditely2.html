@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>tvkinoradio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jcf.js"></script>
+	<script src="js/jcf.file.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jcf.radio.js"></script>
+    <script src="js/jcf.checkbox.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/ckeditor/ckeditor.js"></script>
+	<script src="js/ckeditor/adapters/jquery.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/datepicker.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		// replace custom forms
+		jcf.lib.domReady(function(){
+			jcf.customForms.replaceAll();
+		});
+	</script>
+</head>
+
+<body>
+<a class="side-banner side-banner_old" href="#">
+    <span class="side-banner__inner" >
+        <span class="side-banner__text" >
+            <span class="side-banner__name">Старый дизайн</span>
+        </span>
+    </span>
+</a>
+<div class="container-fluid">
+	<div class="account">
+		<div class="case line">
+			<a class="account__exit" href="#">Выйти</a>
+			<div class="account__info line">
+				<a class="account__person" href="#">
+						<span class="account__photo">
+							<img src="img/avatar02.png" width="30" height="30" alt=""/>
+						</span>
+					<strong class="account__name">Константинопольская Олимпиада</strong>
+				</a>
+				<ul class="account__tools line">
+					<li class="account__tools-item">
+						<a class="account__tools-link account__tools-link_settings" href="#"><i class="ico ico_settings"></i></a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_message"></i>
+							<span class="account__tools-incoming">7</span>
+						</a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_comments"></i>
+							<span class="account__tools-incoming">2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="account__nav">
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Профиль</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Лента</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Фото</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Видео</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Мероприятия</a></li>
+				<li class="account__nav-item account__nav-item_active"><a class="account__nav-link" href="#">Друзья</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Сообщества</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="hdr">
+        <div class="case">
+			<div class="hdr__frame line">
+				<a class="logo logo_hdr" href="#">tvkinoradio</a>
+				<div class="form form_search">
+					<div class="input-i">
+						<input class="input" placeholder="Поиск" type="text"/>
+					</div>
+					<input class="btn_search" type="submit" value="Поиск"/>
+				</div>
+			</div>
+			<div class="navigation">
+				<ul class="nav line">
+					<li class="nav__item"><a class="nav__link" href="#">Оборудование</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Аудио</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Радиовещание</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видео</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">IT оборудование</a>
+										<div class="nav__drop nav__drop_right">
+											<div class="nav__drop-in">
+												<ul class="nav__drop-list">
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация вещания</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Хранение данных</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация производства</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оформление эфира</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видеомонтаж</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Профессиональные носители</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Измерительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Кабели, разъемы</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Системы служебной связи</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Осветительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оборудование DVB-C И DVB-T</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Студийная мебель</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item nav__item_active"><a class="nav__link" href="#">Работа</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Павильоны</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Статьи</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Новости</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Обзоры</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Слова</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Мнение</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">История</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Объект</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item"><a class="nav__link" href="#">События</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Компании</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Группы</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Люди</a></li>
+				</ul>
+			</div>
+        </div>
+    </div>
+    <div class="main line">
+        <div class="case">
+			<div class="cnt">
+				<h1 class="cnt__ttl">Производители</h1>
+                <ul class="catalog__tab">
+                    <li class="active"><a class="catalog__tab-link" href="#">Производители</a></li>
+                    <li><a class="catalog__tab-link" href="#">Категории</a></li>
+                </ul>
+                <div class="alphabet line">
+                    <div class="alphabet__left">
+                        <div class="alphabet__lang">
+                            <a class="alphabet__link" href="#">A</a>
+                            <a class="alphabet__link" href="#">B</a>
+                            <a class="alphabet__link" href="#">C</a>
+                            <a class="alphabet__link" href="#">D</a>
+                            <a class="alphabet__link" href="#">E</a>
+                            <a class="alphabet__link" href="#">F</a>
+                            <a class="alphabet__link" href="#">G</a>
+                            <a class="alphabet__link" href="#">H</a>
+                            <a class="alphabet__link" href="#">I</a>
+                            <a class="alphabet__link" href="#">J</a>
+                            <a class="alphabet__link" href="#">K</a>
+                            <a class="alphabet__link" href="#">L</a>
+                            <a class="alphabet__link" href="#">M</a>
+                            <a class="alphabet__link" href="#">N</a>
+                            <a class="alphabet__link" href="#">O</a>
+                            <a class="alphabet__link" href="#">P</a>
+                            <a class="alphabet__link" href="#">Q</a>
+                            <a class="alphabet__link" href="#">R</a>
+                            <a class="alphabet__link" href="#">S</a>
+                            <a class="alphabet__link" href="#">T</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">U</a>
+                            <a class="alphabet__link" href="#">V</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">W</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">X</a>
+                            <a class="alphabet__link" href="#">Y</a>
+                            <a class="alphabet__link" href="#">Z</a>
+                        </div>
+                        <div class="alphabet__lang">
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">А</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Б</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">В</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Г</a>
+                            <a class="alphabet__link" href="#">Д</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Е</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Ё</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Ж</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">З</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">И</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">К</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Л</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">М</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Н</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">О</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">П</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Р</a>
+                            <a class="alphabet__link" href="#">С</a>
+                            <a class="alphabet__link" href="#">Т</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">У</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Ф</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Х</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Ц</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Ч</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Ш</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Щ</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Э</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Ю</a>
+                            <a class="alphabet__link alphabet__link_dsbl" href="#">Я</a>
+                        </div>
+                    </div>
+                    <div class="alphabet__right">
+                        <ul class="catalog__tab">
+                            <li><a class="catalog__tab-link" href="#"><i class="ico ico_table"></i></a></li>
+                            <li class="active"><a class="catalog__tab-link" href="#"><i class="ico ico_signs"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="items">
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                    <a class="items__link" href="#"><img src="img/prod01.png" alt="" /></a>
+                </div>
+                <div class="recent">
+                    <div class="recent__top line">
+                        <h2 class="recent__ttl">Вы недавно смотрели</h2>
+                        <a class="b-link" href="#"><span class="b-link__inner">Очистить историю</span></a>
+                    </div>
+
+					<div class="gallery line">
+						<div class="gallery__holder">
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img23.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Marshall Electronics</em> Ikegami</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img24.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Panasonic</em> AK-HCU3550EA</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img23.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Datavideo</em> FT-901 Stand</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img24.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>ТРАКТ</em> Многоканальный звуковой редактор и редактор текста</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img24.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Marshall Electronics</em> V-R653P-HDSDI</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img23.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Signum Bildtechnik</em> signum.PrimeVision HD 36GB</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img23.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Производитель</em> Модель</span>
+							</a>
+						</div>
+						<div class="clearfix"></div>
+						<a class="gallery__prev gallery__prev_dsbl" href="#"></a>
+						<a class="gallery__next" href="#"></a>
+					</div>
+
+                </div>
+
+			</div>
+			<div class="sdbr">
+				<div class="widget widget_light">
+                    <div class="widget__top">У вас есть свой бизнес по продаже / аренде профессионального оборудования?</div>
+					<a class="btn btn_red" href="#"><span class="btn__inner">Присоединяйтесь</span></a>
+				</div>
+				<div class="widget widget_banner">
+					<div class="widget__banner">
+						<img src="img/banner240-400.jpg" width="240" height="400" alt=""/>
+					</div>
+                </div>
+                <div class="widget">
+                    <h3 class="widget__ttl">Топ-Производители</h3>
+                    <ul class="widget__list">
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                    </ul>
+                    <div class="widget__bottom">
+                        <a class="btn btn_green" href="#"><span class="btn__inner">Все производители</span></a>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="ftr">
+    <div class="case">
+		<div class="ftr__holder">
+			<p>Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что сомнение методологически дискредитирует гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения. Здравый смысл, как принято считать, индуцирует естественный закон исключённого третьего, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Апперцепция индуцирует позитивизм, открывая новые горизонты. Согласно мнению известных философов, гипотеза методологически трансформирует катарсис, ломая рамки привычных представлений. Суждение, следовательно, непредсказуемо. Язык образов заполняет неоднозначный гедонизм, открывая новые горизонты.</p>
+		</div>
+    </div>
+	<div class="ftr__frame">
+		<div class="case">
+			<div class="ftr__block">
+				<a class="logo logo_ftr" href="#">tvkinoradio</a>
+			</div>
+			<div class="ftr__columns line">
+				<div class="ftr__col03">
+					<ul class="ftr__social line">
+						<li><a class="ftr__social-link ftr__social-link_fb" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_vk" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_tw" href="#"></a></li>
+					</ul>
+					<div class="ftr__copy">
+						<div class="copy__logo line">
+							<strong>Разработка сайта</strong>
+							<a href="#" class="copy__logo-img">happylab digital agency</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="ftr__col01">
+					<p>&copy; Профессиональный портал для работников телевидения, кино и радиовещания TVKINORADIO.ru, 2010–2012. Все права защищены и охраняются законом. При полном или частичном использовании материалов ссылка на tvkinoradio.ru обязательна.</p>
+				</div>
+				<div class="ftr__col02 line">
+					<div class="ftr__nav">
+						<ul class="ftr__nav-list">
+							<li><a class="ftr__nav-link" href="#">Контакты</a></li>
+							<li><a class="ftr__nav-link" href="#">О проекте</a></li>
+							<li><a class="ftr__nav-link" href="#">Реклама</a></li>
+						</ul>
+						<ul class="ftr__nav-list ftr__nav-list_large">
+							<li><a class="ftr__nav-link" href="#">Обратная связь</a></li>
+							<li><a class="ftr__nav-link" href="#">Пользовательское соглашение</a></li>
+							<li><a class="ftr__nav-link" href="#">Хотите стать нашим автором?</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="top_scroll"></div>
+</body>
+</html>

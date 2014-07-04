@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>tvkinoradio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.jcarousel.css" />
+
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jcf.js"></script>
+	<script src="js/jcf.file.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jcf.radio.js"></script>
+    <script src="js/jcf.checkbox.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/ckeditor/ckeditor.js"></script>
+	<script src="js/ckeditor/adapters/jquery.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/datepicker.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		// replace custom forms
+		jcf.lib.domReady(function(){
+			jcf.customForms.replaceAll();
+		});
+	</script>
+</head>
+
+<body>
+<a class="side-banner side-banner_old" href="#">
+    <span class="side-banner__inner" >
+        <span class="side-banner__text" >
+            <span class="side-banner__name">Старый дизайн</span>
+        </span>
+    </span>
+</a>
+<div class="container-fluid">
+	<div class="account">
+		<div class="case line">
+			<a class="account__exit" href="#">Выйти</a>
+			<div class="account__info line">
+				<a class="account__person" href="#">
+						<span class="account__photo">
+							<img src="img/avatar02.png" width="30" height="30" alt=""/>
+						</span>
+					<strong class="account__name">Константинопольская Олимпиада</strong>
+				</a>
+				<ul class="account__tools line">
+					<li class="account__tools-item">
+						<a class="account__tools-link account__tools-link_settings" href="#"><i class="ico ico_settings"></i></a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_message"></i>
+							<span class="account__tools-incoming">7</span>
+						</a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_comments"></i>
+							<span class="account__tools-incoming">2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="account__nav">
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Профиль</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Лента</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Фото</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Видео</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Мероприятия</a></li>
+				<li class="account__nav-item account__nav-item_active"><a class="account__nav-link" href="#">Друзья</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Сообщества</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="hdr">
+        <div class="case">
+			<div class="hdr__frame line">
+				<a class="logo logo_hdr" href="#">tvkinoradio</a>
+				<div class="form form_search">
+					<div class="input-i">
+						<input class="input" placeholder="Поиск" type="text"/>
+					</div>
+					<input class="btn_search" type="submit" value="Поиск"/>
+				</div>
+			</div>
+			<div class="navigation">
+				<ul class="nav line">
+					<li class="nav__item"><a class="nav__link" href="#">Оборудование</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Аудио</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Радиовещание</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видео</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">IT оборудование</a>
+										<div class="nav__drop nav__drop_right">
+											<div class="nav__drop-in">
+												<ul class="nav__drop-list">
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация вещания</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Хранение данных</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация производства</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оформление эфира</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видеомонтаж</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Профессиональные носители</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Измерительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Кабели, разъемы</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Системы служебной связи</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Осветительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оборудование DVB-C И DVB-T</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Студийная мебель</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item nav__item_active"><a class="nav__link" href="#">Работа</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Павильоны</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Статьи</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Новости</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Обзоры</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Слова</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Мнение</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">История</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Объект</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item"><a class="nav__link" href="#">События</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Компании</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Группы</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Люди</a></li>
+				</ul>
+			</div>
+        </div>
+    </div>
+    <div class="main line">
+        <div class="case">
+			<div class="cnt">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог оборудования</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Видео</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Видеокамеры и камкодеры</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Камкодеры 3D</a></li>
+                </ul>
+				<h1 class="cnt__ttl">Panasonic AG-3DA 1E</h1>
+                <div class="look">
+                    <div class="look__top line">
+                        <div class="look__gallery">
+                            <div class="slideshow-main">
+                                <ul>
+                                    <li class="p1 active">
+                                        <a href="#">
+                                            <img src="img/cam01.jpeg" width="340" height="255" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li class="p2">
+                                        <a href="#">
+                                            <img src="img/cam02.jpeg" width="340" height="255" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li class="p3">
+                                        <a href="#">
+                                            <img src="img/cam03.jpeg" width="340" height="255" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li class="p4">
+                                        <a href="#">
+                                            <img src="img/cam04.jpeg" width="340" height="255" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li class="p5">
+                                        <a href="#">
+                                            <img src="img/cam01.jpeg" width="340" height="255" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li class="p6">
+                                        <a href="#">
+                                            <img src="img/cam02.jpeg" width="340" height="255" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li class="p7">
+                                        <a href="#">
+                                            <img src="img/cam03.jpeg" width="340" height="255" alt=""/>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slideshow-carousel">
+                                <ul id="carousel" class="jcarousel jcarousel-skin-tango">
+                                    <li><a href="#" rel="p1"><img src="img/thumb01.jpg" width="60" height="46" alt="#"/></a></li>
+                                    <li><a href="#" rel="p2"><img src="img/thumb01.jpg" width="60" height="46" alt="#"/></a></li>
+                                    <li><a href="#" rel="p3"><img src="img/thumb01.jpg" width="60" height="46" alt="#"/></a></li>
+                                    <li><a href="#" rel="p4"><img src="img/thumb01.jpg" width="60" height="46" alt="#"/></a></li>
+                                    <li><a href="#" rel="p5"><img src="img/thumb01.jpg" width="60" height="46" alt="#"/></a></li>
+                                    <li><a href="#" rel="p6"><img src="img/thumb01.jpg" width="60" height="46" alt="#"/></a></li>
+                                    <li><a href="#" rel="p7"><img src="img/thumb01.jpg" width="60" height="46" alt="#"/></a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="look__info">
+                            <div class="look__stars">
+                                <dl class="look__mark">
+                                    <dt><span class="ico ico_star_dark"></span><span class="ico ico_star_dark"></span><span class="ico ico_star_dark"></span><span class="ico ico_star_dark"></span><span class="ico ico_star"></span></dt>
+                                    <dd>Оценок: 20</dd>
+                                </dl>
+                                <dl class="look__mark">
+                                    <dt><span class="ico ico_star_dark"></span><span class="ico ico_star_dark"></span><span class="ico ico_star"></span><span class="ico ico_star"></span><span class="ico ico_star"></span></dt>
+                                    <dd>Оценить</dd>
+                                </dl>
+                            </div>
+                            <dl class="look__price">
+                                <dt>Среднерыночная цена</dt>
+                                <dd>740 000 <span class="ico ico_ruble"></span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="look__text">Акциденция, конечно, индуцирует здравый смысл, открывая новые горизонты. Концепция индуцирует закон исключённого третьего, ломая рамки привычных представлений.</div>
+                </div>
+                <h2 class="cnt__sub-ttl cnt__sub-ttl_more">Продажа</h2>
+                <div class="data">
+					<div class="data__item data__item_head line">
+						<div class="data__name data__ttl">Компания</div>
+						<div class="data__price data__ttl">Цена</div>
+					</div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания1</div>
+                        <div class="data__price"><strong>735 000 <span class="ico ico_ruble"></span></strong><a class="btn btn_green jsOpenLink" href="#orderPopup"><span class="btn__inner">Заказать</span></a></div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания2</div>
+                        <div class="data__price"><strong>735 000 <span class="ico ico_ruble"></span></strong><a class="btn btn_green jsOpenLink" href="#orderPopup"><span class="btn__inner">Заказать</span></a></div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания3</div>
+                        <div class="data__price"><strong>735 000 <span class="ico ico_ruble"></span></strong><a class="btn btn_green jsOpenLink" href="#orderPopup"><span class="btn__inner">Заказать</span></a></div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания4</div>
+                        <div class="data__price"><strong>735 000 <span class="ico ico_ruble"></span></strong><a class="btn btn_green jsOpenLink" href="#orderPopup"><span class="btn__inner">Заказать</span></a></div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания5</div>
+                        <div class="data__price"><strong>Цена не указана</strong><a class="btn btn_blue jsOpenLink" href="#requestOrder"><span class="btn__inner">Запросить цену</span></a></div>
+                    </div>
+                    <a class="b-link" href="#"><span class="b-link__inner">Все предложения о продаже</span></a>
+                </div>
+                <h2 class="cnt__sub-ttl cnt__sub-ttl_more">Аренда</h2>
+                <div class="data">
+                    <div class="data__item line">
+                        <div class="data__name data__ttl">Компания</div>
+                        <div class="data__price data__ttl">Цена</div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания1</div>
+                        <div class="data__price"><strong>735 000<span class="ico ico_ruble"></span></strong><a class="btn btn_green jsOpenLink" href="#orderPopup"><span class="btn__inner">Заказать</span></a></div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания2</div>
+                        <div class="data__price"><strong>735 000<span class="ico ico_ruble"></span></strong><a class="btn btn_green jsOpenLink" href="#orderPopup"><span class="btn__inner">Заказать</span></a></div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания3</div>
+                        <div class="data__price"><strong>735 000<span class="ico ico_ruble"></span></strong><a class="btn btn_green jsOpenLink" href="#orderPopup"><span class="btn__inner">Заказать</span></a></div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания4</div>
+                        <div class="data__price"><strong>735 000<span class="ico ico_ruble"></span></strong><a class="btn btn_green jsOpenLink" href="#orderPopup"><span class="btn__inner">Заказать</span></a></div>
+                    </div>
+                    <div class="data__item line">
+                        <div class="data__name">Компания5</div>
+                        <div class="data__price"><strong>Цена не указана</strong><a class="btn btn_blue jsOpenLink" href="#requestOrder"><span class="btn__inner">Запросить цену</span></a></div>
+                    </div>
+                    <a class="b-link" href="#"><span class="b-link__inner">Все предложения об аренде</span></a>
+                </div>
+
+
+                <div class="tabs tabs_small jsTabs">
+                <ul class="tabset">
+                    <li class="tabset__item"><a class="tabset__link" href="#tab01">Описание</a></li>
+                    <li class="tabset__item"><a class="tabset__link" href="#tab02">Технические характеристики</a></li>
+                    <li class="tabset__item"><a class="tabset__link" href="#tab03">Отзывы(2)</a></li>
+                    <li class="tabset__item"><a class="tabset__link" href="#tab04">Аксессуары</a></li>
+                    <li class="tabset__item active"><a class="tabset__link" href="#tab05">FAQ</a></li>
+                </ul>
+                <div class="tab__content" style="overflow: hidden;">
+					<div id="tab01" class="tab" style="display: none;">
+						<strong>Первая в мире 3D видеокамера с двумя объективами</strong>
+						<ul>
+							<li>- Суждение, следовательно, непредсказуемо. Язык образов заполняет неоднозначный гедонизм, открывая новые горизонты.</li>
+							<li>- Суждение, следовательно, непредсказуемо.</li>
+							<li>- Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что сомнение методологически дискредитирует гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения. Здравый смысл, как принято считать, индуцирует естественный закон исключённого третьего, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Апперцепция индуцирует позитивизм, открывая новые горизонты.</li>
+						</ul>
+					</div>
+					<div id="tab02" class="tab" style="display: none;">
+						<ul class="features jsStripe">
+							<li>
+								<div class="features__item line">
+									<div class="features__name">Размер матрицы</div>
+									<div class="features__data">2/3*</div>
+								</div>
+							</li>
+							<li>
+								<div class="features__item line">
+									<div class="features__name">Крепление объектива</div>
+									<div class="features__data">Байонет</div>
+								</div>
+							</li>
+							<li>
+								<div class="features__item line">
+									<div class="features__name">Кратность</div>
+									<div class="features__data">86х</div>
+								</div>
+							</li>
+							<li>
+								<div class="features__item line">
+									<div class="features__name">Экстендер</div>
+									<div class="features__data">2</div>
+								</div>
+							</li>
+							<li>
+								<div class="features__item line">
+									<div class="features__name">Функция точной настройки</div>
+									<div class="features__data">Да</div>
+								</div>
+							</li>
+							<li>
+								<div class="features__item line">
+									<div class="features__name">Фокусное расстояние</div>
+								</div>
+								<div class="features__item line">
+									<div class="features__name">1x</div>
+									<div class="features__data">9,3 мм - 800 мм</div>
+								</div>
+								<div class="features__item line">
+									<div class="features__name">2x</div>
+									<div class="features__data">18,6 мм - 1600 мм</div>
+								</div>
+							</li>
+						</ul>
+						<a class="features__link" href="#"><i class="ico ico_pdf"></i>Руководство пользователя<br/>(15,8 мб)</a>
+						<a class="features__link" href="#"><i class="ico ico_pdf"></i>Брошюра<br/>(8,3 мб)</a>
+					</div>
+					<div id="tab03" class="tab" style="display: none;">
+						<div class="view__top">
+							<a class="b-link" href="#"><span class="b-link__inner">Оставьте свой отзыв </span></a> о Panasonic AG-3DA 1E
+						</div>
+
+						<ul class="comments">
+							<li class="line">
+								<div class="comments__photo"><img src="img/avatar01.jpg" alt="" /></div>
+								<div class="comments__text">
+									<div class="comments__top line">
+										<a class="comments__name" href="#">Олимпиада Константинопольская</a>
+										<span class="comments__date">Сегодня, 15:30</span>
+									</div>
+									<div class="comments__rating">
+										<span class="ico ico_star_dark"></span>
+										<span class="ico ico_star_dark"></span>
+										<span class="ico ico_star_dark"></span>
+										<span class="ico ico_star_dark"></span>
+										<span class="ico ico_star"></span>
+									</div>
+									<p><strong>Достоинства:</strong> Крепкий, рамой легко можно колоть орехи.Еще раму можно использовать в качестве домкрата и антенны.Ходули можно сделать, но это в планах)))Пока что так.</p>
+									<p><strong>Недостатки:</strong> Слишком большой, в мою картонную коробку из под холодильника не вмещается.Пришлось отломить по краям, куски друзьям раздал.Им тоже нравится)))Смотрят "кривое зеркало" в ЭчьДи качестве.</p>
+									<p><strong>Комментарий:</strong> Дорогой очень, пришлось почку друга продать (друга пушок зовут, его правда вчера съели).еще взяли кредит на 8000 лет, но это не беда, смогем, осилиим)))</p>
+								</div>
+							</li>
+							<li class="line">
+								<div class="comments__photo"><img src="img/avatar01.jpg" alt="" /></div>
+								<div class="comments__text">
+									<div class="comments__top line">
+										<a class="comments__name" href="#">Олимпиада Константинопольская</a>
+										<span class="comments__date">Сегодня, 15:30</span>
+									</div>
+									<div class="comments__rating">
+										<span class="ico ico_star_dark"></span>
+										<span class="ico ico_star_dark"></span>
+										<span class="ico ico_star_dark"></span>
+										<span class="ico ico_star_dark"></span>
+										<span class="ico ico_star"></span>
+									</div>
+									<p><strong>Достоинства:</strong> Крепкий, рамой легко можно колоть орехи.Еще раму можно использовать в качестве домкрата и антенны.Ходули можно сделать, но это в планах)))Пока что так.</p>
+									<p><strong>Недостатки:</strong> Слишком большой, в мою картонную коробку из под холодильника не вмещается.Пришлось отломить по краям, куски друзьям раздал.Им тоже нравится)))Смотрят "кривое зеркало" в ЭчьДи качестве.</p>
+									<p><strong>Комментарий:</strong> Дорогой очень, пришлось почку друга продать (друга пушок зовут, его правда вчера съели).еще взяли кредит на 8000 лет, но это не беда, смогем, осилиим)))</p>
+								</div>
+							</li>
+						</ul>
+
+						<div class="estimate">
+							<div class="estimate__top">
+								Ваш отзыв о <a class="b-link" href="#"><span class="b-link__inner">Panasonic AG-3DA 1E</span></a>
+							</div>
+							<div class="estimate__mark">
+								Оцените модель: <a class="ico ico_star_dark" href="#"></a><a class="ico ico_star_dark" href="#"></a><a class="ico ico_star" href="#"></a><a class="ico ico_star" href="#"></a><a class="ico ico_star" href="#"></a>
+							</div>
+							<div class="estimate__comment">
+								<div class="ta-imitate">
+									<textarea id="description" class="ta ta_big default" name="" cols="30" rows="10">Обязанности:&#10;&#10;&#10;&#10;Требования:&#10;&#10;&#10;&#10;Условия:</textarea>
+								</div>
+							</div>
+							<div class="estimate__text">
+								<p>Спасибо! Ваш отзыв очень важен для нас.</p>
+								<p>Помните, что отзыв должен быть:</p>
+								<ul>
+									<li>- уникальным,</li>
+									<li>- информативным,</li>
+									<li>- полезным.</li>
+								</ul>
+								<p>Пожалуйста, не допускайте в своём отзыве:</p>
+								<ul>
+									<li>- грубую и ненормативную лексику,</li>
+									<li>- попытки разжигания национальной, расовой, религиозной и социальной вражды,</li>
+									<li>- спам и контент коммерческого и рекламного характера.</li>
+								</ul>
+								<a class="b-link" href="#"><span class="b-link__inner">Все правила публикации отзывов на TVKINORADIO.RU</span></a>
+							</div>
+							<div class="estimate__bottom">
+								<a class="btn btn_green" href="#"><span class="btn__inner">Опубликовать</span></a>
+							</div>
+						</div>
+					</div>
+					<div id="tab04" class="tab" style="display: none;">
+						<div class="category">
+							<h3 class="category__ttl">Категория нижняя</h3>
+							<div class="category__block line">
+								<div class="category__img">
+									<img src="img/bg_comments.png" width="117" height="88" alt="" />
+								</div>
+								<div class="category__text">
+									<a href="#" class="category__name">Производитель Модель</a>
+									<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+									</p>
+								</div>
+							</div>
+							<div class="category__block line">
+								<div class="category__img">
+									<img src="img/bg_comments.png" width="117" height="88" alt="" />
+								</div>
+								<div class="category__text">
+									<a href="#" class="category__name">Производитель Модель</a>
+									<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="category">
+							<h3 class="category__ttl">Категория нижняя</h3>
+							<div class="category__block line">
+								<div class="category__img">
+									<img src="img/bg_comments.png" width="117" height="88" alt="" />
+								</div>
+								<div class="category__text">
+									<a href="#" class="category__name">Производитель Модель</a>
+									<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+									</p>
+								</div>
+							</div>
+							<div class="category__block line">
+								<div class="category__img">
+									<img src="img/bg_comments.png" width="117" height="88" alt="" />
+								</div>
+								<div class="category__text">
+									<a href="#" class="category__name">Производитель Модель</a>
+									<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab05" class="tab js-tab-hidden" style="display: block;">
+					<dl class="accordion">
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Установка серверного и клиентского ПО SL NEO, настройки ОС Windows</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Конфигурирование серверной платформы</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Настройка клиентского программного обеспечения</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Настройка различных функций (запись, воспроизведение, импорт файлов)</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Графическое оформление программ</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Прием и отображение текста из внешних источников</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Резервирование: совместная работа основного и резервного серверов</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Генерация и прием меток, вставка региональной рекламы</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+						<dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Управление сервером, управление устройствами</span></dt>
+						<dd class="accordion__content">
+							<div class="accordion__txt">
+								<p>Configure Server Components – консоль конфигурации базовых аппаратных и программных компонентов сервера SL NEO. Консоль позволяет сформировать "набор" аппаратных узлов и серверных программных модулей - задать модели и количество плат ввода-вывода, количество каналов записи/воспроизведения сервера.</p>
+								<p>Важно ! Настройки серверной платформы должны производиться квалифицированными специалистами, которые прошли обучение и имеют соответствующие полномочия. Следует помнить, что неквалифицированные действия могут повлиять на работоспособность серверной платформы, при добавлении новых компонентов текущая лицензия может оказаться недействительной.</p>
+								<p>Свяжитесь со службой поддержки для уточнения деталей ! Процедура выбора базовых модулей производится при сборке сервера изготовителем, в соответствии с заказанной конфигурацией, тем не менее, данная процедура будет описана ниже.</p>
+								<img src="img/img28.jpg" width="595" height="510" alt=""/>
+								<p>Консоль запускается при остановленном серверном ПО  SL NEO (после выполнения команды Stop Server, по правой кнопке мыши на красном значке загрузчика SkyLark NeoVid в панели задач Windows). Настройки производятся через диалоговое окно, содержащее 2 основных окна Available components и Installed Components.</p>
+								<p>Video IO Boards – раздел содержит список поддерживаемых плат ввода-вывода. <br/>LAN Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием IP-технологий (протоколы UDP/RTP). <br/>FireWire Interfaces – интерфейс для организации каналов записи/воспроизведения с использованием интерфейса IEEE1394 (DV25/HDV). <br/>Computer Screen – интерфейс для организации канала воспроизведения с использованием встроенного VGA-адаптера сервера.</p>
+								<p>Software components - базовые серверные программные модули платформы SL NEO:
+									<br/>Program Channel - модуль автоматизированного исполнения рlay-листа для одного канала (сервис SL NEO Program Player).<br/>Recorder - модуль одноканального рекордера.<br/>Time Shift – модуль, выполняющий функции временной задержки от 3-х минут до </p>
+							</div>
+						</dd>
+					</dl>
+					</div>
+                </div>
+                </div>
+
+                <div class="recent">
+                    <div class="recent__top line">
+                        <h2 class="recent__ttl">Вы недавно смотрели</h2>
+                        <a class="b-link" href="#"><span class="b-link__inner">Очистить историю</span></a>
+                    </div>
+
+					<div class="gallery line">
+						<div class="gallery__holder">
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img23.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Marshall Electronics</em> Ikegami</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img24.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Panasonic</em> AK-HCU3550EA</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img23.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Datavideo</em> FT-901 Stand</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img24.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>ТРАКТ</em> Многоканальный звуковой редактор и редактор текста</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img24.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Marshall Electronics</em> V-R653P-HDSDI</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img23.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Signum Bildtechnik</em> signum.PrimeVision HD 36GB</span>
+							</a>
+							<a href="#" class="gallery__slide">
+                                <span class="gallery__img">
+									<img src="img/img23.jpg" width="116" height="87" alt=""/>
+								</span>
+								<span class="gallery__text"><em>Производитель</em> Модель</span>
+							</a>
+						</div>
+						<div class="clearfix"></div>
+						<a class="gallery__prev gallery__prev_dsbl" href="#"></a>
+						<a class="gallery__next" href="#"></a>
+					</div>
+                </div>
+			</div>
+			<div class="sdbr">
+				<div class="widget widget_light">
+                    <div class="widget__top">У вас есть свой бизнес по продаже / аренде профессионального оборудования?</div>
+					<a class="btn btn_red" href="#"><span class="btn__inner">Присоединяйтесь</span></a>
+				</div>
+				<div class="widget widget_banner">
+					<div class="widget__banner">
+						<img src="img/banner240-400.jpg" width="240" height="400" alt=""/>
+					</div>
+                </div>
+                <div class="widget">
+                    <h3 class="widget__ttl">Топ-Производители</h3>
+                    <ul class="widget__list">
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                        <li class="widget__list-item">
+                            <a class="widget__list-ttl widget__list-ttl_big" href="#">Название производителя <span class="widget__list-photo"><img src="img/avatar01.jpg" width="60" height="60" alt=""/></span></a>
+                        </li>
+                    </ul>
+                    <div class="widget__bottom">
+                        <a class="btn btn_green" href="#"><span class="btn__inner">Все производители</span></a>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="ftr">
+    <div class="case">
+		<div class="ftr__holder">
+			<p>Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что сомнение методологически дискредитирует гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения. Здравый смысл, как принято считать, индуцирует естественный закон исключённого третьего, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Апперцепция индуцирует позитивизм, открывая новые горизонты. Согласно мнению известных философов, гипотеза методологически трансформирует катарсис, ломая рамки привычных представлений. Суждение, следовательно, непредсказуемо. Язык образов заполняет неоднозначный гедонизм, открывая новые горизонты.</p>
+		</div>
+    </div>
+	<div class="ftr__frame">
+		<div class="case">
+			<div class="ftr__block">
+				<a class="logo logo_ftr" href="#">tvkinoradio</a>
+			</div>
+			<div class="ftr__columns line">
+				<div class="ftr__col03">
+					<ul class="ftr__social line">
+						<li><a class="ftr__social-link ftr__social-link_fb" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_vk" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_tw" href="#"></a></li>
+					</ul>
+					<div class="ftr__copy">
+						<div class="copy__logo line">
+							<strong>Разработка сайта</strong>
+							<a href="#" class="copy__logo-img">happylab digital agency</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="ftr__col01">
+					<p>&copy; Профессиональный портал для работников телевидения, кино и радиовещания TVKINORADIO.ru, 2010–2012. Все права защищены и охраняются законом. При полном или частичном использовании материалов ссылка на tvkinoradio.ru обязательна.</p>
+				</div>
+				<div class="ftr__col02 line">
+					<div class="ftr__nav">
+						<ul class="ftr__nav-list">
+							<li><a class="ftr__nav-link" href="#">Контакты</a></li>
+							<li><a class="ftr__nav-link" href="#">О проекте</a></li>
+							<li><a class="ftr__nav-link" href="#">Реклама</a></li>
+						</ul>
+						<ul class="ftr__nav-list ftr__nav-list_large">
+							<li><a class="ftr__nav-link" href="#">Обратная связь</a></li>
+							<li><a class="ftr__nav-link" href="#">Пользовательское соглашение</a></li>
+							<li><a class="ftr__nav-link" href="#">Хотите стать нашим автором?</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="orderPopup" class="popup popup_inner jsOpenPopup" style="display:none;">
+	<div class="popup__data">
+		<div class="popup__box">
+			<div class="reg-form__top line">
+				<h3 class="reg-form__ttl">Заказ отправлен</h3>
+				<p>Спасибо за Ваш заказ!</p>
+				<p>Мы переслали Ваш запрос компании <a class="b-link" href="#"><span class="b-link__inner">Название компании</span></a>.</p>
+				<p>Вам ответят в самое ближайшее время.</p>
+			</div>
+			<div class="reg-form__row reg-form__row_last">
+				<a class="btn btn_green jsClosePopup" href="#"><span class="btn__inner">Ок</span></a>
+			</div>
+		</div>
+		<a class="ico ico_close jsClosePopup" href="#"></a>
+	</div>
+	<div class="popup__bg"></div>
+</div>
+<div id="requestOrder" class="popup popup_inner jsOpenPopup" style="display:none;">
+	<div class="popup__data">
+		<div class="popup__box">
+			<div class="reg-form__top line">
+				<h3 class="reg-form__ttl">Запрос отправлен</h3>
+				<p>Спасибо за Ваш запрос!</p>
+				<p>Мы переслали Ваш запрос компании <a class="b-link" href="#"><span class="b-link__inner">Название компании</span></a>.</p>
+				<p>Вам ответят в самое ближайшее время.</p>
+			</div>
+			<div class="reg-form__row reg-form__row_last">
+				<a class="btn btn_green jsClosePopup" href="#"><span class="btn__inner">Ок</span></a>
+			</div>
+		</div>
+		<a class="ico ico_close jsClosePopup" href="#"></a>
+	</div>
+	<div class="popup__bg"></div>
+</div>
+<div class="top_scroll"></div>
+</body>
+</html>

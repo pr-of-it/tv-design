@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>tvkinoradio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jcf.js"></script>
+	<script src="js/jcf.file.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jcf.radio.js"></script>
+    <script src="js/jcf.checkbox.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/ckeditor/ckeditor.js"></script>
+	<script src="js/ckeditor/adapters/jquery.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/datepicker.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		// replace custom forms
+		jcf.lib.domReady(function(){
+			jcf.customForms.replaceAll();
+		});
+	</script>
+</head>
+
+<body>
+<a class="side-banner side-banner_old" href="#">
+    <span class="side-banner__inner" >
+        <span class="side-banner__text" >
+            <span class="side-banner__name">Старый дизайн</span>
+        </span>
+    </span>
+</a>
+<div class="container-fluid">
+	<div class="account">
+		<div class="case line">
+			<a class="account__exit" href="#">Выйти</a>
+			<div class="account__info line">
+				<a class="account__person" href="#">
+						<span class="account__photo">
+							<img src="img/avatar02.png" width="30" height="30" alt=""/>
+						</span>
+					<strong class="account__name">Константинопольская Олимпиада</strong>
+				</a>
+				<ul class="account__tools line">
+					<li class="account__tools-item">
+						<a class="account__tools-link account__tools-link_settings" href="#"><i class="ico ico_settings"></i></a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_message"></i>
+							<span class="account__tools-incoming">7</span>
+						</a>
+					</li>
+					<li class="account__tools-item">
+						<a class="account__tools-link" href="#">
+							<i class="ico ico_comments"></i>
+							<span class="account__tools-incoming">2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="account__nav">
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Профиль</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Лента</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Фото</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Видео</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Мероприятия</a></li>
+				<li class="account__nav-item account__nav-item_active"><a class="account__nav-link" href="#">Друзья</a></li>
+				<li class="account__nav-item"><a class="account__nav-link" href="#">Сообщества</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="hdr">
+        <div class="case">
+			<div class="hdr__frame line">
+				<a class="logo logo_hdr" href="#">tvkinoradio</a>
+				<div class="form form_search">
+					<div class="input-i">
+						<input class="input" placeholder="Поиск" type="text"/>
+					</div>
+					<input class="btn_search" type="submit" value="Поиск"/>
+				</div>
+			</div>
+			<div class="navigation">
+				<ul class="nav line">
+					<li class="nav__item"><a class="nav__link" href="#">Оборудование</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Аудио</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Радиовещание</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видео</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">IT оборудование</a>
+										<div class="nav__drop nav__drop_right">
+											<div class="nav__drop-in">
+												<ul class="nav__drop-list">
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация вещания</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Хранение данных</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация производства</a></li>
+													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оформление эфира</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видеомонтаж</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Профессиональные носители</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Измерительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Кабели, разъемы</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Системы служебной связи</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Осветительное оборудование</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оборудование DVB-C И DVB-T</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Студийная мебель</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item nav__item_active"><a class="nav__link" href="#">Работа</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Павильоны</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Статьи</a>
+						<div class="nav__drop">
+							<div class="nav__drop-in">
+								<ul class="nav__drop-list">
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Новости</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Обзоры</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Слова</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Мнение</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">История</a></li>
+									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Объект</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item"><a class="nav__link" href="#">События</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Компании</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Группы</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">Люди</a></li>
+				</ul>
+			</div>
+        </div>
+    </div>
+    <div class="main line">
+        <div class="case">
+			<div class="area line">
+				<div class="area__aside">
+					<h2 class="area__aside-ttl"><strong>404</strong> Страница не найдена</h2>
+					<p>Страница, которую вы ищете, еще или уже не существует.</p>
+					<ul class="area__links">
+						<li><a class="b-link" href="#"><span class="b-link__inner">Назад</span></a></li>
+						<li><a class="b-link" href="#"><span class="b-link__inner">Перейти на главную</span></a></li>
+					</ul>
+				</div>
+				<div class="area__cnt">
+					<img src="img/img-404.jpg" width="701" height="526" alt=""/>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="ftr ftr_small">
+	<div class="ftr__frame">
+		<div class="case">
+			<div class="ftr__block">
+				<a class="logo logo_ftr" href="#">tvkinoradio</a>
+			</div>
+			<div class="ftr__columns line">
+				<div class="ftr__col03">
+					<ul class="ftr__social line">
+						<li><a class="ftr__social-link ftr__social-link_fb" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_vk" href="#"></a></li>
+						<li><a class="ftr__social-link ftr__social-link_tw" href="#"></a></li>
+					</ul>
+					<div class="ftr__copy">
+						<div class="copy__logo line">
+							<strong>Разработка сайта</strong>
+							<a href="#" class="copy__logo-img">happylab digital agency</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="ftr__col01">
+					<p>&copy; Профессиональный портал для работников телевидения, кино и радиовещания TVKINORADIO.ru, 2010–2012. Все права защищены и охраняются законом. При полном или частичном использовании материалов ссылка на tvkinoradio.ru обязательна.</p>
+				</div>
+				<div class="ftr__col02 line">
+					<div class="ftr__nav">
+						<ul class="ftr__nav-list">
+							<li><a class="ftr__nav-link" href="#">Контакты</a></li>
+							<li><a class="ftr__nav-link" href="#">О проекте</a></li>
+							<li><a class="ftr__nav-link" href="#">Реклама</a></li>
+						</ul>
+						<ul class="ftr__nav-list ftr__nav-list_large">
+							<li><a class="ftr__nav-link" href="#">Обратная связь</a></li>
+							<li><a class="ftr__nav-link" href="#">Пользовательское соглашение</a></li>
+							<li><a class="ftr__nav-link" href="#">Хотите стать нашим автором?</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="top_scroll"></div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+/* custom select styles */
+.select-area {
+	position: relative;
+	overflow: hidden;
+	height: 30px;
+	display:block;
+	background:#2c3e50;
+	.border-radius(3px);
+	cursor:pointer;
+}
+.select-i_small .select-area {
+	font-size:12px;
+	line-height:15px;
+	width:130px;
+	height:24px;
+}
+.select-i_lgreen .select-area {
+	font-size:16px;
+	line-height:20px;
+	background:#1abc9c;
+	height: 39px;
+}
+.select-area .center {
+	white-space: nowrap;
+	padding: 6px 10px;
+	display:block;
+	color:#fff;
+}
+.select-area .center i {
+	font-style:normal;
+	color:#e74c3c;
+}
+.select-i_small .select-area .center{
+	padding: 4px 10px;
+}
+.select-i_lgreen .center {
+	padding: 8px 21px 12px 21px;
+}
+.select-disabled {
+	background: #eee;
+}
+.select-area .select-opener {
+	position: absolute;
+	height: 30px;
+	width: 31px;
+	right: 0;
+	top: 0;
+	background:url(../img/select-r.png) no-repeat;
+	.border-radius(3px);
+	cursor:pointer;
+}
+.select-area.select-active .select-opener {
+	background:url(../img/select-r-h.png) no-repeat;
+}
+.select-i_small .select-area .select-opener {
+	height: 24px;
+	width: 25px;
+	background:url(../img/select-r-small02.png) no-repeat;
+}
+.select-i_small .select-area.select-active .select-opener {
+	background:url(../img/select-r-small02-h.png) no-repeat;
+}
+.select-i_lgreen .select-opener  {
+	height: 39px;
+	width: 39px;
+	background:url(../img/select-lgreen.png) no-repeat;
+}
+.select-i_lgreen .select-area.select-active .select-opener {
+	background:url(../img/select-lgreen-a.png) no-repeat;
+}
+.select-options {
+	position: absolute;
+	overflow: hidden;
+	z-index: 2000;
+	padding:10px 0;
+}
+.select-options:after {
+	position:absolute;
+	content:"";
+	right:0;
+	top:0;
+	z-index:2010;
+	width:10px;
+	height:10px;
+}
+
+.select-options:after,
+.select-options:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	z-index:2013;
+}
+.select-options:after {
+	border-color: rgba(52, 73, 94, 0);
+	border-bottom-color: #2c3e50;
+	border-width: 5px;
+	left: 91%;
+	margin-left: -5px;
+}
+.select-options:before {
+	border-color: rgba(52, 73, 94, 0);
+	border-bottom-color: #2c3e50;
+	border-width: 6px;
+	left: 87%;
+	margin-left: -6px;
+}
+.drop-select_lgreen:after {
+	left: 12%;
+}
+.drop-select_lgreen:before {
+	left: 18%;
+}
+
+.select-options .drop-holder {
+	position:relative;
+	overflow: hidden;
+	height: 1%;
+	background:#2c3e50;
+	padding:2px;
+	.border-radius(3px);
+}
+
+.select-options ul {
+	font-size:12px;
+	line-height:15px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.drop-select_lgreen ul {
+	font-size:14px;
+	line-height:18px;
+}
+.select-options ul li {
+	width: 100%;
+	float: left;
+}
+.select-options ul a {
+	text-decoration: none;
+	padding: 5px 10px;
+	display: block;
+	color: #fff;
+	height: 1%;
+	.border-radius(3px);
+	cursor:pointer;
+	position:relative;
+}
+.select-options .item-selected a {
+	text-decoration: none;
+	background: #1abc9c;
+	color: #fff;
+}
+.select-area img, .select-options a img {
+	vertical-align: top;
+	margin: 0 5px 0 0;
+}
+.select-i_error .select-area {
+
+}
+/* select options optgroup example styles */
+.select-options .optgroup {
+	clear: both;
+}
+.select-options .optgroup strong {
+	display: block;
+	padding: 5px;
+}
+.select-options .optgroup ul a {
+	padding-left: 30px;
+}
+/* multiple select styles */
+.select-multiple-area {
+	border: 1px solid #777;
+	clear: both;
+}
+.select-multiple-area .multiple-list{
+	border: none;
+	position: static;
+}
+.select-multiple-area .multiple-list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.select-multiple-area .multiple-list li {
+	margin: 0;
+}
+.select-multiple-area .multiple-list a:hover {
+	text-decoration: none;
+	background: #fff;
+	color: #000;
+}
+.select-multiple-area .multiple-list a {
+	display: block;
+	cursor: default;
+	padding: 5px;
+	color: #000;
+}
+.select-multiple-area .multiple-list .item-selected a {
+	background: #007;
+	color: #fff;
+}
+.select-multiple-area .multiple-list .optgroup strong {
+	display: block;
+	padding: 5px;
+}
+.select-multiple-area .multiple-list .optgroup a {
+	padding-left: 30px;
+}
+.select-disabled  .multiple-list .item-selected a {
+	background: #777;
+}
+.live-example fieldset .select-multiple-area .scrollable-area-wrapper {
+	margin: 0;
+}
+
+/* custom scrollbars styles */
+.scrollable-area-wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+.scrollable-area-wrapper .hscrollbar,
+.scrollable-area-wrapper .vscrollbar {
+	position: absolute;
+	top: 1px;
+	right: 0;
+	width: 12px;
+}
+.scrollable-area-wrapper .hscroll-left,
+.scrollable-area-wrapper .vscroll-up,
+.scrollable-area-wrapper .hscroll-right,
+.scrollable-area-wrapper .vscroll-down {
+	background: #34495e;
+	width: 0;
+	height: 1px;
+	float: right;
+	margin:0;
+}
+.scrollable-area-wrapper .hscroll-line,
+.scrollable-area-wrapper .vscroll-line {
+	background: #26323d;
+	width: 9px;
+	float: right;
+	.border-radius(2px);
+}
+.scrollable-area-wrapper .hscroll-slider,
+.scrollable-area-wrapper .vscroll-slider {
+	background: #34495e;
+	width: 7px;
+	margin:0 1px;
+	height: 30px !important;
+	.border-radius(2px);
+}
+.scrollable-area-wrapper .hscrollbar {
+	position: static;
+	height: 20px;
+	top: auto;
+}
+.scrollable-area-wrapper .hscroll-line {
+	height: 20px;
+	width: auto;
+}
+/* misc styles */
+.controls-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.controls-list li {
+	margin: 0 0 10px;
+	overflow: hidden;
+	width: 100%;
+}
+.controls-list label {
+	margin: 0 10px 0 0;
+	float: left;
+}
+.controls-list label.demo-label span {
+	font: bold 11px "Courier New", Courier, monospace;
+	color: #007;
+}
+.controls-list select {
+	min-width: 150px;
+}
+.live-example fieldset {
+	font-size: 14px;
+	line-height: 20px;
+	border: 1px solid #ddd;
+	display: block;
+	padding: 15px;
+	margin: 0 0 15px;
+}
+.live-example fieldset legend {
+	font-style: italic;
+	color: #000;
+}
+.live-example fieldset .scrollable-area-wrapper {
+	margin: 0 0 20px;
+}
+.scrollable-area {
+	background: #ffe;
+	overflow: auto;
+	height: 700px;
+	width: 400px;
+}
+.anyscrollable .text,
+.hscrollable .text {
+	width: 600px;
+}
+.file-list .row {
+	overflow: hidden;
+	margin: 0 0 10px;
+	width: 100%;
+}
+.file-list .flip .jcf-fake-input {
+	float: right;
+}
+.test-select {
+	width: 123px;
+}
+.select-options li.default {
+	display: none;
+}
+ul.thumbnails {
+	list-style: none;
+	font-size: 50px;
+	line-height: 150px;
+	text-align: center;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+ul.thumbnails li {
+	background: #eee;
+	display: inline;
+	float: left;
+	margin: 15px;
+	width: 150px;
+	height: 150px;
+}
+.select-i .select-disabled .select-opener {
+    background: url(../img/select-r-d.png) no-repeat;
+}
+.select-i_small .select-disabled .select-opener {
+    background: url(../img/select-r-small-d.png) no-repeat;
+}

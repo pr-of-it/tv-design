@@ -1,0 +1,94 @@
+/* hide original element */
+.jcf-hidden {
+	display: block !important;
+	position: absolute !important;
+	left: -9999px !important; /* change to right: -9999px on RTL sites */
+}
+/* custom file input */
+.file-area .jcf-input-wrapper {
+	position: relative;
+	overflow: hidden;
+	float: left;
+	cursor:pointer;
+}
+.jcf-input-wrapper {
+	overflow:hidden;
+	position:relative;
+	cursor:pointer;
+}
+.jcf-wrap {
+	overflow:hidden;
+	cursor:pointer;
+}
+.file-area .jcf-upload-button {
+	float:left;
+	font-size:12px;
+	line-height:20px;
+	padding:5px 20px;
+	min-width:80px;
+	color:#34495e;
+	text-align:center;
+	text-decoration:none;
+	background:#ced0d5;
+	.border-radius(5px);
+	cursor:pointer;
+	position:relative;
+
+	&:hover {
+		color:#fff;
+		background:darken(#ced0d5, 15%);
+	}
+
+	&:active {
+		color:#fff;
+		background:darken(#ced0d5, 15%);
+	}
+}
+.form__message .file-area .jcf-upload-button {
+	background:#34495e;
+	color:#fff;
+}
+
+.jcf-input-wrapper:hover .jcf-upload-button {
+	background:darken(#ced0d5, 15%);
+}
+.file-area .jcf-fake-input {
+	padding: 5px 15px;
+	float: left;
+	margin: 0 5px;
+	width: 450px;
+	height: 20px;
+	color:#a7a9ac;
+	.opacity(1);
+//	background:#fff;
+
+	em {
+		font-style:normal;
+	}
+}
+
+.form_steps .jcf-fake-input {
+	width: 450px;
+}
+.form_account .jcf-fake-input {
+	width: 350px;
+}
+.file-area.no-file .jcf-fake-input em {
+	color:#a7a9ac;
+}
+.file-disabled .jcf-upload-button {
+	border-color: #eee;
+	background-color: #eee;
+	color: #777;
+}
+.file-disabled .jcf-fake-input {
+	border-color: #eee;
+	color: #aaa;
+}
+
+.btn-disabled {
+	background: #aaa !important;
+}
+.upload-i_error .file-area.no-file .jcf-fake-input em {
+    color: #e74c3c;
+}
