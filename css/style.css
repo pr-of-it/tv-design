@@ -13526,3 +13526,48 @@ disabled look for disabled choices in the results dropdown
 .data__tree a:hover{
   text-decoration: underline;
 }
+.similar__article{
+border-top: 2px solid #ecf0f1;
+padding: 36px 0 29px;
+}
+.similar__article__top{
+  margin-bottom: 11px;
+}
+.similar__article__slide{
+  text-decoration: none;
+  float: left;
+  display: block;
+  margin: 0 5px 0 7px;
+  width: 170px;
+  min-height: 141px;
+  overflow: hidden;
+}
+.similar__article__img{
+  display: block;
+  width: 160px;
+  height: 105px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  border: 1px solid #d8dee1;
+  background: #fff;
+  text-align: center;
+}
+.similar__article__img img{
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.gallery__date{
+  color:#a7a9ac;
+  font-style: normal;
+  font-size: 14px;
+}
