@@ -5153,10 +5153,11 @@ a:hover {
 }
 .visual__list-frame img {
   display: inline-block;
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-  position: relative;
+	vertical-align: middle;
+	width: 100%;
+	height: auto;
+	position: relative;
+	min-height: 100%;
 }
 .visual__list-image:hover .visual__list-frame {
   background: #f3f5f6;
