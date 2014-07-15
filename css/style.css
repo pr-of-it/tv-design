@@ -13612,3 +13612,12 @@ padding: 36px 0 29px;
 #tab01 table tr:nth-child(2n) {
 	background-color: #f9fafb;
 }
+.product__deleted {
+	background-color: #e74c3c;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 18pt;
+	padding: 15px 0 15px;
+	margin-bottom: 20px;
+}
