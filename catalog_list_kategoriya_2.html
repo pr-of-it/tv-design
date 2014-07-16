@@ -245,6 +245,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="categoryProductList">
                 <div class="result line">
 					<div class="result__mod">
 						<span class="result__mod-txt">Всего 287 моделей</span>
@@ -431,7 +432,7 @@
                         <li class="paging__item paging__item_next"><a class="paging__link paging__link_next" href="#"><i class="ico ico_next"></i></a></li>
                     </ul>
                 </div>
-
+                </div>
 			</div>
 			<div class="sdbr">
 				<div class="widget widget_light">
@@ -519,5 +520,14 @@
 	</div>
 </div>
 <div class="top_scroll"></div>
+
+<script type="text/javascript">
+	$(".paging__link").click(function() {
+		jQuery(function($) {
+		    $("html, body").animate({scrollTop: $("#categoryProductList").offset().top-20}, 500);
+		});
+	});
+</script>
+
 </body>
 </html>
