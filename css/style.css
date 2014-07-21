@@ -5569,6 +5569,10 @@ a:hover {
   padding-left: 16px;
   background: url("../img/dash.png") 0 9px no-repeat;
 }
+.b-wysiwyg ul li ul li {
+  padding-left: 16px;
+  background: url("../img/point.png") 0 9px no-repeat;
+}
 .b-wysiwyg ul strong {
   font-size: 16px;
   line-height: 19px;
