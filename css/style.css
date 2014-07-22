@@ -5720,8 +5720,8 @@ a:hover {
   width: 115px;
   height: 86px;
   overflow: hidden;
-  position: relative;
   margin-bottom: 15px;
+  position: relative;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
@@ -7443,7 +7443,7 @@ a:hover {
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
-  margin-right: 1px;
+  margin-right: 0.5px;
   color: #4a5a65;
 }
 .alphabet__link_dsbl {
