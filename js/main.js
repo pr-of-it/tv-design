@@ -1,5 +1,5 @@
 var MainJsClass = function () {
-	var scope = this;
+	var scope = this;		
 
 	this.customDatepicker = function () {
 		if($('.custom-datepicker').length){
@@ -867,3 +867,6 @@ function mycarousel_initCallback(carousel) {
 		carousel.startAuto();
 	});
 }
+$(function(){
+	$("table").attr("border", "0");
+});
