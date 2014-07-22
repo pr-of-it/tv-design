@@ -13618,6 +13618,9 @@ padding: 36px 0 29px;
 #tab01 table thead tr {
   background-color: #f9fafb;
 }
+tr.child td{
+  border:none !important;
+}
 .product__deleted {
 	background-color: #e74c3c;
 	color: white;
