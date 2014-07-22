@@ -13582,16 +13582,15 @@ padding: 36px 0 29px;
 	border-bottom: 2px solid #ecf0f1 !important;
 	font-size: 16px;
 	color:#2c3e50;
-	font-weight: bold;
 	margin-top:24px;
 }
 #tab01 table td{
-	text-align: center;
+	text-align: left;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 #tab01 table th{
-	text-align: center;
+	text-align: left;
 }
 #tab01 table tr{
 	border-bottom: 2px solid #ecf0f1 !important;
@@ -13602,7 +13601,7 @@ padding: 36px 0 29px;
 	padding-left: 10px;
 }
 #tab01 table th:last-child{
-	text-align: right;
+	text-align: left;
 	padding-right: 10px;
 }
 #tab01 table td:first-child{
@@ -13610,11 +13609,14 @@ padding: 36px 0 29px;
 	padding-left: 10px;
 }
 #tab01 table td:last-child{
-	text-align: right;
+	text-align: left;
 	padding-right: 10px;
 }
 #tab01 table tr:nth-child(2n) {
 	background-color: #f9fafb;
+}
+#tab01 table thead tr {
+  background-color: #f9fafb;
 }
 .product__deleted {
 	background-color: #e74c3c;
