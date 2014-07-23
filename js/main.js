@@ -869,4 +869,11 @@ function mycarousel_initCallback(carousel) {
 }
 $(function(){
 	$("table").attr("border", "0");
+
+	$('#invitePopup').hide();
+	
+	$("#invite_friends").click(function(){
+        $('#invitePopup').show();
+        jcf.customForms.replaceAll();
+	});
 });

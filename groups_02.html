@@ -40,6 +40,71 @@
 </head>
 
 <body>
+
+<div id="invitePopup" class="popup popup_invite jsOpenPopup" style="">
+	    <div class="popup__data">
+	        <div class="popup__box" id="invitePopup-body">
+		        <div class="reg-form__top line">
+		            <h3 class="reg-form__ttl">Пригласить в группу</h3>
+		        </div>
+		        <form id="event-form" action="/event/invite?id=1268" method="post">
+		        	<div class="check-events  mCustomScrollbar _mCS_1">
+		        		<div class="mCustomScrollBox mCS-light" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+		        			<div class="mCSB_container mCS_no_scrollbar" style="position: relative; top: 0px;">
+		            
+			                    <div class="reg-form__row reg-form__row__invite">
+			                        <div class="chk-area chk-unchecked">
+			                        	<span></span>
+			                        </div>
+			                        <input id="event1" type="checkbox" name="FriendsInviteIds[]" value="1" class="jcf-hidden">
+			                        <label for="event1" class="b-label b-label_check">
+			                            <i class="check-label"></i>
+				                		<span>
+				                    		<img src="img/avatar_50x50.jpeg" class="av" width="30" height="30">
+				                    	</span>
+			                        	Administrator
+			                        </label>
+			                    </div>
+		                
+			                    <div class="reg-form__row  checked">
+			                        <label for="event2" class="b-label b-label_check">
+			                            <i class="check-label"></i>
+			                			<span>
+			                    			<img src="img/avatar_50x50.jpeg" class="av" width="30" height="30">
+			                    		</span>
+			                            Editor
+			                        </label>
+			                    </div>
+
+		                    </div>
+
+		                    <div class="mCSB_scrollTools" style="position: absolute; display: none;">
+			                    <div class="mCSB_draggerContainer">
+				                    <div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;">
+					                    <div class="mCSB_dragger_bar" style="position:relative;"></div>
+				                    </div>
+				                    <div class="mCSB_draggerRail">
+				                    </div>
+			                    </div>
+		                    </div>
+		                </div>
+		            </div>
+
+
+			        <div class="reg-form__bottom">
+			           <input type="submit" class="btn btn_green btn__inner" name="submit_btn" value="Отправить">
+			           <a class="btn btn_general" href="#">
+			           		<span class="btn__inner jsClosePopup">Отменить</span>
+			           </a>
+			        </div>
+		        </form>
+			</div>
+	        <a class="ico ico_close jsClosePopup" href="#"></a>
+	    </div>
+	    <div class="popup__bg">
+	    </div>
+	</div>
+
 <a class="side-banner side-banner_old" href="#">
     <span class="side-banner__inner" >
         <span class="side-banner__text" >
@@ -180,7 +245,7 @@
 									</li>
 								</ul>
 								<div class="profile__meta profile__meta_group line">
-									<a href="#" class="btn btn_green"><span class="btn__inner">Пригласить в группу</span></a>
+									<a href="#" class="btn btn_green" id="invite_friends"><span class="btn__inner">Пригласить в группу</span></a>
 								</div>
 							</div>
 						</div>
