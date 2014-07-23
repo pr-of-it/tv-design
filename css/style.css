@@ -13586,11 +13586,13 @@ padding: 36px 0 29px;
 }
 #tab01 table td{
 	text-align: left;
-	padding-top: 10px;
-	padding-bottom: 10px;
+  padding: 10px 4px;
 }
 #tab01 table th{
 	text-align: left;
+  padding-left: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #tab01 table tr{
 	border-bottom: 2px solid #ecf0f1 !important;
@@ -13601,8 +13603,9 @@ padding: 36px 0 29px;
 	padding-left: 10px;
 }
 #tab01 table th:last-child{
-	text-align: left;
-	padding-right: 10px;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 10px;
 }
 #tab01 table td:first-child{
 	text-align: left;
@@ -13610,7 +13613,8 @@ padding: 36px 0 29px;
 }
 #tab01 table td:last-child{
 	text-align: left;
-	padding-right: 10px;
+  padding-left: 0;
+  padding-right: 10px;
 }
 #tab01 table tr:nth-child(2n) {
 	background-color: #f9fafb;
