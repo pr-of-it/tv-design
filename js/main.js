@@ -219,6 +219,8 @@ var MainJsClass = function () {
 			max: sliderMaxStart,
 			values: [ sliderMinStart, sliderMaxStart ],
 			stop: function(event, ui) {
+				$('input[name="min_price"]').val(sliderRangeItem.slider("values",0));
+    			$('input[name="max_price"]').val(sliderRangeItem.slider("values",1));
 				sliderMin.text(sliderRangeItem.slider("values",0));
 				sliderMax.text(sliderRangeItem.slider("values",1));
 				sliderMinCur = sliderRangeItem.slider("values",0);
@@ -227,6 +229,8 @@ var MainJsClass = function () {
 				$('.filter__value-right').html(sliderMaxCur + ' <span class="b-rbl">a</span>');
 			},
 			slide: function(event, ui){
+				$('input[name="min_price"]').val(sliderRangeItem.slider("values",0));
+    			$('input[name="max_price"]').val(sliderRangeItem.slider("values",1));
 				sliderMin.text(sliderRangeItem.slider("values",0));
 				sliderMax.text(sliderRangeItem.slider("values",1));
 				sliderMinCur = sliderRangeItem.slider("values",0);
