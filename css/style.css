@@ -10013,6 +10013,22 @@ a:hover {
   vertical-align: middle;
   text-align: center;
 }
+.reg-form__row__invite .b-label a{
+	margin-left:2px;
+}
+.reg-form__row__invite img{
+	width: 30px;
+	height: 30px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+  	-moz-border-radius: 2px;
+}
+.reg-form__row__invite .chk-area{
+	margin-top:8px !important;
+}
+.popup_invite .reg-form__row__invite{
+	margin-bottom: 5px !important;
+}
 .popup_invite .reg-form__row {
   width: 210px;
   display: inline-block;
