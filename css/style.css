@@ -10798,10 +10798,11 @@ background: url(../img/bg-label.png) repeat;
   margin: 0;
 }
 .message-box__friends {
-  width: 100%;
-  overflow: hidden;
-  height: 575px;
-  padding: 1px 0 0;
+	width: 100%;
+	overflow: hidden;
+	max-height: 575px;
+	padding: 1px 0 0;
+	overflow-y: auto !important;
 }
 .message-box__friends-inner {
   width: 90px;
