@@ -111,10 +111,10 @@ a:hover {
   text-decoration: none;
   outline: none;
 }
-.b-link:hover .b-link__inner {
+/*.b-link:hover .b-link__inner {
   border: 0;
   padding-bottom: 1px;
-}
+}*/
 .b-link__inner {
   line-height: 1;
   text-decoration: none;
@@ -6698,7 +6698,7 @@ a:hover {
 }
 .tabs_small .tabset__item.active:hover .tabset__link,
 .tabs_small .tabset__item.active .tabset__link {
-  padding: 6px 10px 9px;
+  padding: 6px 20px 9px;
   border-color: #edf1f2;
   border-style: solid;
   -webkit-border-radius: 5px 5px 0 0;
@@ -6710,6 +6710,27 @@ a:hover {
   position: relative;
   z-index: 2;
   color: #34495e;
+}
+#tab04 .category .category__ttl{
+  margin-top:21px;
+}
+#tab04 .category .category__block .category__text{
+  line-height: 15px;
+}
+#tab04 .category .category__block .category__text a.b-link__inner{
+  color:#1abc9c;
+}
+#tab04 .category .category__block .category__text a.b-link__inner:hover{
+  border:0px;
+}
+#tab04 .category .category__block .category__text span.b-link{
+  color:#34495e;
+}
+#tab04 .category .category__block .category__text a{
+  margin-bottom: 7px;
+}
+#tab04 .category .category__block .category__img img{
+  width: 100%;
 }
 .tabs_small .tabset__item {
   margin: 0 18px 0 0;
