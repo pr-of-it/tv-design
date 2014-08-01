@@ -13641,34 +13641,28 @@ padding: 36px 0 29px;
 }
 #tab01 table td{
 	text-align: left;
-  padding: 10px 4px;
+  padding: 10px 5px 10px 5px;
+  max-width: 206px;
+  vertical-align: top;
 }
 #tab01 table th{
 	text-align: left;
-  padding-left: 4px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 5px 10px 5px;
 }
 #tab01 table tr{
 	border-bottom: 2px solid #ecf0f1 !important;
 	padding:10px;
 }
-#tab01 table th:first-child{
-	text-align: left;
-	padding-left: 10px;
+#tab01 table tr th:first-child{
+  padding-left: 10px;
 }
-#tab01 table th:last-child{
-  text-align: left;
-  padding-left: 0;
+#tab01 table tr th:last-child{
   padding-right: 10px;
 }
-#tab01 table td:first-child{
-	text-align: left;
-	padding-left: 10px;
+#tab01 table tr td:first-child{
+  padding-left: 10px;
 }
-#tab01 table td:last-child{
-	text-align: left;
-  padding-left: 0;
+#tab01 table tr td:last-child{
   padding-right: 10px;
 }
 #tab01 table tr:nth-child(2n) {
