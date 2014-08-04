@@ -9932,6 +9932,12 @@ a:hover {
 .popup_notifications .notification__cnt {
   padding-right: 2px;
 }
+.popup_notifications .notification__cnt p a{
+  border-bottom:1px solid #1abc9c;
+}
+.popup_notifications .notification__cnt p a:hover{
+  border-bottom:0px solid #1abc9c;
+}
 .popup_notifications .notification__cnt_big h3 {
   font-size: 16px;
   line-height: 16px;
