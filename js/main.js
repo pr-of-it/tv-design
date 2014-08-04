@@ -878,4 +878,25 @@ $(function(){
         $('#invitePopup').show();
         jcf.customForms.replaceAll();
 	});
+
+//Accordion
+      $('.category > div')
+        .click(function(event){
+          event.stopPropagation();
+        })
+        .hide();
+      $('.category').click(function(){
+        var selfClick = $(this).find('> div:first').is(':visible');
+        if(!selfClick) {
+          $(this)
+            .parent()
+            .find('.category > div:visible')
+            .slideToggle();
+        } 
+        $(this)
+          .find('> div:first')
+          .stop(true, true)
+          .slideToggle();
+      });
+    
 });

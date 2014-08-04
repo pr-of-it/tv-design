@@ -6624,7 +6624,10 @@ a:hover {
 }
 .tabs_small .category {
   overflow: hidden;
-  padding: 16px 0 3px;
+  padding: 0px 0 3px;
+}
+.category__sec{
+  margin-bottom: 13px;
 }
 .tabs_small .category:first-child {
   padding: 0 0 3px;
@@ -6713,6 +6716,11 @@ a:hover {
 }
 #tab04 .category .category__ttl{
   margin-top:21px;
+  background-image: url(../img/category_icon.png);
+  background-repeat: no-repeat;
+  background-position: 0px 6px;
+  padding-left:21px;
+  cursor: pointer;
 }
 #tab04 .category .category__block .category__text{
   line-height: 15px;
