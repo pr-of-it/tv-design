@@ -879,6 +879,10 @@ $(function(){
         jcf.customForms.replaceAll();
 	});
 
+$('li.tabset__item').not($('li.active')).click(function(){
+		$('form > div.error').hide();
+});
+
 //Accordion
       $('.category > div')
         .click(function(event){
