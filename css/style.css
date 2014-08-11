@@ -2046,6 +2046,13 @@ a:hover {
   width: 16px;
   height: 17px;
 }
+.ico_vk-white {
+  background-image: url(../img/icons/vk_icon.png);
+  background-position: 0px 0px;
+  width: 21px;
+  height: 14px;
+  margin-right: 10px;
+}
 .ico_fb {
   background-image: url(../img/icons.png);
   background-position: -281px -100px;
@@ -2662,6 +2669,27 @@ a:hover {
   color: #fff;
   background: #2f4b93;
   border: 2px solid #2f4b93;
+}
+.btn_vk-blue {
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 7px 13px 6px;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  color: #fff;
+  background: #4c75a3;
+  border: 2px solid #4c75a3;
+  margin-top: 10px !important;
+}
+.btn_vk-blue:hover {
+  background: #2b587a;
+  border: 2px solid #2b587a;
+  color: #fff;
 }
 .btn_dark-blue:hover {
   background: #4465b8;
