@@ -10782,7 +10782,6 @@ background: url(../img/bg-label.png) repeat;
   border: 2px solid #edf1f2;
   padding: 5px 5px 5px 0;
   overflow: hidden;
-  height: 606px;
 }
 .message-box__left {
   float: left;
@@ -10836,9 +10835,9 @@ background: url(../img/bg-label.png) repeat;
 .message-box__friends {
 	width: 100%;
 	overflow: hidden;
+  overflow-y: auto !important;
 	max-height: 575px;
 	padding: 1px 0 0;
-	overflow-y: auto !important;
 }
 .message-box__friends-inner {
   width: 90px;
@@ -10912,19 +10911,19 @@ background: url(../img/bg-label.png) repeat;
 }
 .message-box__main {
   width: 100%;
-  height: 461px;
   position: relative;
 }
 .message-box__bottom {
   border: 2px solid #edf1f2;
   padding: 18px 5px 12px;
   background: #fff;
-  -webkit-border-radius: 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
   -moz-background-clip: padding;
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
   background-clip: padding-box;
+  margin-top: -2px;
 }
 .message-box__bottom .ta {
   margin: 0;
