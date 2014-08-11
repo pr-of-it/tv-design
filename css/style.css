@@ -6625,6 +6625,7 @@ a:hover {
 .tabs_small .category {
   overflow: hidden;
   padding: 0px 0 3px;
+  margin-top: -2px;
 }
 .category__sec{
   margin-bottom: 13px;
@@ -6637,7 +6638,7 @@ a:hover {
 }
 .tabs_small .category__block {
   margin: 0;
-  padding: 19px 0 0;
+  padding: 17px 0 0;
 }
 .tabs_small-user {
   padding-top: 0;
@@ -6735,7 +6736,7 @@ a:hover {
   color:#34495e;
 }
 #tab04 .category .category__block .category__text a{
-  margin-bottom: 7px;
+  margin-bottom: 12px;
 }
 #tab04 .category .category__block .category__img img{
   width: 100%;
@@ -7871,7 +7872,7 @@ a:hover {
 }
 .category__img {
   float: left;
-  height: 86px;
+  height: 85px;
   width: 115px;
   margin-right: 20px;
   -webkit-border-radius: 5px;
@@ -7882,6 +7883,7 @@ a:hover {
   background-clip: padding-box;
   border: 1px solid #d8dee1;
   background: #fff;
+  overflow: hidden;
 }
 .category__img img {
   display: block;
