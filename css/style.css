@@ -10172,6 +10172,14 @@ background: url(../img/bg-label.png) repeat;
   height: 112px !important;
   width: 10px !important;
 }
+.message-box__friends .mCSB_dragger_bar {
+  background-color: #dcddde !important;
+  height: 112px !important;
+  width: 10px !important;
+}
+.message-box__friends .mCSB_draggerRail {
+background: transparent !important;
+}
 .popup_invite .mCSB_scrollTools .mCSB_draggerRail {
   background: none;
 }
@@ -10863,14 +10871,13 @@ background: url(../img/bg-label.png) repeat;
 .message-box__friends {
 	width: 100%;
 	overflow: hidden;
-  overflow-y: auto !important;
 	max-height: 575px;
 	padding: 1px 0 0;
 }
 .message-box__friends-inner {
   width: 90px;
   height: 602px;
-  overflow: auto;
+  overflow:hidden;
 }
 .message-box_active .message-box__friends-inner {
   width: 235px;

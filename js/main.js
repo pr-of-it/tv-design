@@ -882,13 +882,7 @@ $(function(){
 $('li.tabset__item').not($('li.active')).click(function(){
 		$('form > div.error').hide();
 });
-
-//Message Box Left Height == Message Box Right Height
-var jsMesBoxHeight = $("#jsMesBoxRight").height();
-$(window).load(function() {
-  $(".message-box__friends").css("height", jsMesBoxHeight-33);
-});
-
+$(".message-box__friends").mCustomScrollbar({theme: "light-3"});
 //Accordion
       $('.category > div')
         .click(function(event){
