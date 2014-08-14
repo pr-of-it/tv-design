@@ -40,6 +40,33 @@
 </head>
 
 <body>
+
+<div class="popup popup_inner jsOpenPopup" id="voc__feedback_popup" style="display:block;">
+    <div class="popup__data">
+        <div class="popup__box">
+        	<h2 class="cnt__sub-ttl" id="cover__let__usname">Олимпиада Константинпольская</h2>
+        	<a class="linktocv" target="_blank" href="#">Руководитель проектов</a>
+        	<span id="border__line"></span>
+        	<h2 class="cnt__sub-ttl" id="cover__let__ttl">Сопроводительное письмо к вашему резюме:</h2>
+        	<p>Вы можете оставить текст по умолчанию или написать свое письмо и рассказать о себе дополнительную информацию автору вакансии.</p>
+        	<form id="cover__let__form">
+        		<textarea id="cover__let__textbox" type="text" name="">
+Прошу вас рассмотреть мое резюме на вакансию “Руководитель очень крутого проекта”, размещенную на сайте tvkinoradio.ru.
+					
+С Уважением,
+Олимпиада Константинопльская.
+olimpiada.k@gmail.ru
+        		</textarea>
+	            <div class="send__feedback">
+	                <a class="btn btn_green" href="#"><span class="btn__inner">Отправить отклик</span></a>
+	            </div>
+            </form>
+        </div>
+        <a class="ico ico_close jsClosePopup" href="#"></a>
+    </div>
+    <div class="popup__bg"></div>
+</div>
+
 <a class="side-banner side-banner_old" href="#">
     <span class="side-banner__inner" >
         <span class="side-banner__text" >
@@ -210,7 +237,7 @@
 						</ul>
 					</div>
 					<div class="btn-holder">
-						<a class="btn btn_green" href="#"><span class="btn__inner">Откликнуться на вакансию</span></a>
+						<a class="btn btn_green" id="voc__feedback__btn" href="#"><span class="btn__inner">Откликнуться на вакансию</span></a>
 					</div>
 					<div class="box">
 						<a class="box__close" href="#"></a>

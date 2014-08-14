@@ -4044,6 +4044,19 @@ a:hover {
   border-bottom: 0;
   padding-bottom: 1px;
 }
+.linktocv {
+  display: inline-block;
+  color: #1abc9c;
+  text-decoration: none;
+  border-bottom: 1px solid #1abc9c;
+  font-size: 16px;
+}
+.linktocv:hover {
+  text-decoration: none;
+  color: #1abc9c;
+  border-bottom: 0;
+  padding-bottom: 1px;
+}
 .back-link {
   line-height: 16px;
   font-weight: bold;
@@ -13732,4 +13745,59 @@ tr.child td{
 	font-size: 18pt;
 	padding: 15px 0 15px;
 	margin-bottom: 20px;
+}
+#border__line{
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #ecf0f1;
+  left:0px;
+  margin-top:22px;
+}
+#cover__let__ttl{
+  font-size: 18px;
+  margin-top:34px;
+  margin-bottom:-3px;
+}
+#voc__feedback_popup p{
+  line-height: 16px;
+}
+#voc__feedback_popup .popup__data .popup__box{
+  background-color: #f9fafb;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  padding-bottom: 23px !important;
+  width: 539px;
+}
+#voc__feedback_popup .popup__data a.ico_close{
+  top:20px;
+  right: 20px;
+}
+#voc__feedback_popup .popup__data{
+  margin-top:-209px;
+  width: 594px;
+}
+#cover__let__textbox{
+  width: 520px;
+  height: 112px;
+  border: 2px solid #ecf0f1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 19px;
+  margin-top: 24px;
+  outline: none;
+  padding: 10px;
+  resize:none;
+  font-size: 16px;
+  line-height: 18px;
+  color: #a7a9ac;
+  overflow: hidden;
+}
+#cover__let__textbox:focus{
+  color:#34495e;
+}
+.send__feedback .btn{
+  width: 176px;
 }

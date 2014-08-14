@@ -879,6 +879,12 @@ $(function(){
         jcf.customForms.replaceAll();
 	});
 
+	$("#voc__feedback_popup").hide();
+	$("#voc__feedback__btn").click(function(){
+		$("#voc__feedback_popup").show();
+	});
+
+
 $('li.tabset__item').not($('li.active')).click(function(){
 		$('form > div.error').hide();
 });
