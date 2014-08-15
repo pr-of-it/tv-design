@@ -5025,6 +5025,9 @@ a:hover {
   max-width: 100%;
   height: auto;
 }
+.news-list .list-view .empty {
+font-size: 14px;
+}
 /* ==== [ short-news ] ==== */
 .short-news {
   font-size: 14px;
