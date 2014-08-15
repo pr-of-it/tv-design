@@ -401,31 +401,41 @@ var MainJsClass = function () {
 			var $text = $('.jsMoreText');
 
 				$text.each(function(){
-					var $this = $(this),
-						$textBox = $this.find('.jsMoreTextBox'),
-						$opener = $this.find('.jsMoreTextOpener'),
-						$textBoxHeight = $textBox.height();
+					
+					var $symbol_count = 0;
+					var $shorttext = "";
+					var $alltext = $('.jsMoreTextBox').text();
 
-						if($textBox.height()>113) {
-							$textBox.css({
-								'height': '113px',
-								'overflow': 'hidden'
-							});
-							$opener.click(function(e){
-								$textBox.animate({
-									'height': $textBoxHeight,
-									'overflow': 'auto'
-								}, 300);
-								$(this).fadeOut();
-								e.preventDefault();
-							});
-						} else {
-							$textBox.css({
-								'height': 'auto',
-								'overflow': 'auto'
-							});
-							$opener.hide();
+					if($('.jsMoreTextBox').text().replace(/ /g, '').length >= 300) {
+
+						for(i=0;i<=$('.jsMoreTextBox').text().length;i++) {
+							if($symbol_count != 300) {
+								if($('.jsMoreTextBox').text().substring(i, i+1) != " ") {
+
+									$symbol_count+=1;
+									$shorttext = $shorttext + $('.jsMoreTextBox').text().substring(i, i+1);
+
+								}
+								else $shorttext = $shorttext + " ";
+							}
+							else {
+
+								$shorttext = $shorttext + '...';
+								$('#show_more').click(function(){
+									$('.jsMoreTextBox p').html($alltext);
+									$(this).hide();
+								});
+								break;
+							}
 						}
+					}
+					else {
+
+						$shorttext = $('.jsMoreTextBox').text();
+						$('#show_more').hide();
+					}
+
+					$('.jsMoreTextBox p').html($shorttext);
 				});
 		}
 	};
