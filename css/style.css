@@ -10090,9 +10090,14 @@ font-size: 14px;
   border-radius: 4px;
   background-clip: padding-box;
 }
+.popup_invite .b-label a{
+  text-decoration: none;
+}
 .popup_invite .b-label img {
   vertical-align: middle;
   text-align: center;
+  height: 28px;
+  width: 28px;
 }
 .reg-form__row__invite .b-label a{
 	margin-left:2px;
