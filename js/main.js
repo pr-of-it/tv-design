@@ -404,16 +404,16 @@ var MainJsClass = function () {
 					
 					var $symbol_count = 0;
 					var $shorttext = "";
-					var $alltext = $('.jsMoreTextBox').text();
+					var $alltext = $('.jsMoreTextBox p').text();
 
-					if($('.jsMoreTextBox').text().replace(/ /g, '').length >= 300) {
+					if($('.jsMoreTextBox p').text().replace(/ /g, '').length >= 300) {
 
-						for(i=0;i<=$('.jsMoreTextBox').text().length;i++) {
+						for(i=0;i<=$('.jsMoreTextBox p').text().length;i++) {
 							if($symbol_count != 300) {
-								if($('.jsMoreTextBox').text().substring(i, i+1) != " ") {
+								if($('.jsMoreTextBox p').text().substring(i, i+1) != " ") {
 
 									$symbol_count+=1;
-									$shorttext = $shorttext + $('.jsMoreTextBox').text().substring(i, i+1);
+									$shorttext = $shorttext + $('.jsMoreTextBox p').text().substring(i, i+1);
 
 								}
 								else $shorttext = $shorttext + " ";
@@ -431,7 +431,7 @@ var MainJsClass = function () {
 					}
 					else {
 
-						$shorttext = $('.jsMoreTextBox').text();
+						$shorttext = $('.jsMoreTextBox p').text();
 						$('#show_more').hide();
 					}
 

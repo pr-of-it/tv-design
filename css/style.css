@@ -4812,6 +4812,7 @@ a:hover {
 .company-box__cnt-txt .view-more:hover {
   border: 0;
   padding: 0 0 1px;
+  cursor: pointer;
 }
 .company-box__txt {
   font-size: 16px;
