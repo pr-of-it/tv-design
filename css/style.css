@@ -4793,6 +4793,7 @@ a:hover {
   line-height: 16px;
   font-weight: normal;
   color: #898989;
+  margin-top: 1px;
 }
 .company-box__cnt-txt {
   overflow: hidden;
