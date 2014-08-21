@@ -4760,7 +4760,7 @@ a:hover {
   color: #34495e;
   font-weight: normal;
   overflow: hidden;
-  margin: 3px 0 -9px;
+  margin: 3px 0 -7px;
 }
 .company-box__entry-list dl dt {
   float: left;
@@ -4807,7 +4807,7 @@ a:hover {
   color: #1abc9c;
   text-decoration: none;
   outline: none;
-  margin: 23px 0 0;
+  margin: 18px 0 0;
 }
 .company-box__cnt-txt .view-more:hover {
   border: 0;
@@ -9200,10 +9200,19 @@ font-size: 14px;
   padding: 10px 0 0;
 }
 .profile__meta .btn_green {
-  padding: 6px 18px 9px !important;
+  padding: 6px 11px 9px !important;
 }
 .profile__meta_group {
   padding: 18px 0 19px;
+}
+.no__site{
+  height: 0px;
+}
+.no__btn{
+  height: 0px;
+}
+.no__btn__no__site{
+  height: 30px;
 }
 .profile__meta-status {
   float: left;
@@ -13821,4 +13830,15 @@ tr.child td{
 }
 .recommended__price{
   margin-top:8px;
+}
+#group__u__status{
+  background-image: url(../img/icons/check-big.png);
+  background-repeat: no-repeat;
+  padding-left: 23px;
+  background-position: 0px 2px;
+  color: #34495e;
+  font-size: 16px;
+  margin-top:10px;
+  margin-left:4px;
+  display: block;
 }
