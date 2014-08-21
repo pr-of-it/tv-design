@@ -10899,7 +10899,6 @@ background: transparent !important;
 }
 .message-box__friends-inner {
   width: 90px;
-  height: 602px;
   overflow:hidden;
 }
 .message-box_active .message-box__friends-inner {
@@ -10938,7 +10937,7 @@ background: transparent !important;
   height: auto;
 }
 .message-box__friends-list {
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 .message-box__friend-status {
   position: absolute;
@@ -11516,7 +11515,7 @@ table.treetable th {
 .mCSB_scrollTools .mCSB_dragger {
   cursor: pointer;
   width: 100%;
-  height: 30px !important;
+  height: 112px !important;
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   width: 7px;

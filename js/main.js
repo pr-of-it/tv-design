@@ -898,7 +898,13 @@ $(function(){
 $('li.tabset__item').not($('li.active')).click(function(){
 		$('form > div.error').hide();
 });
-$(".message-box__friends").mCustomScrollbar({theme: "light-3"});
+
+(function($){
+        $(window).load(function(){
+            $(".message-box__friends").mCustomScrollbar({theme: "light-3"});
+        });
+    })(jQuery);
+    
 //Accordion
       $('.category > div')
         .click(function(event){
