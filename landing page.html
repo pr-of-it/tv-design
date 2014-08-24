@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>tvkinoradio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/jquery.jcarousel.css" />
+    <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jcf.js"></script>
+    <script src="js/jcf.file.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+    <script src="js/jcf.radio.js"></script>
+    <script src="js/jcf.checkbox.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/ckeditor/ckeditor.js"></script>
+    <script src="js/ckeditor/adapters/jquery.js"></script>
+    <script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+
+    <script type="text/javascript">
+        // replace custom forms
+        jcf.lib.domReady(function(){
+            jcf.customForms.replaceAll();
+        });
+
+        $(document).ready(function(){
+  $('.bxslider').bxSlider();
+  $('#slider2').bxSlider({
+    slideMargin: 0
+  });
+});
+    </script>
+    
+</head>
+
+<body>
+
+<!-- POPUPS -->
+    <script>
+        $(document).ready(function(){
+            $("#land_work_sent").hide();
+            $("#land_signin").hide();
+            $("#land_register").hide();
+            $("#land_work_send").hide();
+            $("#land_agree").hide();
+        });
+    </script>
+<div class="popup popup_inner jsOpenPopup" id="land_work_sent">
+            <div class="popup__data land__pop__work">
+                
+                    <h2 class="cnt__sub-ttl land__pop__work__title" >Работа успешно отправлена</h2>
+                    <span id="border__line"></span>
+                    <h2 class="cnt__sub-ttl" id="cover__let__ttl"></h2>
+                    <p>Твоя конкурсная работа успешно передана на оценку экспертному жюри конкурса.</p>
+               
+                <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
+            </div>
+        <div class="popup__bg"></div>
+    </div>
+    <div class="popup popup_inner jsOpenPopup" id="land_work_send">
+    <div class="popup__data land__pop__work2">
+            <div class="reg-form__top line land__pop__top">
+            <h3 class="reg-form__ttl">Отправка конкурсной работы</h3>
+            
+        </div>
+            <form id="cover__let__form" class=" parent-active">
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label" for="Profile_first_name">Имя</label>           
+                     <div class="input-i input-i_middle  ">
+                        <input size="60" class="input input_small" maxlength="255" name=""type="text">      
+                     </div>
+                </div>
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label" for="UserLogin_email">E-mail</label>         
+                    <div class="input-i input-i_middle  ">
+                        <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">  </div>
+                </div>
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label" for="UserLogin_email">Ссылка на ваше конкурсное видео на tvkinoradio.ru</label>          
+                    <div class="input-i input-i_middle  ">
+                        <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">  </div>
+                </div>
+                <div class="reg-form__text land__pop__text">
+                    <a class="b-link">
+                    <span class="b-link__inner">Отправляя заявку на участие, вы соглашаетесь с <br/> <a id="land_agree_link" style="color: #1abc9c;">полными условиями конкурса</a></span>
+                </a>
+
+            </div>
+                <div class="reg-form__bottom land__pop__bottom">
+                  <a class="btn btn_green" href="#"><span class="btn__inner">Отправить отклик</span></a>
+                </div>
+        </form>
+        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
+    </div>
+    <div class="popup__bg"></div>
+</div>
+           <!-- reg -->
+  <div class="popup popup_inner jsOpenPopup" id="land_register">
+    <div class="popup__data land__pop__work2">
+            <div class="reg-form__top line land__pop__top ">
+            <h3 class="reg-form__ttl land__pop__ttl">Регистрация</h3>
+            <a class="b-link b-link_top" href="/login"><span class="b-link__inner">Вход</span></a>
+        </div>
+            <form id="cover__let__form" class=" parent-active">
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label" for="Profile_first_name">Имя</label>           
+                     <div class="input-i input-i_middle  ">
+                        <input size="60" class="input input_small" maxlength="255" name=""type="text">      
+                     </div>
+                </div>
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label" for="Profile_first_name">Фамилия</label>           
+                     <div class="input-i input-i_middle  ">
+                        <input size="60" class="input input_small" maxlength="255" name=""type="text">      
+                     </div>
+                </div>
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label" for="UserLogin_email">E-mail</label>         
+                    <div class="input-i input-i_middle  ">
+                        <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">  </div>
+                </div>
+                <div class="reg-form__row land__pop__row">
+                     <label class="b-label " for="RegistrationForm_password">Пароль </label>    <div class="input-i input-i_middle  ">
+                     <input class="input input_small" name="RegistrationForm[password]" id="RegistrationForm_password" type="password" maxlength="128"></div>
+                </div>
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label " for="RegistrationForm_verifyPassword">Подтверждение пароля </label> 
+                        <div class="input-i input-i_middle  ">
+                            <input class="input input_small" name="RegistrationForm[verifyPassword]" id="RegistrationForm_verifyPassword" type="password" maxlength="128">                            
+                        </div>
+                </div>
+                <div class="reg-form__row land__pop__row">
+                   <div class="reg-form__text">Регистрируясь, вы подтверждаете свое согласие с условиями  <a class="b-link" href="#" id="yii-user-terms-of-service-link">
+                    <span class="b-link__inner">Пользовательского соглашения</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="reg-form__row land__pop__row">
+            <input class="btn btn_green" type="submit" name="yt0" value="Зарегистрироваться"> 
+        </div>
+        <div class="reg-form__bottom land__pop__bottom2">
+            
+            <div class="auth-service facebook">
+            <a class="btn btn_dark-blue auth-link facebook" href="/login/service/facebook"><i class="ico ico_fb-white"></i>Войти через Facebook</a>    </div>
+         </div>
+
+        </form>
+    
+        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
+    </div>
+    <div class="popup__bg"></div>
+</div>
+<!-- signin -->
+<div class="popup popup_inner jsOpenPopup" id="land_signin">
+    <div class="popup__data land__pop__work2">
+        
+            <div class="reg-form__top line land__pop__top ">
+            <h3 class="reg-form__ttl land__pop__ttl">Вход</h3>
+            <a class="b-link b-link_top" href="/login"><span class="b-link__inner">Регистрация</span></a>
+            </div>
+            <form id="cover__let__form" class=" parent-active">
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label" for="UserLogin_email">E-mail</label>         
+                    <div class="input-i input-i_middle  ">
+                        <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">  </div>
+                </div>
+                <div class="reg-form__row land__pop__row">
+                    <label class="b-label" for="UserLogin_password">Пароль</label>        
+                    <a class="b-link" href="/recovery"><span class="b-link__inner">Забыли пароль?</span></a>
+                    <div class="input-i input-i_middle  ">
+                         <input maxlength="254" class="input input_small" tabindex="2" name="UserLogin[password]" type="password">        
+                    </div>
+                </div>
+                 <div class="reg-form__row">
+        <input id="ytUserLogin_rememberMe" type="hidden" value="0" name="UserLogin[rememberMe]"><input name="UserLogin[rememberMe]" id="UserLogin_rememberMe" value="1" type="checkbox" class="jcf-hidden">        <label for="UserLogin_rememberMe" class="b-label b-label_check">Запомнить меня</label>
+    </div>
+                <div class="reg-form__row">
+                    <input id="submit_link" class="btn btn_green submit" tabindex="3" type="submit" name="yt0" value="Войти">   
+                </div>
+
+                <div class="reg-form__bottom land__pop__bottom2">
+                
+                    <div class="auth-service facebook">
+                        <a class="btn btn_dark-blue auth-link facebook" href="/login/service/facebook"><i class="ico ico_fb-white"></i>Войти через Facebook</a>    </div>
+                </div>
+
+            </form>
+        
+        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
+    </div>
+    <div class="popup__bg"></div>
+</div>
+<!-- full -->
+        <div class="popup popup_inner jsOpenPopup" id="land_agree">
+            <div class="popup__data land__pop__work3">
+                
+                    <div class="reg-form__top line land__pop__top3">
+                    <h3 class="reg-form__ttl">Пользовательские соглашения</h3>
+                    <p> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+               
+            
+            </div>
+        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
+    </div>
+    <div class="popup__bg"></div>
+</div>
+<!-- END OF POPUPS -->
+
+    <div class="wrapper-landing">
+        <div class="hdr__landing">
+            <div class="hdr__landing__line">
+                <div class="school__logo">
+                    <a class="school-logo" target="_blank" href="http://www.newcinemaschool.com"><img src="img/icon/school-logo.png"/></a>
+                </div>
+                 <div class="TKR__logo">
+                    <a class="TKR-logo" target="_blank" href="http://www.tvkinoradio.ru"><img src="img/icon/TKR-logo.png"/></a>
+                </div>
+            </div>
+            <div class="timer__banner">
+                <div class="timer__banner__text">
+                    <p>
+                        СТАНЬ ОБЛАДАТЕЛЕМ ГРАНТА НА ОБУЧЕНИЕ В МОСКОВСКОЙ ШКОЛЕ НОВОГО КИНО ПО ПРОФЕСИИ – «РЕЖИССЕР МОНТАЖА»
+                   </p>
+                    <span class="timer__title">
+                        ДО ОКОНЧАНИЯ КОНКУРСА ОСТАЛОСЬ:
+                    </span>
+                    <div class="timer">
+                         <!-- Начало панели счетчика -->
+                        <div id="countdown_dashboard">
+                            <div id="getting-started"></div>
+                                <script type="text/javascript">
+                                    $("#getting-started")
+                                    .countdown("2014/09/21", function(event) {
+                                      $(this).text(
+                                        event.strftime('%D %H %M')
+                                      );
+                                    });
+                                </script>
+                           <div class="dash days_dash">
+
+                            <span class="dash_title">дней</span>    
+                           </div>
+                          
+                            <div class="dash days_dash"><span class="dash_title">часов</span>  
+                             </div>
+                             
+                              <div class="dash days_dash"><span class="dash_title">минут</span></div>
+                        </div>
+                    </div>
+                    <div class="widget__bottom">
+                    <a class="btn btn_yellow" id="work_send_btn"><span class="btn__inner">ОТПРАВИТЬ РАБОТУ</span></a>
+                </div>
+                </div>
+                     
+            </div>
+        </div>
+        <div class="container__landing">
+            <div class="conditions">
+                <span class="condition__text">ПОДРОБНЕЕ О КОНКУРСЕ</span><br/>
+                <span class="condition__icon"> </span>
+            </div>
+            <div class="competition">
+                <span class="competition__text">УСЛОВИЯ КОНКУРСА</span>
+                <div class="competition__cont">
+                    <div class="step">
+                        <div class="step1">
+                            <div class="step__icon step__icon1"></div>
+                            <div class="step__title">ШАГ 1</div>
+                            <div class="step__text step_text1">
+                            <p>Зарегистрируйся или авторизуйся на tvkinoradio.ru и скачай исходные материалы для монтажа</p>
+                            </div>
+                        </div>
+                        <div class="sl"></div>
+                        <div class="step1 step2">
+                            <div class="step__icon step__icon2"></div>
+                            <div class="step__title step__title2">ШАГ 2</div>
+                            <div class="step__text step_text2">
+                            <p>Смонтируй видео, используя только предоставленные ролики (все или несколько). Максимальный хронометраж — 10 минут.</p>
+                            </div>
+                        </div>
+                        <div class="sl"></div>
+                        <div class="step1 step3">
+                            <div class="step__icon step__icon3"></div>
+                            <div class="step__title step__title3">ШАГ 3</div>
+                            <div class="step__text step_text3">
+                            <p>Загрузи результат на любой видеохостинг и размести в своем профиле на сайте tvkinoradio.ru</p>
+                            </div>
+                        </div>
+                        <div class="sl"></div>
+                        <div class="step1 step4">
+                            <div class="step__icon step__icon4"></div>
+                            <div class="step__title step__title4">ШАГ 4</div>
+                            <div class="step__text step_text4">
+                            <p>Загрузи результат на любой видеохостинг и размести в своем профиле на сайте tvkinoradio.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div class="completion">
+                        <div class="completion1">
+                            <span>Завершение<br />приема работ</span><span class="completion__numbr">21</span><span>сентября</span>
+                        </div>
+                        
+                        <div class="completion1 completion1_middle">
+                           <span>Объявление <br/>результатов:</span><span class="completion__numbr">25</span><span>сентября</span>
+                        </div>
+                        
+                        <div class="completion1">
+                             <span>Награждение <br/>победителя:</span><span class="completion__numbr">26</span><span>сентября</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="clear:both;"></div>
+                <a class="full" id="land_full_inf" href"#">Полные условия конкурса</a>
+
+            </div> 
+            <div class="sharpe">
+            <div id="pntik"></div>
+                <div class="sharpe__text">
+                    <p>
+                        ПОБЕДИТЕЛЬ КОНКУРСА ПОЛУЧИТ ГРАНТ НА БЕСПЛАТНОЕ ОБУЧЕНИЕ НА ФАКУЛЬТЕТЕ «РЕЖИССЕР МОНТАЖА»
+                    </p>
+                    <span class="sharpe__determine">Победителя определит экспертное жюри:</span>
+                </div>
+            </div>
+        <div id="slider1">
+            <div class="bxslider">
+              
+                  <div class="slider__tab">
+                <div class="slider__img">
+                    <img src="img/photo1.png" />
+                </div>
+                <div class="slider__text">
+                <h1 class="slider__title">Шерстобитов Илья</h1>  
+                <p class="slider__text2">Директор Московской школы нового кино </p>
+                <p class="slider__text3">С 1992 года работает в СМИ. В рамках телеканала РТР был режиссёром-постановщиком программы «Башня». Работал главным редактором журнала «Башня» и креативным 
+                директором журнала «Beauty». Работал в кинопроизводстве голливудских компаний. 
+                С января 2013 руководит Московской школой нового кино. Продюсер, член союза 
+                журналистов России и Москвы</p>
+
+                </div>
+                <div style="clear:both;"></div>
+                </div>
+              
+              
+                  <div class="slider__tab">
+                <div class="slider__img">
+                    <img src="img/photo1.png" />
+                </div>
+                <div class="slider__text">
+                <h1 class="slider__title">Шерстобитов Илья</h1>  
+                <p class="slider__text2">Директор Московской школы нового кино </p>
+                <p class="slider__text3">С 1992 года работает в СМИ. В рамках телеканала РТР был режиссёром-постановщиком 
+                программы «Башня». Работал главным редактором журнала «Башня» и креативным 
+                директором журнала «Beauty». Работал в кинопроизводстве голливудских компаний. 
+                С января 2013 руководит Московской школой нового кино. Продюсер, член союза 
+                журналистов России и Москвы</p>
+
+                </div>
+                <div style="clear:both;"></div>
+                </div>
+
+                <div class="slider__tab">
+                <div class="slider__img">
+                    <img src="img/photo1.png" />
+                </div>
+                <div class="slider__text">
+                <h1 class="slider__title">Шерстобитов Илья</h1>  
+                <p class="slider__text2">Директор Московской школы нового кино </p>
+                <p class="slider__text3">С 1992 года работает в СМИ. В рамках телеканала РТР был режиссёром-постановщиком 
+                программы «Башня». Работал главным редактором журнала «Башня» и креативным 
+                директором журнала «Beauty». Работал в кинопроизводстве голливудских компаний. 
+                С января 2013 руководит Московской школой нового кино. Продюсер, член союза 
+                журналистов России и Москвы</p>
+
+                </div>
+                <div style="clear:both;"></div>
+                </div>
+              
+            </div>
+        </div>
+            
+
+
+                <div class="slider__tab2">
+                    <span class="slider__tab2__title">МАТЕРИАЛЫ ДЛЯ МОНТАЖА</span>
+
+                    <p class="">В монтаже конкурсной работы ты можешь использовать только материалы, представленные на этой странице — все или некоторые. В архивах для скачивания ты найдешь и 18 основных роликов, и дополнительные видео, предоставленные МШНК. Не забудь: длина твоего видео должна быть не больше 10 минут.</p>
+
+                    <div id="slider2">
+                        <div class="full__mont__video">
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="full__mont__video">
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="full__mont__video">
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="mont__video">
+                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                <div style="clear:both;"></div>
+                    <div class="download__full">
+                        <a href="#" class="download">Основные материалы (хх Гб)</a>
+                        <a href="#" class="download">Дополнительные материалы по фильму "Софи"</a>
+                        <a href="#" class="download">Дополнительные материалы по фильму "Еду как хочу" </a>
+                        <a href="#" class="download">Дополнительные материалы по "Софи"</a>
+                    </div>
+
+            </div>
+            <div style="clear:both;"></div>
+       </div>
+       <div class="fr__landing">
+                <div class="fr__banner">
+                    <div class="fr__banner__text">
+                        <p>
+                            ПРИНЯТЬ УЧАСТИЕ В КОНКУРСЕ
+                       </p>
+                    </div>
+                    <div class="fr__timer">
+                         
+                        <div class="fr__dashboard">
+                             <span class="fr__tx">Уже подано заявок:</span><span class="fr__numbr">34</span>
+                        </div>
+                    </div>
+                    <div class="widget__bottom">
+                        <a class="btn btn_yellow btn__fr" id="land_submit" href="#"><span class="btn__inner">ПОДАТЬ ЗАЯВКУ</span></a>
+                    </div>
+                </div>
+                <div class="fr__title"><span class="">ПОДРОБНЕЕ О КОНКУРСЕ</span>
+                <p>Задавай их в <a href="#" class="fr__full">группе конкурса</a> на tvkinoradio.ru</p></div> 
+                <div class="fr__landing__social">
+                    <a href="#" id="landing__social1__id"class="landing__social"></a>
+                    <a href="#" id="landing__social2__id" class="landing__social"></a>
+                    <a href="#" id="landing__social3__id" class="landing__social"></a>
+                </div>
+        </div>
+            
+    </div>
+</body>
+</html>

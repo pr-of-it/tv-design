@@ -904,7 +904,7 @@ $('li.tabset__item').not($('li.active')).click(function(){
             $(".message-box__friends").mCustomScrollbar({theme: "light-3"});
         });
     })(jQuery);
-    
+
 //Accordion
       $('.category > div')
         .click(function(event){
@@ -926,3 +926,25 @@ $('li.tabset__item').not($('li.active')).click(function(){
       });
     
 });
+
+// LANDING PAGE POPUPS
+$(window).load(function(){
+
+            $("#land_submit").click(function(){
+            	$("#land_register").show();
+            });
+
+            $("#work_send_btn").click(function(){
+            	$("#land_work_send").show();
+            });
+
+            $("#land_full_inf").click(function(){
+            	$("#land_agree").show();
+            });
+
+            $("#land_agree_link").click(function(){
+            	$("#land_work_send").hide();
+            	$("#land_agree").show();
+            });
+
+        });
