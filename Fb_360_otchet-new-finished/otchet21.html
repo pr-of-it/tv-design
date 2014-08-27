@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        /*resets from YUI*/
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0; padding:0;}
+    table {border-collapse:collapse; border-spacing:0;}
+    fieldset,img {border:0;}
+    address,caption,cite,code,dfn,th,var {font-style:normal; font-weight:normal;}
+    ol,ul {list-style:none;}
+    caption,th {text-align:left;}
+    h1,h2,h3,h4,h5,h6 {font-size:100%; font-weight:normal;}
+    q:before,q:after {content:'';}
+    abbr,acronym { border:0;}
+
+        /* setup the page */
+    @page { margin: 57px; background: #ffffff; }
+        /* setup the footer */
+    @page { @bottom { content: flow(foot); } }
+    #footer { flow: static(foot); }
+
+        /* some useful defaults */
+    th, td, caption { padding: 4px 10px 4px 5px; }
+
+        /* useful utility */
+    .clear { clear:both; }
+    .g-left {float:left;}
+    .g-right {float:right;}
+    .line {overflow:visible;}
+
+    .line:after {
+        font-size:0;
+        content:".";
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden;
+    }
+
+        /* layout */
+    #container { font-family: Calibri, Futura, Geneva, Tahoma; font-size: 16px; color: #58595b; position: relative;  }
+
+        /* footer shenanigans! */
+    #footer {
+        text-align: center;
+        display: block;
+        height:140px;
+    }
+        /* hack around the way prince handles the footer */
+    #footer .contain { display: inline-block; text-align:right; width:305px;}
+    #footer .footer-right {text-align:right;}
+    .footer__text {font-size:14px; font-weight:bold; float:left; margin-top:20px; color:#808285;}
+        /* end hack */
+
+        /* colors */
+    .blue { color: #3479be !important;}
+    .pink {color:#f06eaa !important;}
+    .crimson {color:#ab218e !important;}
+    .green {color:#50b848 !important;}
+    .light-blue {color:#00aeef !important;}
+    .dark-blue {color:#0083ca !important;}
+    .light-green {color:#b2d235 !important;}
+    .brown {color:#7a3236 !important;}
+    .aqua {color:#008c89 !important;}
+    .yellow {color:#fcaf17 !important;}
+    .orange {color:#f58220 !important;}
+    .red {color:#ed1c24 !important;}
+    .darkred {color:#d2232a !important;}
+
+        /* stylin */
+    #header_img {margin-left:23px; width: 200px;}
+
+    #main { position:relative; }
+    #phase_details th { font-size: 0.8em; padding: 10px !important; border-style: solid !important; }
+
+        /*#phase_details th, td {*/
+        /*border-width: 1px;*/
+        /*padding: 3px 5px;*/
+        /*border-top-style: none;*/
+        /*border-bottom-style: none;*/
+        /*border-left-style: solid;*/
+        /*border-right-style: solid;*/
+        /*border-color: gray;*/
+        /*background-color: white;*/
+        /*}*/
+
+    #phase_details tr.first td { padding-top: 10px; padding-bottom: 10px; }
+
+    #phase_details td.price { text-align: left; }
+    #phase_details .price_container { float: left; min-width: 30%; }
+
+    #phase_details thead .title { width: 20%; }
+    #phase_details thead .description { width: 60%; }
+    #phase_details thead .price { width: 20%; }
+    #phase_details tr.last { border-bottom: 1px solid gray; }
+    #total_price h2 { color: black; font-size: 0.6em; font-weight: bold; }
+    #total_price .price { margin-left: 0.75em; }
+
+    .main-list {font-size:19px; color:#0066b3;}
+    .main-list p {font-size:14px; font-style:italic; color:#808285;}
+    .main-list li {margin-bottom:11px;}
+    .main__copyright {font-size:12px; text-align:left; margin-top:-19px; margin-left:9px; color:#bcbec0;}
+    .main__date {font-size:16px; margin-left:40px; display:inline-block; color:#fff; position:relative; }
+    .main__ttl {font-size:40px; line-height:43px; margin-bottom:50px; color:#fff;}
+    .main__sub-ttl {font-size:32px; font-weight:bold; margin-bottom:9px; color:#0066b3;}
+    .main__inner p {margin-bottom:16px; color:#58595b;}
+    .main__block p {margin-bottom:42px;}
+    #author_img {text-align:center; height:231px; width:205px; background:url("img/avatar-fon.png") 0 0 no-repeat; margin-bottom:12px; background-size: 100%; position:relative; z-index:100;}
+    #author_img img {width:100%;}
+    .grey-fon {position:absolute; top:0; right:-38px; height:308px; width:60%; background:#e6e7e8; border-radius:11px; z-index:1;}
+    .blue-fon {position:absolute; top:77px; left:0; height:324px; width:100%; background:#0066b3; border-radius:11px; z-index:1;}
+    .sidebar {width: 30%; float: left; margin-top: 62px; z-index:100; position:relative;}
+    .main__info {width: 70%; float: left; margin-top: 57px; position:relative; z-index:100; }
+    .page-ttl {font-size:40px; font-weight:bold; margin-bottom:25px; color:#808285; }
+    .page-text {overflow:hidden; width:480px;}
+    .page-list dd {float:left; width:415px; background:url("img/dot.png") 0 74% repeat-x; color:#0066b3; }
+    .page-list dt {overflow:hidden; font-weight:normal; color:#0066b3; margin-bottom:7px;}
+    .page-list__name {background:#fff; }
+    .page-img {border-radius:11px; background:#e4e5e6; margin-left:63px; height:204px; width:181px;}
+    .page-img img {width:100%;}
+    .page-img_left {margin:0 45px 0 0;}
+    .page-note {margin-bottom:54px; color:#0066b3;}
+    .page-attention {font-size:19px; font-weight:bold; display:block; color:#0066b3;}
+    .page-attention_indent {margin-bottom:11px;}
+    .header_top {font-size:11px; display:inline-block; vertical-align:top; padding-right:20px; margin-bottom:61px; margin-right:3px;  border-right:1px solid #dfe0e0; height:30px; color:#0066b3;}
+    .header_top-name {font-weight:bold; display:block; margin-top:4px;}
+    .header_page {font-size:24px; color:#808285; float:right;}
+    .main__text {padding-bottom:49px;}
+    .main__text p {line-height:19px; margin-bottom:8px; color:#58595b;}
+    .main__text_top {padding-top:39px;}
+    .main__header {font-weight:bold; margin-bottom:14px; color:#0066b3; }
+    .main__note {font-size:16px; color:#58595b; margin-bottom:40px;}
+    .main__note p {margin-bottom:11px;}
+    .report-list {}
+    .report-list li {border-top:1px dotted #0066b3; padding:9px 0 27px;}
+    .report-list__left {float:left; width:155px; color:#0066b3;}
+    .report-list__left_more {width:210px;}
+    .report-list__info {float:right; width:480px; color:#58595b;}
+    .report-list__info p {font-size:14px;}
+    .report-list__info-pic {margin-bottom:34px;}
+    .report-list_graph {margin-bottom:14px;}
+    .report-list_graph li {border-top:1px dotted #a1a2a5;}
+    .report-list_graph .report-list__info {width:440px;}
+    .features_orange {float:left; position:relative; height:251px; width:251px; margin:113px 0 0 -486px; }
+    .features_orange .features__bg {width:100%; height:100%; position:absolute; left:0; top:0; border-radius:126px; background:url("img/bg-orange.png"); }
+    .features_green {float:left; position:relative; height:290px; width:290px; margin-left: 259px;}
+    .features_green .features__bg {width:100%; height:100%; position:absolute; left:0; top:0; border-radius:144px; background:url("img/bg-green.png"); z-index:2; }
+    .features { text-align: center; position:relative; z-index:1;}
+    .features__cnt {font-size:14px;  vertical-align:middle; color:#fff; z-index:3; position:relative;}
+    .features__cnt strong {line-height:19px; font-weight:bold;}
+    .features__cnt-inner {display:inline-block; text-align:left; width:159px;}
+    .features__cnt-list {font-size:14px; position:relative; z-index:1; width:200px;}
+    .features__cnt-list li {list-style-type:disc; list-style-position:inside; margin-bottom:1px}
+    .features_orange .features__cnt {margin-top:75px;}
+    .features_green .features__cnt {margin-top:65px;}
+    .features-wrap {padding:7px 0 41px;}
+    .table-block {position:relative;}
+    .table-block .table-block__y {position:absolute; top:-8px; left:15px;}
+    .table-block .table-block__x {position:absolute; bottom:-42px; left:53px;}
+    .value-details {margin:46px auto 0; }
+    .value-details td {border:1px dotted #a2a4a6; padding:30px; height:265px; width:265px; vertical-align:top;}
+    .value-details__head {font-size:16px; line-height:19px; min-height:47px; color:#808285;}
+    .value-details__list {font-size:12px; list-style-type:disc; list-style-position:inside;}
+    .side-block {padding:9px;}
+    .side-block__info {float:left; width:216px}
+    .side-block__graph {float:left; margin-top:45px;}
+    .side-block__ttl {font-size:19px; font-weight:bold; padding-top:2px; margin-bottom:15px; color:#0066b3; width:134px;}
+    .side-block__ttl-small {font-size:14px; font-weight:bold; margin:0 0 21px 12px; color:#0066b3; width:134px; display:inline-block; vertical-align:top;}
+    .side-block__list li {margin-bottom:4px;}
+    .side-block__list-num {display:inline-block; vertical-align:middle; margin-right:5px;}
+    .side-block__graph {position:relative;}
+    .side-block__num {position:absolute;}
+    .side-block__num-one {top:-8px; right:43px;}
+    .side-block__num-two {top:27px; right:55px;}
+    .side-block__num-three {top:58px; right:76px;}
+    .result-ttl {font-size:16px; margin-bottom:25px; color:#00aeef; padding-top:4px; border-top:1px dotted #afb1b2;}
+    .result-ttl_blue {color:#0066b3;}
+    .result-ttl_green {color:#b2d235;}
+    .result-top {margin-bottom:31px;}
+    .result-top__img {float:left; width:427px; margin-right:24px;}
+    .result-top__text {font-size:14px; color:#77787a; overflow:hidden;}
+    .result-subttl {font-size:14px; font-weight:bold; display:block; margin-bottom:14px; color:#58595b; }
+    .result-graph {margin: 0 -45px 23px 0}
+    .result-graph__block {display:inline-block; vertical-align:middle; margin-right:40px; position:relative;}
+    .result-graph .result-graph__block:first-child {margin:6px 5px 0 0 ;}
+    .result-graph__head {font-size:11px; color:#58595b; display:block; margin:0 -40px 8px 0}
+    .result-graph__stroke {font-size:8px; display:block; margin-bottom:6px;}
+    .result-graph__block-num {font-size:8px; color:#58595b; position:absolute; bottom:-6px; left:-2px;}
+    .result-graph__block-num_sec {left:73px;}
+    .result-graph__block-num_third {left:149px;}
+    .result-text {font-size:14px; line-height:16px; color:#58595b; border-top:1px dotted #afb1b2; padding-top:15px;}
+    .task-ttl {font-size:19px; font-weight:bold; margin-bottom:11px; color:#0066b3;}
+    .task-block {font-size:16px; margin-bottom:41px;}
+    .task-block__item {display:inline-block; vertical-align:top; width:270px;}
+    .task-block .task-block__item:first-child {border-right:1px dotted #afb0b2; padding-right:40px; margin-right:20px;}
+    .task-block__item strong {color:#58595b; display:block; margin-bottom:11px;}
+    .task-block__list dt {font-style:italic; font-weight:normal;}
+    .task-block__list dd {margin-bottom:11px; color:#58595b;}
+    .report-list__info-list {color:#58595b; }
+    .report-list__info-list dt {font-size:16px; font-weight:bold; margin-bottom:7px;}
+    .report-list__info-list dd span {display:block; margin-bottom:18px;}
+    .report-list_recomend li {border-top: 1px dotted #a1a2a5; padding: 30px 0 34px;}
+    .report-list__left em {color:#58595b;}
+    .report-list__info-steps dt {font-size:40px; line-height:40px; font-weight:normal; color:#0066b3;}
+    .report-list__bottom {width:419px; color:#58595b;}
+    .report-list__bottom p {margin-bottom:9px;}
+    .progress {padding-top:46px;}
+    .progress__sub-ttl {font-size:16px; font-weight:bold; margin-bottom:11px; color:#58595b;}
+    .progress__ttl {font-size:19px; font-weight:bold; margin-bottom:28px; text-transform:uppercase; color:#0066b3;}
+    .progress__concept {font-size:12px; font-style:italic; margin-bottom:11px; display:block; color:#58595b;}
+    .progress__list {width:540px; color:#58595b;}
+    .progress__list li {list-style-type:decimal; margin:0 0 10px 50px; color:#ed1c24; font-weight:bold;}
+    .progress__list-text {color:#58595b; font-weight:normal;}
+    .plane__ttl {font-weight:bold; text-transform:uppercase; margin-bottom:22px; color:#0066b3;}
+    .plane__steps {width:418px; float:left; border-right:1px dotted #c8c8c9; margin-right:14px;}
+    .plane__steps dt {font-size:40px; font-weight:normal; line-height:40px; color:#0066b3;}
+    .plane__steps dd {margin-bottom:18px;}
+    .plane__text {width:208px; float:left;}
+    .plane__text-item {font-size:12px; margin-bottom:10px; display:block;}
+    .plane__text-item_large {font-size:24px; margin-bottom:10px; display:block;}
+    .table-progress {font-size:12px; color:#4f95ca; width:100%; margin-bottom:27px; border-bottom:1px solid #0066b3;}
+    .table-progress td {border-top:1px solid #4f95ca; padding:6px 0;}
+    .table-progress .first-col {width:223px; border-right:1px solid #4f95ca;}
+    .table-info {font-size:12px; color:#4f95ca; width:100%; border-bottom:1px solid #0066b3;}
+    .table-info td {border-top:1px solid #4f95ca; padding:6px 0;}
+    .table-info th {background:#0066b3; color:#fff; text-align:center;}
+    .table-info .first-col {width:38px; text-align:center; border-right:1px solid #4f95ca;}
+    .table-info__main {text-align:center; background:#c7eafb; font-weight:bold; }
+    .table-info .second-col {border-right:1px solid #4f95ca; width:255px;}
+    .table-info .third-col {border-right:1px solid #4f95ca; width:117px;}
+    .table-info .fourth-col {border-right:1px solid #4f95ca; width:117px;}
+    .table-info__top {background:#00aeef; height:18px; border-radius:8px; margin-bottom:-8px;}
+    .description {padding-top:53px;}
+    .description__ttl {font-size:19px; font-weight:bold; text-transform:uppercase; color:#0066b3;}
+    .description__ttl_indent {margin-bottom:14px;}
+    .description__img {position:relative; width:400px; margin:35px auto 57px;}
+    .description__img-txt {font-size:11px; position:absolute; width:105px;}
+    .description__img-txt_fst {top:12px; left:-111px;}
+    .description__img-txt_sec {top:98px; left:-111px;}
+    .description__img-txt_third {top:231px; left:-111px;}
+    .description__img-txt_fourth {top:-6px; right:-100px;}
+    .description__img-txt_five {top:80px; right:-100px;}
+    .description__img-txt_six {top:303px; right:-100px;}
+    .description p {margin-bottom:25px;}
+    .description__num {font-size:40px; line-height:40px; display:block; color:#0066b3;}
+    .description__right-txt {margin-left:225px; padding-top:20px;}
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <div class="line">
+        <div class="header_top">
+            <span class="header_top-name">Константинопольский Константин Константинович</span>
+            <span>Старший менеджер</span>
+        </div>
+        <img src="img/mb.png" width="100" />
+        <span class="header_page">2</span>
+    </div>
+    <div id="main">
+        <div class="description">
+            <p>Для работы над отчетом важно понимать, о чем говорит та или иная цифра. Для этого просто помните, что общая шкала состоит из четырех уровней:</p>
+            <span class="description__num">1</span>
+            <p>Вы либо не проявляете необходимого личностного качества, навыка, либо зачастую ведете себя таким образом, что это качество проявляется со знаком «-». Обратите внимание на эти оценки. Чаще всего они говорят о том, что другие не видят необходимого поведения, либо считают, что оно проявляется совершенно не так, как это нужно делать в Вашей Компании.</p>
+            <span class="description__num">2</span>
+            <p>Второй уровень владения компетенциями показывает, что необходимые качества Вы проявляете. Но это происходит не всегда. Чаще всего такая оценка показывает, что качества проявляются не в полном объеме (одна часть навыков проявляются, а другая нет; либо в знакомых ситуациях проявляются, а более непривычных или новых – нет). Именно поэтому этот уровень чаще всего называют уровнем развития.</p>
+            <span class="description__num">3</span>
+            <p>Эта оценка говорит о том, что необходимое качество проявляется в большинстве ситуаций, чаще всего этого достаточно для успешного решения поставленных задач. При этом отдельные навыки, возможно, требуют совершенствования. Тем не менее - это хороший результат, и чаще всего этот уровень является «целевым».</p>
+            <span class="description__num">4</span>
+            <p>Это высокая оценка. Она показывает, что Вы владеете необходимыми навыками в полном объеме, умеете проявлять нужные качества в нестандартных и сложных ситуациях. Возможно, иногда Вы делаете больше, чем от Вас ожидают. Такой уровень владения компетенцией часто называют «лидерским» - это значит, что Вы можете быть примером для других.</p>
+            <div class="description__right-txt">Так как Вас оценивало много людей, и в отчете даны усредненные результаты – оценки могут быть не только «целыми» (например, ровно «2»), но и с «запятой» (например, «3,2»).</div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer__text">Детальная информация по оценкам</div>
+        <div class="footer-right" style="float:right">
+            <div class="contain">
+                <img id="footer_img" src="img/log-ftr.png" width="203"/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

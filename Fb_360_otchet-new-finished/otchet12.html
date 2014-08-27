@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style type="text/css">
+    /*resets from YUI*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0; padding:0;}
+table {border-collapse:collapse; border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,th,var {font-style:normal; font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%; font-weight:normal;}
+q:before,q:after {content:'';}
+abbr,acronym { border:0;}
+
+    /* setup the page */
+@page { margin: 57px; background: #ffffff; }
+    /* setup the footer */
+@page { @bottom { content: flow(foot); } }
+#footer { flow: static(foot); }
+
+    /* some useful defaults */
+th, td, caption { padding: 4px 10px 4px 5px; }
+
+    /* useful utility */
+.clear { clear:both; }
+.g-left {float:left;}
+.g-right {float:right;}
+.line {overflow:visible;}
+
+.line:after {
+    font-size:0;
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+    /* layout */
+        #container { font-family: Calibri, Futura, Geneva, Tahoma; font-size: 13px; color: #a7a7a7; position: relative;  }
+
+            /* footer shenanigans! */
+        #footer {
+            display: block;
+            height:140px;
+        }
+            /* hack around the way prince handles the footer */
+        #footer .contain { display: inline-block; text-align:right; width:305px;}
+        #footer .footer-right {text-align:right;}
+            /* hack around the way prince handles the footer */
+       
+.footer__text {font-size:14px; font-weight:bold; float:left; margin-top:20px; color:#808285;}
+    /* end hack */
+
+    /* colors */
+.blue { color: #3479be;}
+.pink {color:#f06eaa;}
+.crimson {color:#ab218e;}
+.green {color:#50b848;}
+.light-blue {color:#00aeef;}
+.dark-blue {color:#0083ca;}
+.light-green {color:#b2d235;}
+.brown {color:#7a3236;}
+.aqua {color:#008c89;}
+.yellow {color:#fcaf17;}
+.orange {color:#f58220;}
+.red {color:#ed1c24;}
+.darkred {color:#d2232a;}
+
+    /* stylin */
+#header_img {margin-left:23px; width: 200px;}
+
+#main { position:relative; }
+#phase_details th { font-size: 0.8em; padding: 10px !important; border-style: solid !important; }
+
+#phase_details th, td {
+    border-width: 1px;
+    padding: 3px 5px;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: gray;
+    background-color: white;
+}
+
+#phase_details tr.first td { padding-top: 10px; padding-bottom: 10px; }
+
+#phase_details td.price { text-align: left; }
+#phase_details .price_container { float: left; min-width: 30%; }
+
+#phase_details thead .title { width: 20%; }
+#phase_details thead .description { width: 60%; }
+#phase_details thead .price { width: 20%; }
+#phase_details tr.last { border-bottom: 1px solid gray; }
+#total_price h2 { color: black; font-size: 0.6em; font-weight: bold; }
+#total_price .price { margin-left: 0.75em; }
+
+.main-list {font-size:19px; color:#0066b3;}
+.main-list p {font-size:14px; font-style:italic; color:#808285;}
+.main-list li {margin-bottom:11px;}
+.main__copyright {font-size:12px; text-align:left; margin-top:-19px; margin-left:9px; color:#bcbec0;}
+.main__date {font-size:16px; margin-left:40px; display:inline-block; color:#fff; position:relative; }
+.main__ttl {font-size:40px; line-height:43px; margin-bottom:50px; color:#fff;}
+.main__sub-ttl {font-size:32px; font-weight:bold; margin-bottom:9px; color:#0066b3;}
+.main__inner p {margin-bottom:16px; color:#58595b;}
+.main__block p {margin-bottom:42px;}
+#author_img {text-align:center; height:231px; width:205px; background:url("img/avatar-fon.png") 0 0 no-repeat; margin-bottom:12px; background-size: 100%; position:relative; z-index:100;}
+#author_img img {width:100%;}
+.grey-fon {position:absolute; top:0; right:-38px; height:308px; width:60%; background:#e6e7e8; border-radius:11px; z-index:1;}
+.blue-fon {position:absolute; top:77px; left:0; height:324px; width:100%; background:#0066b3; border-radius:11px; z-index:1;}
+.sidebar {width: 30%; float: left; margin-top: 62px; z-index:100; position:relative;}
+.main__info {width: 70%; float: left; margin-top: 57px; position:relative; z-index:100; }
+.page-ttl {font-size:30px; font-weight: bold; margin-bottom:25px; color:#808285; }
+.page-text {overflow:hidden; width:480px;}
+.page-list dd {float:left; width:415px; background:url("img/dot.png") 0 74% repeat-x; color:#0066b3; }
+.page-list dt {overflow:hidden; font-weight:normal; color:#0066b3; margin-bottom:7px;}
+.page-list__name {background:#fff; }
+.page-img {border-radius:11px; background:#e4e5e6; margin-left:63px; height:204px; width:181px;}
+.page-img img {width:100%;}
+.page-img_left {margin:0 45px 0 0;}
+.page-note {margin-bottom:54px; color:#0066b3;}
+.page-attention {font-size:19px; font-weight:bold; display:block; color:#0066b3;}
+.page-attention_indent {margin-bottom:11px;}
+.header_top {font-size:11px; display:inline-block; vertical-align:top; padding-right:20px; margin-bottom:61px; margin-right:3px;  border-right:1px solid #dfe0e0; height:30px; color:#0066b3;}
+.header_top-name {font-weight:bold; display:block; margin-top:4px;}
+.header_page {font-size:24px; color:#808285; float:right;}
+.main__text {padding-bottom:49px;}
+.main__text p {line-height:19px; margin-bottom:8px; color:#58595b;}
+.main__text_top {padding-top:39px;}
+.main__header {font-weight:bold; margin-bottom:14px; color:#0066b3; }
+.main__note {
+    font-size: 13px;
+color: #58595b;
+margin-bottom: 12px;
+}
+.report-list {}
+.report-list li {border-top:1px dotted #0066b3; padding:9px 0 27px;}
+.report-list__left {float:left; width:155px; color:#0066b3;}
+.report-list__info {float:right; width:480px; color:#58595b;}
+.report-list__info p {font-size:14px;}
+.report-list__info-pic {margin:20px 0 34px;}
+.report-list_graph {margin-bottom:14px;}
+.report-list_graph li {border-top:1px dotted #a1a2a5;}
+.report-list_graph .report-list__info {width:440px;}
+.features_orange {float:left; position:relative; height:251px; width:251px; margin:113px 0 0 -486px; }
+.features_orange .features__bg {width:100%; height:100%; position:absolute; left:0; top:0; border-radius:126px; background:url("img/bg-orange.png"); }
+.features_green {float:left; position:relative; height:290px; width:290px; margin-left: 259px;}
+.features_green .features__bg {width:100%; height:100%; position:absolute; left:0; top:0; border-radius:144px; background:url("img/bg-green.png"); z-index:2; }
+.features { text-align: center; position:relative; z-index:1;}
+.features__cnt {font-size:14px;  vertical-align:middle; color:#fff; z-index:3; position:relative;}
+.features__cnt strong {line-height:19px; font-weight:bold;}
+.features__cnt-inner {display:inline-block; text-align:left; width:159px;}
+.features__cnt-list {font-size:14px; position:relative; z-index:1; width:200px;}
+.features__cnt-list li {list-style-type:disc; list-style-position:inside; margin-bottom:1px}
+.features_orange .features__cnt {margin-top:75px;}
+.features_green .features__cnt {margin-top:65px;}
+.features-wrap {padding:7px 0 41px;}
+.table-block {position:relative;}
+.table-block .table-block__y {position:absolute; top:-8px; left:15px;}
+.table-block .table-block__x {position:absolute; bottom:-42px; left:53px;}
+.value-details {margin:46px auto 0; }
+.value-details td {border:1px dotted #a2a4a6; padding:30px; height:265px; width:265px; vertical-align:top;}
+.value-details__head {font-size:16px; line-height:19px; min-height:47px; color:#808285;}
+.value-details__list {font-size:12px; list-style-type:disc; list-style-position:inside;}
+.side-block {padding:9px;}
+.side-block__info {float:left; width:216px}
+.side-block__graph {float:left; margin-top:45px;}
+.side-block__ttl {font-size:19px; font-weight:bold; padding-top:2px; margin-bottom:15px; color:#0066b3; width:134px;}
+.side-block__ttl-small {font-size:14px; font-weight:bold; margin:0 0 21px 12px; color:#0066b3; width:134px; display:inline-block; vertical-align:top;}
+.side-block__list li {margin-bottom:4px;}
+.side-block__list-num {display:inline-block; vertical-align:middle; margin-right:5px;}
+.side-block__graph {position:relative;}
+.side-block__num {position:absolute;}
+.side-block__num-one {top:-8px; right:43px;}
+.side-block__num-two {top:27px; right:55px;}
+.side-block__num-three {top:58px; right:76px;}
+.result-ttl {font-size:16px; margin-bottom:25px; color:#00aeef; padding-top:4px; border-top:1px dotted #afb1b2;}
+.result-ttl_blue {color:#0066b3;}
+.result-ttl_green {color:#b2d235;}
+.result-top {margin-bottom:31px;}
+.result-top__img {float:left; width:427px; margin-right:24px;}
+.result-top__text {font-size:14px; color:#77787a; overflow:hidden;}
+.result-subttl {font-size:14px; font-weight:bold; display:block; margin-bottom:14px; color:#58595b; }
+.result-graph {margin: 0 -45px 23px 0}
+.result-graph__block {display:inline-block; vertical-align:middle; margin-right:40px; position:relative;}
+.result-graph .result-graph__block:first-child {margin:6px 5px 0 0 ;}
+.result-graph__head {font-size:11px; color:#58595b; display:block; margin:0 -40px 8px 0}
+.result-graph__stroke {font-size:8px; display:block; margin-bottom:6px;}
+.result-graph__block-num {font-size:8px; color:#58595b; position:absolute; bottom:-6px; left:-2px;}
+.result-graph__block-num_sec {left:73px;}
+.result-graph__block-num_third {left:149px;}
+.result-text {font-size:14px; line-height:16px; color:#58595b; border-top:1px dotted #afb1b2; padding-top:15px;}
+.task-ttl {
+    font-size: 15px;
+margin-bottom: 11px;
+color: #0066b3;
+font-weight: bold;
+}
+.task-block {font-size:16px; margin-bottom:41px;}
+.task-block__item {
+   display: inline-block;
+vertical-align: top;
+width: 239px;
+float: left;
+border: 1px solid #51b848;
+}
+.task-block__item__red{
+   border: 1px solid #f5ac1c;
+   margin-left: 20px; 
+}
+.task-block .task-block__item:first-child {}
+.task-block__item strong {
+    color: #fff;
+display: block;
+height: 40px;
+background-color: #51b848;
+font-size: 13px;
+text-align: center;
+padding-top: 10px;
+}
+.task-block__item__red strong{
+    background-color: #f5ac1c;
+}
+.task-block__list dt {font-style:italic; font-weight:normal; border-top: 1px dotted #a1a2a5; padding-top: 9px;}
+.task-block__list dd {
+color: #58595b;
+font-size: 13px;
+width: 229px;
+margin-left: 5px;
+border-bottom: 1px dotted #9d9fa2;
+padding-bottom: 5px;
+margin-top: 5px;
+}
+.task-block__list dd:last-child{
+    border:none !important;
+}
+.level__graph {margin:66px 0 66px 40px; height: 6px; width: 340px; background: url("img/level-line.png") 0 0 no-repeat; position: relative;}
+.level__left {position: absolute; left: -48px; top: 50%; margin-top: -11px;}
+.level__right {position: absolute; right: -48px; top: 50%; margin-top: -11px;}
+.level__left-line {position: absolute; left: 0; top: 50%; margin-top: -15px; height:30px; width:1px; background: url("img/report-line.png") 0 0 no-repeat;}
+.level__right-line {position: absolute; right: 0; top: 50%; margin-top: -15px; height:30px; width:1px; background: url("img/report-line.png") 0 0 no-repeat;}
+.level__mid-line {position: absolute; right: 50%; top: 50%; margin-top: -15px; height:30px; width:1px; background: url("img/report-line.png") 0 0 no-repeat;}
+.level__arrow {text-align:center; height:26px; width: 22px; margin-left:-12px; background: url("img/result-arr.png") 50% 50% no-repeat; position: absolute; bottom: 7px; left: 34%;}
+.level__arrow-bottom {background: url("img/result-arr-down.png") 50% 50% no-repeat; position: absolute; bottom: auto; top: 7px; left: 66%;}
+.level__arrow-in {position: relative;height:26px; width: 200px; margin-left: -80px; display: block;}
+.level__arrow-name {font-size:12px; position: absolute; bottom: 26px; left: 0;  width: 100%; margin-left: -5px;}
+.level__arrow-bottom .level__arrow-name {bottom: auto; top: 28px;}
+.level__percent {display: block;}
+/* setup the page */
+        @page {
+        size: A4 landscape;
+        prince-shrink-to-fit: auto;
+        margin:0;
+        padding:0;
+        }
+        .container {
+        page-break-after: always;
+        }
+
+/*21 CLASSES FOR GRAPHS*/
+        .graph_color1{
+            fill:#e29325;
+        }
+        .graph_color2{
+            fill:#ae8349;
+        }
+        .graph_color3{
+            fill:#c34528;
+        }
+        .graph_color4{
+            fill:#a01d23;
+        }
+        .graph_color5{
+            fill:#c48775;
+        }
+        .graph_color6{
+            fill:#402126;
+        }
+        .graph_color7{
+            fill:#885b89;
+        }
+        .graph_color8{
+            fill:#8f4054;
+        }
+        .graph_color9{
+            fill:#e44490;
+        }
+        .graph_color10{
+            fill:#194787;
+        }
+        .graph_color11{
+            fill:#2682ba;
+        }
+        .graph_color12{
+            fill:#202d54;
+        }
+        .graph_color13{
+            fill:#148698;
+        }
+        .graph_color14{
+            fill:#4b609a;
+        }
+        .graph_color15{
+            fill:#256d3c;
+        }
+        .graph_color16{
+            fill:#459c46;
+        }
+        .graph_color17{
+            fill:#7dc687;
+        }
+        .graph_color18{
+            fill:#b2ce37;
+        }
+        .graph_color19{
+            fill:#8e2e75;
+        }
+        .graph_color20{
+            fill:#694493;
+        }
+        .graph_color21{
+            fill:#33a3cc;
+        }
+        .graph_color22{
+            fill:#50b748;
+        }
+        .graph_color23{
+            fill:#0066b3;
+        }
+
+</style>
+</head>
+
+<body>
+<div id="container">
+    <div class="line">
+        <div class="header_top">
+            <span class="header_top-name">Выполнение рабочих задач</span>
+            <span>Старший менеджер</span>
+        </div>
+        <span class="header_page">17</span>
+    </div>
+    <div id="main">
+        <h2 class="page-ttl">Выполнение рабочих задач</h2>
+        <div class="main__note">Данный раздел помогает увидеть, какие реальные задачи Вам удается решать лучше, а какие требуют совершенствования. Более того, Вы можете ориентироваться на мнение вашего окружения при выборе приоритетов дальнейшего развития (что помогает, а что препятствует успешному выполнения поставленных задач).</div>
+        <h3 class="task-ttl">Задачи</h3>
+        <div class="task-block line">
+            <div class="task-block__item">
+                <strong>Лучше всего Вам удается решать
+                    следующие задачи:</strong>
+                <dl class="task-block__list">
+                    <dd>Разработка новых отчетов и информационных панелей. Разработка методик для анализа новой информации. Разработка концепций новых приложений и постановка задач на их внедрение другими людьми.
+                    </dd>
+                    <dd>Создание отчетов в системе отчетности</dd>
+                    <dd>анализ данных по качеству функционирования сети конкурентов
+                    </dd>
+                    <dd>Текущие задачи аналитического плана</dd>
+                    <dd>Сбор и анализ большого объема информации</dd>
+                </dl>
+            </div>
+            <div class="task-block__item task-block__item__red">
+                <strong>Задачи, выполнение которых требует
+                    совершенствования:</strong>
+                <dl class="task-block__list">
+                    <dd>Ведение проектов в качестве менеджера. Организация работы группы немотивированных коллег. Недостаточная автоматизация регулярных повторяющихся задач.</dd>
+                    <dd>Нет таких
+                    </dd>
+                    <dd>Умничка:)</dd>
+                    <dd>Развитие в смежных областях</dd>
+                    <dd>Управление проектной командой умение адаптировать решения в случае изменения ситуации</dd>
+                    <dd>Рад буду работать с этим человеком в одной команде</dd>
+                </dl>
+            </div>
+        </div>
+        
+    </div>
+    <div id="footer">
+    <span>Выполнение рабочих задач</span>
+        <div class="footer-right">
+            <div class="contain">
+                <img id="footer_img" src="img/log-ftr.png" width="203"/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
