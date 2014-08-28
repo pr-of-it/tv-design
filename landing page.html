@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
@@ -6,21 +8,38 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>tvkinoradio</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/jquery.jcarousel.css" />
-    <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
-    <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/tv_new/assets/main.css" />
+<link rel="stylesheet" type="text/css" href="/themes/tv_new/assets/css/landing.css" />
+<link rel="stylesheet" type="text/css" href="/themes/tv_new/assets/css/no-theme/jquery-ui-1.10.3.custom.css" />
+<link rel="stylesheet" type="text/css" href="/themes/tv_new/assets/css/jquery.jcarousel.css" />
+<link rel="stylesheet" type="text/css" href="/themes/tv_new/assets/css/jquery.bxslider.css" />
+<link rel="stylesheet" type="text/css" href="/themes/tv_new/assets/css/jquery.datepicker.css" />
+ <link rel="stylesheet" type="text/css" href="css/jquery.jcarousel.css" />
+ <link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.css" />
+ <link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+ <link rel="stylesheet" href="css/style.css" />
+ <link rel="stylesheet" href="css/jquery.bxslider.css" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/counters/google.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/counters/yandex.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/jcf.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/jcf.file.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/jcf.radio.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/jcf.checkbox.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/select2.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/placeholder.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/datepicker.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/themes/tv_new/assets/js/jquery.countdown.min.js"></script>
 
-    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jcf.js"></script>
-    <script src="js/jcf.file.js"></script>
-    <script src="js/select2.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script src="js/jcf.js"></script>
+<script src="js/jcf.file.js"></script>
+<script src="js/select2.js"></script>
     <script src="js/jquery.mCustomScrollbar.js"></script>
     <script src="js/jcf.radio.js"></script>
     <script src="js/jcf.checkbox.js"></script>
@@ -37,199 +56,529 @@
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
 
+<title>Выиграй грант на обучение в Московской школе нового кино</title>
+    <meta name="description" content="Конкурс от tvkinoradio.ru и Московской школы нового кино: смонтируй простое видео
+    и получи возможность бесплатно обучаться в Московской школе нового кино по курсу &laquo;Режиссер монтажа&raquo;">
+    <meta name="keywords" content="Режиссура монтажа, Московская школа нового кино, грант на обучение">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="shortcut icon" href="/assets/3e8109ff/images/design/favicon.ico" type="image/vnd.microsoft.icon"/>
+
+    <!--[if lt IE 9]><script src="/themes/tv_new/assets/js/html5shiv.js"></script><![endif]-->
 
     <script type="text/javascript">
-        // replace custom forms
-        jcf.lib.domReady(function(){
-            jcf.customForms.replaceAll();
-        });
+// replace custom forms
+jcf.lib.domReady(function(){
+    jcf.customForms.replaceAll();
+});
 
-        $(document).ready(function(){
-  $('.bxslider').bxSlider();
-  $('#slider2').bxSlider({
-    slideMargin: 0
-  });
+$(document).ready(function() {
+    $('.bxslider').bxSlider();
+    $('#slider2').bxSlider({
+        slideMargin: 0
+    });
+
+    window.noPopup = false;
+
+    $("#land_submit, #work_send_btn").click(function(e){
+        $("#land_form").show();
+        e.preventDefault();
+    });
+
+    $("#login_link").click(function(e){
+        $("#land_form").hide();
+        $("#login_popup").show();
+        e.preventDefault();
+    });
+
+    $('#registration_link').click(function(e){
+        $("#login_popup").hide();
+        $("#land_form").show();
+        e.preventDefault();
+    });
+
+
+    $("#land_full_inf").click(function(e){
+        $("#land_agree").show();
+        e.preventDefault();
+    });
+
+    $("#land_agree_link").click(function(e){
+        $("#land_form").hide();
+        $("#land_agree").show();
+
+        e.preventDefault();
+    });
+
+    $("#registration_agree_link").click(function(e){
+        $("#land_form").hide();
+
+        $('#agreementPopup-body').html($('#agreement_text').html());
+        $('#agreementPopup').show();
+        $(".scroll-area").mCustomScrollbar();
+
+        e.preventDefault();
+    });
+
+    $('.jsClosePopup').click(function(e){
+        $('.jsOpenPopup').hide();
+
+        e.preventDefault();
+    });
+
+    $('#agreementPopup .jsClosePopup, #land_agree .jsClosePopup').click(function(e){
+        if (! window.noPopup) $("#land_form").show();
+
+        window.noPopup = false;
+
+        e.preventDefault();
+    });
+
+    if ($('.error').length) {
+        $('.error').closest('.jsOpenPopup').show();
+    }
+
+
+    $("#condition_link").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".competition").offset().top
+        }, 750);
+    });
 });
     </script>
-    
 </head>
 
 <body>
 
-<!-- POPUPS -->
-    <script>
-        $(document).ready(function(){
-            $("#land_work_sent").hide();
-            $("#land_signin").hide();
-            $("#land_register").hide();
-            $("#land_work_send").hide();
-            $("#land_agree").hide();
-        });
-    </script>
-<div class="popup popup_inner jsOpenPopup" id="land_work_sent">
-            <div class="popup__data land__pop__work">
-                
-                    <h2 class="cnt__sub-ttl land__pop__work__title" >Работа успешно отправлена</h2>
-                    <span id="border__line"></span>
-                    <h2 class="cnt__sub-ttl" id="cover__let__ttl"></h2>
-                    <p>Твоя конкурсная работа успешно передана на оценку экспертному жюри конкурса.</p>
-               
-                <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
-            </div>
-        <div class="popup__bg"></div>
-    </div>
-    <div class="popup popup_inner jsOpenPopup" id="land_work_send">
-    <div class="popup__data land__pop__work2">
-            <div class="reg-form__top line land__pop__top">
-            <h3 class="reg-form__ttl">Отправка конкурсной работы</h3>
-            
-        </div>
-            <form id="cover__let__form" class=" parent-active">
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label" for="Profile_first_name">Имя</label>           
-                     <div class="input-i input-i_middle  ">
-                        <input size="60" class="input input_small" maxlength="255" name=""type="text">      
-                     </div>
-                </div>
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label" for="UserLogin_email">E-mail</label>         
-                    <div class="input-i input-i_middle  ">
-                        <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">  </div>
-                </div>
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label" for="UserLogin_email">Ссылка на ваше конкурсное видео на tvkinoradio.ru</label>          
-                    <div class="input-i input-i_middle  ">
-                        <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">  </div>
-                </div>
-                <div class="reg-form__text land__pop__text">
-                    <a class="b-link">
-                    <span class="b-link__inner">Отправляя заявку на участие, вы соглашаетесь с <br/> <a id="land_agree_link" style="color: #1abc9c;">полными условиями конкурса</a></span>
-                </a>
+<!-- BEGIN OF POPUPS -->
 
-            </div>
-                <div class="reg-form__bottom land__pop__bottom">
-                  <a class="btn btn_green" href="#"><span class="btn__inner">Отправить отклик</span></a>
-                </div>
-        </form>
-        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
-    </div>
-    <div class="popup__bg"></div>
+<!-- flash -->
+
+
+<!-- registration or sending popup -->
+<div class="popup popup_inner jsOpenPopup" id="land_form" style="display: none">
+    <div class="popup__data land__pop__work2">
+                <div class="reg-form__top line land__pop__top ">
+    <h3 class="reg-form__ttl land__pop__ttl">Регистрация</h3>
+    <a class="b-link b-link_top" href="#" id="login_link"><span class="b-link__inner">Вход</span></a>
 </div>
-           <!-- reg -->
-  <div class="popup popup_inner jsOpenPopup" id="land_register">
-    <div class="popup__data land__pop__work2">
-            <div class="reg-form__top line land__pop__top ">
-            <h3 class="reg-form__ttl land__pop__ttl">Регистрация</h3>
-            <a class="b-link b-link_top" href="/login"><span class="b-link__inner">Вход</span></a>
-        </div>
-            <form id="cover__let__form" class=" parent-active">
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label" for="Profile_first_name">Имя</label>           
-                     <div class="input-i input-i_middle  ">
-                        <input size="60" class="input input_small" maxlength="255" name=""type="text">      
-                     </div>
-                </div>
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label" for="Profile_first_name">Фамилия</label>           
-                     <div class="input-i input-i_middle  ">
-                        <input size="60" class="input input_small" maxlength="255" name=""type="text">      
-                     </div>
-                </div>
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label" for="UserLogin_email">E-mail</label>         
-                    <div class="input-i input-i_middle  ">
-                        <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">  </div>
-                </div>
-                <div class="reg-form__row land__pop__row">
-                     <label class="b-label " for="RegistrationForm_password">Пароль </label>    <div class="input-i input-i_middle  ">
-                     <input class="input input_small" name="RegistrationForm[password]" id="RegistrationForm_password" type="password" maxlength="128"></div>
-                </div>
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label " for="RegistrationForm_verifyPassword">Подтверждение пароля </label> 
-                        <div class="input-i input-i_middle  ">
-                            <input class="input input_small" name="RegistrationForm[verifyPassword]" id="RegistrationForm_verifyPassword" type="password" maxlength="128">                            
-                        </div>
-                </div>
-                <div class="reg-form__row land__pop__row">
-                   <div class="reg-form__text">Регистрируясь, вы подтверждаете свое согласие с условиями  <a class="b-link" href="#" id="yii-user-terms-of-service-link">
-                    <span class="b-link__inner">Пользовательского соглашения</span>
-                </a>
-            </div>
-        </div>
 
-        <div class="reg-form__row land__pop__row">
-            <input class="btn btn_green" type="submit" name="yt0" value="Зарегистрироваться"> 
+<form id="cover__let__form" class=" parent-active" action="/signup" method="post" target="_blank">
+    <div class="reg-form__row land__pop__row">
+        <label class="b-label" for="Profile_first_name">
+            Имя
+            <span class="required">*</span>
+        </label>
+        <div class="input-i input-i_middle  ">
+            <input size="60" class="input input_small" maxlength="255" name="Profile[first_name]" type="text">
         </div>
-        <div class="reg-form__bottom land__pop__bottom2">
-            
-            <div class="auth-service facebook">
-            <a class="btn btn_dark-blue auth-link facebook" href="/login/service/facebook"><i class="ico ico_fb-white"></i>Войти через Facebook</a>    </div>
-         </div>
-
-        </form>
-    
-        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
     </div>
-    <div class="popup__bg"></div>
-</div>
-<!-- signin -->
-<div class="popup popup_inner jsOpenPopup" id="land_signin">
-    <div class="popup__data land__pop__work2">
+
+    <div class="reg-form__row land__pop__row">
+        <label class="b-label" for="Profile_first_name">
+            Фамилия
+            <span class="required">*</span>
+        </label>
+        <div class="input-i input-i_middle  ">
+            <input size="60" class="input input_small" maxlength="255" name="Profile[last_name]" type="text">
+        </div>
+    </div>
+
+    <div class="reg-form__row land__pop__row">
+        <label class="b-label" for="UserLogin_email">
+            E-mail
+            <span class="required">*</span>
+        </label>
+        <div class="input-i input-i_middle">
+            <input maxlength="254" class="input input_small" tabindex="1" name="RegistrationForm[email]"  type="text">
+        </div>
+    </div>
+
+    <div class="reg-form__row land__pop__row">
+        <label class="b-label " for="RegistrationForm_password">
+            Пароль
+            <span class="required">*</span>
+        </label>
+        <div class="input-i input-i_middle">
+            <input class="input input_small" name="RegistrationForm[password]" id="RegistrationForm_password" type="password" maxlength="128">
+        </div>
+    </div>
+
+    <div class="reg-form__row land__pop__row">
+        <label class="b-label " for="RegistrationForm_verifyPassword">
+            Подтверждение пароля
+            <span class="required">*</span>
+        </label>
+        <div class="input-i input-i_middle  ">
+            <input class="input input_small" name="RegistrationForm[verifyPassword]" id="RegistrationForm_verifyPassword" type="password" maxlength="128">
+        </div>
+    </div>
+
+    <div class="reg-form__row land__pop__row">
+       <div class="reg-form__text">Регистрируясь, вы подтверждаете свое согласие с условиями
+           <a class="b-link" href="#" id="registration_agree_link">
+                <span class="b-link__inner">Пользовательского соглашения</span>
+           </a>
+       </div>
+    </div>
+
+    <div class="reg-form__row land__pop__row">
+        <input class="btn btn_green" type="submit" name="yt0" value="Зарегистрироваться">
+    </div>
+    <div class="reg-form__bottom land__pop__bottom">
+        <div class="auth-service facebook">
+        <a class="btn btn_dark-blue auth-link facebook" href="/login/service/facebook"><i class="ico ico_fb-white"></i>Войти через Facebook</a>    </div>
+     </div>
+</form>
         
-            <div class="reg-form__top line land__pop__top ">
+        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
+    </div>
+    <div class="popup__bg"></div>
+</div>
+
+<div class="popup popup_inner jsOpenPopup" id="login_popup" style="display: none">
+    <div class="popup__data land__pop__work2">
+        <div class="reg-form__top line land__pop__top ">
             <h3 class="reg-form__ttl land__pop__ttl">Вход</h3>
-            <a class="b-link b-link_top" href="/login"><span class="b-link__inner">Регистрация</span></a>
+            <a class="b-link b-link_top" href="#" id="registration_link"><span class="b-link__inner">Регистрация</span></a>
+        </div>
+
+        <form id="cover__let__form" class=" parent-active" method="post" action="/login">
+            <div class="reg-form__row land__pop__row">
+                <label class="b-label" for="UserLogin_email">E-mail</label>
+                <div class="input-i input-i_middle  ">
+                    <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">
+                </div>
             </div>
-            <form id="cover__let__form" class=" parent-active">
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label" for="UserLogin_email">E-mail</label>         
-                    <div class="input-i input-i_middle  ">
-                        <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">  </div>
+            <div class="reg-form__row land__pop__row">
+                <label class="b-label" for="UserLogin_password">Пароль</label>
+                <a class="b-link" href="/recovery"><span class="b-link__inner">Забыли пароль?</span></a>
+                <div class="input-i input-i_middle  ">
+                     <input maxlength="254" class="input input_small" tabindex="2" name="UserLogin[password]" type="password">
                 </div>
-                <div class="reg-form__row land__pop__row">
-                    <label class="b-label" for="UserLogin_password">Пароль</label>        
-                    <a class="b-link" href="/recovery"><span class="b-link__inner">Забыли пароль?</span></a>
-                    <div class="input-i input-i_middle  ">
-                         <input maxlength="254" class="input input_small" tabindex="2" name="UserLogin[password]" type="password">        
-                    </div>
+            </div>
+            <div class="reg-form__row">
+                <input id="ytUserLogin_rememberMe" type="hidden" value="0" name="UserLogin[rememberMe]">
+                <input name="UserLogin[rememberMe]" id="UserLogin_rememberMe" value="1" type="checkbox" class="jcf-hidden">        <label for="UserLogin_rememberMe" class="b-label b-label_check">Запомнить меня</label>
+            </div>
+
+            <div class="reg-form__row">
+                <input id="submit_link" class="btn btn_green submit" tabindex="3" type="submit" name="yt0" value="Войти">
+            </div>
+
+            <div class="reg-form__bottom land__pop__bottom2">
+                <div class="auth-service facebook">
+                    <a class="btn btn_dark-blue auth-link facebook" href="/login/service/facebook"><i class="ico ico_fb-white"></i>Войти через Facebook</a>
                 </div>
-                 <div class="reg-form__row">
-        <input id="ytUserLogin_rememberMe" type="hidden" value="0" name="UserLogin[rememberMe]"><input name="UserLogin[rememberMe]" id="UserLogin_rememberMe" value="1" type="checkbox" class="jcf-hidden">        <label for="UserLogin_rememberMe" class="b-label b-label_check">Запомнить меня</label>
+            </div>
+        </form>
+
+        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
     </div>
-                <div class="reg-form__row">
-                    <input id="submit_link" class="btn btn_green submit" tabindex="3" type="submit" name="yt0" value="Войти">   
-                </div>
 
-                <div class="reg-form__bottom land__pop__bottom2">
-                
-                    <div class="auth-service facebook">
-                        <a class="btn btn_dark-blue auth-link facebook" href="/login/service/facebook"><i class="ico ico_fb-white"></i>Войти через Facebook</a>    </div>
-                </div>
+    <div class="popup__bg"></div>
+</div>
+<!-- landing agreement -->
+<div class="popup popup_inner jsOpenPopup" id="land_agree" style="display: none">
+    <div class="popup__data land__pop__work3">
+        <div class="reg-form__top line land__pop__top3">
+            <h3 class="reg-form__ttl">Полные условия конкурса</h3>
 
-            </form>
-        
+            <div class="scroll">
+            <p>УСЛОВИЕМ УЧАСТИЯ И ПОБЕДЫ НЕ ЯВЛЯЕТСЯ ПОКУПКА КАКОГО-ЛИБО ТОВАРА ИЛИ УСЛУГИ.</p>
+<p>ПОДАЧА ЗАЯВКИ НА УЧАСТИЕ В КОНКУРСЕ ОЗНАЧАЕТ ВАШЕ ПРИНЯТИЕ НАСТОЯЩИХ УСЛОВИЙ ПРОВЕДЕНИЯ КОНКУРСА.</p>
+<p>
+    Конкурс «Грант от Московской Школы Нового Кино» (далее – <strong>«Конкурс»</strong>) – это творческий конкурс,
+    участники которого создают свою собственную версию смонтированного материала из предложенных работ студентов
+    Московской Школы Нового Кино. Судьи выберут победителей среди участников, руководствуясь критериями оценки,
+    установленными настоящими Правилами проведения Конкурса (далее –<strong>«Правила»</strong>). Участнику, чей готовый
+    материал получит наивысшую оценку судей, будет вручен приз, указанный в Правилах. Более подробная информация
+    изложена ниже.
+</p>
+
+
+<h3>1. ОБЯЗАТЕЛЬНОЕ СОГЛАШЕНИЕ:</h3>
+<p>
+    Чтобы стать участником Конкурса, вам необходимо принять его Правила. Поэтому просим вас прочитать настоящие Правила
+    перед тем, как зарегистрироваться в качестве участника, чтобы убедиться, что вы их поняли и принимаете. Вы согласны
+    с тем, что, регистрируясь в качестве участника Конкурса, вы тем самым даете свое согласие на настоящие Правила.
+    Если вы не согласны с настоящими Правилами, вы не должны регистрироваться для участия в Конкурсе. Настоящие Правила
+    составляют юридически обязывающее соглашение между вами и компанией Московская Школа Нового Кино в отношении
+    Конкурса.
+</p>
+<p>
+    В Конкурсе «Грант от Московской Школы Нового Кино» могут принять участие все без исключения люди, чей возраст достиг
+    18 лет и не превысил 35 лет.
+</p>
+<h3>2. ТРЕБОВАНИЯ К УЧАСТНИКАМ:</h3>
+<p>
+    Работники, студенты и должностные лица компании МШНК не имеют права участвовать в данном Конкурсе.
+</p>
+
+
+<h3>3. ОРГАНИЗАТОР И ПАРТНЕРЫ:</h3>
+<p>
+    Организатором Конкурса является ОАНО «МШНК» (ОГРН 1127799008116, адрес местонахождения: 121099, Москва, Проточный
+    переулок д. 14/1, стр. 1 этаж 1 помещение 1, комната 1).
+</p>
+<p>
+    Партнером Конкурса (далее – <strong>«Партнер»</strong>) является ООО "Айтикреативофф" (ОГРН 1127746419580, адрес
+    местонахождения: 127549, г. Москва, ул. Бибиревская, д.2, корп,1)
+</p>
+
+
+<h3>4. ПЕРИОД ПРОВЕДЕНИЯ КОНКУРСА:</h3>
+<p>
+    Конкурс проводится с 26 августа 2014 г. по 26 сентября 2014 г. и включает следующие периоды:
+</p>
+<p>
+    Период приема заявок на участие в Конкурсе: с 26 августа 2014 г. до 23:59 21 сентября 2014г.
+</p>
+<p>Определение победителя – 21 – 24 сентября 2014г.</p>
+<p>Объявление победителя – 25 сентября 2014г.</p>
+<p>Вручение приза – 26 сентября 2014г. Все даты могут быть изменены решением Организатора Конкурса.
+</p>
+
+
+<h3>5. ПРОЦЕДУРА РЕГИСТРАЦИИ:</h3>
+<p>
+    Чтобы зарегистрироваться для участия в Конкурсе, зарегистрируйтесь на сайте tvkinoradio.ru (далее –
+    <strong>«Сайт»</strong>) в течение периода приема заявок на участие в Конкурсе и скачайте конкурсный видеоматериал.
+    Готовый конкурсный материал должен соответствовать изложенным ниже Требованиям к материалу. Для участия в Конкурсе
+    нужно загрузить готовый видеоматериал в свой профиль на Сайте и отправить его через форму обратной связи.
+</p>
+<p>
+    ОДИН УЧАСТНИК МОЖЕТ ПОДАТЬ НЕ БОЛЕЕ ОДНОЙ ЗАЯВКИ. Время отправки определяется по дате отправки в форме обратной
+    связи. Для рассмотрения на Конкурсе, заявки должны быть получены не позднее
+    <strong>23:59 по московскому времени 21 сентября 2014г.</strong> В случае представления заявки, не удовлетворяющей
+    вышеупомянутым критериям, Участник будет дисквалифицирован. Ни МШНК, ни Партнер не принимают на себя
+    ответственность в случае потери, задержки, повреждения, искажения или неправильного размещения заявки,
+    независимо от того, чем это было вызвано. Доказательство отправки формы обратной связи не является
+    доказательством регистрации.
+</p>
+
+
+<h3>6. ТРЕБОВАНИЯ К КОНКУРСНОМУ МАТЕРИАЛУ − ВИДЕОРОЛИКУ:</h3>
+<p>
+    Видеоролик должен удовлетворять следующим критериям:
+</p>
+<p>
+    (a) Видеоролик должен содержать <strong>только тот контент</strong>, который предоставлен Организатором
+    (допускается полное или выборочное использование предоставленного видеоматериала),
+</p>
+<p>
+    (б) Хронометраж конкурсного Видеоролика не должен превышать 10 минут.
+</p>
+
+
+<h3>7. ОЦЕНОЧНАЯ СИСТЕМА:</h3>
+<p>
+    Каждый Видеоролик будет оцениваться по техническим характеристикам и художественным достоинствам экспертным жюри.
+</p>
+
+
+<h3>8. ПРИЗЫ:</h3>
+<p>
+    Победитель в качестве приза получит возможность обучения в Московской Школе Нового Кино на грантовой основе. Грант распространяется на факультет «Режиссуры Монтажа».
+</p>
+
+
+<h3>9. НАЛОГИ:</h3>
+<p>
+    Грант не подлежит налогообложению.
+</p>
+
+
+<h3>10. ДИСКВАЛИФИКАЦИЯ:</h3>
+<p>
+    Помимо иных случаев дисквалификации, установленных настоящими Правилами, МШНК оставляет за собой право отстранить
+    Участника от Конкурса, если МШНК по своему исключительному усмотрению обоснованно полагает, что Участник пытался
+    негативно повлиять на проведение Конкурса путем мошенничества, обмана, иных недобросовестных действий, или досаждая,
+    адресуя оскорбления или угрозы, или причиняя беспокойство другим участникам, МШНК или судьям.
+</p>
+
+
+<h3>11. ПРАВА НА ОБЪЕКТЫ ИНТЕЛЛЕКТУАЛЬНОЙ СОБСТВЕННОСТИ:</h3>
+<p>
+    Стороны соглашаются с тем, что исключительные права на конкурсный материал — Видеоролики — принадлежат МШНК
+    в полном объеме без ограничения по территории использования на весь срок действия исключительного права.
+    МШНК вправе распоряжаться ими всеми существующими или могущими возникнуть в будущем способами, включая, но, не
+    ограничиваясь способами, предусмотренными ст.1270 ГК РФ, включая использования без указания имени участника
+    Конкурса (анонимно), право вносить любые изменения, сокращения, дополнения, комментарии, осуществлять любыми
+    способами редактирование, перемонтаж, наложение другого графического и музыкального оформления и т.п. (никакие
+    изменения, сокращения или дополнения не могут рассматриваться как нарушение прав участников Конкурса на
+    неприкосновенность созданных им объектов интеллектуальной собственности)
+</p>
+<p>
+    Присланные на Конкурс заявки не возвращаются.
+</p>
+
+
+<h3>12. СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ ПЕРСОНАЛЬНЫХ ДАННЫХ:</h3>
+<p>
+    Участники Конкурса соглашаются с тем, что персональные данные, представленные вместе с заявкой, включая имя и
+    фамилию, почтовый адрес, телефонный номер и адрес электронной почты, собираются, записываются, систематизируются,
+    хранятся, уточняются, передаются и используются иным образом Организатором и Партнером. Регистрируясь на Конкурсе,
+    Участники соглашаются на обработку своих персональных данных Организатором и Партнером всеми способами, включая
+    вышеперечисленные.
+</p>
+<p>
+    В случае непредставления Участником данных, требуемых при регистрации, такому Участнику может быть отказано в
+    регистрации. Организатор не несет ответственности за неисполнение обязанностей, связанных с проведением Конкурса,
+    если такое неисполнение произошло вследствие уничтожения персональных данных Участника в результате их отзыва
+    Участником. В случае отзыва персональных данных, указываемых в заявке или иным образом необходимых для проведения
+    Конкурса, Участник может быть дисквалифицирован.
+</p>
+
+
+<h3>13. РЕКЛАМА:</h3>
+<p>
+    Факт участия в Конкурсе подразумевает, что Участники выражают свое безусловное согласие с тем, что их имена,
+    фамилии и фото- и видеоматериалы с их изображением, связанные с участием в Конкурсе, а также интервью и иные
+    материалы о них могут быть использованы Организатором и/или Партнером в рекламных и/или иных коммерческих целях
+    как на территории Российской Федерации, так и за ее пределами в течение неограниченного срока и без выплаты
+    каких-либо вознаграждений.
+</p>
+<p>
+    Участники принимают на себя обязательство принимать участие в фото- и видеосъемках, интервью, прочих
+    мероприятиях, проводимых в указанных целях Организатором и/или Партнером или третьими лицами по их поручению.
+</p>
+
+
+<h3>14. ОТСТРАНЕНИЕ ОТ УЧАСТИЯ В КОНКУРСЕ:</h3>
+<p>
+    Любая ложная информация, предоставленная Участником в рамках Конкурса в отношении его или ее личности,
+    почтового адреса, телефонного номера, адреса электронной почты, обладания каким-либо правом или несоблюдение
+    настоящих Правил, или аналогичное событие, может повлечь за собой немедленное отстранение Участника от участия в
+    Конкурсе.
+</p>
+
+
+<h3>15. ИНТЕРНЕТ И ОТКАЗ ОТ ПРАВ:</h3>
+<p>
+    МШНК не несет ответственность за неправильную работу Сайта конкурса или за задержку, потерю, повреждение,
+    неправильное направление, неполноту, неудобочитаемость, невозможность доставки или уничтожение Видеороликов,
+    вследствие системных ошибок, сбоев, дефектов или порчи компьютера, или неправильной работы системы дистанционной
+    передачи данных, или сбоев в аппаратном или программном обеспечении любого рода, потери или недоступности сетевых
+    подключений, типографских или системных ошибок и сбоев, технических отказов телефонных сетей или линий, кабельных
+    соединений, спутниковой связи, серверов или провайдеров, или компьютерного оборудования, перегрузок в сети Интернет
+    или на Сайте конкурса, или любого сочетания вышеназванных событий, включая иные телекоммуникационные, кабельные,
+    цифровые или спутниковые отказы, в силу которых Участник/пользователь не сможет принять участие/проголосовать,
+    соответственно.
+</p>
+
+
+<h3>17. ПРАВО ОТМЕНЫ, ИЗМЕНЕНИЯ УСЛОВИЙ ИЛИ ДИСКВАЛИФИКАЦИИ:</h3>
+<p>
+    Если, по какой-либо причине, Конкурс не может быть проведен согласно графику, в том числе, вследствие заражения
+    компьютерным вирусом, серьезных аппаратных или программных ошибок, злонамеренного изменения программных средств и
+    документов, несанкционированного вмешательства, мошенничества, технических неисправностей или любых других причин,
+    вследствие которых повреждается или нарушается администрирование, безопасность, равнодоступность, целостность или
+    правильность проведения Конкурса, МШНК оставляет за собой право, по своему исключительному усмотрению, отменить,
+    завершить, внести изменения в сроки проведения или приостановить Конкурс.
+</p>
+
+
+<h3>18. ОБЩИЕ ПОЛОЖЕНИЯ:</h3>
+<p>
+    Настоящие Правила размещаются в сети Интернет на Сайте в течение срока проведения Конкурса. В случае
+    изменения условий Конкурса Организатор размещает уточнения, изменения и дополнения к Правилам на Сайте. Все спорные
+    вопросы относительно настоящего Конкурса и Правил регулируются на основе действующего законодательства Российской
+    Федерации.
+</p>            </div>
+        </div>
         <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
     </div>
     <div class="popup__bg"></div>
 </div>
-<!-- full -->
-        <div class="popup popup_inner jsOpenPopup" id="land_agree">
-            <div class="popup__data land__pop__work3">
-                
-                    <div class="reg-form__top line land__pop__top3">
-                    <h3 class="reg-form__ttl">Пользовательские соглашения</h3>
-                    <p> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-               
+
+<!-- user agreement -->
+<div class="popup popup_agreement jsOpenPopup" id="agreementPopup" style="display:none;">
+    <div class="popup__data">
+        <div class="popup__box" id="agreementPopup-body">
+        </div>
+        <a class="ico ico_close jsClosePopup" href="#"></a>
+    </div>
+    <div class="popup__bg"></div>
+</div>
+
+<div class="" id="agreement_text" style="display:none;">
+    <div class="reg-form__top line">
+        <h3 class="reg-form__ttl">Пользовательское соглашение</h3>
+    </div>
+
+    <div class="scroll-area" >
+        <div class="agreement">
+            <!-- Text -->
             
+        <p>1. Общие положения</p>
+        <p>1.1. Настоящее пользовательское соглашение (далее - «Соглашение») регламентирует отношения между администрацией сайта <a href="http://tvkinoradio.ru">http://tvkinoradio.ru</a> (далее - «Сайт») и физическим лицом (далее - Пользователь). Администрация Сайта - группа лиц, уполномоченная на управление Сайтом и взаимодействие с Пользователями. Материалы пользователя &nbsp;- видео, аудио, фото и иной контент, размещаемый на Сайте. Соглашение вступает в силу с момента, когда Пользователь принимает его условия в полном объеме. Пользователь считается принявшим условия Соглашения в полном объеме, без всяких оговорок и исключений с момента, когда начинает использовать какой-либо сервис или его отдельные функции, либо пройдя процедуру регистрации. В случае несогласия Пользователя с какими-либо из положений Соглашения, Пользователь не в праве использовать сервисы Сайта. Пользователь обязан полностью ознакомиться с настоящими Правилами до момента регистрации на Сайте. Регистрация Пользователя на Сайте означает полное и безоговорочное принятие Пользователем настоящих Правил в соответствии со ст. 438 Гражданского кодекса Российской Федерации.</p>
+        <p>1.2. Использование Сайта регулируется настоящим Соглашением. Соглашение может быть изменено Администрацией сайта без какого-либо специального уведомления, новая редакция Соглашения вступает в силу с момента ее размещения в сети Интернет по указанному в настоящем абзаце адресу, если иное не предусмотрено новой редакцией Соглашения. Действующая редакция Пользовательского соглашения &nbsp;всегда находится на странице по адресу&nbsp;<a href="http://tvkinoradio.ru/agreement">http://tvkinoradio.ru/agreement</a></p>
+        <p>1.3. Начиная использовать какой-либо сервис Сайта, или его отдельные функции, либо пройдя процедуру регистрации, Пользователь считается принявшим условия Соглашения в полном объеме, без всяких оговорок и исключений. В случае несогласия Пользователя с какими-либо из положений Соглашения, Пользователь не в праве использовать сервисы Сайта. В случае, если Администрацией сайта были внесены какие-либо изменения в Соглашение в порядке, предусмотренном пунктом 1.2 Соглашения, с которыми Пользователь не согласен, он обязан прекратить использование сервисов Сайта.</p>
+        <p>1.4. Пользователь подтверждает &nbsp;и согласен с тем, что Администрация Сайта в любой момент может прекратить предоставление услуг.</p>
+        <p>1.5. Регистрация Пользователя осуществляется путем заполнения соответствующей регистрационной формы.</p>
+        <p>1.6. Пользователь не вправе пользоваться Сайтом и не вправе подтверждать свое согласие с данными условиями, если не достиг возраста, с которого может заключать юридически обязывающий договор.</p>
+        <p>1.7. Принимая данное Соглашение, Пользователь подтверждает, что вся указанная при регистрации информация является достоверной.</p>
+        <p>1.8. В случае предоставления Пользователем недостоверной, неполной или неточной информации, Администрация Сайта имеет право приостановить либо отменить регистрацию и/или отказать Пользователю в использовании Сайта. За предоставление недостоверной, неполной или неточной информации и возникшие вследствие этого негативные последствия несет ответственность Пользователь. Пользователь несет ответственность за достоверность, актуальность, полноту и соответствие законодательству Российской Федерации предоставленной при регистрации информации и ее чистоту от претензий третьих лиц.</p>
+        <p>1.9. Принимая данное Соглашение, Пользователь соглашается с тем, что Сайт не дает каких-либо гарантий или заверений. Сайт не гарантирует, что:</p>
+        <ul>
+            <li>Функционал Сайта будет соответствовать потребностям Пользователя;</li>
+            <li>Работа Сайта будет бесперебойной, своевременной, безопасной и не будет содержать ошибок;</li>
+            <li>Любая информация, полученная Пользователем в результате использования Сайта, будет точной или достоверной.</li>
+        </ul>
+        <p>1.10. Принимая данное Соглашение, Пользователь подтверждает использование сервисов Сайта на свой страх и риск и под свою ответственность. В случае, если работа сервиса вызовет потерю данных или другие ошибки на компьютере Пользователя или компьютерах сети Пользователя, Пользователь обязуется не предъявлять претензий Администрации Сайта и не возлагать на нее ответственность за случившееся.</p>
+        <p>1.11. При регистрации Пользователь самостоятельно выбирает себе логин и пароль для доступа к учетной записи. Пользователь самостоятельно несет ответственность за безопасность выбранного им пароля, а также самостоятельно обеспечивает конфиденциальность своего пароля. Пользователь самостоятельно несет ответственность за все действия (а также их последствия) в рамках или с использованием Сайта под учетной записью Пользователя, включая случаи добровольной передачи Пользователем данных для доступа к учетной записи Пользователя третьим лицам на любых условиях (в том числе по договорам или соглашениям). При этом все действия в рамках или с использованием сервисов Сайта под учетной записью Пользователя считаются произведенными самим Пользователем.</p>
+        <p>2. Конфиденциальность</p>
+        <p>2.1. Принимая данное Соглашение, Пользователь обязуется не раскрывать конфиденциальную информацию Сайта без предварительного разрешающего письма от Администрации Сайта. Конфиденциальная информация Сайта включает в себя: программное обеспечение Сайта, технические спецификации, документацию, финансовую информацию. Данное правило не распространяется на информацию, публично размещенную на внешних страницах Сайта, а также законно полученную Пользователем от третьего лица без нарушения конфиденциальности третьим лицом.</p>
+        <p>2.2. Принимая данное Соглашение, Пользователь признает, что Сайт не несет ответственность за утечку информации, произведенную любым третьим лицом.</p>
+        <p>2.3. Никакие положения настоящих Правил не предоставляют Пользователю право на использование фирменного наименования, товарных знаков, доменных имен и иных отличительных знаков Администрации Сайта. Право на использование фирменного наименования, товарных знаков, доменных имен и иных отличительных знаков Администрации Сайта может быть предоставлено исключительно по письменному соглашению с Администрацией Сайта.</p>
+        <p>2.4. Обработка персональных данных Пользователя осуществляется в соответствии с законодательством Российской Федерации. Администрация Сайта обрабатывает персональные данные Пользователя в целях предоставления Пользователю услуг, проверки, исследования и анализа таких данных, позволяющих поддерживать и улучшать сервисы и разделы Сайта, а также разрабатывать новые сервисы и разделы Сайта. Администрация предоставляет доступ к персональным данным Пользователя только тем работникам, подрядчикам и агентам Администрации, которым эта информация необходима для обеспечения функционирования Сайта и предоставления Услуг Пользователю. Администрация Сайта вправе использовать предоставленную Пользователем информацию, в том числе персональные данные, в целях обеспечения соблюдения требований действующего законодательства Российской Федерации (в том числе в целях предупреждения и/или пресечения незаконных и/или противоправных действий Пользователей). Раскрытие предоставленной Пользователем информации может быть произведено лишь в соответствии с действующим законодательством Российской Федерации по требованию суда, правоохранительных органов, а равно в иных предусмотренных законодательством Российской Федерации случаях. Поскольку Администрация Сайта осуществляет обработку персональных данных Пользователя в целях исполнения заключенного договора между Администрацией Сайта и Пользователем на оказание Услуг, в силу положений законодательства о персональных данных согласие Пользователя на обработку его персональных данных не требуется. Но все же принимая данное Соглашения Пользователь разрешает обработку своих персональных данных.</p>
+        <p>3. Условия размещения Материалов</p>
+        <p>3.1. Пользователь самостоятельно несет ответственность за соответствие содержания размещаемых Пользователем Материалов требованиям действующего законодательства, включая ответственность перед третьим лицами в случаях, когда размещение Пользователем тех или иных Материалов или содержание Материалов нарушает права и законные интересы третьих лиц, в том числе личные неимущественные права авторов, иные интеллектуальные права третьих лиц, и/или посягает на принадлежащие им нематериальные блага.</p>
+        <p>3.2. Пользователь признает и соглашается с тем, что Администрация Сайта не обязана просматривать Материалы любого вида, размещаемые и/или распространяемые Пользователем посредством сервисов Сайта, а также то, что Администрация Сайта имеет право (но не обязанность) по своему усмотрению отказать Пользователю в размещении и/или распространении им Материалов или удалять любые Материалы, которые доступны посредством сервисов Сайта. Пользователь осознает и согласен с тем, что он должен самостоятельно оценивать все риски, связанные с использованием Материалов, включая оценку надежности, полноты или полезности этих Материалов.</p>
+        <p>3.3. Пользователь осознает и соглашается с тем, что технология работы Сайта может потребовать копирование (воспроизведение)Материалов Пользователя Сайтом, а также переработки его Материалов Администрацией Сайта для соответствия техническим требованиям того или иного сервиса.</p>
+        <p>4. Условия использования сервисов Сайта</p>
+        <p>4.1. Пользователь самостоятельно несет ответственность перед третьими лицами за свои действия, связанные с использованием сервисов Сайта, в том числе, если такие действия приведут к нарушению прав и законных интересов третьих лиц, а также за соблюдение законодательства при использовании сервисов Сайта.</p>
+        <p>4.2. При использовании сервисов Сайта Пользователь не вправе:</p>
+        <p>4.2.1. загружать, посылать, хранить, передавать или любым другим способом размещать, распространять или использовать Материалы и информацию, которые являются незаконными, вредоносными, клеветническими, оскорбляют нравственность, содержат угрозы, дискредитируют, &nbsp;порочат честь и достоинство, нарушают неприкосновенность частной жизни, демонстрируют (или являются пропагандой) насилия и жестокости, призывают и содержат &nbsp;экстремистские материалы, &nbsp;нарушают права интеллектуальной собственности, пропагандируют ненависть и/или дискриминацию людей по расовому, этническому, половому, религиозному, социальному признакам, содержат оскорбления в адрес каких-либо лиц или организаций, содержат элементы (или является пропагандой) порнографии, детской эротики, являются вульгарными или непристойными, содержат нецензурную лексику, представляют собой рекламу (или являются пропагандой) услуг сексуального характера (в том числе под видом иных услуг), разъясняют порядок изготовления, применения или иного использования наркотических веществ или их аналогов, взрывчатых веществ или иного оружия, содержат информацию ограниченного доступа, включая, но не ограничиваясь государственной и коммерческой тайной, информацией о частной жизни третьих лиц;</p>
+        <p>4.2.2. пропагандировать преступную деятельность или давать советы, инструкции или руководства по совершению преступных действий;</p>
+        <p>4.2.3. нарушать права третьих лиц, в том числе несовершеннолетних лиц и/или причинять им вред в любой форме;</p>
+        <p>4.2.4. выдавать себя за другого человека или представителя организации и/или сообщества без достаточных на то прав, в том числе за сотрудников Администрации Сайта, за модераторов форумов, за владельцев сайта, а также применять любые другие формы и способы незаконного представительства других лиц в сети, а также вводить пользователей или Администрацию Сайта в заблуждение относительно свойств и характеристик каких-либо субъектов или объектов;</p>
+        <p>4.2.5. загружать, посылать, передавать или любым другим способом размещать и/или распространять Материалы, при отсутствии прав на такие действия согласно законодательству или каким-либо договорным отношениям;</p>
+        <p>4.2.6. загружать, посылать, передавать или любым другим способом размещать и/или распространять не разрешенную специальным образом рекламную информацию, спам (в том числе и поисковый), списки чужих адресов электронной почты, схемы «пирамид», многоуровневого (сетевого) маркетинга (MLM), системы интернет- заработка и e-mail-бизнесов, «письма счастья», а также использовать сервисы Сайта для участия в этих мероприятиях, или использовать сервисы Сайта, исключительно для перенаправления пользователей на страницы других доменов;</p>
+        <p>4.2.7. загружать, посылать, передавать или любым другим способом размещать и/или распространять какие-либо материалы, содержащие вирусы или другие компьютерные коды, файлы или программы, предназначенные для нарушения, уничтожения либо ограничения функциональности любого компьютерного или телекоммуникационного оборудования или программ, для осуществления несанкционированного доступа, а также серийные номера к коммерческим программным продуктам и программы для их генерации, логины, пароли и прочие средства для получения несанкционированного доступа к платным ресурсам в Интернете, а также размещения ссылок на вышеуказанную информацию;</p>
+        <p>4.2.8. несанкционированно собирать и хранить персональные данные других лиц;</p>
+        <p>4.2.9. нарушать нормальную работу веб- сайтов и сервисов Сайта;</p>
+        <p>4.2.10. размещать ссылки на ресурсы сети, содержание которых противоречит действующему законодательству РФ;</p>
+        <p>4.2.11. содействовать действиям, направленным на нарушение ограничений и запретов, налагаемых Соглашением;</p>
+        <p>4.2.12. другим образом нарушать нормы законодательства, в том числе нормы международного права.</p>
+        <p>5. Сайты третьих лиц и реклама.</p>
+        <p>5.1. Сервисы Сайта могут содержать ссылки на другие сайты в сети Интернет (сайты третьих лиц). Указанные третьи лица и их Материалы не проверяются Администрацией Сайта на соответствие тем или иным требованиям (достоверности, полноты, законности и т.п.). Администрация сайта не несет ответственность за любую информацию, материалы, размещенные на сайтах третьих лиц, к которым Пользователь получает доступ с использованием сервисов, в том числе, за любые мнения или утверждения, выраженные на сайтах третьих лиц, рекламу и т.п., а также за доступность таких сайтов или Материалов и последствия их использования Пользователем.</p>
+        <p>5.2. Ссылка (в любой форме) на любой сайт, продукт, услугу, любую информацию коммерческого или некоммерческого характера, размещенная на Сайте, не является одобрением или рекомендацией данных продуктов (услуг, деятельности) со стороны Администрации Сайта, за исключением случаев, когда на это прямо указывается на ресурсах Сайта.</p>
+        <p>5.3. Администрация Сайта не несет ответственность за рекламу, размещенную на сервисах Сайта, в пределах, установленных законодательством РФ.</p>
+        <p>5.4. Администрация Сайта не несет ответственности за любые виды убытков, произошедшие вследствие использования Пользователем сервисов Сайта или отдельных частей/функций сервисов;</p>
+        <p>5.5. Пользователь использует сервисы Сайта на свой собственный риск. Сервисы предоставляются «как есть». Администрация не&nbsp;принимает на себя никакой ответственности, в том числе за соответствие сервисов целям Пользователя;</p>
+        <p>5.6. Администрация Сайта не гарантирует, что: сервисы соответствуют/будут соответствовать требованиям Пользователя; сервисы будут предоставляться непрерывно, быстро, надежно и без ошибок; результаты, которые могут быть получены с использованием сервисов, будут точными и надежными и могут использоваться для каких-либо целей или в каком-либо качестве (например, для установления и/или подтверждения каких-либо фактов); качество какого-либо продукта, услуги, информации и пр., полученных с использованием сервисов, будет соответствовать ожиданиям Пользователя. Любые информацию и/или материалы (в том числе загружаемое ПО, письма, какие-либо инструкции и руководства к действию и т.д.), доступ к которым Пользователь получает с использованием сервисов Сайта, Пользователь может использовать на свой собственный страх и риск и самостоятельно несет ответственность за возможные последствия использования указанных информации и/или материалов, в том числе за ущерб, который это может причинить компьютеру Пользователя или третьим лицам, за потерю данных или любой другой вред;</p>
+        <p>6. Иные положения.</p>
+        <p>6.1. Настоящее Соглашение представляет собой договор между Пользователем и Администрацией Сайта относительно порядка использования сервисов и заменяет собой все предыдущие соглашения между Пользователем и Администрацией Сайта.</p>
+        <p>6.2. Настоящее Соглашение регулируется и толкуется в соответствии с законодательством Российской Федерации. Вопросы, не урегулированные настоящим Соглашением, подлежат разрешению в соответствии с законодательством Российской Федерации. Все возможные споры, вытекающие из отношений, регулируемых настоящим Соглашением, разрешаются в порядке, установленном действующим законодательством Российской Федерации, по нормам российского права. Везде по тексту настоящего Соглашения, если явно не указано иное, под термином «законодательство» понимается как законодательство Российской Федерации, так и законодательство места пребывания Пользователя.</p>
+        <p>6.3. Ввиду безвозмездности услуг, оказываемых в рамках настоящего Соглашения, нормы о защите прав потребителей, предусмотренные законодательством Российской Федерации, не могут быть к применимыми к отношениям между Пользователем и Администрацией Сайта.</p>
+        <p>6.4. Ничто в Соглашении не может пониматься как установление между Пользователем и Администрацией Сайта агентских отношений, отношений товарищества, отношений по совместной деятельности, отношений личного найма, либо каких-то иных отношений, прямо не предусмотренных Соглашением.</p>
+        <p>6.5. Если по тем или иным причинам одно или несколько положений настоящего Соглашения будут признаны недействительными или не имеющими юридической силы, это не оказывает влияния на действительность или применимость остальных положений Соглашения.</p>
+        <p>6.6. Бездействие со стороны Администрации Сайта в случае нарушения Пользователем либо иными пользователями положений Соглашений не лишает Администрацию Сайта права предпринять соответствующие действия в защиту своих интересов позднее, а также не означает отказа Администрации Сайта от своих прав в случае совершения в последующем подобных либо сходных нарушений.</p>
+        <p>6.7. Настоящее Соглашение составлено на русском языке.</p>
+        <p>6.8. САЙТ И ЕГО СЕРВИСЫ, ВКЛЮЧАЯ ВСЕ СКРИПТЫ, ПРИЛОЖЕНИЯ, КОНТЕНТ И ОФОРМЛЕНИЕ САЙТА ПОСТАВЛЯЮТСЯ «КАК ЕСТЬ». АДМИНИСТРАЦИЯ ОТКАЗЫВАЕТСЯ ОТ ВСЯКИХ ГАРАНТИЙ ТОГО, ЧТО САЙТ ИЛИ ЕГО СЕРВИСЫ МОГУТ ПОДХОДИТЬ ИЛИ НЕ ПОДХОДИТЬ ДЛЯ КОНКРЕТНЫХ ЦЕЛЕЙ ИСПОЛЬЗОВАНИЯ. АДМИНИСТРАЦИЯ НЕ МОЖЕТ ГАРАНТИРОВАТЬ И НЕ ОБЕЩАЕТ НИКАКИХ СПЕЦИФИЧЕСКИХ РЕЗУЛЬТАТОВ ОТ ИСПОЛЬЗОВАНИЯ САЙТА И/ИЛИ ЕГО СЕРВИСОВ;</p>
+        <p>6.9. ВО ИЗБЕЖАНИЕ НЕДОРАЗУМЕНИЙ ПОЛЬЗОВАТЕЛЮ СЛЕДУЕТ СОБЛЮДАТЬ МЕРЫ ПРЕДОСТОРОЖНОСТИ В СКАЧИВАНИИ С САЙТА ИЛИ ПО РАЗМЕЩЕННЫМ НА НЕМ ССЫЛКАМ, И ИСПОЛЬЗОВАНИИ ЛЮБЫХ ФАЙЛОВ, В ТОМ ЧИСЛЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ. АДМИНИСТРАЦИЯ САЙТА НАСТОЯТЕЛЬНО РЕКОМЕНДУЕТ ИСПОЛЬЗОВАТЬ ТОЛЬКО ЛИЦЕНЗИОННОЕ, В ТОМ ЧИСЛЕ АНТИВИРУСНОЕ, ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ;</p>
+        <p>6.10. ИСПОЛЬЗУЯ САЙТ, ПОЛЬЗОВАТЕЛЬ СОГЛАШАЕТСЯ С ТЕМ, ЧТО СКАЧИВАЕТ С САЙТА ИЛИ С ЕГО ПОМОЩЬЮ ЛЮБЫЕ МАТЕРИАЛЫ НА СВОЙ СОБСТВЕННЫЙ РИСК И НЕСЕТ ЛИЧНУЮ ОТВЕТСТВЕННОСТЬ ЗА ВОЗМОЖНЫЕ ПОСЛЕДСТВИЯ ИСПОЛЬЗОВАНИЯ УКАЗАННЫХ МАТЕРИАЛОВ, В ТОМ ЧИСЛЕ ЗА УЩЕРБ, КОТОРЫЙ ЭТО МОЖЕТ ПРИЧИНИТЬ КОМПЬЮТЕРУ ПОЛЬЗОВАТЕЛЯ ИЛИ ТРЕТЬИМ ЛИЦАМ, ЗА ПОТЕРЮ ДАННЫХ ИЛИ ЛЮБОЙ ДРУГОЙ ВРЕД;</p>
+        <p>6.11. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АДМИНИСТРАЦИЯ САЙТА ИЛИ ЕЕ ПРЕДСТАВИТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТЬ ПЕРЕД ПОЛЬЗОВАТЕЛЕМ ИЛИ ПЕРЕД ЛЮБЫМИ ТРЕТЬИМИ ЛИЦАМИ ЗА ЛЮБОЙ КОСВЕННЫЙ, СЛУЧАЙНЫЙ, НЕУМЫШЛЕННЫЙ УЩЕРБ, ВКЛЮЧАЯ УПУЩЕННУЮ ВЫГОДУ ИЛИ ПОТЕРЯННЫЕ ДАННЫЕ, ВРЕД ЧЕСТИ, ДОСТОИНСТВУ ИЛИ ДЕЛОВОЙ РЕПУТАЦИИ, ВЫЗВАННЫЙ В СВЯЗИ С ИСПОЛЬЗОВАНИЕМ САЙТА, СОДЕРЖИМОГО САЙТА ИЛИ ИНЫХ МАТЕРИАЛОВ, К КОТОРЫМ ВЫ ИЛИ ИНЫЕ ЛИЦА ПОЛУЧИЛИ ДОСТУП С ПОМОЩЬЮ САЙТА, ДАЖЕ ЕСЛИ АДМИНИСТРАЦИЯ САЙТА ПРЕДУПРЕЖДАЛА ИЛИ УКАЗЫВАЛА НА ВОЗМОЖНОСТЬ ТАКОГО ВРЕДА.</p>
             </div>
-        <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
     </div>
-    <div class="popup__bg"></div>
 </div>
+
 <!-- END OF POPUPS -->
 
     <div class="wrapper-landing">
-        <div class="hdr__landing">
+           <div class="hdr__landing">
             <div class="hdr__landing__line">
                 <div class="school__logo">
                     <a class="school-logo" target="_blank" href="http://www.newcinemaschool.com"><img src="img/icon/school-logo.png"/></a>
@@ -241,7 +590,8 @@
             <div class="timer__banner">
                 <div class="timer__banner__text">
                     <p>
-                        СТАНЬ ОБЛАДАТЕЛЕМ ГРАНТА НА ОБУЧЕНИЕ В МОСКОВСКОЙ ШКОЛЕ НОВОГО КИНО ПО ПРОФЕСИИ – «РЕЖИССЕР МОНТАЖА»
+                       СТАНЬ ОБЛАДАТЕЛЕМ ГРАНТА НА ОБУЧЕНИЕ В МОСКОВСКОЙ ШКОЛЕ НОВОГО КИНО
+                       ПО ПРОФЕСИИ – «РЕЖИССЕР МОНТАЖА»
                    </p>
                     <span class="timer__title">
                         ДО ОКОНЧАНИЯ КОНКУРСА ОСТАЛОСЬ:
@@ -260,17 +610,17 @@
                                 </script>
                            <div class="dash days_dash">
 
-                            <span class="dash_title">дней</span>    
+                            <span class="dash_title">дни</span>    
                            </div>
                           
-                            <div class="dash days_dash"><span class="dash_title">часов</span>  
+                            <div class="dash days_dash"><span class="dash_title">часы</span>  
                              </div>
                              
-                              <div class="dash days_dash"><span class="dash_title">минут</span></div>
+                              <div class="dash days_dash"><span class="dash_title">минуты</span></div>
                         </div>
                     </div>
                     <div class="widget__bottom">
-                    <a class="btn btn_yellow" id="work_send_btn"><span class="btn__inner">ОТПРАВИТЬ РАБОТУ</span></a>
+                    <a class="btn btn_yellow" id="work_send_btn"><span class="btn__inner">ПОДАТЬ ЗАЯВКУ</span></a>
                 </div>
                 </div>
                      
@@ -320,15 +670,17 @@
                     <div style="clear:both;"></div>
                     <div class="completion">
                         <div class="completion1">
-                            <span>Завершение<br />приема работ</span><span class="completion__numbr">21</span><span>сентября</span>
+                            <span>Завершение<br />приема работ:</span><span class="completion__numbr">21</span><span>сентября</span>
                         </div>
                         
                         <div class="completion1 completion1_middle">
-                           <span>Объявление <br/>результатов:</span><span class="completion__numbr">25</span><span>сентября</span>
+                           <span>Объявление <br/>результатов:</span><span class="completion__numbr number2">25</span><span>сентября</span>
+                          
                         </div>
                         
-                        <div class="completion1">
-                             <span>Награждение <br/>победителя:</span><span class="completion__numbr">26</span><span>сентября</span>
+                        <div class="completion1 completion12 ">
+                             <span>Награждение <br/>победителя:</span><span class="completion__numbr number3">26</span><span>сентября</span>
+
                         </div>
                     </div>
 
@@ -346,146 +698,145 @@
                     <span class="sharpe__determine">Победителя определит экспертное жюри:</span>
                 </div>
             </div>
+
         <div id="slider1">
-            <div class="bxslider">
-              
-                  <div class="slider__tab">
-                <div class="slider__img">
-                    <img src="img/photo1.png" />
-                </div>
-                <div class="slider__text">
-                <h1 class="slider__title">Шерстобитов Илья</h1>  
-                <p class="slider__text2">Директор Московской школы нового кино </p>
-                <p class="slider__text3">С 1992 года работает в СМИ. В рамках телеканала РТР был режиссёром-постановщиком программы «Башня». Работал главным редактором журнала «Башня» и креативным 
-                директором журнала «Beauty». Работал в кинопроизводстве голливудских компаний. 
-                С января 2013 руководит Московской школой нового кино. Продюсер, член союза 
-                журналистов России и Москвы</p>
+        <div class="bxslider">
 
-                </div>
-                <div style="clear:both;"></div>
-                </div>
-              
-              
-                  <div class="slider__tab">
-                <div class="slider__img">
-                    <img src="img/photo1.png" />
-                </div>
-                <div class="slider__text">
-                <h1 class="slider__title">Шерстобитов Илья</h1>  
-                <p class="slider__text2">Директор Московской школы нового кино </p>
-                <p class="slider__text3">С 1992 года работает в СМИ. В рамках телеканала РТР был режиссёром-постановщиком 
-                программы «Башня». Работал главным редактором журнала «Башня» и креативным 
-                директором журнала «Beauty». Работал в кинопроизводстве голливудских компаний. 
-                С января 2013 руководит Московской школой нового кино. Продюсер, член союза 
-                журналистов России и Москвы</p>
+      <div class="slider__tab">
+    <div class="slider__img">
+        <img src="img/photo1.png" />
+    </div>
+    <div class="slider__text">
+    <h1 class="slider__title">Шерстобитов Илья</h1>
+    <p class="slider__text2">Директор Московской школы нового кино </p>
+    <p class="slider__text3">
+        С 1992 года работает в СМИ. В рамках телеканала РТР был режиссёром-постановщиком программы «Башня». Работал главным редактором журнала «Башня» и креативным
+        директором журнала «Beauty». Работал в кинопроизводстве голливудских компаний.
+        С января 2013 руководит Московской школой нового кино. Продюсер, член союза
+        журналистов России и Москвы.
+    </p>
 
-                </div>
-                <div style="clear:both;"></div>
-                </div>
+    </div>
+    <div style="clear:both;"></div>
+    </div>
 
-                <div class="slider__tab">
-                <div class="slider__img">
-                    <img src="img/photo1.png" />
-                </div>
-                <div class="slider__text">
-                <h1 class="slider__title">Шерстобитов Илья</h1>  
-                <p class="slider__text2">Директор Московской школы нового кино </p>
-                <p class="slider__text3">С 1992 года работает в СМИ. В рамках телеканала РТР был режиссёром-постановщиком 
-                программы «Башня». Работал главным редактором журнала «Башня» и креативным 
-                директором журнала «Beauty». Работал в кинопроизводстве голливудских компаний. 
-                С января 2013 руководит Московской школой нового кино. Продюсер, член союза 
-                журналистов России и Москвы</p>
 
-                </div>
-                <div style="clear:both;"></div>
-                </div>
-              
-            </div>
+      <div class="slider__tab">
+    <div class="slider__img">
+        <img src="img/Mamulia.png" />
+    </div>
+    <div class="slider__text">
+    <h1 class="slider__title">Дмитрий Мамулия</h1>
+    <p class="slider__text2">Художественный руководитель школы </p>
+    <p class="slider__text3">
+        Кинорежиссер, сценарист, теоретик литературы, кино.
+        Автор литературных, поэтических, философских, культурологических текстов. Автор книг «Dreimal Hesse», «Птица внутри»;
+        призер международных и отечественных фестивалей; лауреат премии российской киноакадемии «Ника».
+    </p>
+
+    </div>
+    <div style="clear:both;"></div>
+    </div>
+
+    <div class="slider__tab">
+    <div class="slider__img">
+        <img src="img/Tomashevich.png" />
+    </div>
+    <div class="slider__text">
+    <h1 class="slider__title">Илья Томашевич</h1>
+    <p class="slider__text2">Куратор факультета</p>
+    <p class="slider__text3">
+        Закончил факультет режиссуры во ВГИКЕ.
+        Его дипломный фильм «Синее небо. Черный хлеб» получил ряд наград на зарубежных и отечественных кинофестивалях.
+        Также учился в FAMU (Киношкола в Праге) в департаменте монтажа. Преподавал в школе-студии Анимационного кино
+        «Шар» и Московской международной Киношколе/ Киноколледже #40.
+    </p>
+
+    </div>
+    <div style="clear:both;"></div>
+    </div>
+
+</div>
         </div>
-            
 
+        <div class="slider__tab2">
+        <span class="slider__tab2__title">МАТЕРИАЛЫ ДЛЯ МОНТАЖА</span>
 
-                <div class="slider__tab2">
-                    <span class="slider__tab2__title">МАТЕРИАЛЫ ДЛЯ МОНТАЖА</span>
+<p class="">В монтаже конкурсной работы ты можешь использовать только материалы, представленные на этой странице — все или некоторые. В архивах для скачивания ты найдешь и 18 основных роликов, и дополнительные видео, предоставленные МШНК. Не забудь: длина твоего видео должна быть не больше 10 минут.</p>
 
-                    <p class="">В монтаже конкурсной работы ты можешь использовать только материалы, представленные на этой странице — все или некоторые. В архивах для скачивания ты найдешь и 18 основных роликов, и дополнительные видео, предоставленные МШНК. Не забудь: длина твоего видео должна быть не больше 10 минут.</p>
-
-                    <div id="slider2">
-                        <div class="full__mont__video">
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-                        <div class="full__mont__video">
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-                        <div class="full__mont__video">
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="mont__video">
-                                <iframe width="470" height="263" src="https://www.youtube.com/embed/7HUFihwNgew" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-
-                <div style="clear:both;"></div>
-                    <div class="download__full">
-                        <a href="#" class="download">Основные материалы (хх Гб)</a>
-                        <a href="#" class="download">Дополнительные материалы по фильму "Софи"</a>
-                        <a href="#" class="download">Дополнительные материалы по фильму "Еду как хочу" </a>
-                        <a href="#" class="download">Дополнительные материалы по "Софи"</a>
-                    </div>
-
+<div id="slider2">
+    <div class="full__mont__video">
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/swPMqaJ2l0Q" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/Qz_fV6f9tK0" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/XQwI5AJvjZo" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/u66-cCv6P48" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/OjrPT_cw1ow" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/XlUpysoPyRE" frameborder="0" allowfullscreen></iframe>
+        </div>
             </div>
-            <div style="clear:both;"></div>
-       </div>
+    <div class="full__mont__video">
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/RzXSeHBFN2w" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/Ii5GYOTAk7A" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/lGAhm7P1WjQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/xgYZtFFTd4M" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/Q2MhkY1BrX8" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/J6DxjTpEVQQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+            </div>
+    <div class="full__mont__video">
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/w8d7gPRJyLE" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/jtcMmaAYobo" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/HsR5jFf7GnI" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/OEv6C4ZdCBw" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/hgxd9Nv7BZs" frameborder="0" allowfullscreen></iframe>
+        </div>
+                <div class="mont__video">
+            <iframe width="470" height="263" src="https://www.youtube.com/embed/19h6O6q37_Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+            </div>
+</div>
+
+<div style="clear:both;"></div>
+    <div class="download__full">
+        <a href="/landing/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B.zip" class="download">Основные материалы (794 Мб)</a>
+        <a href="/landing/Sofi.zip" class="download">Дополнительные материалы по фильму "Софи" (2 Гб)</a>
+        <a href="/landing/Edu%20kak%20hochu.zip" class="download">Дополнительные материалы по фильму "Еду как хочу" (1,5 Гб)</a>
+        <a href="/landing/Prezrenie.zip" class="download">Дополнительные материалы по фильму "Презрение" (2,5 Гб)</a>
+    </div>
+
+</div>
+<div style="clear:both;"></div>        </div>
        <div class="fr__landing">
                 <div class="fr__banner">
                     <div class="fr__banner__text">
@@ -494,24 +845,42 @@
                        </p>
                     </div>
                     <div class="fr__timer">
-                         
+
                         <div class="fr__dashboard">
-                             <span class="fr__tx">Уже подано заявок:</span><span class="fr__numbr">34</span>
+                             <span class="fr__tx">Уже подано заявок:&nbsp;&nbsp;</span><span class="fr__numbr">1</span>
                         </div>
                     </div>
                     <div class="widget__bottom">
-                        <a class="btn btn_yellow btn__fr" id="land_submit" href="#"><span class="btn__inner">ПОДАТЬ ЗАЯВКУ</span></a>
+                        <a class="btn btn_yellow btn__fr" id="land_submit" href="#">
+                            <span class="btn__inner">ПОДАТЬ ЗАЯВКУ</span>
+                        </a>
                     </div>
                 </div>
-                <div class="fr__title"><span class="">ПОДРОБНЕЕ О КОНКУРСЕ</span>
-                <p>Задавай их в <a href="#" class="fr__full">группе конкурса</a> на tvkinoradio.ru</p></div> 
-                <div class="fr__landing__social">
-                    <a href="#" id="landing__social1__id"class="landing__social"></a>
-                    <a href="#" id="landing__social2__id" class="landing__social"></a>
-                    <a href="#" id="landing__social3__id" class="landing__social"></a>
+                <div class="fr__title"><span class="">ПОЯВИЛИСЬ ВОПРОСЫ?</span>
+                <p>
+                    Задавай их в
+                    <a href="/group/227/status" class="fr__full">группе конкурса</a>
+                    на tvkinoradio.ru</p>
                 </div>
-        </div>
-            
+                <div class="fr__landing__social">
+                    <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftvkinoradio.ru%2Fkonkurs&t=%D0%9A%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81+%D0%BE%D1%82+tvkinoradio.ru+%D0%B8+%D0%9C%D0%A8%D0%9D%D0%9A%3A+%D1%81%D0%BC%D0%BE%D0%BD%D1%82%D0%B8%D1%80%D1%83%D0%B9+%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE+%D0%B8+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8+%D0%B3%D1%80%D0%B0%D0%BD%D1%82+%D0%BD%D0%B0+%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE%D0%B5+%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5+%D0%BF%D0%BE+%D0%BA%D1%83%D1%80%D1%81%D1%83+%22%D0%A0%D0%B5%D0%B6%D0%B8%D1%81%D1%81%D0%B5%D1%80+%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%B0%22" id="landing__social1__id" class="landing__social" target="_blank"></a>
+                    <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ftvkinoradio.ru%2Fkonkurs&text=%D0%9A%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81+%D0%BE%D1%82+tvkinoradio.ru+%D0%B8+%D0%9C%D0%A8%D0%9D%D0%9A%3A+%D1%81%D0%BC%D0%BE%D0%BD%D1%82%D0%B8%D1%80%D1%83%D0%B9+%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE+%D0%B8+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8+%D0%B3%D1%80%D0%B0%D0%BD%D1%82+%D0%BD%D0%B0+%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE%D0%B5+%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5+%D0%BF%D0%BE+%D0%BA%D1%83%D1%80%D1%81%D1%83+%22%D0%A0%D0%B5%D0%B6%D0%B8%D1%81%D1%81%D0%B5%D1%80+%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%B0%22&tw_p=tweetbutton&url=http%3A%2F%2Ftvkinoradio.ru%2Fkonkurs" id="landing__social2__id" class="landing__social" target="_blank"></a>
+                    <a href="http://vkontakte.ru/share.php?url=http%3A%2F%2Ftvkinoradio.ru%2Fkonkurs&title=%D0%9A%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81+%D0%BE%D1%82+tvkinoradio.ru+%D0%B8+%D0%9C%D0%A8%D0%9D%D0%9A%3A+%D1%81%D0%BC%D0%BE%D0%BD%D1%82%D0%B8%D1%80%D1%83%D0%B9+%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE+%D0%B8+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8+%D0%B3%D1%80%D0%B0%D0%BD%D1%82+%D0%BD%D0%B0+%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE%D0%B5+%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5+%D0%BF%D0%BE+%D0%BA%D1%83%D1%80%D1%81%D1%83+%22%D0%A0%D0%B5%D0%B6%D0%B8%D1%81%D1%81%D0%B5%D1%80+%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%B0%22" id="landing__social3__id" class="landing__social" target="_blank"></a>
+                </div>
+
+                <!--LiveInternet counter-->
+<script type="text/javascript"><!--
+    document.write("<a href='http://www.liveinternet.ru/click' "+
+        "target=_blank><img src='//counter.yadro.ru/hit?t45.4;r"+
+        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+        ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+            screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+        ";"+Math.random()+
+        "' alt='' title='LiveInternet' "+
+        "border='0' width='31' height='31'><\/a>");
+//--></script>
+<!--/LiveInternet-->        </div>
+
     </div>
 </body>
 </html>
