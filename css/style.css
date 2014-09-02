@@ -14507,62 +14507,45 @@ margin-bottom:2px;
   width: 288px;
   padding: 28px 8px 24px;
 }
-.fr__landing__social{
-  text-align: center;
-  margin-left: -11px;
-}
 .landing__social{
-  display: inline-block;
-  margin-right: 7px;
-  margin-top: 40px;
+  display: block;
   width: 50px;
   height: 50px;
  }
-
+ .fr__landing__social{
+  position: fixed;
+  left:0px;
+  top:78px;
+ }
+.fr__landing__social a{
+  margin-top:5px;
+}
 #landing__social1__id{
-  display: inline-block;
-  margin-right: 17px;
-  margin-top: 40px;
   background: url('../img/icon/landingfb.png');
   background-repeat: no-repeat;
   overflow: hidden;
 }
 #landing__social1__id:hover{
-  display: inline-block;
-  margin-right: 17px;
-  margin-top: 40px;
   background: url('../img/icon/landingfbhover.png');
   background-repeat: no-repeat;
   overflow: hidden;
 }
 #landing__social2__id{
-  display: inline-block;
-  margin-right: 17px;
-  margin-top: 40px;
   background: url('../img/icon/landingtwi.png');
   background-repeat: no-repeat;
   overflow: hidden;
 }
 #landing__social2__id:hover{
-  display: inline-block;
-  margin-right: 17px;
-  margin-top: 40px;
   background: url('../img/icon/landingtwihover.png');
   background-repeat: no-repeat;
   overflow: hidden;
 }
 #landing__social3__id{
-  display: inline-block;
-  margin-right: 7px;
-  margin-top: 40px;
   background: url('../img/icon/landingvk.png');
   background-repeat: no-repeat;
   overflow: hidden;
 }
 #landing__social3__id:hover{
-  display: inline-block;
-  margin-right: 7px;
-  margin-top: 40px;
   background: url('../img/icon/landingvkhover.png');
   background-repeat: no-repeat;
   overflow: hidden;
