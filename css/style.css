@@ -10485,7 +10485,7 @@ background: transparent !important;
   display: inline-block;
   vertical-align: top;
   min-height: 67px;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 .user-inf__company h3 {
   font-size: 16px;
@@ -14756,4 +14756,23 @@ a.fr__full:hover{
   top: 20px;
   right: 10px;
   min-width: 160px;
+}
+.my__subscribes{
+  border-top:2px solid #ecf0f1;
+  padding-top: 14px;
+  margin-top: -16px;
+}
+.unsubscribe{
+  font-size: 14px;
+  color:#e84d38;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom:1px solid #e84d38;
+  position: relative;
+  top: -8px;
+}
+.unsubscribe:hover{
+  color:#e74c3c;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
 }
