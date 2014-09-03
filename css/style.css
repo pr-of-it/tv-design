@@ -14691,3 +14691,69 @@ margin-top:-201px !important;
 a.fr__full:hover{
   color:#0fb8ee;
 }
+.company_delegate{
+  color:#34495e;
+}
+.company_delegate a{
+  color:#34495e;
+  font-weight: bold;
+  text-decoration: none;
+}
+.company_delegate a:hover{
+  color:#1abc9c;
+  text-decoration: none;
+}
+.company_delegate_block{
+  position: relative;
+  width: 100%;
+  background-color: #ecf0f1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.company_delegate_block img{
+  position: relative;
+  margin:10px 10px 6px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.delegate_info{
+  position:absolute;
+  top:6px;
+  left: 90px;
+}
+.delegate_info a{
+  display: block;
+  font-size: 16px;
+  color:#34495e;
+  text-decoration: none;
+  font-weight: bold;
+}
+.delegate_info a:hover{
+  color:#1abc9c;
+  text-decoration: none;
+}
+.delegate_info span{
+  display: block;
+  font-size: 16px;
+  color: #34495e;
+}
+.delegate_info ul{
+  display: block;
+  font-size: 16px;
+  color: #3498db;
+}
+.delegate_info ul li .ico_mark{
+  margin-top:2px;
+  margin-right: 5px;
+}
+.delegate_info ul li{
+  margin-top:2px;
+}
+.company_delegate_block .btn{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  min-width: 160px;
+}
