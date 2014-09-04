@@ -2848,6 +2848,9 @@ a:hover {
   padding: 6px 35px 7px 10px;
   color: #d0d3d7;
 }
+.input-i_job-search .input:focus {
+  color: #34495E;
+}
 .input-i_job-search .input.text-active {
   color: #34495e;
 }
