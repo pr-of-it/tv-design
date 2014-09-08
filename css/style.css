@@ -4657,7 +4657,7 @@ a:hover {
 /* ==== [ company ] ==== */
 .company-box__head {
   padding: 18px 20px 7px 20px;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
@@ -10408,7 +10408,7 @@ background: transparent !important;
   height: 16px;
 }
 .user-inf {
-  padding-top: 13px;
+  padding-top: 0px;
 }
 .user-inf h1 {
   font-size: 38px;
@@ -14767,10 +14767,10 @@ a.fr__full:hover{
 }
 .unsubscribe{
   font-size: 14px;
-  color:#e84d38;
+  color:#e74c3c;
   text-decoration: none;
   display: inline-block;
-  border-bottom:1px solid #e84d38;
+  border-bottom:1px solid #e74c3c;
   position: relative;
   top: -8px;
 }
