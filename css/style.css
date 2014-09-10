@@ -10038,11 +10038,11 @@ font-size: 14px;
   margin-right: 0;
 }
 .popup_invite .popup__data {
-  width: 454px;
-  margin-left: -245px;
+  width: 482px;
+  margin-left: -241px;
 }
 .popup_invite .popup__box {
-  width: 414px;
+  width: 442px;
   padding-top: 0;
   -webkit-box-shadow: 10px 16px 2px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 10px 16px 2px rgba(0, 0, 0, 0.35);
@@ -10090,15 +10090,15 @@ font-size: 14px;
   font-size: 12px;
   display: block;
   position: relative;
-  padding: 4px 10px 4px 80px;
+  padding: 4px 10px 4px 84px;
   margin: 0 0 0 -5px;
   color: #34495e;
   min-height: 32px;
 }
 .popup_invite .b-label span {
   position: absolute;
-  left: 35px;
-  top: 2px;
+  left: 39px;
+  top: 6px;
   display: table-cell;
   border: 1px solid #dfe1e3;
   -webkit-border-radius: 4px;
@@ -10128,18 +10128,22 @@ font-size: 14px;
   	-moz-border-radius: 2px;
 }
 .reg-form__row__invite .chk-area{
-	margin-top:8px !important;
+	margin-top: 10px !important;
+  margin-left: 4px;
 }
 .popup_invite .reg-form__row__invite{
 	margin-bottom: 5px !important;
 }
 .popup_invite .reg-form__row {
-  width: 210px;
+  width: 205px;
   display: inline-block;
   vertical-align: top;
   margin-bottom: 10px;
   margin-right: 0px;
   padding-left: 4px;
+}
+.popup_invite .reg-form__row:nth-child(even){
+  margin-left:24px;
 }
 .popup_invite .reg-form__row__invite {
 width: 200px;
@@ -10179,8 +10183,8 @@ width: 200px;
 .popup_invite .check-label {
   display: none;
   position: absolute;
-  left: 10px;
-  top: 14px;
+  left: 16px;
+  top: 16px;
   width: 11px;
   height: 10px;
 }
@@ -10192,6 +10196,8 @@ background: url(../img/bg-label.png) repeat;
 }
 .popup_invite .reg-form__row.checked .check-label{
   display: block;
+  background-image: url(../img/check-label.png);
+  background-repeat: no-repeat;
 }
 .popup_invite .reg-form__row__invite:hover .check-label{
   display: none;
