@@ -2047,8 +2047,8 @@ a:hover {
   height: 17px;
 }
 .ico_vk-white {
-  background-image: url(../img/icons/vk_icon.png);
-  background-position: 0px 0px;
+  background-image: url(../img/icons.png);
+  background-position: -330px 0px;
   width: 21px;
   height: 14px;
   margin-right: 10px;
@@ -2659,7 +2659,7 @@ a:hover {
   font-size: 14px;
   font-weight: normal;
   text-decoration: none;
-  padding: 7px 18px 6px;
+  padding: 7px 0px 6px;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
@@ -2669,12 +2669,14 @@ a:hover {
   color: #fff;
   background: #2f4b93;
   border: 2px solid #2f4b93;
+  width: 192px;
+  text-align: center;
 }
 .btn_vk-blue {
   font-size: 14px;
   font-weight: normal;
   text-decoration: none;
-  padding: 7px 13px 6px;
+  padding: 7px 0px 6px;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
@@ -2685,6 +2687,8 @@ a:hover {
   background: #4c75a3;
   border: 2px solid #4c75a3;
   margin-top: 10px !important;
+  width: 192px;
+  text-align: center;
 }
 .btn_vk-blue:hover {
   background: #2b587a;
