@@ -173,15 +173,28 @@
         .result-top__img {float:left; width:427px; margin-right:24px;}
         .result-top__text {font-size:14px; color:#77787a; overflow:hidden;}
         .result-subttl {font-size:14px; font-weight:bold; display:block; margin-bottom:14px; color:#58595b; }
-        .result-graph {margin: 0 -45px 23px 0}
+        .result-graph {margin: 0 0 23px 0}
         .result-graph__block {display:inline-block; vertical-align:middle; margin-right:40px; position:relative;}
-        .result-graph .result-graph__block:first-child {margin:14px 5px 0 0 ;}
+        .result-graph .rgb_head:first-child {display: block; padding-left: 7%; margin-right: 0;}
+        .rgb_container .rgb_3rd_slider {margin-right: 0;}
         .result-graph__head {
         	font-size: 8px;
 			color: #58595b;
-			display: block;
+			border:none;
 			margin-bottom: 8px;
+            width: 30%;
+            padding-left: 3px;
 		}
+        .result-graph__head:nth-child(2){
+            padding-left:6px;
+        }
+        .result-graph__head:nth-child(3){
+            padding-left:10px;
+        }
+        .result-graph .rgb_title {
+            width: 5%;
+            margin-right: 2%;
+        }
         .result-graph__stroke {
         	font-size: 6px;
 			display: block;
@@ -269,19 +282,19 @@
         }
         .result-graph-container{
             position: relative;
-            width: 113px;
+            width: 100%;
             height: 24px;
         }
         .result-graph-bar-bg-top{
             height: 11px;
-            width: 113px;
+            width: 100%;
             background-color: #f4f8e7;
             position: absolute;
             top: 0;
         }
         .result-graph-bar-bg-bottom{
             height: 11px;
-            width: 113px;
+            width: 100%;
             background-color: #f4f8e7;
             position: absolute;
             top: 13px;
@@ -292,19 +305,19 @@
             top: 0;
         }
         #result-graph-bar-top-1{
-            width: 72px;
+            width: 64%;
         }
         #result-graph-bar-top-2{
-            width: 72px;
+            width: 64%;
         }
         #result-graph-bar-top-3{
-            width: 113px;
+            width: 100%;
         }
         #result-graph-bar-top-4{
-            width: 72px;
+            width: 64%;
         }
         #result-graph-bar-top-5{
-            width: 72px;
+            width: 0%;
         }
         .result-graph-bar-bottom{
             height: 11px;
@@ -312,19 +325,19 @@
             top: 13px;
         }
         #result-graph-bar-bottom-1{
-            width: 72px;
+            width: 64%;
         }
         #result-graph-bar-bottom-2{
-            width: 72px;
+            width: 64%;
         }
         #result-graph-bar-bottom-3{
-            width: 60px;
+            width: 45%;
         }
         #result-graph-bar-bottom-4{
-            width: 80px;
+            width: 70%;
         }
         #result-graph-bar-bottom-5{
-            width: 65px;
+            width: 48%;
         }
         .result-graph-val-left{
             font-size: 8px;
@@ -340,25 +353,25 @@
             width: 12px !important;
         }
         #result-graph-val-middle-1{
-            left: 67px;
+            left: 63%;
         }
         #result-graph-val-middle-2{
-            left: 67px;
+            left: 63%;
         }
         #result-graph-val-middle-3{
-            left: 67px;
+            left: 63%;
         }
         #result-graph-val-middle-4{
-            left: 67px;
+            left: 63%;
         }
         #result-graph-val-middle-5{
-            left: 67px;
+            left: 63%;
         }
         .result-graph-val-right{
             font-size: 8px;
             position: absolute;
             top: 32px;
-            left: 107px;
+            right: -6px;
             width: 12px !important;
         }
         .result-graph-devider-left{
@@ -371,19 +384,19 @@
             position: absolute;
         }
         #result-graph-devider-middle-1{
-            left: 72px;
+            left: 64%;
         }
         #result-graph-devider-middle-2{
-            left: 72px;
+            left: 64%;
         }
         #result-graph-devider-middle-3{
-            left: 72px;
+            left: 64%;
         }
         #result-graph-devider-middle-4{
-            left: 72px;
+            left: 64%;
         }
         #result-graph-devider-middle-5{
-            left: 72px;
+            left: 64%;
         }
         .result-graph-devider-right{
             top: -2px;
@@ -397,62 +410,62 @@
             top: 18px;
         }
         #result-graph-inner-middle-line-1{
-            width: 4px;
-            left: 70px;
+            width: 5%;
+            left: 60%;
         }
         #result-graph-inner-middle-line-2{
-            width: 20px;
-            left: 62px;
+            width: 17%;
+            left: 54%;
         }
         #result-graph-inner-middle-line-3{
-            width: 26px;
-            left: 45px;
+            width: 25%;
+            left: 37%;
         }
         #result-graph-inner-middle-line-4{
-            width: 27px;
-            left: 62px;
+            width: 24.5%;
+            left: 53%;
         }
         #result-graph-inner-middle-line-5{
-            width: 26px;
-            left: 49px;
+            width: 24%;
+            left: 41%;
         }
         .result-graph-inner-left-marker{
             position: absolute;
             top: 16px;
         }
         #result-graph-inner-left-marker-1{
-            left: 68px;
+            left: 60%;
         }
         #result-graph-inner-left-marker-2{
-            left: 60px;
+            left: 54%;
         }
         #result-graph-inner-left-marker-3{
-            left: 42px;
+            left: 37%;
         }
         #result-graph-inner-left-marker-4{
-            left: 60px;
+            left: 53%;
         }
         #result-graph-inner-left-marker-5{
-            left: 47px;
+            left: 41%;
         }
         .result-graph-inner-right-marker{
             position: absolute;
             top: 16px;
         }
         #result-graph-inner-right-marker-1{
-            left: 73px;
+            left: 65%;
         }
         #result-graph-inner-right-marker-2{
-            left: 81px;
+            left: 71%;
         }
         #result-graph-inner-right-marker-3{
-            left: 70px;
+            left: 61.5%;
         }
         #result-graph-inner-right-marker-4{
-            left: 88px;
+            left: 77%;
         }
         #result-graph-inner-right-marker-5{
-            left: 74px;
+            left: 65%;
         }
 		.side-block__list li{
 			font-size: 11px;
@@ -482,10 +495,8 @@
 			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 		}
 		.rgb_long{
-			width: 113px;
-		}
-		.rgb_long span{
-			width:150px;
+			width: 29%;
+            margin-right: 2%;
 		}
 		.symb_anotation{
 			font-size: 8px;
@@ -500,6 +511,11 @@
 			float:left;
 			margin-top:2px;
 		}
+        .rgb_blue_arrows {
+            position: absolute;
+            right: -15px;
+            top: 7px;
+        }
 		.symb_anotation span{
 			float:left;
 		}
@@ -507,6 +523,22 @@
             font-size: 24px;
             color: #808285;
             float: right;
+        }
+         .result-graph-bar-top-NA{
+            position: absolute;
+            top: -2px;
+            z-index: 99;
+            font-size: 10px;
+            left: 50%;
+            color: #000;
+        }
+        .result-graph-bar-bottom-NA{
+            position: absolute;
+            top: 11px;
+            z-index: 99;
+            font-size: 10px;
+            left: 50%;
+            color: #000;
         }
 
 /*21 CLASSES FOR GRAPHS*/
@@ -623,104 +655,124 @@
         </div>
         <strong class="result-subttl">Эта компетенция включает несколько составляющих:</strong>
         <div class="result-graph">
-            <div class="result-graph__block">
-                <span class="result-graph__stroke">Самооценка</span>
-                <span class="result-graph__stroke">Окружение</span>
+            <div class="result-graph__block rgb_head">
+                <table width="100%">
+                    <tr>
+                        <td class="result-graph__head">Навыки установления контакта</td>
+                        <td class="result-graph__head">Умение вызвать доверие</td>
+                        <td class="result-graph__head">Навыки работы в команде</td>
+                    </tr>
+                </table>
             </div>
-            <div class="result-graph__block rgb_long">
-                <span class="result-graph__head">Навыки установления контакта</span>
-                <div class="result-graph-container">
-                    <div class="result-graph-bar-bg-top"></div>
-                    <div class="result-graph-bar-bg-bottom"></div>
-                    <div id="result-graph-bar-top-1" class="result-graph-bar-top graph_color22"></div>
-                    <div id="result-graph-bar-bottom-1" class="result-graph-bar-bottom graph_color22"></div>
-                    <span class="result-graph-val-left">1.0</span>
-                    <span id="result-graph-val-middle-1" class="result-graph-val-middle">3.0</span>
-                    <span class="result-graph-val-right">4.0</span>
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
-                    <img id="result-graph-devider-middle-1" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
-                    <div id="result-graph-inner-middle-line-1" class="result-graph-inner-middle-line"></div>
-                    <img id="result-graph-inner-left-marker-1" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
-                    <img id="result-graph-inner-right-marker-1" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+            <div class="rgb_container">
+                <div class="result-graph__block rgb_title">
+                    <span class="result-graph__stroke">Самооценка</span>
+                    <span class="result-graph__stroke">Окружение</span>
                 </div>
-            </div>
-            <div class="result-graph__block rgb_long">
-                <span class="result-graph__head">Умение вызвать доверие</span>
-                <div class="result-graph-container">
-                    <div class="result-graph-bar-bg-top"></div>
-                    <div class="result-graph-bar-bg-bottom"></div>
-                    <div id="result-graph-bar-top-2" class="result-graph-bar-top graph_color22"></div>
-                    <div id="result-graph-bar-bottom-2" class="result-graph-bar-bottom graph_color22"></div>
-                    <span class="result-graph-val-left">1.0</span>
-                    <span id="result-graph-val-middle-2" class="result-graph-val-middle">3.0</span>
-                    <span class="result-graph-val-right">4.0</span>
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
-                    <img id="result-graph-devider-middle-2" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
-                    <div id="result-graph-inner-middle-line-2" class="result-graph-inner-middle-line"></div>
-                    <img id="result-graph-inner-left-marker-2" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
-                    <img id="result-graph-inner-right-marker-2" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+                <div class="result-graph__block rgb_long">
+                    <div class="result-graph-container">
+                        <div class="result-graph-bar-bg-top"></div>
+                        <div class="result-graph-bar-bg-bottom"></div>
+                        <div id="result-graph-bar-top-1" class="result-graph-bar-top graph_color22"></div>
+                        <div id="result-graph-bar-bottom-1" class="result-graph-bar-bottom graph_color22"></div>
+                        <span class="result-graph-val-left">1.0</span>
+                        <span id="result-graph-val-middle-1" class="result-graph-val-middle">3.0</span>
+                        <span class="result-graph-val-right">4.0</span>
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
+                        <img id="result-graph-devider-middle-1" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
+                        <div id="result-graph-inner-middle-line-1" class="result-graph-inner-middle-line"></div>
+                        <img id="result-graph-inner-left-marker-1" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
+                        <img id="result-graph-inner-right-marker-1" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+                    </div>
                 </div>
-            </div>
-            <div class="result-graph__block rgb_long">
-                <span class="result-graph__head">Навыки работы в команде</span>
-                <div class="result-graph-container">
-                    <div class="result-graph-bar-bg-top"></div>
-                    <div class="result-graph-bar-bg-bottom"></div>
-                    <div id="result-graph-bar-top-3" class="result-graph-bar-top graph_color22"></div>
-                    <div id="result-graph-bar-bottom-3" class="result-graph-bar-bottom graph_color22"></div>
-                    <span class="result-graph-val-left">1.0</span>
-                    <span id="result-graph-val-middle-3" class="result-graph-val-middle">3.0</span>
-                    <span class="result-graph-val-right">4.0</span>
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
-                    <img id="result-graph-devider-middle-3" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
-                    <div id="result-graph-inner-middle-line-3" class="result-graph-inner-middle-line"></div>
-                    <img id="result-graph-inner-left-marker-3" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
-                    <img id="result-graph-inner-right-marker-3" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+                <div class="result-graph__block rgb_long">
+                    <div class="result-graph-container">
+                        <div class="result-graph-bar-bg-top"></div>
+                        <div class="result-graph-bar-bg-bottom"></div>
+                        <div id="result-graph-bar-top-2" class="result-graph-bar-top graph_color22"></div>
+                        <div id="result-graph-bar-bottom-2" class="result-graph-bar-bottom graph_color22"></div>
+                        <span class="result-graph-val-left">1.0</span>
+                        <span id="result-graph-val-middle-2" class="result-graph-val-middle">3.0</span>
+                        <span class="result-graph-val-right">4.0</span>
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
+                        <img id="result-graph-devider-middle-2" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
+                        <div id="result-graph-inner-middle-line-2" class="result-graph-inner-middle-line"></div>
+                        <img id="result-graph-inner-left-marker-2" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
+                        <img id="result-graph-inner-right-marker-2" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+                    </div>
+                </div>
+                <div class="result-graph__block rgb_long rgb_3rd_slider">
+                    <div class="result-graph-container">
+                        <div class="result-graph-bar-bg-top"></div>
+                        <div class="result-graph-bar-bg-bottom"></div>
+                        <div id="result-graph-bar-top-3" class="result-graph-bar-top graph_color22"></div>
+                        <div id="result-graph-bar-bottom-3" class="result-graph-bar-bottom graph_color22"></div>
+                        <span class="result-graph-val-left">1.0</span>
+                        <span id="result-graph-val-middle-3" class="result-graph-val-middle">3.0</span>
+                        <span class="result-graph-val-right">4.0</span>
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
+                        <img id="result-graph-devider-middle-3" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
+                        <div id="result-graph-inner-middle-line-3" class="result-graph-inner-middle-line"></div>
+                        <img id="result-graph-inner-left-marker-3" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
+                        <img id="result-graph-inner-right-marker-3" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+                    </div>
+                    <img class="rgb_blue_arrows" src="img/anotation_img2.png" width="11" />
                 </div>
             </div>
         </div>
         <div class="result-graph">
-            <div class="result-graph__block">
-                <span class="result-graph__stroke">Самооценка</span>
-                <span class="result-graph__stroke">Окружение</span>
+            <div class="result-graph__block rgb_head">
+                <table width="100%">
+                    <tr>
+                        <td class="result-graph__head">Готовность оказать помощь и поддержку</td>
+                        <td class="result-graph__head">Решение конфликтных ситуаций</td>
+                        <td class="result-graph__head"></td>
+                    </tr>
+                </table>
             </div>
-            <div class="result-graph__block rgb_long">
-                <span class="result-graph__head">Готовность оказать помощь и поддержку</span>
-                <div class="result-graph-container">
-                    <div class="result-graph-bar-bg-top"></div>
-                    <div class="result-graph-bar-bg-bottom"></div>
-                    <div id="result-graph-bar-top-4" class="result-graph-bar-top graph_color22"></div>
-                    <div id="result-graph-bar-bottom-4" class="result-graph-bar-bottom graph_color22"></div>
-                    <span class="result-graph-val-left">1.0</span>
-                    <span id="result-graph-val-middle-4" class="result-graph-val-middle">3.0</span>
-                    <span class="result-graph-val-right">4.0</span>
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
-                    <img id="result-graph-devider-middle-4" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
-                    <div id="result-graph-inner-middle-line-4" class="result-graph-inner-middle-line"></div>
-                    <img id="result-graph-inner-left-marker-4" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
-                    <img id="result-graph-inner-right-marker-4" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+            <div class="rgb_container">
+                <div class="result-graph__block rgb_title">
+                    <span class="result-graph__stroke">Самооценка</span>
+                    <span class="result-graph__stroke">Окружение</span>
                 </div>
-            </div>
-            <div class="result-graph__block rgb_long">
-                <span class="result-graph__head">Решение конфликтных ситуаций</span>
-                <div class="result-graph-container">
-                    <div class="result-graph-bar-bg-top"></div>
-                    <div class="result-graph-bar-bg-bottom"></div>
-                    <div id="result-graph-bar-top-5" class="result-graph-bar-top graph_color22"></div>
-                    <div id="result-graph-bar-bottom-5" class="result-graph-bar-bottom graph_color22"></div>
-                    <span class="result-graph-val-left">1.0</span>
-                    <span id="result-graph-val-middle-5" class="result-graph-val-middle">3.0</span>
-                    <span class="result-graph-val-right">4.0</span>
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
-                    <img id="result-graph-devider-middle-5" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
-                    <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
-                    <div id="result-graph-inner-middle-line-5" class="result-graph-inner-middle-line"></div>
-                    <img id="result-graph-inner-left-marker-5" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
-                    <img id="result-graph-inner-right-marker-5" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+                <div class="result-graph__block rgb_long">
+                    <div class="result-graph-container">
+                        <div class="result-graph-bar-bg-top"></div>
+                        <div class="result-graph-bar-bg-bottom"></div>
+                        <div id="result-graph-bar-top-4" class="result-graph-bar-top graph_color22"></div>
+                        <div id="result-graph-bar-bottom-4" class="result-graph-bar-bottom graph_color22"></div>
+                        <span class="result-graph-val-left">1.0</span>
+                        <span id="result-graph-val-middle-4" class="result-graph-val-middle">3.0</span>
+                        <span class="result-graph-val-right">4.0</span>
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
+                        <img id="result-graph-devider-middle-4" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
+                        <div id="result-graph-inner-middle-line-4" class="result-graph-inner-middle-line"></div>
+                        <img id="result-graph-inner-left-marker-4" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
+                        <img id="result-graph-inner-right-marker-4" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+                    </div>
+                </div>
+                <div class="result-graph__block rgb_long">
+                    <div class="result-graph-container">
+                        <div class="result-graph-bar-bg-top"></div>
+                        <div class="result-graph-bar-bg-bottom"></div>
+                        <div id="result-graph-bar-top-5" class="result-graph-bar-top graph_color22"></div>
+                        <div id="result-graph-bar-bottom-5" class="result-graph-bar-bottom graph_color22"></div>
+                        <span class="result-graph-val-left">1.0</span>
+                        <span id="result-graph-val-middle-5" class="result-graph-val-middle">3.0</span>
+                        <span class="result-graph-val-right">4.0</span>
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-left">
+                        <img id="result-graph-devider-middle-5" src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-middle">
+                        <img src="img/10_slider_devider.png" width="1" height="34" class="result-graph-devider-right">
+                        <div id="result-graph-inner-middle-line-5" class="result-graph-inner-middle-line"></div>
+                        <img id="result-graph-inner-left-marker-5" src="img/10_slider_left_marker.png" width="3.5" height="5" class="result-graph-inner-left-marker">
+                        <img id="result-graph-inner-right-marker-5" src="img/10_slider_right_marker.png" width="3.5" height="5" class="result-graph-inner-right-marker">
+                        <span class="result-graph-bar-top-NA">N/A</span>
+                        <!-- <span class="result-graph-bar-bottom-NA">N/A</span> -->
+                    </div>
                 </div>
             </div>
         </div>

@@ -187,7 +187,7 @@
             }
         .report-list__describe {font-size:11px; display:inline-block; vertical-align:top; width:95px; margin-right:40px; color:#58595b;}
         .report-list__describe-dot {display:inline-block; vertical-align:top; margin:3px 0 0 3px; height:14px; width:14px; border-radius:7px; background:#d12229;}
-        .report-list__describe-dot-green {display:inline-block; height:14px; width:14px; border-radius:7px; background:#50b748;}
+        .report-list__describe-dot-green {display:inline-block; height:14px; width:14px; border-radius:7px; background:#50b748; margin-left:20px;}
         .level-img {background: url("img/bg_line.jpg") 0 100% repeat-y; height: 73px; width: 139px; position: relative; margin-left: 45px; margin-top: 5px;}
         .level-line {position: absolute; left: 16px;}
         .graph__ttl {font-size:12px; width:230px; display:inline-block; margin-bottom:10px; color: #575756;}
@@ -204,15 +204,25 @@
         }
         .line_graph_img {
             margin-top: 30px;
+            display: block;
         }
         .report-list_graph .line_graph_left_right:first-child{
             border-right:1px dotted #a1a2a5;
-            padding-right:20px;
             float: left;
+            width: 50%;
+            box-sizing: border-box;
         }
         .report-list_graph .line_graph_left_right:last-child{
+            float: left;
+            width: 50%;
+
+        }
+        .report-list_graph .line_graph_left_right:last-child img,
+        .report-list_graph .line_graph_left_right:last-child .report-list__info{
             padding-left: 20px;
-            float: right;
+        }
+        .report-list_graph .line_graph_left_right:first-child .report-list__info{
+            padding-right:20px;
         }
         .report-list_graph_left-right{
             padding-top:10px;
@@ -231,16 +241,53 @@
             clear: both;
             display: block;
             position: relative;
+            height: 21px;
+        }
+        .grad-slider{
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            top:8px;
+        }
+        .grad-slider-start{
+            position: absolute;
+            left:0px;
+            top:0px;
+            height: 21px;
+            width: 21px;
+        }
+        .grad-slider-end{
+            position: absolute;
+            right:0px;
+            top:0px;
+            height: 21px;
+            width: 21px;
         }
         #grad-slider-marker-1 {
             position: absolute;
-            left: 310px;
-            bottom: 18px;
+            left: 59%;
+            top: -15px;
+        }
+        #grad-slider-middle-1{
+            position: absolute;
+            left: 50%;
+            top:0px;
+            height: 23px;
+            width: 1px;
+            background-color: #808284;
         }
         #grad-slider-marker-2 {
             position: absolute;
-            left: 265px;
-            bottom: 18px;
+            left: 39%;
+            top: -15px;
+        }
+        #grad-slider-middle-2{
+            position: absolute;
+            left: 50%;
+            top:0px;
+            height: 23px;
+            width: 1px;
+            background-color: #808284;
         }
                 /* setup the page */
         @page {
@@ -345,15 +392,21 @@
                 <li class="line">
                     <div class="report-list__left">Мой показатель</div>
                     <div class="grad-slider-container">
-                        <img id="grad-slider-marker-1" src="img/08_1_marker.png" width="12" height="22"/>
-                        <img class="grad-slider" src="img/08_1.png" width="484" height="21"/> 
+                        <img id="grad-slider-marker-1" src="img/08_1_marker.png" width="12" height="22"/> 
+                        <img class="grad-slider" src="img/09_grad_slider.png" width="" height="21"/>
+                        <div id="grad-slider-middle-1"></div>
+                        <img class="grad-slider-start" src="img/09_grad_slider_start.png" width="" height="21"/>
+                        <img class="grad-slider-end" src="img/09_grad_slider_end.png" width="" height="21"/>  
                     </div>
                 </li>
                 <li class="line">
                     <div class="report-list__left">Среднее по группе оцененных</div>
                     <div class="grad-slider-container">
                         <img id="grad-slider-marker-2" src="img/08_1_marker.png" width="12" height="22"/>
-                        <img class="grad-slider" src="img/08_1.png" width="484" height="21"/> 
+                        <img class="grad-slider" src="img/09_grad_slider.png" width="" height="21"/>
+                        <div id="grad-slider-middle-2"></div>
+                        <img class="grad-slider-start" src="img/09_grad_slider_start.png" width="" height="21"/>
+                        <img class="grad-slider-end" src="img/09_grad_slider_end.png" width="" height="21"/>   
                     </div>
                 </li>
             </ul>
