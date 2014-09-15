@@ -5887,6 +5887,7 @@ font-size: 14px;
 }
 .gallery__slide_center .gallery__text {
   font-size: 14px;
+  min-height: 85px;
 }
 /* ==== [ list ] ==== */
 .list-wrap strong {
