@@ -14791,3 +14791,126 @@ a.fr__full:hover{
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
 }
+.news__nav{
+  position: relative;
+  width: 100%;
+  margin-bottom:18px;
+  margin-top: -5px;
+}
+.news__nav ul{
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.news__nav ul li{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-right: 11px;
+}
+.news__nav ul li a{
+  text-decoration: none;
+  color:#34495e;
+  font-size: 16px;
+}
+.news__nav ul li a:hover{
+  color:#1abc9c;
+}
+.news__nav ul li a.active{
+  color:#1abc9c;
+}
+.top__news__block{
+  position: relative;
+  width:100%;
+  clear: both;
+}
+.top__left__news__block{
+  position: relative;
+  width: 459px;
+  max-height: 432px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom:38px;
+  float: left;
+}
+.top__right__news__block{
+  position: relative;
+  display: inline-block;
+  max-height: 432px;
+  width: 149px;
+  padding: 0px 17px 0px 15px;
+  margin-bottom:38px;
+  float: left;
+}
+.top__right__news__block a.all__news{
+  color:#1abc9c;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: bold;
+}
+.top__right__news__block a.all__news:hover{
+  color:#1abc9c;
+  text-decoration: none;
+}
+.top__news__img{
+  position: relative;
+  width: 460px;
+  height: 306px;
+}
+.top__news__img img{
+  width: 460px;
+  height: 306px;
+  outline: none;
+  border:none;
+}
+.top__news__info{
+  position: relative;
+  padding: 14px 10px 13px 10px;
+  width: 440px;
+  min-height: 97px;
+}
+.top__news__info .news__category{
+  line-height: 16px !important;
+}
+.top__news__info .news__ttl{
+  margin-top: 1px;
+}
+.top__news__info .news__date{
+  margin-top: 2px;
+}
+.top__right__news__block__title{
+  position: relative;
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #ecf0f1;
+  color:#34495e;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom:10px;
+  line-height: 13px;
+  margin-bottom:15px;
+}
+.top__right__news__block__item{
+  position: relative;
+  width: 100%;
+  margin-bottom:15px;
+}
+.top__right__news__block__item .time{
+  position: relative;
+  color:#a7a9ac;
+  font-size: 14px;
+  display: block;
+  margin-top: -3px;
+}
+.top__right__news__block__item .title{
+  position: relative;
+  color:#34495e;
+  font-size: 16px;
+  display: block;
+}
+
