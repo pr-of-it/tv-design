@@ -4374,23 +4374,14 @@ a:hover {
   display: block;
   max-width: 100%;
   position: relative;
-  border: 1px solid #d8dee1;
-  -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 5px;
   background-clip: padding-box;
   -webkit-transition: opacity 0.2s ease;
   -moz-transition: opacity 0.2s ease;
   -o-transition: opacity 0.2s ease;
   -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
-  -webkit-backface-visibility: hidden;
-  /* webkit-animation bug */
-
-  -moz-backface-visibility: hidden;
-  /* moz-animation bug */
 
 }
 .news__category {
@@ -14828,12 +14819,11 @@ a.fr__full:hover{
 .top__left__news__block{
   position: relative;
   width: 459px;
-  max-height: 432px;
+  min-height: 432px;
   background-color: #ecf0f1;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  overflow: hidden;
   display: inline-block;
   margin-bottom:38px;
   float: left;
@@ -14847,20 +14837,30 @@ a.fr__full:hover{
   margin-bottom:38px;
   float: left;
 }
-.top__right__news__block a.all__news{
+.news_main a.all__news{
   color:#1abc9c;
   text-decoration: underline;
   font-size: 14px;
   font-weight: bold;
+  display: block;
+  width: 75px;
 }
-.top__right__news__block a.all__news:hover{
+.news_main a.all__news:hover{
   color:#1abc9c;
   text-decoration: none;
+}
+.news_main a.all__news__bottom{
+  margin-top: -18px;
+  margin-bottom: 40px;
 }
 .top__news__img{
   position: relative;
   width: 460px;
   height: 306px;
+  overflow: hidden;
+  border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
 }
 .top__news__img img{
   width: 460px;
@@ -14913,4 +14913,13 @@ a.fr__full:hover{
   font-size: 16px;
   display: block;
 }
-
+.news__img__box{
+  position: relative;
+  width: 300px;
+  height: 195px;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border:1px solid #d8dee1;
+}
