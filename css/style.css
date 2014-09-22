@@ -7585,10 +7585,12 @@ font-size: 14px;
   margin-top: 11px;
 }
 .items {
-  position: relative;
-  top: -70px;
   margin-right: -21px;
   padding: 0 0 23px;
+}
+.items i {
+    position: relative;
+    top: -70px;
 }
 .items__link {
   display: inline-block;
