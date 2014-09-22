@@ -7585,6 +7585,8 @@ font-size: 14px;
   margin-top: 11px;
 }
 .items {
+  position: relative;
+  top: -70px;
   margin-right: -21px;
   padding: 0 0 23px;
 }
