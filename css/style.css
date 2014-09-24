@@ -7591,6 +7591,7 @@ font-size: 14px;
 .items i {
     position: relative;
     top: -70px;
+    display: inline-block;
 }
 .items__link {
   display: inline-block;
