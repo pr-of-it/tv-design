@@ -14928,3 +14928,69 @@ a.fr__full:hover{
   -moz-border-radius:5px;
   border:1px solid #d8dee1;
 }
+.clear { clear:both }
+.construct_welcome {
+    width:100%;
+    min-height:466px;
+    color:#ffffff;
+    font-size:16px;
+    box-sizing:border-box;
+    padding: 20px 20px 20px 185px;
+    margin: 0 0 40px 0;
+    background: url('../img/construct-welcome-img.png') no-repeat 20px 20px #34495e;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.construct_welcome .title {
+    color: #1abc9c;
+    font-size:38px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.construct_welcome .text {
+    line-height:19px;
+}
+.construct_welcome b {
+    font-size:18px;
+}
+.construct_items .item {
+    width:100%;
+    margin: 0 0 40px 0;
+    position:relative;
+}
+.construct_items .item .icon {
+    width:221px;
+    height:185px;
+    box-sizing:border-box;
+    border:solid 2px #edf1f2;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background:#f9fafd;
+    float:left;
+    margin:0 20px 0 0;
+}
+.construct_items .item .item-info {
+    float:left;
+    width:360px;
+}
+.construct_items .item .btn {
+    margin: 20px 0 0 0;
+}
+.construct_items .item .title {
+    color:#34495e;
+    font-weight:bold;
+    font-size:24px;
+}
+.construct_items .item .subtitle {
+    color:#34495e;
+    font-weight:bold;
+    font-size:16px;
+    margin: 0 0 4px 0;
+}
+.construct_items .item .tag {
+    color: #3498db;
+    font-size:14px;
+    width:230px;
+}
