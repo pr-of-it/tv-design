@@ -544,14 +544,26 @@ var MainJsClass = function () {
         }
     };
 
+
+
     this.initScroll = function (){
         if ($('.check-events').length) {
             $(".check-events").mCustomScrollbar();
         }
 
-		if ($('.scroll-area').length) {
-			$(".scroll-area").mCustomScrollbar();
-		}
+        if ($('.scroll-area').length) {
+            $(".scroll-area").mCustomScrollbar();
+        }
+
+        if ($('.question_content').length) {
+            $(".question_content").mCustomScrollbar();
+            $('#cosntruct-prev-questions').on('click', function() {
+                $(".question_list").fadeIn('fast');
+            });
+            $('.question_list .close').on('click', function() {
+                $(".question_list").fadeOut('fast');
+            });
+        }
     };
     this.initScroll2 = function (){
         if ($('.notification').length) {
