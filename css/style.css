@@ -14934,11 +14934,11 @@ a.fr__full:hover{
 .construct_welcome .text { line-height:19px; }
 .construct_welcome b { font-size:18px; }
 .construct_items .item { width:100%; margin: 0 0 40px 0; position:relative; }
-.construct_items .item .icon { width:221px; height:185px; box-sizing:border-box; border:solid 2px #edf1f2; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; background:#f9fafd; float:left; margin:0 20px 0 0; }
-.construct_items .item .item-info { float:left; width:360px; }
-.construct_items .item .btn { margin: 20px 0 0 0; }
+.construct_items .item .icon { width:221px; height:185px; box-sizing:border-box; border:solid 2px #edf1f2; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; background:#f9fafd; float:left; margin:0 17px 0 0; }
+.construct_items .item .item-info { float:left; width:350px; margin: -7px 0 0 0; }
+.construct_items .item .btn { margin: 24px 0 0 2px; width: 160px; }
 .construct_items .item .title { color:#34495e; font-weight:bold; font-size:24px; }
-.construct_items .item .subtitle { color:#34495e; font-weight:bold; font-size:16px; margin: 0 0 4px 0; }
+.construct_items .item .subtitle { color:#34495e; font-weight:bold; font-size:16px; margin: 4px 0 6px 1px; }
 .construct_items .item .tag { color: #3498db; font-size:14px; width:230px; }
 .how_it_works { color:#3498db; float: right; margin: -47px 0 0 0; }
 .how_it_works:hover { color:#34495e; }
