@@ -2578,14 +2578,14 @@ a:hover {
   background-clip: padding-box;
 }
 .btn_grey:hover {
-  color: #fff;
-  background: #a5a8b2;
-  border: 2px solid #a5a8b2;
+    color: #fff;
+    background: #a5a8b2;
+    border: 2px solid #a5a8b2;
 }
 .btn_grey:active {
-  color: #fff;
-  background: #898e9a;
-  border: 2px solid #898e9a;
+    color: #fff;
+    background: #898e9a;
+    border: 2px solid #898e9a;
 }
 .btn_search {
   font-size: 0;
@@ -15005,3 +15005,12 @@ a.fr__full:hover{
 .product_name { margin:23px 0 0 0; }
 .addMargin { margin: 0 18px 0 0; }
 .newWidth { width:173px; }
+
+.btn_grey_light {
+    background: #a7a9ac;
+    border: 2px solid #a7a9ac;
+}
+.btn_grey_light:hover {
+    background: #8b8c8e!important;
+    border: 2px solid #8b8c8e;
+}
