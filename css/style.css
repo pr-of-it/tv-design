@@ -14836,7 +14836,7 @@ a.fr__full:hover{
 .top__right__news__block{
   position: relative;
   display: inline-block;
-  max-height: 432px;
+  /*max-height: 432px;*/
   width: 149px;
   padding: 0px 17px 0px 15px;
   margin-bottom:38px;
@@ -14853,6 +14853,11 @@ a.fr__full:hover{
 .news_main a.all__news:hover{
   color:#1abc9c;
   text-decoration: none;
+}
+.news_main a.all__news.absolute {
+
+    position: absolute;
+    top: 0;
 }
 .news_main a.all__news__bottom{
   margin-top: -18px;
@@ -14903,7 +14908,7 @@ a.fr__full:hover{
 .top__right__news__block__item{
   position: relative;
   width: 100%;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 .top__right__news__block__item .time{
   position: relative;

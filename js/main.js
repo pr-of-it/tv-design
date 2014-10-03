@@ -1,5 +1,19 @@
 var MainJsClass = function () {
-	var scope = this;		
+	var scope = this;
+
+    this.initNewsBlock = function() {
+        var leftHeight = $('.top__left__news__block').height();
+        var rightheight = $('.top__right__news__block').height();
+        var imgHeight = $('.top__news__img').height();
+        var padding = parseInt($('.top__news__info').css('paddingTop'), 10) + parseInt($('.top__news__info').css('paddingBottom'), 10);
+        if ( leftHeight < rightheight ) {
+            $('.top__news__info').css('height', (rightheight - imgHeight - padding) + 'px');
+        }
+        else {
+            var $allnews = $('.top__right__news__block a.all__news');
+            $allnews.addClass('absolute').css('margin-top', (leftHeight - $allnews.height()) + 'px');
+        }
+    };
 
 	this.customDatepicker = function () {
 		if($('.custom-datepicker').length){
@@ -851,6 +865,7 @@ var MainJsClass = function () {
     };
 
 	$(function(){
+        scope.initNewsBlock();
 		scope.customDatepicker();
 		scope.initWysiwyg();
 		scope.initCarousel();
