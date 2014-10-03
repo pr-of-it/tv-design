@@ -14997,3 +14997,6 @@ a.fr__full:hover{
 .construct_complete .data__item.grey { background:#f9fafb; }
 .construct_complete .data__item.grey .data__price strong { color:#6c7b8a; }
 .construct_complete .data__item.grey .ico_ruble { background-position: -329px -203px; }
+.product_name { margin:23px 0 0 0; }
+.addMargin { margin: 0 18px 0 0; }
+.newWidth { width:173px; }
