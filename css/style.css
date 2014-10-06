@@ -7409,10 +7409,13 @@ font-size: 14px;
   margin-bottom: 29px;
 }
 .reviews__img {
-  width: 117px;
-  float: left;
-  margin: 5px 11px 0 0;
+    width: 117px;
+    float: left;
+    margin: 5px 11px 0 0;
 }
+.reviews__link { position: absolute; top: 26px; left: 120px; }
+.reviews__link.no_link { color:#a7a9ac; }
+.reviews__link a { text-decoration:none; }
 .reviews__img .b-label {
   font-size: 14px;
   font-weight: normal;
