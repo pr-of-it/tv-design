@@ -15024,3 +15024,20 @@ a.fr__full:hover{
 .reg_auth .txt_field  { width:274px; height:32px; line-height:32px; color:#a7a9ac; font-size:16px; padding: 0 13px; margin: 20px 0; box-sizing: border-box; border:solid 2px #ecf0f1; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
 .reg_auth .txt_field:first-child { margin-right:29px; }
 .reg_auth .logs { position:absolute; }
+
+.email_body { width:640px; font-family: Calibri, Arial, sans-serif; color:#35495e; }
+.email_body .mail_header { width:100%; height:90px; padding: 0 40px; box-sizing: border-box; border-bottom:solid 4px #121d2a; background:#28333d; }
+.email_body .mail_footer { width:100%; height:66px; background: #edf0f1; padding: 20px 40px; box-sizing: border-box; color:#939598; font-size:12px; }
+.email_body .mail_content { width:100%; padding: 40px; box-sizing: border-box; font-size:16px; }
+.email_body b { font-weight:bold; }
+.email_body h1 { font-family: inherit; font-weight: bold; color: #34495e; }
+.email_body a { text-decoration:underline; color: #1abc9c; }
+.email_body a:hover { color: #48c9b0; text-decoration: none; }
+.email_body .line { margin:25px 0; width:100%; height:2px; background: #edf0f1; display: block; }
+.email_body .count { font-size:18px; }
+.email_body .cancel { color:#e64c3c; }
+.email_body .cancel_reason { font-size:14px; margin:10px 0 0 0; }
+.email_body .green_btn { width:230px; height:34px; margin: 15px 0 0 0; text-align: center; display:block; line-height:34px; text-decoration:none; background: #1abc9c; font-size: 14px; color: #ffffff; font-weight: bold; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
+.email_body .green_btn:hover { background:#48c9b0; color: #ffffff; }
+.email_body .logo { width: 209px; height: 33px; margin:25px 0 0 0; float:left; overflow: hidden; text-indent: -9999px; background: url(../img/logo-hdr.png) no-repeat; }
+.email_body .logo_company { color:#26b99b; margin: 32px 0 0 30px; padding: 0 0 0 30px; border-left:solid 1px #26b99b; height:29px; line-height: 29px; font-size:24px; float:left; }
