@@ -162,15 +162,42 @@
 					<div class="company-box__section">
 						<h1>Создание компании</h1>
 						<div class="form form_create form_create_company">
-							<div class="form__row">
-								<label class="b-label" for="title">Название<span class="required">*</span></label>
-								<div class="input-i">
-									<input id="title" placeholder="placeholdertext" value="" class="input" type="text">
-								</div>
-							</div>
+                            <div class="form__row">
+                                <label class="b-label" for="title">Название<span class="required">*</span></label>
+                                <div class="input-i full_width">
+                                    <input id="title" placeholder="" value="" class="input" type="text">
+                                </div>
+                                <div class="tip">Пожалуйста, указывайте название компании без формы собственности (ООО, ЗАО и так далее) и кавычек.</div>
+                            </div>
+                            <div class="form__row">
+                                <label class="b-label" for="title">Направление деятельности компании<span class="required">*</span></label>
+                                <div class="input-check"><input class="" type="checkbox"> Дистрибуция контента</div>
+                                <div class="input-check"><input class="" type="checkbox"> Оборудование</div>
+                                <div class="input-check"><input class="" type="checkbox"> Обучение</div>
+                                <div class="input-check"><input class="" type="checkbox"> Общественные организации</div>
+                                <div class="input-check"><input class="" type="checkbox"> Производство контента</div>
+                            </div>
+                            <div class="form__row">
+                                <label class="b-label" for="title">Специализация</label>
+                                <div class="">
+                                    <div class="select-i">
+                                        <select class="select select_custom" data-placeholder="Выберите специализацию">
+                                            <option></option>
+                                            <option>Открытая группа</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row borders">
+                                <b>Добавьте еще одну специализацию</b>
+                                <a href="#" class="ico_plus_big">Добавить</a>
+                            </div>
+                            <div class="form__row">
+                                <div class="tip">Вы можете выбрать не более 5 специализаций.</div>
+                            </div>
 
 							<div class="form__row">
-								<label class="b-label" for="title">Описание<span class="required">*</span></label>
+								<label class="b-label" for="title">Описание компании<span class="required">*</span></label>
 								<div class="wysiwyg-i">
 									<textarea id="wysiwyg" name="wysiwyg" cols="30" rows="10"></textarea>
 								</div>
@@ -186,7 +213,7 @@
 							<div class="form__row">
 								<label class="b-label" for="city">Город<span class="required">*</span></label>
 								<div class="input-i">
-									<input value="valuetext" id="city" class="input" type="text">
+									<input value="" id="city" class="input" type="text">
 								</div>
 							</div>
 

@@ -3033,7 +3033,7 @@ a:hover {
   margin: 0 0 10px;
 }
 .form__row {
-  margin: 0 0 20px;
+    margin: 0 0 20px;
 }
 .form__row_small {
   margin: 0 0 15px;
@@ -3384,15 +3384,29 @@ a:hover {
 .form_create_company .form__row {
   margin: 0 0 15px;
 }
+
+.form_create_company .form__row.borders {
+    margin: 20px 0 5px;
+    padding:20px 0;
+    font-size:16px;
+    border-top:solid 2px #edf0f1;
+    border-bottom:solid 2px #edf0f1;
+}
+.form_create_company .ico_plus_big { background: url("../img/icons/add-big.png") no-repeat; padding: 0 0 0 50px; height:29px; line-height: 29px; color:#1abc9c; display: inline-block; margin: 0 0 0 15px; }
+.form_create_company .ico_plus_big:hover{ text-decoration:none; }
 .form_create_company .b-label {
   font-size: 18px;
   line-height: 22px;
 }
 .form_create_company .input-i {
-  width: 320px;
+    width: 320px;
+}
+.form_create_company .input-check { height:20px; margin:10px 0 0 0; }
+.form_create_company .input-i.full_width {
+    width: 100%;
 }
 .form_create_company .input {
-  padding: 4px 10px;
+  padding: 9px 10px;
 }
 .form_create_company .form__bottom {
   padding: 5px 0 0;
@@ -4733,6 +4747,9 @@ a:hover {
   line-height: 18px;
   color: #3498db;
   margin: 0 0 -12px;
+}
+.company-box__entry-list li.description {
+    color:#34495e;
 }
 .company-box__entry-list li {
   padding: 0 0 12px 0;
@@ -14996,6 +15013,7 @@ a.fr__full:hover{
 .construct_complete { color:#34495e; font-size:16px; margin: 42px 0 0 -4px; }
 .construct_complete .recreate_btn { color:#e74c3c; display: block;margin:12px 0 29px 0; }
 .font_18 { font-size:18px; }
+.font_16 { font-size:16px; }
 .construct_complete .font_24 { font-size:24px; margin:0 0 8px 0; }
 .construct_complete .btn_green { width:173px;}
 .construct_complete .block_scheme { width:100%; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border:solid 1px #d8dee1; margin-bottom: 40px; }
@@ -15025,6 +15043,7 @@ a.fr__full:hover{
 .reg_auth .txt_field  { width:274px; height:32px; line-height:32px; color:#a7a9ac; font-size:16px; padding: 0 13px; margin: 20px 0; box-sizing: border-box; border:solid 2px #ecf0f1; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
 .reg_auth .txt_field:first-child { margin-right:29px; }
 .reg_auth .logs { position:absolute; }
+.tip { width:375px; font-size:12px; margin:5px 0 0 0; }
 
 .email_body { width:640px; font-family: Calibri, Arial, sans-serif; color:#35495e; }
 .email_body .mail_header { width:100%; height:90px; padding: 0 40px; box-sizing: border-box; border-bottom:solid 4px #121d2a; background:#28333d; }
@@ -15042,3 +15061,27 @@ a.fr__full:hover{
 .email_body .green_btn:hover { background:#48c9b0; color: #ffffff; }
 .email_body .logo { width: 209px; height: 33px; margin:25px 0 0 0; float:left; overflow: hidden; text-indent: -9999px; background: url(../img/logo-hdr.png) no-repeat; }
 .email_body .logo_company { color:#26b99b; margin: 32px 0 0 30px; padding: 0 0 0 30px; border-left:solid 1px #26b99b; height:29px; line-height: 29px; font-size:24px; float:left; }
+
+.form-company-search .btn_show { min-width:80px; display:block; float:right; }
+.form-company-search .input-i.semi_width { width: 496px; float:left; }
+.form-company-search .search-title { margin:0 0 10px 0; }
+.form-company-search .form_row { margin:15px 0 0 0; }
+.form-company-search .select-i { width:260px; }
+.form-company-search h5 { background:url('../img/icons/arrow-bottom.png') no-repeat left center; font-size:16px; font-weight:bold; padding:0 0 0 20px; margin:0 0 10px 0; }
+.form-company-search .event__ttl { margin: 0 0 5px 0; }
+.form-company-search .select-i .select { width:100% }
+.form-company-search .last_news { width:100%; box-sizing: border-box; padding: 15px 0 ; margin:20px 0 0 0; background: #f3f4f5; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
+.form-company-search .last_news .separator { margin:15px 0; }
+.form-company-search .last_news .news-row { padding:0 15px; }
+.form-company-search .last_news .news-row .date { font-size: 12px; color: #939598; }
+.form-company-search .last_news .news-row .col { width:160px; display: inline-block; }
+.form-company-search .last_news .news-row .col:first-child { margin:0 50px 0 0; }
+.form-company-search .last_news .news-row .col:last-child { margin:0 0 0 50px; }
+.form-company-search .news_title { font-size:16px; float:left; margin: 0 0 0 15px; }
+.form-company-search .all_news { float:right; margin:0 15px 0 0; }
+.form-company-search .select-i.top-margin { margin:0 0 10px 0; display: block; }
+.form-company-search .search-result { font-size:12px; }
+.form-company-search .all-companies { font-size:12px; margin:7px 0 20px 0; display: block; }
+.form-company-search .parts { color:#3498db; }
+.btn_green_underline { color:#1abc9c; }
+.btn_green_underline:hover { color:#1abc9c; text-decoration:none; }
