@@ -10085,6 +10085,7 @@ font-size: 14px;
 .popup_invite .chk-area {
   margin-top: 5px;
   position: absolute;
+ z-index: 1;
 }
 .popup_invite .b-label {
   font-size: 12px;
@@ -10149,13 +10150,13 @@ font-size: 14px;
 width: 200px;
 }
 .popup_invite .reg-form__row:hover .chk-area {
-  display: none;
+  /*display: none;*/
 }
 .popup_invite .reg-form__row__invite:hover .chk-area {
   display:block;
 }
 .popup_invite .reg-form__row:hover .b-label {
-  background: url(../img/bg-label.png) repeat;
+  /*background: url(../img/bg-label.png) repeat;*/
 }
 .popup_invite .reg-form__row:hover .check-label {
   display: block;
