@@ -4751,6 +4751,10 @@ a:hover {
 .company-box__entry-list li.description {
     color:#34495e;
 }
+.company-box__entry-list li.description a:hover {
+    color:#34495e;
+    text-decoration: none;
+}
 .company-box__entry-list li {
   padding: 0 0 12px 0;
   position: relative;
@@ -15067,7 +15071,8 @@ a.fr__full:hover{
 .form-company-search .search-title { margin:0 0 10px 0; }
 .form-company-search .form_row { margin:15px 0 0 0; }
 .form-company-search .select-i { width:260px; }
-.form-company-search h5 { background:url('../img/icons/arrow-bottom.png') no-repeat left center; font-size:16px; font-weight:bold; padding:0 0 0 20px; margin:0 0 10px 0; }
+.form-company-search h5.alphabet_sort { background:url('../img/icons/arrow-bottom.png') no-repeat 0 7px; cursor: pointer; font-size:16px; font-weight:bold; padding:0 0 0 20px; margin:0 0 10px 0; }
+.form-company-search h5.alphabet_sort.reverse { background-position:0 -13px; }
 .form-company-search .event__ttl { margin: 0 0 5px 0; }
 .form-company-search .select-i .select { width:100% }
 .form-company-search .last_news { width:100%; box-sizing: border-box; padding: 15px 0 ; margin:20px 0 0 0; background: #f3f4f5; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
@@ -15085,3 +15090,4 @@ a.fr__full:hover{
 .form-company-search .parts { color:#3498db; }
 .btn_green_underline { color:#1abc9c; }
 .btn_green_underline:hover { color:#1abc9c; text-decoration:none; }
+.company-box__section .event__img { width:118px; height:118px; }
