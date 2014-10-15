@@ -8331,7 +8331,7 @@ font-size: 14px;
   padding: 0 0 4px;
 }
 .popup__data {
-  position: absolute;
+  position: fixed;
   z-index: 5;
   top: 101px;
   left: 50%;
