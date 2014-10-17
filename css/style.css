@@ -9297,9 +9297,9 @@ font-size: 14px;
 .profile__meta-tooltip .b-link {
   float: right;
 }
-.profile__meta-txt:hover .profile__meta-tooltip {
+/*.profile__meta-txt:hover .profile__meta-tooltip {
   display: block;
-}
+}*/
 .profile__bottom {
   margin-bottom: 15px;
 }
