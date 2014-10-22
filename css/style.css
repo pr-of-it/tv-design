@@ -6752,6 +6752,10 @@ font-size: 14px;
 .tabs_small .tabset__item:hover .tabset__link {
   background: #fff;
 }
+
+.tabs_small .tabset__item.active:hover .comments__count {
+    margin-bottom: 0;
+}
 .jsStripe li:nth-child(2n) {
   background-color: #f9fafb;
 }
