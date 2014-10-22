@@ -2746,6 +2746,11 @@ a:hover {
   display: inline-block;
   border-bottom: 1px solid #e84d38;
 }
+.btn_unsubscribe .btn__group {
+    color: #e74c3c;
+    border-bottom: 1px solid #e74c3c;
+    display: inline-block;
+}
 .btn_unsubscribe:hover {
   color: #e84d38;
   text-decoration: none;
