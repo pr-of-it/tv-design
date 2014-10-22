@@ -6634,6 +6634,7 @@ font-size: 14px;
   margin: 0 -2px 0 0;
   float: left;
 }
+
 .tabset__item.active .tabset__link,
 .tabset__item:hover .tabset__link {
   background: #f9fafd;
@@ -6767,6 +6768,9 @@ font-size: 14px;
   border-color: #fff;
   border-width: 2px 2px 0;
   border-style: solid;
+}
+.tabset__link.comments__count, .tabs_small .tabset__item:hover .comments__count {
+    margin-bottom: 0;
 }
 .tabs_small .tabset__item.active:hover .tabset__link,
 .tabs_small .tabset__item.active .tabset__link {
