@@ -14834,13 +14834,15 @@ a.fr__full:hover{
   position: relative;
   display: inline-block;
   margin-bottom: 8px;
-  margin-right: 11px;
+  margin-right: 9px;
 }
+.news__nav ul li:last-child {margin-right:0; }
 .news__nav ul li a{
   text-decoration: none;
   color:#34495e;
   font-size: 16px;
 }
+.news__nav.news_small ul li a { font-size:14px; }
 .news__nav ul li a:hover{
   color:#1abc9c;
 }
@@ -15097,7 +15099,7 @@ a.fr__full:hover{
 .btn_green_underline { color:#1abc9c; }
 .btn_green_underline:hover { color:#1abc9c; text-decoration:none; }
 .company-box__section .event__img { width:118px; height:118px; }
-.news_separator { border-bottom:solid 2px #ecf0f1; padding:0 0 10px 0; }
+.news_separator { border-bottom:solid 2px #ecf0f1; padding:0 0 8px 0; }
 .comments h2 { margin: 20px 0 10px 0; }
 .news_tag span { height:24px; line-height: 24px; padding: 0 10px; background: #ecf0f1; color:#848d93; font-size: 14px; display: inline-block; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
 .news_tag span:hover { color:#1abc9c; }
