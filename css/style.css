@@ -13292,7 +13292,7 @@ Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
   width: 31px;
   background: url(../img/select-r.png) no-repeat;
   position: absolute;
-  right: 0;
+  right: -1px;
   top: 0;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
