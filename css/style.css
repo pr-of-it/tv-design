@@ -1364,6 +1364,18 @@ a:hover {
   font-weight: bold;
   margin: -12px 0 21px;
 }
+.cnt .vacancy h1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    padding-right: 120px;
+}
+
+.cnt .article h1 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    line-height: 28px;
+}
 .cnt__sub-ttl {
   font-size: 24px;
   line-height: 28px;
@@ -4111,10 +4123,11 @@ a:hover {
   border-top: 2px solid #ecf0f1;
 }
 .events__date {
-  font-size: 24px;
-  line-height: 27px;
-  font-weight: normal;
-  margin: 0 0 28px;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: normal;
+    margin: 0 0 28px;
+    font-family: inherit;
 }
 .events_main {
   padding: 0 0 26px;
@@ -4196,11 +4209,12 @@ a:hover {
   color: #1abc9c;
 }
 .event__ttl {
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: bold;
-  color: #34495e;
-  margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #34495e;
+    margin: 0 0 8px;
+    font-family: inherit;
 }
 .event__ttl a {
   text-decoration: none;
@@ -4409,10 +4423,11 @@ a:hover {
   color: #3498db;
 }
 .news__ttl {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  color: #34495e;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    color: #34495e;
+    font-family: inherit;
 }
 .news__ttl a {
   text-decoration: none;
@@ -4469,6 +4484,13 @@ a:hover {
   line-height: 30px;
   font-weight: bold;
   padding: 0 30px 0 0;
+}
+h1.post__ttl {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 0 30px 0 0;
+    margin: 0;
 }
 .post__entry {
   padding: 0 0 15px;
@@ -4729,7 +4751,7 @@ a:hover {
   border-radius: 5px;
   background-clip: padding-box;
 }
-.company-box__ttl {
+.company-box__ttl, h1.company-box__ttl {
   margin: -4px 0 9px;
   font-size: 24px;
   line-height: 28px;
@@ -4868,6 +4890,18 @@ a:hover {
   font-size: 24px;
   line-height: 28px;
   margin: 0 0 7px;
+}
+.company-box__section .delegate_name {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 7px;
+}
+.company-box__section .subscribers__ttl {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 7px;
 }
 .company-box__section h4 {
   font-size: 18px;
@@ -6496,12 +6530,13 @@ font-size: 14px;
   padding: 0 0 0px 80px;
 }
 .comments__count {
-  font-size: 12px;
-  line-height: 14px;
-  font-weight: bold;
-  display: block;
-  color: #34495e;
-  margin: 0 0 15px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+    display: block;
+    color: #34495e;
+    margin: 0 0 15px;
+    font-family: inherit;
 }
 .comments__count em {
   font-weight: normal;
@@ -7297,6 +7332,11 @@ font-size: 14px;
 .catalog__ttl a {
   text-decoration: none;
 }
+.catalog__ttl .catalog__ttl-link{
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 16px;
+}
 .catalog__ttl-link {
   text-decoration: none;
   color: #34495e;
@@ -7581,6 +7621,7 @@ font-size: 14px;
 .letters__ttl {
   font-weight: bold;
   font-size: 16px;
+    font-family: inherit;
 }
 .letters__block {
   margin-bottom: 14px;
