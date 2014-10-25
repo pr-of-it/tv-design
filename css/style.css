@@ -2252,10 +2252,28 @@ a:hover {
   height: 26px;
 }
 .ico_pdf {
-  background-image: url(../img/icons.png);
-  background-position: 0px -155px;
-  width: 36px;
-  height: 37px;
+    background-image: url(../img/icons.png);
+    background-position: 0px -155px;
+    width: 36px;
+    height: 37px;
+}
+.ico_xls {
+    background-image: url(../img/icons.png);
+    background-position: 0px -320px;
+    width: 36px;
+    height: 37px;
+}
+.ico_doc {
+    background-image: url(../img/icons.png);
+    background-position: -40px -320px;
+    width: 36px;
+    height: 37px;
+}
+.ico_ppt {
+    background-image: url(../img/icons.png);
+    background-position: -80px -320px;
+    width: 36px;
+    height: 37px;
 }
 .ico_person-green {
   background-image: url(../img/icons.png);
@@ -8073,7 +8091,7 @@ font-size: 14px;
   margin: 20px 20px 2px 57px;
   color: #34495e;
 }
-.features__link .ico_pdf {
+.features__link .ico_pdf, .features__link .ico_xls, .features__link .ico_doc, .features__link .ico_ppt {
   position: absolute;
   left: -57px;
   top: 0;
@@ -15153,3 +15171,6 @@ a.fr__full:hover{
 .news-col .parts { color:#a7a9ac; margin:0 0 5px 0; }
 .news-col .description { color:#58595b; }
 .news-col.news-border { border-bottom:solid 2px #d7dcde; padding: 0 0 15px 0; }
+.brand_ttl { font-size:16px; margin:-15px 0 20px 0; color: #1abc9c; display: inline-block; vertical-align: top; outline: none; }
+.brand_ttl:hover { text-decoration: none; }
+.post__files { margin:-15px 0 15px 0; }
