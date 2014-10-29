@@ -3154,10 +3154,11 @@ a:hover {
   margin: 0 16px 0 0;
 }
 .form_filter__ttl {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin: 0 0 8px;
+    font-family: inherit;
 }
 .form_create .input-i_large {
   float: left;
