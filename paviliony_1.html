@@ -31,6 +31,71 @@
 	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="js/datepicker.js"></script>
 	<script src="js/main.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"> </script>
+    <script type="text/javascript">
+        
+        ymaps.ready(init);
+        var myMap, icon;
+
+        function init(){
+            myMap = new ymaps.Map("map-canvas", {
+                center: [55.834042,37.315407],
+                zoom: 15
+            });
+             myMap.controls.remove('zoomControl');
+             myMap.controls.remove('typeSelector');
+             myMap.controls.remove('control');
+             myMap.controls.remove('mapTools');
+             myMap.controls.remove('searchControl');
+             myMap.controls.remove('trafficControl');
+             myMap.controls.remove('scaleLine');
+             myMap.controls.remove('miniMap');
+             myMap.controls.remove('smallZoomControl');
+           
+
+            icon = new ymaps.Placemark([55.8382,37.3070], {
+                balloonContent: '<div class="pav__event" style="border-bottom: none!important;text-align:left; padding-left:20px;margin:0; padding-top:20px; height: 238px; width: 495px;"> <a class="event__img" href="https://www.google.com" style="margin: 4px 15px 0 0;width: 115px;height: 84px;float: left;overflow: hidden;border-radius: 5px;border: 1px solid #d8dee1;"><img src="img/img17.jpg" height="84" alt=""style="height: 84px;"></a><div class="event__cnt" style="text-align: left; font-family: Calibri, Arial, sans-serif;font-size: 14px;margin: 0;padding: 0;color: #34495e;overflow: hidden;"><span class="event__cat" style="cursor: auto;font-family: Calibri, Arial, sans-serif;font-size: 16px;line-height: 20px;display: block;color: #3498db;"><a href="https://www.google.com" style="text-decoration: none;color: #3498db;">Кинопавильон, Телепавильон, Фотопавильон</a></span><h2 class="event__ttl" style="font-size: 18px;line-height: 18px;font-weight: bold;color:#34495e;margin: 0;"><a href="https://www.google.com">Павильон №1</a></h2><ul class="event__info" style="list-style-type: none;font-size: 16px;line-height: 18px;color: #7f8c8d;"><li style="display: list-item;text-align: -webkit-match-parent;"><strong>Киностудия “Амедия”</strong></li><li><span class="event__price" style="font-size: 24px !important;color: #1abc9c!important;font-weight: bold!important;">2000 <span>руб/час</span></span></li></ul></div><p style=" margin-top:31px;margin-bottom:5px;font-size:16px; font-family:Calibri, Arial, sans-serif;text-align:left;">This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum </p><span class="event__price"><span><a href="#">Посмотреть подробнее</a></span></span></div>'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/icons/geometka.png',
+                iconImageSize: [59, 60],
+                iconImageOffset: [-25, -65],
+                hideIconOnBalloonOpen: false,
+                balloonContentSize: [550, 238], // размер нашего кастомного балуна в пикселях
+                balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+                balloonImageHref: 'img/hint.png', // Картинка заднего фона балуна
+                balloonImageOffset: [30, -65], // смещание балуна, надо подогнать под стрелочку
+                balloonImageSize: [550, 238], // размер картинки-бэкграунда балуна
+                balloonShadow: true
+
+            }
+
+            );
+           
+
+            myMap.geoObjects.add(icon);
+            icon.balloon.open();
+            
+        }
+    </script>
+    <script>
+
+      $(function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 33000,
+          values: [ 10000, 23000 ],
+          slide: function( event, ui ) {
+            $( "#amountMin" ).val("oт" + " " + ui.values[ 0 ] + " " + "р.");
+            $( "#amountMax" ).val("дo" + " " + ui.values[ 1 ] + " " + "р.");
+          }
+        });
+        $( "#amountMin" ).val("ot " + $( "#slider-range" ).slider( "values", 0 ) + " р.");
+        $( "#amountMax" ).val("do " + $( "#slider-range" ).slider( "values", 1 ) + " р.");
+      });
+    </script>
+
 	<script type="text/javascript">
 		// replace custom forms
 		jcf.lib.domReady(function(){
@@ -40,559 +105,563 @@
 </head>
 
 <body>
-<a class="side-banner side-banner_old" href="#">
-    <span class="side-banner__inner" >
-        <span class="side-banner__text" >
-            <span class="side-banner__name">Старый дизайн</span>
+    <a class="side-banner side-banner_old" href="#">
+        <span class="side-banner__inner" >
+            <span class="side-banner__text" >
+                <span class="side-banner__name">Старый дизайн</span>
+            </span>
         </span>
-    </span>
-</a>
-<div class="container-fluid">
-	<div class="account">
-		<div class="case line">
-			<a class="account__exit" href="#">Выйти</a>
-			<div class="account__info line">
-				<a class="account__person" href="https://www.google.com">
-						<span class="account__photo">
-							<img src="img/avatar02.png" width="30" height="30" alt=""/>
-						</span>
-					<strong class="account__name">Константинопольская Олимпиада</strong>
-				</a>
-				<ul class="account__tools line">
-					<li class="account__tools-item">
-						<a class="account__tools-link account__tools-link_settings" href="#"><i class="ico ico_settings"></i></a>
-					</li>
-					<li class="account__tools-item">
-						<a class="account__tools-link" href="#">
-							<i class="ico ico_message"></i>
-							<span class="account__tools-incoming">7</span>
-						</a>
-					</li>
-					<li class="account__tools-item">
-						<a class="account__tools-link" href="#">
-							<i class="ico ico_comments"></i>
-							<span class="account__tools-incoming">2</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<ul class="account__nav">
-				<li class="account__nav-item"><a class="account__nav-link" href="https://www.google.com">Профиль</a></li>
-				<li class="account__nav-item"><a class="account__nav-link" href="#">Лента</a></li>
-				<li class="account__nav-item"><a class="account__nav-link" href="#">Фото</a></li>
-				<li class="account__nav-item"><a class="account__nav-link" href="#">Видео</a></li>
-				<li class="account__nav-item"><a class="account__nav-link" href="#">Мероприятия</a></li>
-				<li class="account__nav-item account__nav-item_active"><a class="account__nav-link" href="#">Друзья</a></li>
-				<li class="account__nav-item"><a class="account__nav-link" href="#">Сообщества</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="hdr">
-        <div class="case">
-			<div class="hdr__frame line">
-				<a class="logo logo_hdr" href="#">tvkinoradio</a>
-				<div class="form form_search">
-					<div class="input-i">
-						<input class="input" placeholder="Поиск" type="text"/>
-					</div>
-					<input class="btn_search" type="submit" value="Поиск"/>
-				</div>
-			</div>
-			<div class="navigation">
-				<ul class="nav line">
-					<li class="nav__item"><a class="nav__link" href="https://www.google.com">Оборудование</a>
-						<div class="nav__drop">
-							<div class="nav__drop-in">
-								<ul class="nav__drop-list">
-									<li class="nav__drop-item"><a class="nav__drop-link" href="https://www.google.com">Аудио</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Радиовещание</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видео</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">IT оборудование</a>
-										<div class="nav__drop nav__drop_right">
-											<div class="nav__drop-in">
-												<ul class="nav__drop-list">
-													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация вещания</a></li>
-													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Хранение данных</a></li>
-													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация производства</a></li>
-													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оформление эфира</a></li>
-												</ul>
-											</div>
-										</div>
-									</li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видеомонтаж</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Профессиональные носители</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Измерительное оборудование</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Кабели, разъемы</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Системы служебной связи</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Осветительное оборудование</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оборудование DVB-C И DVB-T</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Студийная мебель</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li class="nav__item nav__item_active"><a class="nav__link" href="#">Работа</a></li>
-					<li class="nav__item"><a class="nav__link" href="#">Павильоны</a></li>
-					<li class="nav__item"><a class="nav__link" href="#">Статьи</a>
-						<div class="nav__drop">
-							<div class="nav__drop-in">
-								<ul class="nav__drop-list">
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Новости</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Обзоры</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Слова</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Мнение</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">История</a></li>
-									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Объект</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li class="nav__item"><a class="nav__link" href="#">События</a></li>
-					<li class="nav__item"><a class="nav__link" href="#">Компании</a></li>
-					<li class="nav__item"><a class="nav__link" href="#">Группы</a></li>
-					<li class="nav__item"><a class="nav__link" href="#">Люди</a></li>
-				</ul>
-			</div>
+    </a>
+    <div class="container-fluid">
+    	<div class="account">
+    		<div class="case line">
+    			<a class="account__exit" href="#">Выйти</a>
+    			<div class="account__info line">
+    				<a class="account__person" href="https://www.google.com">
+    						<span class="account__photo">
+    							<img src="img/avatar02.png" width="30" height="30" alt=""/>
+    						</span>
+    					<strong class="account__name">Константинопольская Олимпиада</strong>
+    				</a>
+    				<ul class="account__tools line">
+    					<li class="account__tools-item">
+    						<a class="account__tools-link account__tools-link_settings" href="#"><i class="ico ico_settings"></i></a>
+    					</li>
+    					<li class="account__tools-item">
+    						<a class="account__tools-link" href="#">
+    							<i class="ico ico_message"></i>
+    							<span class="account__tools-incoming">7</span>
+    						</a>
+    					</li>
+    					<li class="account__tools-item">
+    						<a class="account__tools-link" href="#">
+    							<i class="ico ico_comments"></i>
+    							<span class="account__tools-incoming">2</span>
+    						</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<ul class="account__nav">
+    				<li class="account__nav-item"><a class="account__nav-link" href="https://www.google.com">Профиль</a></li>
+    				<li class="account__nav-item"><a class="account__nav-link" href="#">Лента</a></li>
+    				<li class="account__nav-item"><a class="account__nav-link" href="#">Фото</a></li>
+    				<li class="account__nav-item"><a class="account__nav-link" href="#">Видео</a></li>
+    				<li class="account__nav-item"><a class="account__nav-link" href="#">Мероприятия</a></li>
+    				<li class="account__nav-item account__nav-item_active"><a class="account__nav-link" href="#">Друзья</a></li>
+    				<li class="account__nav-item"><a class="account__nav-link" href="#">Сообщества</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="hdr">
+            <div class="case">
+    			<div class="hdr__frame line">
+    				<a class="logo logo_hdr" href="#">tvkinoradio</a>
+    				<div class="form form_search">
+    					<div class="input-i">
+    						<input class="input" placeholder="Поиск" type="text"/>
+    					</div>
+    					<input class="btn_search" type="submit" value="Поиск"/>
+    				</div>
+    			</div>
+    			<div class="navigation">
+    				<ul class="nav line">
+    					<li class="nav__item"><a class="nav__link" href="https://www.google.com">Оборудование</a>
+    						<div class="nav__drop">
+    							<div class="nav__drop-in">
+    								<ul class="nav__drop-list">
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="https://www.google.com">Аудио</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Радиовещание</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видео</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">IT оборудование</a>
+    										<div class="nav__drop nav__drop_right">
+    											<div class="nav__drop-in">
+    												<ul class="nav__drop-list">
+    													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация вещания</a></li>
+    													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Хранение данных</a></li>
+    													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Автоматизация производства</a></li>
+    													<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оформление эфира</a></li>
+    												</ul>
+    											</div>
+    										</div>
+    									</li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Видеомонтаж</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Профессиональные носители</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Измерительное оборудование</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Кабели, разъемы</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Системы служебной связи</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Осветительное оборудование</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Оборудование DVB-C И DVB-T</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Студийная мебель</a></li>
+    								</ul>
+    							</div>
+    						</div>
+    					</li>
+    					<li class="nav__item nav__item_active"><a class="nav__link" href="#">Работа</a></li>
+    					<li class="nav__item"><a class="nav__link" href="#">Павильоны</a></li>
+    					<li class="nav__item"><a class="nav__link" href="#">Статьи</a>
+    						<div class="nav__drop">
+    							<div class="nav__drop-in">
+    								<ul class="nav__drop-list">
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Новости</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Обзоры</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Слова</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Мнение</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">История</a></li>
+    									<li class="nav__drop-item"><a class="nav__drop-link" href="#">Объект</a></li>
+    								</ul>
+    							</div>
+    						</div>
+    					</li>
+    					<li class="nav__item"><a class="nav__link" href="#">События</a></li>
+    					<li class="nav__item"><a class="nav__link" href="#">Компании</a></li>
+    					<li class="nav__item"><a class="nav__link" href="#">Группы</a></li>
+    					<li class="nav__item"><a class="nav__link" href="#">Люди</a></li>
+    				</ul>
+    			</div>
+            </div>
         </div>
-    </div>
-    <div class="main line">
-        <div class="case">
-			<div class="cnt">
-				<h1 class="cnt__ttl">Павильоны</h1>
+        <div class="main line pav_main">
+            <div class="case">
 
-				<div class="result-block"></div>
+    			<div class="cnt">
+    				<h1 class="cnt__ttl">Павильоны</h1>
 
-				<div class="result result_pav line">
-					<div class="result__mod">
-						<span class="result__mod-txt">Всего 145 павильонов</span>
-					</div>
-				</div>
+    				<div class="result-block"></div>
 
-                <div class="events events_pavilion">
-                    <div class="event line">
-                        <a class="event__img" href="https://www.google.com">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="https://www.google.com">Павильон №1</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
+    				<div class="result result_pav line">
+    					<div class="result__mod result__mod2">
+    						<span class="result__mod-txt ">Всего 145 павильонов</span>
+    					</div>
+    				</div>
+            	</div>
+                <div class="sdbr pav__sdbr">
+                    <div class="widget widget_light">
+                        <a class="btn btn_red" href="#"><span class="btn__inner">Разместить павильон</span></a>
+                    </div>
+                </div>
+                <div class='pav__not'>
+                    <div class="form__row line form__row_select pav__not_form__row">
+                        <div class="form__col pav__not_form__col ">
+                            <label class="b-label">Расположение</label>
+                            <div class="select-i">
+                               <select class="select select_custom pav__not_select" data-placeholder="Города">
+                                    <option></option>
+                                    <option>Москва</option>
+                                    <option>Москва1</option>
+                                    <option>Москва2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__col pav__not_form__col ">
+                            <label class="b-label"></label>
+                            <div class="select-i">
+                                <select disabled class="select select_custom pav__not_select" data-placeholder="Станция метро">
+                                    <option></option>
+                                    <option>Художник по специальному гримму</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__col pav__not_form__col ">
+                            <label class="b-label"><span class="required"></span></label>
+                                <div class="select-i">
+                                    <select disabled class="select select_custom pav__not_select " id="ex01" data-placeholder="Удаленность от метро">
+                                        <option></option>
+                                        <option>1</option>
+                                    </select>
+                                </div>
                         </div>
                     </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №2</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
+                    <div class="form__row line form__row_select pav__not_form__row">
+                        <div class="form__col pav__not_form__col ">
+                            <label class="b-label">Параметры</label>
+                            <div class="select-i">
+                               <select class="select select_custom pav__not_select" data-placeholder="Тип павильона">
+                                    <option></option>
+                                    <option>Москва</option>
+                                    <option>Москва1</option>
+                                    <option>Москва2</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №3</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
+                        <div class="form__col pav__not_form__col ">
+                            <label class="b-label"></label>
+                            <div class="select-i">
+                                <select class="select select_custom pav__not_select" data-placeholder="Площадь, м²">
+                                    <option></option>
+                                    <option>Художник по специальному гримму</option>
+                                </select>
+                            </div>
                         </div>
+                        <div class="form__col pav__not_form__col ">
+                            <label class="b-label"><span class="required"></span></label>
+                                <div class="select-i">
+                                    <select class="select select_custom pav__not_select" id="ex01" data-placeholder="Высота потолка, м">
+                                        <option></option>
+                                        <option>1</option>
+                                    </select>
+                                </div>
+                        </div>                             
                     </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №4</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №5</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №6</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №7</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №8</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №9</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №10</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №11</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="event line">
-                        <a class="event__img" href="#">
-                            <img src="img/img17.jpg" width="180" height="120" alt="">
-                        </a>
-                        <div class="event__cnt">
-                            <span class="event__cat"><a href="#">Кинопавильон, Телепавильон, Фотопавильон</a></span>
-                            <h2 class="event__ttl"><a href="#">Павильон №12</a></h2>
-                            <ul class="event__info">
-                                <li><strong>Киностудия “Амедия”</strong></li>
-                                <li><i class="ico ico_place"></i>Москва</li>
-                            </ul>
+                    <div class="form__row line form__row_select pav__not_form__row">
+                        <div class="form__col pav__not_form__col ">
+                            
+                            <div class="select-i">
+                               <select class="select select_custom pav__not_select" data-placeholder="Уровень шума">
+                                    <option></option>
+                                    <option>Москва</option>
+                                    <option>Москва1</option>
+                                    <option>Москва2</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-				<div class="paging">
-					<ul class="paging__list line">
-						<li class="paging__item paging__item_prev"><a class="paging__link paging__link_prev" href="#"><i class="ico ico_prev"></i></a></li>
-						<li class="paging__item"><a class="paging__link" href="#">1</a></li>
-						<li class="paging__item"><a class="paging__link" href="#">2</a></li>
-						<li class="paging__item paging__item_active"><span class="paging__link">3</span></li>
-						<li class="paging__item"><a class="paging__link" href="#">4</a></li>
-						<li class="paging__item"><a class="paging__link" href="#">5</a></li>
-						<li class="paging__item"><a class="paging__link" href="#">6</a></li>
-						<li class="paging__item"><a class="paging__link" href="#">7</a></li>
-						<li class="paging__item"><a class="paging__link" href="#">8</a></li>
-						<li class="paging__item"><a class="paging__link" href="#">9</a></li>
-						<li class="paging__item"><a class="paging__link" href="#">10</a></li>
-						<li class="paging__item paging__item_more">
-							<div class="paging__more">
-								<ul class="paging__more-list">
-									<li><a class="paging__more-link paging__more-link_first" href="#">10 &ndash; 20</a></li>
-									<li><a class="paging__more-link" href="#">20 &ndash; 30</a></li>
-									<li><a class="paging__more-link paging__more-link_last" href="#">40 &ndash; 50</a></li>
-								</ul>
-							</div>
-							<a class="paging__link" href="#"><i class="ico ico_arrow01"></i></a>
-						</li>
-						<li class="paging__item paging__item_next"><a class="paging__link paging__link_next" href="#"><i class="ico ico_next"></i></a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="sdbr">
-				<div class="widget widget_light">
-					<a class="btn btn_red" href="#"><span class="btn__inner">Разместить павильон</span></a>
-				</div>
-                <div class="widget widget_light widget_light-pad">
-                    <div class="map">
-                        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=FsUitGiPZUA8XODvVJ93sM0QUmodBkJm&width=260&height=260"></script>
+                <div style="clear:both"></div>
+                <div id="filtersBox"  style="overflow: hidden; display: block;">
+                    <div class="pav__or_sum">
+                        <div class="rent__sum">
+                            <h3 class="form_filter__ttl">Ориентировочная стоимость аренды в день</h3>
+                            <div id="slider-range"></div>
+                            <p>
+                                <input type="text" id="amountMin" readonly >
+                                <input type="text" id="amountMax" readonly >
+                            </p>
+                        </div>
+                        <div class="form form_filter form_top">
+                            <h3 class="form_filter__ttl">Даты</h3>
+                            <div class="line">
+                                <label class="b-label" for="from">c</label>
+                                <div class="input-i input-i_datepicker  ">
+                                    <i class="ico ico_calendar"></i>
+                                    <input id="from" class="input custom-datepicker  " type="text">
+                                </div>
+                                <label class="b-label" for="to">по</label>
+                                <div class="input-i input-i_datepicker">
+                                    <i class="ico ico_calendar"></i>
+                                    <input id="to" class="input custom-datepicker" type="text">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <dl class="accordion accordion_sdbr">
-                        <dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Назначение павильона</span></dt>
-                        <dd class="accordion__content active">
-                            <div class="form form_account">
-                                <div class="form__row line">
-                                    <div class="filter__select">
-                                        <div class="filter__top"><span class="filter__list filter__list_fst">Тип павильона</span> <a class="ico ico_type_arrow" href="#"></a></div>
-                                        <div class="filter__list-block" style="display:none">
-                                            <span class="filter__list">Тип павильона1</span>
-                                            <span class="filter__list">Тип павильона2</span>
-                                            <span class="filter__list filter__list_dsbl">Тип павильона3</span>
-                                            <span class="filter__list">Тип павильона4</span>
-                                        </div>
-                                    </div>
+                    <div style="clear:both"></div>
+                    <div class="services">
+                        <div class="producers producers_noborder">
+                            <div class="producers__inner">
+
+                                
+                                <div class="producers__block">
+                                    <span class="producers__ttl">Услуги</span>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Аренда осветительного оборудования</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Аренда съёмочного оборудования</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Аренда звукового оборудования</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox"  /><label for="">Аренда операторского оборудования</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Хранение данных</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox"  /><label for="">Оцифровка аудио-видео материала</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Аппаратные для перезаписи и копирования</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox"  /><label for="">Аппаратные для чернового видеомонтажа и цветокоррекции</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Аппаратные для звукового монтажа</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox"  /><label for="">Тон- студия</label></div>     
                                 </div>
-                            </div>
-                        </dd>
-                        <dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Расположение</span></dt>
-                        <dd class="accordion__content">
-                            <div class="form form_account">
-                                <div class="form__row line">
-                                    <div class="filter__select">
-                                        <div class="filter__top"><span class="filter__list filter__list_fst">Город</span> <a class="ico ico_type_arrow" href="#"></a></div>
-                                        <div class="filter__list-block" style="display:none">
-                                            <span class="filter__list">Город1</span>
-                                            <span class="filter__list">Город2</span>
-											<span class="filter__list">Город3</span>
-											<span class="filter__list filter__list_dsbl">Город4</span>
-                                        </div>
-                                    </div>
+                                <div class="producers__block">
+                                    <span class="producers__ttl"></span>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Аренда костюмов</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Аренда реквизита</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Аренда мебели</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Гримерные / актерские</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Офисные помещения</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Стоянка</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Телефония</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Интернет</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Возможность кругосуточной работы</label></div>
+                                    
                                 </div>
-                                <div class="form__row line">
-                                    <div class="filter__select">
-                                        <div class="filter__top"><span class="filter__list filter__list_fst">Станция метро</span> <a class="ico ico_type_arrow" href="#"></a></div>
-                                        <div class="filter__list-block" style="display:none">
-                                            <span class="filter__list">Станция метро1</span>
-                                            <span class="filter__list">Станция метро2</span>
-                                        </div>
-                                    </div>
+                                
+                                <div class="producers__block">
+                                    <span class="producers__ttl">Оснащение</span>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Звукоизоляция</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Кондиционирование</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Хромакей</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Натурные площадки</label></div>
+                                    <div class="producers__item"><input id="" type="checkbox" /><label for="">Вспомогательные помещения</label></div>
                                 </div>
-                                <div class="form__row line">
-                                    <div class="filter__select">
-                                        <div class="filter__top"><span class="filter__list filter__list_fst">Удаленность от метро, м</span> <a class="ico ico_type_arrow" href="#"></a></div>
-                                        <div class="filter__list-block" style="display:none">
-                                            <span class="filter__list">10</span>
-                                            <span class="filter__list">20</span>
-                                            <span class="filter__list">30</span>
-                                            <span class="filter__list">40</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </dd>
-                        <dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Параметры</span></dt>
-                        <dd class="accordion__content">
-                            <div class="form form_account">
-                                <div class="form__row line">
-                                    <div class="filter__select">
-                                        <div class="filter__top"><span class="filter__list filter__list_fst">Площадь, м<sup>2</sup></span><a class="ico ico_type_arrow" href="#"></a></div>
-                                        <div class="filter__list-block" style="display:none">
-                                            <span class="filter__list">10</span>
-                                            <span class="filter__list">20</span>
-                                            <span class="filter__list">30</span>
-                                            <span class="filter__list">40</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form__row line">
-                                    <div class="filter__select">
-                                        <div class="filter__top"><span class="filter__list filter__list_fst">Мощность, кВт</span><a class="ico ico_type_arrow" href="#"></a></div>
-                                        <div class="filter__list-block" style="display:none">
-                                            <span class="filter__list">100</span>
-                                            <span class="filter__list">200</span>
-                                            <span class="filter__list">250</span>
-                                            <span class="filter__list">300</span>
-                                            <span class="filter__list">350</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form__row line">
-                                    <div class="filter__select">
-                                        <div class="filter__top"><span class="filter__list filter__list_fst">Высота потолка, м</span><a class="ico ico_type_arrow" href="#"></a></div>
-                                        <div class="filter__list-block" style="display:none">
-                                            <span class="filter__list">2</span>
-                                            <span class="filter__list">2,5</span>
-                                            <span class="filter__list">3</span>
-                                            <span class="filter__list">3,5</span>
-                                            <span class="filter__list">4</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form__row line">
-                                    <div class="filter__select">
-                                        <div class="filter__top"><span class="filter__list filter__list_fst">Уровень шума</span><a class="ico ico_type_arrow" href="#"></a></div>
-                                        <div class="filter__list-block" style="display:none">
-                                            <span class="filter__list-check line"><input id="level01" class="input" type="checkbox" /><label for="level01">0-10 дБА (Почти не слышно) доступно</label></span>
-                                            <span class="filter__list-check line"><input id="level02" class="input" type="checkbox" /><label for="level02">10-30 дБА (Тихо) выбрано</label></span>
-                                            <span class="filter__list-check line"><input id="level03" class="input" type="checkbox" /><label for="level03">30-50 дБА (Довольно слышно) наведение</label></span>
-                                            <span class="filter__list-check line"><input id="level04" class="input" type="checkbox" disabled /><label for="level04">50-100 дБА (Шумно) доступно</label></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </dd>
-                        <dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Оснащение</span></dt>
-                        <dd class="accordion__content">
-                            <div class="form form_account">
-                                <div class="form__row">
-                                    <ul class="profession profession_sdbr">
-                                        <li class="line"><input id="eq01" type="checkbox" /><label for="eq01">Звукоизоляция</label></li>
-                                        <li class="line"><input id="eq02" type="checkbox" /><label for="eq02">Кондиционирование</label></li>
-                                        <li class="line"><input id="eq03" type="checkbox" /><label for="eq03">Хромакей</label></li>
-                                        <li class="line"><input id="eq04" type="checkbox" /><label for="eq04">Натурные площадки</label></li>
-                                        <li class="line"><input id="eq05" type="checkbox" /><label for="eq05">Вспомогательные помещения</label></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </dd>
-                        <dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Услуги</span></dt>
-                        <dd class="accordion__content">
-                            <div class="form form_account">
-                                <div class="form__row">
-                                    <ul class="profession profession_sdbr">
-                                        <li class="line"><input id="serv01" type="checkbox" /><label for="serv01">Аренда осветительного оборудования</label></li>
-                                        <li class="line"><input id="serv02" type="checkbox" /><label for="serv02">Аренда съёмочного оборудования</label></li>
-                                        <li class="line"><input id="serv03" type="checkbox" /><label for="serv03">Аренда звукового оборудования</label></li>
-                                        <li class="line"><input id="serv04" type="checkbox" /><label for="serv04">Аренда операторского оборудования</label></li>
-                                        <li class="line"><input id="serv05" type="checkbox" /><label for="serv05">Хранение данных</label></li>
-                                        <li class="line"><input id="serv06" type="checkbox" /><label for="serv06">Оцифровка аудио-видео материала</label></li>
-                                        <li class="line"><input id="serv07" type="checkbox" /><label for="serv07">Аппаратные для перезаписи и копирования</label></li>
-                                        <li class="line"><input id="serv08" type="checkbox" /><label for="serv08">Аппаратные для чернового видеомонтажа и цветокоррекции</label></li>
-                                        <li class="line"><input id="serv09" type="checkbox" /><label for="serv09">Аппаратные для звукового монтажа</label></li>
-                                        <li class="line"><input id="serv10" type="checkbox" /><label for="serv10">Тон- студия</label></li>
-                                        <li class="line"><input id="serv11" type="checkbox" /><label for="serv11">Аренда костюмов</label></li>
-                                        <li class="line"><input id="serv12" type="checkbox" /><label for="serv12">Аренда реквизита</label></li>
-                                        <li class="line"><input id="serv13" type="checkbox" /><label for="serv13">Аренда мебели</label></li>
-                                        <li class="line"><input id="serv14" type="checkbox" /><label for="serv14">Гримерные / актерские</label></li>
-                                        <li class="line"><input id="serv15" type="checkbox" /><label for="serv15">Офисные помещения</label></li>
-                                        <li class="line"><input id="serv16" type="checkbox" /><label for="serv16">Стоянка</label></li>
-                                        <li class="line"><input id="serv17" type="checkbox" /><label for="serv17">Телефония</label></li>
-                                        <li class="line"><input id="serv18" type="checkbox" /><label for="serv18">Интернет</label></li>
-                                        <li class="line"><input id="serv19" type="checkbox" /><label for="serv19">Возможность кругосуточной работы</label></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </dd>
-                        <dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Стоимость</span></dt>
-                        <dd class="accordion__content">
-                            <div class="form__row-text">Ориентировочная стоимость аренды в день</div>
-                            <div class="form__row">
-                                <div class="filter">
-                                    <div id="filter-slider"></div>
-                                    <span id="filter-slider-left" class="filter__value filter__value-left">500 <span class="b-rbl">a</span></span>
-                                    <span id="filter-slider-right" class="filter__value filter__value-right">10000 <span class="b-rbl">a</span></span>
-                                </div>
-                            </div>
-                        </dd>
-                        <dt class="accordion__caption"><span class="accordion__caption-in"><span class="ico ico_accordion-a"></span>Даты</span></dt>
-                        <dd class="accordion__content">
-                            <div class="form form_account">
-                                <div class="form__date line">
-                                    <label class="b-label" for="from">от</label>
-                                    <div class="input-i input-i_datepicker">
-                                        <i class="ico ico_calendar"></i>
-                                        <input id="from" class="input custom-datepicker" placeholder="23 сентября, 2013" type="text"/>
-                                    </div>
-                                </div>
-                                <div class="form__date line">
-                                    <label class="b-label" for="to">до</label>
-                                    <div class="input-i input-i_datepicker">
-                                        <i class="ico ico_calendar"></i>
-                                        <input id="to" class="input custom-datepicker" placeholder="23 сентября, 2013" type="text"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </dd>
-                    </dl>
-                    <a class="filter__clear" href="#">Сбросить значения</a>
+                            </div>    
+                       </div>
+                        <div class="result line">
+                        </div>
+                    </div>
                 </div>
-			</div>
+                <div class="pav__reset"> 
+
+                    <a class="pav__not__reset" href="#">Сбросить значения</a>
+                </div>
+               	<dl class="accordion pav__accordion">
+
+                    <dt class="accordion__caption"><span id="filtorBtn" class="accordion__caption-in pav__caption-in"><span class="ico ico_accordion-a"></span>Подробный поиск</span></dt>
+                </dl>
+                <!-- <div class="pav_map">
+                    <div id="map-canvas" style="width: 1020px; height: 836px"></div>
+           
+                    <div class="pav__event__data" style="left:40px; margin:0 0 0 0px; padding:0 0 0px;">
+
+                        <div class="reg-form__top line">
+
+                            <p>123 <a href="#" class="btn">фотопавильона</a> в "<a href="#" class="btn">г. Москва</a>" площадью <a href="#" class="btn">150м²</a> рядом с метро <a href="#" class="btn">150м²</a> “ВДНХ” </p>
+                        </div>
+
+                        <div class="notification" style="height: 702px;">
+                            <div class="events events_pavilion mCustomScrollbar _mCS_1 " style="height: 777px;">
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Павильон №1</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>Киностудия “Амедия”</strong></li>
+                                                <li><span class="event__price">2000 <span>руб/час</span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Хромакейный Павильон в две строки</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>РосМосИдиотКиноМаноПродак...</strong></li>
+                                                <li><span class="event__price"><span><a href="#">Запросить стоимость</a></span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Павильон №1</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>Киностудия “Амедия”</strong></li>
+                                                <li><span class="event__price">2000 <span>руб/час</span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Хромакейный Павильон в две строки</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>РосМосИдиотКиноМаноПродак...</strong></li>
+                                                <li><span class="event__price"><span><a href="#">Запросить стоимость</a></span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Павильон №1</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>Киностудия “Амедия”</strong></li>
+                                                <li><span class="event__price">2000 <span>руб/час</span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Хромакейный Павильон в две строки</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>РосМосИдиотКиноМаноПродак...</strong></li>
+                                                <li><span class="event__price"><span><a href="#">Запросить стоимость</a></span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div> -->
+            </div>
+            <div class="pav_map">
+                    <div id="map-canvas" style="width: 100%; height: 836px"></div>
+                 <div id="pav__event__data__cont">
+                    <div class="pav__event__data" style="margin:0 0 0 0px; padding:0 0 0px;">
+
+                        <div class="reg-form__top line">
+
+                            <p>123 <a href="#" class="btn">фотопавильона</a> в "<a href="#" class="btn">г. Москва</a>" площадью <a href="#" class="btn">150м²</a> рядом с метро <a href="#" class="btn">150м²</a> “ВДНХ” </p>
+                        </div>
+
+                        <div class="notification" style="height: 702px;">
+                            <div class="events events_pavilion mCustomScrollbar _mCS_1 " style="height: 777px;">
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Павильон №1</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>Киностудия “Амедия”</strong></li>
+                                                <li><span class="event__price">2000 <span>руб/час</span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Хромакейный Павильон в две строки</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>РосМосИдиотКиноМаноПродак...</strong></li>
+                                                <li><span class="event__price"><span><a href="#">Запросить стоимость</a></span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Павильон №1</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>Киностудия “Амедия”</strong></li>
+                                                <li><span class="event__price">2000 <span>руб/час</span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Хромакейный Павильон в две строки</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>РосМосИдиотКиноМаноПродак...</strong></li>
+                                                <li><span class="event__price"><span><a href="#">Запросить стоимость</a></span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Павильон №1</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>Киностудия “Амедия”</strong></li>
+                                                <li><span class="event__price">2000 <span>руб/час</span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line pav__event">
+                                        <div class="map_pin"></div>
+                                        <a class="event__img" href="https://www.google.com">
+
+                                            <img src="img/img17.jpg" height="84" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="https://www.google.com">Кинопавильон, Телепавильон, Фотопавильон</a></span>
+                                            <h2 class="event__ttl"><a href="https://www.google.com">Хромакейный Павильон в две строки</a></h2>
+                                            <ul class="event__info">
+                                                <li><strong>РосМосИдиотКиноМаноПродак...</strong></li>
+                                                <li><span class="event__price"><span><a href="#">Запросить стоимость</a></span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="ftr">
-    <div class="case">
-		<div class="ftr__holder">
-			<p>Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что сомнение методологически дискредитирует гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения. Здравый смысл, как принято считать, индуцирует естественный закон исключённого третьего, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Апперцепция индуцирует позитивизм, открывая новые горизонты. Согласно мнению известных философов, гипотеза методологически трансформирует катарсис, ломая рамки привычных представлений. Суждение, следовательно, непредсказуемо. Язык образов заполняет неоднозначный гедонизм, открывая новые горизонты.</p>
-		</div>
+    <div class="ftr">
+        <div class="case">
+    		<div class="ftr__holder">
+    			<p>Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что сомнение методологически дискредитирует гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения. Здравый смысл, как принято считать, индуцирует естественный закон исключённого третьего, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Апперцепция индуцирует позитивизм, открывая новые горизонты. Согласно мнению известных философов, гипотеза методологически трансформирует катарсис, ломая рамки привычных представлений. Суждение, следовательно, непредсказуемо. Язык образов заполняет неоднозначный гедонизм, открывая новые горизонты.</p>
+    		</div>
+        </div>
+    	<div class="ftr__frame">
+    		<div class="case">
+    			<div class="ftr__block">
+    				<a class="logo logo_ftr" href="#">tvkinoradio</a>
+    			</div>
+    			<div class="ftr__columns line">
+    				<div class="ftr__col03">
+    					<ul class="ftr__social line">
+    						<li><a class="ftr__social-link ftr__social-link_fb" href="#"></a></li>
+    						<li><a class="ftr__social-link ftr__social-link_vk" href="#"></a></li>
+    						<li><a class="ftr__social-link ftr__social-link_tw" href="#"></a></li>
+    					</ul>
+    					<div class="ftr__copy">
+    						<div class="copy__logo line">
+    							<strong>Разработка сайта</strong>
+    							<a href="#" class="copy__logo-img">happylab digital agency</a>
+    						</div>
+    					</div>
+    				</div>
+
+    				<div class="ftr__col01">
+    					<p>&copy; Профессиональный портал для работников телевидения, кино и радиовещания TVKINORADIO.ru, 2010–2012. Все права защищены и охраняются законом. При полном или частичном использовании материалов ссылка на tvkinoradio.ru обязательна.</p>
+    				</div>
+    				<div class="ftr__col02 line">
+    					<div class="ftr__nav">
+    						<ul class="ftr__nav-list">
+    							<li><a class="ftr__nav-link" href="#">Контакты</a></li>
+    							<li><a class="ftr__nav-link" href="#">О проекте</a></li>
+    							<li><a class="ftr__nav-link" href="#">Реклама</a></li>
+    						</ul>
+    						<ul class="ftr__nav-list ftr__nav-list_large">
+    							<li><a class="ftr__nav-link" href="#">Обратная связь</a></li>
+    							<li><a class="ftr__nav-link" href="#">Пользовательское соглашение</a></li>
+    							<li><a class="ftr__nav-link" href="#">Хотите стать нашим автором?</a></li>
+    						</ul>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </div>
-	<div class="ftr__frame">
-		<div class="case">
-			<div class="ftr__block">
-				<a class="logo logo_ftr" href="#">tvkinoradio</a>
-			</div>
-			<div class="ftr__columns line">
-				<div class="ftr__col03">
-					<ul class="ftr__social line">
-						<li><a class="ftr__social-link ftr__social-link_fb" href="#"></a></li>
-						<li><a class="ftr__social-link ftr__social-link_vk" href="#"></a></li>
-						<li><a class="ftr__social-link ftr__social-link_tw" href="#"></a></li>
-					</ul>
-					<div class="ftr__copy">
-						<div class="copy__logo line">
-							<strong>Разработка сайта</strong>
-							<a href="#" class="copy__logo-img">happylab digital agency</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="ftr__col01">
-					<p>&copy; Профессиональный портал для работников телевидения, кино и радиовещания TVKINORADIO.ru, 2010–2012. Все права защищены и охраняются законом. При полном или частичном использовании материалов ссылка на tvkinoradio.ru обязательна.</p>
-				</div>
-				<div class="ftr__col02 line">
-					<div class="ftr__nav">
-						<ul class="ftr__nav-list">
-							<li><a class="ftr__nav-link" href="#">Контакты</a></li>
-							<li><a class="ftr__nav-link" href="#">О проекте</a></li>
-							<li><a class="ftr__nav-link" href="#">Реклама</a></li>
-						</ul>
-						<ul class="ftr__nav-list ftr__nav-list_large">
-							<li><a class="ftr__nav-link" href="#">Обратная связь</a></li>
-							<li><a class="ftr__nav-link" href="#">Пользовательское соглашение</a></li>
-							<li><a class="ftr__nav-link" href="#">Хотите стать нашим автором?</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="top_scroll"></div>
+    <div class="top_scroll"></div>
 </body>
 </html>

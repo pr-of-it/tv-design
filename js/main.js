@@ -975,3 +975,28 @@ $(window).load(function(){
             });
 
         });
+/*pavilion filters*/
+$( document ).ready(function() {
+
+	$("#filtersBox").css({'height' : '0'});
+
+    var filtersHeight = $("#filtersBox").height();
+
+
+    $("#filtorBtn").click(function(){
+
+        if(filtersHeight == 0) {
+
+            $("#filtersBox").animate({'height' : '496'}, 200, function(){filtersHeight = 496});
+
+        }
+        else if(filtersHeight == 496) {
+
+            $("#filtersBox").animate({'height' : '0'}, 200, function(){filtersHeight = 0});
+
+        }
+
+    });
+
+	
+});
