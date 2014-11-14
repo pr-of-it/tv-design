@@ -58,6 +58,23 @@ var MainJsClass = function () {
 		}
 	};
 
+
+    this.companyAlphabetSort = function () {
+        if($(".alphabet_sort").length){
+            $(".alphabet_sort").on('click', function() {
+
+                if($(".alphabet_sort").hasClass('reverse')) {
+                    $(".alphabet_sort").removeClass('reverse');
+                    $(this).text('А - Я');
+                }
+                else {
+                    $(".alphabet_sort").addClass('reverse');
+                    $(this).text('Я - А');
+                }
+            });
+        }
+    };
+
 	this.initCarousel = function () {
 		if($('.slider__holder').length){
 			$(".slider__holder").carouFredSel({
@@ -865,6 +882,7 @@ var MainJsClass = function () {
     };
 
 	$(function(){
+        scope.companyAlphabetSort();
         scope.initNewsBlock();
 		scope.customDatepicker();
 		scope.initWysiwyg();

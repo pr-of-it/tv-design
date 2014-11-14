@@ -160,87 +160,130 @@
 			<div class="cnt">
 				<div class="company-box">
 					<div class="company-box__section">
-						<h1>Создание компании</h1>
-						<div class="form form_create form_create_company">
-                            <div class="form__row">
-                                <label class="b-label" for="title">Название<span class="required">*</span></label>
-                                <div class="input-i full_width">
-                                    <input id="title" placeholder="" value="" class="input" type="text">
+						<h1>Компании</h1>
+						<div class="form form-company-search">
+                            <div class="form_row">
+                                <p class="search-title">Введите название или категорию компании:</p>
+                                <div class="input-i semi_width">
+                                    <input id="title" placeholder="Например, Корпорация ДНК" value="" class="input" type="text">
                                 </div>
-                                <div class="tip">Пожалуйста, указывайте название компании без формы собственности (ООО, ЗАО и так далее) и кавычек.</div>
+                                <a href="#" class="btn_show btn_green">Показать</a>
+                                <div class="clear"></div>
                             </div>
-                            <div class="form__row">
-                                <label class="b-label" for="title">Направление деятельности компании<span class="required">*</span></label>
-                                <div class="input-check"><input class="" type="checkbox"> Дистрибуция контента</div>
-                                <div class="input-check"><input class="" type="checkbox"> Оборудование</div>
-                                <div class="input-check"><input class="" type="checkbox"> Обучение</div>
-                                <div class="input-check"><input class="" type="checkbox"> Общественные организации</div>
-                                <div class="input-check"><input class="" type="checkbox"> Производство контента</div>
+                            <div class="form_row">
+                                <p class="search-title"><b>Поиск по категориям</b></p>
+                                <div class="select-i">
+                                    <select class="select select_custom" data-placeholder="Выберите категорию компании">
+                                        <option></option>
+                                        <option>Открытая группа</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form__row">
-                                <label class="b-label" for="title">Специализация</label>
-                                <div class="">
-                                    <div class="select-i">
-                                        <select class="select select_custom" data-placeholder="Выберите специализацию">
-                                            <option></option>
-                                            <option>Открытая группа</option>
-                                        </select>
+
+                            <div class="separator"></div>
+
+                            <div class="form_row">
+                                <p class="search-title"><b>Новые компании</b></p>
+                                <div>
+                                    <a href="#" class="btn_green_underline">А-медиа,</a>
+                                    <a href="#" class="btn_green_underline">Тревор Филлипс Инк,</a>
+                                    <a href="#" class="btn_green_underline">Окно ТВ,</a>
+                                    <a href="#" class="btn_green_underline">REY-Rey,</a>
+                                    <a href="#" class="btn_green_underline">NHFL,</a>
+                                    <a href="#" class="btn_green_underline">Wacom,</a>
+                                    <a href="#" class="btn_green_underline">А-медиа,</a>
+                                    <a href="#" class="btn_green_underline">Тревор Филлипс Инк,</a>
+                                    <a href="#" class="btn_green_underline">Окно ТВ,</a>
+                                    <a href="#" class="btn_green_underline">REY-Rey,</a>
+                                    <a href="#" class="btn_green_underline">NHFL,</a>
+                                    <a href="#" class="btn_green_underline">А-медиа,</a>
+                                    <a href="#" class="btn_green_underline">Тревор Филлипс Инк,</a>
+                                    <a href="#" class="btn_green_underline">Окно ТВ,</a>
+                                    <a href="#" class="btn_green_underline">REY-Rey,</a>
+                                    <a href="#" class="btn_green_underline">NHFL,</a>
+                                    <a href="#" class="btn_green_underline">Wacom,</a>
+                                    <a href="#" class="btn_green_underline">А-медиа</a>
+                                </div>
+                                <div class="last_news">
+                                    <p class="news_title"><b>Новости компаний</b></p>
+                                    <a href="#" class="btn_green_underline all_news">Все новости</a>
+                                    <div class="clear"></div>
+                                    <div class="separator"></div>
+                                    <div class="news-row">
+                                        <div class="col">
+                                            <p><b>А-медиа</b></p>
+                                            <p class="parts">Обучение, Киношколы</p>
+                                            <p>
+                                                <b class="font_16">This is Photoshop's version  of Lorem</b> roin gravida nibh vel velit auctor aliquet
+                                                <a href="#" class="btn_green_underline">Подробнее</a>
+                                            </p>
+                                            <p class="date">сегодня</p>
+                                        </div>
+                                        <div class="col">
+                                            <p><b>А-медиа</b></p>
+                                            <p class="parts">Обучение, Киношколы</p>
+                                            <p>
+                                                <b class="font_16">This is Photoshop's version  of Lorem</b> roin gravida nibh vel velit auctor aliquet
+                                                <a href="#" class="btn_green_underline">Подробнее</a>
+                                            </p>
+                                            <p class="date">вчера</p>
+                                        </div>
+                                        <div class="col">
+                                            <p><b>А-медиа</b></p>
+                                            <p class="parts">Обучение, Киношколы</p>
+                                            <p>
+                                                <b class="font_16">This is Photoshop's version  of Lorem</b> roin gravida nibh vel velit auctor aliquet
+                                                <a href="#" class="btn_green_underline">Подробнее</a>
+                                            </p>
+                                            <p class="date">вчера</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form__row borders">
-                                <b>Добавьте еще одну специализацию</b>
-                                <a href="#" class="ico_plus_big">Добавить</a>
+                            <div class="separator"></div>
+                            <div class="search-result">Всего 144 компании</div>
+                            <a href="#" class="btn_green_underline all-companies">Все компании</a>
+                            <div class="company-box__section">
+                                <h5 class="alphabet_sort">А - Я</h5>
+                                <div class="events events_pavilion">
+                                    <div class="event line">
+                                        <a class="event__img" href="#">
+                                            <img src="img/img17_1.jpg" width="118" height="118" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="#">Общественные организации, Обучение, Киношколы.</a></span>
+                                            <h2 class="event__ttl"><a href="#">А-Медиа</a></h2>
+                                            <ul class="event__info">
+                                                <li><i class="ico ico_place"></i>Москва</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line">
+                                        <a class="event__img" href="#">
+                                            <img src="img/img17_1.jpg" width="118" height="118" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="#">Общественные организации, Актерские агентства, Постподакшен, Обучение, Киношколы.</a></span>
+                                            <h2 class="event__ttl"><a href="#">Б-Медиа</a></h2>
+                                            <ul class="event__info">
+                                                <li><i class="ico ico_place"></i>Москва</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="event line">
+                                        <a class="event__img" href="#">
+                                            <img src="img/img17_1.jpg" width="118" height="118" alt="">
+                                        </a>
+                                        <div class="event__cnt">
+                                            <span class="event__cat"><a href="#">Общественные организации, Актерские агентства, Постподакшен, Обучение, Киношколы.</a></span>
+                                            <h2 class="event__ttl"><a href="#">Тревор Филлипс Драгс энд Рокнролл Инкорпорейтед Лимитед Медиа</a></h2>
+                                            <ul class="event__info">
+                                                <li><i class="ico ico_place"></i>Москва</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form__row">
-                                <div class="tip">Вы можете выбрать не более 5 специализаций.</div>
-                            </div>
-
-							<div class="form__row">
-								<label class="b-label" for="title">Описание компании<span class="required">*</span></label>
-								<div class="wysiwyg-i">
-									<textarea id="wysiwyg" name="wysiwyg" cols="30" rows="10"></textarea>
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="city">Фотографии</label>
-								<div class="upload-i line">
-									<input type="file" title="Файл не выбран"/>
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="city">Город<span class="required">*</span></label>
-								<div class="input-i">
-									<input value="" id="city" class="input" type="text">
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="address">Адрес<span class="required">*</span></label>
-								<div class="input-i">
-									<input id="address" class="input" type="text">
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="phone">Телефон<span class="required">*</span></label>
-								<div class="input-i">
-									<input id="phone" class="input" type="text">
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="site">Сайт<span class="required">*</span></label>
-								<div class="input-i">
-									<input id="site" class="input" type="text">
-								</div>
-							</div>
-
-							<div class="form__bottom">
-								<a class="btn btn_green" href="#"><span class="btn__inner">Создать</span></a>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -353,6 +396,22 @@
 			</div>
 		</div>
 	</div>
+</div>
+<div class="popup popup_inner jsOpenPopup" style="display:none;">
+	<div class="popup__data">
+		<div class="popup__box">
+			<div class="reg-form__top line">
+				<h3 class="reg-form__ttl">Заявка отправлена</h3>
+				<p>Спасибо за Ваш запрос!</p>
+				<p>В ближайшее время с вами свяжется Администратор сайта.</p>
+			</div>
+			<div class="reg-form__row reg-form__row_last">
+				<a class="btn btn_green jsClosePopup" href="#"><span class="btn__inner">Ок</span></a>
+			</div>
+		</div>
+		<a class="ico ico_close jsClosePopup" href="#"></a>
+	</div>
+	<div class="popup__bg"></div>
 </div>
 <div class="top_scroll"></div>
 </body>

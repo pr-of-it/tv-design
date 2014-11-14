@@ -159,88 +159,107 @@
         <div class="case">
 			<div class="cnt">
 				<div class="company-box">
+					<div class="company-box__head company-box__head_short">
+						<div class="company-box__entry">
+							<div class="company-box__photo">
+								<img src="img/avatar09.jpg" width="140" height="140" alt=""/>
+							</div>
+							<div class="company-box__entry-txt">
+								<h2 class="company-box__ttl"><a href="#">ООО «Продюсерский центр «Хорошо Продакшен»</a></h2>
+								<ul class="company-box__entry-list">
+									<li>
+										<i class="ico ico_mark"></i>
+										<p>Москва</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="company-box__btm">
+							<ul class="menu">
+								<li class="menu__item">
+									<a class="menu__link" href="#">
+										<span class="menu__img">
+											<i class="ico ico_vacancy"></i>
+										</span>
+										<strong>Вакансии</strong>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">
+										<span class="menu__img">
+											<i class="ico ico_camera"></i>
+										</span>
+										<strong>Товары</strong>
+									</a>
+								</li>
+								<li class="menu__item menu__item_active">
+									<a class="menu__link" href="#">
+										<span class="menu__img">
+											<i class="ico ico_pavilions"></i>
+										</span>
+										<strong>Павильоны</strong>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">
+										<span class="menu__img">
+											<i class="ico ico_news"></i>
+										</span>
+										<strong>Новости</strong>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">
+										<span class="menu__img">
+											<i class="ico ico_photo"></i>
+										</span>
+										<strong>Фотографии</strong>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">
+										<span class="menu__img">
+											<i class="ico ico_video"></i>
+										</span>
+										<strong>Видео</strong>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<ul class="breadcrumbs">
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">ООО «Продюсерский центр «Хорошо продакшен»</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Товары</a></li>
+					</ul>
+
 					<div class="company-box__section">
-						<h1>Создание компании</h1>
-						<div class="form form_create form_create_company">
-                            <div class="form__row">
-                                <label class="b-label" for="title">Название<span class="required">*</span></label>
-                                <div class="input-i full_width">
-                                    <input id="title" placeholder="" value="" class="input" type="text">
+						<h1>Разместить товары и цены</h1>
+						<div class="form">
+                            <div class="form__addprod addxml">
+                                <div class="form__important form__important_addprod">
+                                    <p>Вы можете обновить цены вашей компании в товарах нашего каталога.</p>
                                 </div>
-                                <div class="tip">Пожалуйста, указывайте название компании без формы собственности (ООО, ЗАО и так далее) и кавычек.</div>
-                            </div>
-                            <div class="form__row">
-                                <label class="b-label" for="title">Направление деятельности компании<span class="required">*</span></label>
-                                <div class="input-check"><input class="" type="checkbox"> Дистрибуция контента</div>
-                                <div class="input-check"><input class="" type="checkbox"> Оборудование</div>
-                                <div class="input-check"><input class="" type="checkbox"> Обучение</div>
-                                <div class="input-check"><input class="" type="checkbox"> Общественные организации</div>
-                                <div class="input-check"><input class="" type="checkbox"> Производство контента</div>
-                            </div>
-                            <div class="form__row">
-                                <label class="b-label" for="title">Специализация</label>
-                                <div class="">
-                                    <div class="select-i">
-                                        <select class="select select_custom" data-placeholder="Выберите специализацию">
-                                            <option></option>
-                                            <option>Открытая группа</option>
-                                        </select>
-                                    </div>
+                                <div class="form__bottom">
+                                    <a class="btn btn_green" href="#">Изменить цены</a>
                                 </div>
                             </div>
-                            <div class="form__row borders">
-                                <b>Добавьте еще одну специализацию</b>
-                                <a href="#" class="ico_plus_big">Добавить</a>
+                            <div class="form__addprod addxml">
+                                <div class="form__important form__important_addprod">
+                                    <p>Не нашли свои товары в нашем каталоге? Добавьте их.</p>
+                                </div>
+                                <div class="form__bottom">
+                                    <a class="btn btn_green" href="#">Загрузить товары</a>
+                                </div>
                             </div>
-                            <div class="form__row">
-                                <div class="tip">Вы можете выбрать не более 5 специализаций.</div>
+                            <div class="form__addprod addxml">
+                                <div class="form__important form__important_addprod">
+                                    <p>Вы можете загрузить XML-файл </p>
+                                </div>
+                                <div class="form__bottom">
+                                    <a class="btn btn_green btn_blue_bg" href="#">Загрузить XML</a>
+                                </div>
                             </div>
-
-							<div class="form__row">
-								<label class="b-label" for="title">Описание компании<span class="required">*</span></label>
-								<div class="wysiwyg-i">
-									<textarea id="wysiwyg" name="wysiwyg" cols="30" rows="10"></textarea>
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="city">Фотографии</label>
-								<div class="upload-i line">
-									<input type="file" title="Файл не выбран"/>
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="city">Город<span class="required">*</span></label>
-								<div class="input-i">
-									<input value="" id="city" class="input" type="text">
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="address">Адрес<span class="required">*</span></label>
-								<div class="input-i">
-									<input id="address" class="input" type="text">
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="phone">Телефон<span class="required">*</span></label>
-								<div class="input-i">
-									<input id="phone" class="input" type="text">
-								</div>
-							</div>
-
-							<div class="form__row">
-								<label class="b-label" for="site">Сайт<span class="required">*</span></label>
-								<div class="input-i">
-									<input id="site" class="input" type="text">
-								</div>
-							</div>
-
-							<div class="form__bottom">
-								<a class="btn btn_green" href="#"><span class="btn__inner">Создать</span></a>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -353,6 +372,22 @@
 			</div>
 		</div>
 	</div>
+</div>
+<div class="popup popup_inner jsOpenPopup" style="display:none;">
+	<div class="popup__data">
+		<div class="popup__box">
+			<div class="reg-form__top line">
+				<h3 class="reg-form__ttl">Заявка отправлена</h3>
+				<p>Спасибо за Ваш запрос!</p>
+				<p>В ближайшее время с вами свяжется Администратор сайта.</p>
+			</div>
+			<div class="reg-form__row reg-form__row_last">
+				<a class="btn btn_green jsClosePopup" href="#"><span class="btn__inner">Ок</span></a>
+			</div>
+		</div>
+		<a class="ico ico_close jsClosePopup" href="#"></a>
+	</div>
+	<div class="popup__bg"></div>
 </div>
 <div class="top_scroll"></div>
 </body>
