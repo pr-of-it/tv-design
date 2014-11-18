@@ -6618,6 +6618,11 @@ font-size: 14px;
 .comments__holder_txt {
   padding-top: 16px;
 }
+.comments__holder .separator {
+    margin-top:0;
+}
+.comments__holder .b-link { font-size:16px; }
+
 .comments-wrap h4 {
   font-size: 24px;
   font-weight: bold;
