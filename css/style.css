@@ -5777,6 +5777,12 @@ font-size: 14px;
 .slider__slide {
   float: left;
 }
+.slider__slide p {
+    text-align: center;
+    color:#34495e;
+    font-size:18px;
+    margin-top: 15px;
+}
 .slider__pagination {
   padding: 22px 0 0;
   font-weight: bold;
@@ -5808,9 +5814,9 @@ font-size: 14px;
 }
 .slider__next:hover {
   background-image: url(../img/icons.png);
-  background-position: -224px -185px;
-  width: 12px;
-  height: 6px;
+  background-position: -213px -680px;
+  width: 21px;
+  height: 20px;
 }
 .slider #slider_log {
   width: 44px;
