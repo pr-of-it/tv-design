@@ -993,8 +993,13 @@ $(window).load(function(){
             });
 
         });
-/*pavilion filters*/
+
+
+
 $( document ).ready(function() {
+
+/*pavilion filters*/
+	
 
 	$("#filtersBox").css({'height' : '0'});
 
@@ -1016,5 +1021,30 @@ $( document ).ready(function() {
 
     });
 
-	
+/*pavilion profile*/
+
+ $("#showMap").css({'height' : '0'});
+
+    var filtersHeight2 = $("#showMap").height();
+
+
+    $("#showMapBtn").click(function(){
+
+        if(filtersHeight2 == 0) {
+
+            $("#showMap").animate({'height' : '400'}, 200, function(){filtersHeight2 = 400});
+            $("#showMapBtn .b-link__inner").text('Скрыть карту');
+                           
+        }
+        else if(filtersHeight2 == 400) {
+
+            $("#showMap").animate({'height' : '0'}, 200, function(){filtersHeight2 = 0});
+            $("#showMapBtn .b-link__inner").text('Показать на карте');
+           
+        }
+
+    });
+
+ 
 });
+
