@@ -39,6 +39,29 @@
 			jcf.customForms.replaceAll();
 		});
 	</script>
+
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"> </script>
+    <script type="text/javascript">
+
+        ymaps.ready(init);
+        var myMap, icon;
+
+        function init() {
+            myMap = new ymaps.Map("object-map", {
+                center: [55.834042, 37.315407],
+                zoom: 15
+            });
+            myMap.controls.remove('zoomControl');
+            myMap.controls.remove('typeSelector');
+            myMap.controls.remove('control');
+            myMap.controls.remove('mapTools');
+            myMap.controls.remove('searchControl');
+            myMap.controls.remove('trafficControl');
+            myMap.controls.remove('scaleLine');
+            myMap.controls.remove('miniMap');
+            myMap.controls.remove('smallZoomControl');
+        }
+    </script>
 </head>
 
 <body>
@@ -190,10 +213,12 @@
                                             <a href="#">Производство контента - Cъемочные павильоны</a>.
                                     </li>
 									<li>
-										<i class="ico ico_mark"></i>
+										<i class="ico ico_mark"  id="open-map"></i>
 										<p>Москва, ул. Новоостаповская дом 5 стр.3</p>
 										<p>+7 (495) 530-30-30</p>
 									</li>
+                                    <script type="application/javascript">
+                                    </script>
 									<li>
 										<a href="#" class="b-link"><span class="b-link__inner">www.tv-owgogopowerrangers.com</span></a>
 									</li>
@@ -390,6 +415,15 @@
 	</div>
 </div>
 <div class="top_scroll"></div>
+
+<div class="map-popup">
+    <div class="innerbox">
+        <div class="map-inner" id="object-map">
+
+        </div>
+    </div>
+    <div class="map-popup-arr"><img src="img/map-popup_arr.png" width="67" height="35"></div>
+</div>
 <script type="text/javascript">
     jQuery(function($) {
         $('.fancybox').fancybox({overlayOpacity: 0.7, overlayColor: '#000'});
