@@ -15705,8 +15705,9 @@ background-repeat: no-repeat;
 .email_body .logo { width: 209px; height: 33px; margin:25px 0 0 0; float:left; overflow: hidden; text-indent: -9999px; background: url(../img/logo-hdr.png) no-repeat; }
 .email_body .logo_company { color:#26b99b; margin: 32px 0 0 30px; padding: 0 0 0 30px; border-left:solid 1px #26b99b; height:29px; line-height: 29px; font-size:24px; float:left; }
 
-.form-company-search .btn_show { min-width:80px; display:block; float:right; }
-.form-company-search .input-i.semi_width { width: 496px; float:left; }
+.form_row .btn_show { min-width:80px; display:block; float:right; }
+.form_row .input-i.semi_width { width: 496px; float:left; }
+.company-box__entry .form_row .input-i.semi_width { width: 460px; }
 .form-company-search .search-title { margin:0 0 10px 0; }
 .form-company-search .form_row { margin:15px 0 0 0; }
 .form-company-search .select-i { width:260px; }
@@ -15746,4 +15747,13 @@ background-repeat: no-repeat;
 .brand_ttl { font-size:16px; margin:-15px 0 20px 0; color: #1abc9c; display: inline-block; vertical-align: top; outline: none; }
 .brand_ttl:hover { text-decoration: none; }
 .post__files { margin:-15px 0 15px 0; }
->>>>>>> FETCH_HEAD
+.select-row { margin:20px 0 10px 0; }
+.select-row .select-i { float:left; margin: 0 25px 0 0; }
+.sp-groups { margin:5px 0 25px 0 !important; }
+.info-box { width:100%; height:177px; line-height: 177px; background: #edf1f2; font-weight: bold; font-size: 16px; margin: 0 0 20px 0; text-align: center;  border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
+.lupa  { background: url("../img/icons.png") no-repeat 0 -283px; width: 17px; height: 19px; position: absolute; top: 10px; right: 10px; z-index: 1; }
+.groups-search { margin: 25px 0 15px 0; }
+.groups-search a { margin-right:40px; font-size: 16px; }
+.groups-search-info { font-weight:bold; font-size:16px; margin: 0 0 10px 0;}
+.groups-search-info span { color:#1abc9c; }
+>>>>>>> FETCH_1HEAD
