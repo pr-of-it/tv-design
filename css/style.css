@@ -1356,7 +1356,6 @@ a:hover {
 .cnt {
   float: left;
   width: 620px;
-    position: relative;
 }
 .cnt h1,
 .cnt__ttl {
@@ -15758,9 +15757,4 @@ background-repeat: no-repeat;
 .groups-search-info { font-weight:bold; font-size:16px; margin: 0 0 10px 0;}
 .groups-search-info span { color:#1abc9c; }
 .group-search-select.pav__not_select { width: 136px !important; height: 24px; }
-.map-popup { position: absolute; top:0; left:0; z-index: 100; display: none; }
-.map-popup .map-popup-arr { margin: -2px 0 0 166px; }
-.map-popup .innerbox { background: #f9fafd; padding: 18px; border: solid 2px #edf1f2; box-sizing: border-box; width:400px; height:260px; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;  }
-.map-popup .map-inner { border:solid 1px #d7dcde; height:100%; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
-#open-map { cursor:pointer; z-index: 1; }
 >>>>>>> FETCH_1HEAD

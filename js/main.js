@@ -998,21 +998,7 @@ $(window).load(function(){
 
 $( document ).ready(function() {
 
-
-    $(document).on('mouseover', '#open-map', function(e) {
-        $('.map-popup').css({
-            top: ($(this).offset().top - 297) + 'px',
-            left: ($(this).offset().left - 193) + 'px'
-        });
-        $('.map-popup').fadeIn('fast');
-    });
-    $(document).on('mouseout', '#open-map', function(e) {
-        $('.map-popup').fadeOut('fast');
-    });
-
 /*pavilion filters*/
-
-
 	
 
 	$("#filtersBox").css({'height' : '0'});
