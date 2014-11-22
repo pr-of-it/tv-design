@@ -15756,4 +15756,5 @@ background-repeat: no-repeat;
 .groups-search a { margin-right:40px; font-size: 16px; }
 .groups-search-info { font-weight:bold; font-size:16px; margin: 0 0 10px 0;}
 .groups-search-info span { color:#1abc9c; }
+.group-search-select.pav__not_select { width: 136px !important; height: 24px; }
 >>>>>>> FETCH_1HEAD
