@@ -76,45 +76,85 @@ var MainJsClass = function () {
     };
 
 	this.initCarousel = function () {
-		if($('.slider__holder').length){
-			$(".slider__holder").carouFredSel({
-				width: 620,
-				height: "variable",
-				items: {
-					visible: 1,
-					width: 620,
-					height: "variable"
-				},
-				onCreate: function() {
-					$(this).trigger("currentPosition", function( pos ) {
-						var txt = (pos+1) + " из " + $("> *", this).length;
-						$("#slider_log").html( txt );
-					});
-				},
-				scroll: {
-					pauseOnHover: true,
-					onBefore : function() {
-						$(this).trigger("currentPosition", function( pos ) {
-							var txt = (pos+1) + " из " + $("> *", this).length;
-							$("#slider_log").html( txt );
-						});
-					},
-					onAfter : function() {
-						$(this).trigger("currentPosition", function( pos ) {
-							var txt = (pos+1) + " из " + $("> *", this).length;
-							$("#slider_log").html( txt );
-						});
-					}
-				},
-				auto: {
-					timeoutDuration: 5000,
-					delay: 5000,
-					progress: ".bar"
-				},
-				prev: ".slider__prev",
-				next: ".slider__next"
-			});
-		};
+        if($('.slider_1').length){
+            $(".slider_1").carouFredSel({
+                width: 620,
+                height: "variable",
+                items: {
+                    visible: 1,
+                    width: 620,
+                    height: "variable"
+                },
+                onCreate: function() {
+                    $(this).trigger("currentPosition", function( pos ) {
+                        var txt = (pos+1) + " из " + $("> *", this).length;
+                        $(".slider_log_1").html( txt );
+                    });
+                },
+                scroll: {
+                    pauseOnHover: true,
+                    onBefore : function() {
+                        $(this).trigger("currentPosition", function( pos ) {
+                            var txt = (pos+1) + " из " + $("> *", this).length;
+                            $(".slider_log_1").html( txt );
+                        });
+                    },
+                    onAfter : function() {
+                        $(this).trigger("currentPosition", function( pos ) {
+                            var txt = (pos+1) + " из " + $("> *", this).length;
+                            $(".slider_log_1").html( txt );
+                        });
+                    }
+                },
+                auto: {
+                    timeoutDuration: 5000,
+                    delay: 5000,
+                    progress: ".bar"
+                },
+                prev: ".slider__prev_1",
+                next: ".slider__next_1"
+            });
+        };
+
+        if($('.slider_2').length){
+            $(".slider_2").carouFredSel({
+                width: 620,
+                height: "variable",
+                items: {
+                    visible: 1,
+                    width: 620,
+                    height: "variable"
+                },
+                onCreate: function() {
+                    $(this).trigger("currentPosition", function( pos ) {
+                        var txt = (pos+1) + " из " + $("> *", this).length;
+                        $(".slider_log_2").html( txt );
+                    });
+                },
+                scroll: {
+                    pauseOnHover: true,
+                    onBefore : function() {
+                        $(this).trigger("currentPosition", function( pos ) {
+                            var txt = (pos+1) + " из " + $("> *", this).length;
+                            $(".slider_log_2").html( txt );
+                        });
+                    },
+                    onAfter : function() {
+                        $(this).trigger("currentPosition", function( pos ) {
+                            var txt = (pos+1) + " из " + $("> *", this).length;
+                            $(".slider_log_2").html( txt );
+                        });
+                    }
+                },
+                auto: {
+                    timeoutDuration: 5000,
+                    delay: 5000,
+                    progress: ".bar"
+                },
+                prev: ".slider__prev_2",
+                next: ".slider__next_2"
+            });
+        };
 
 		$('.gallery').each(function(){
 			var gallery = $(".gallery__holder", $(this)),
