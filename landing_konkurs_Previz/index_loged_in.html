@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Moscowfilmschool</title>
+	<link rel="stylesheet" href="style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="js/jcf.checkbox.js"></script>
+    <script type="text/javascript" src="js/jcf.js"></script>
+    <script type="text/javascript" src="js/jcf.file.js"></script>
+    <script type="text/javascript" src="js/jcf.radio.js"></script>
+</head>
+<body >
+	<!-- popups -->
+	<div class="popup popup_inner jsOpenPopup" id="sucsess_popup" style="display: none;">
+        <div class="popup__data land__pop__work2">
+            <div class="reg-form__top line land__pop__top ">
+                <h3 class="reg-form__ttl land__pop__ttl">Работа успешно отправлена</h3>
+            </div>
+            <p>
+            	Итоги конкурса будут подведены 
+    			26 декабря 2014 года. 
+    			Желаем удачи!
+    		</p>
+           
+
+            <a class="ico ico_close landing__popups__close jsClosePopup"></a>
+        </div>
+    </div>
+     <!-- registration or sending popup -->
+    <div class="popup popup_inner jsOpenPopup" id="land_form" style="display: none">
+        <div class="popup__data land__pop__work4">
+            <div class="scroll">
+                <div class="reg-form__top line land__pop__top ">
+                    <h3 class="reg-form__ttl land__pop__ttl">Регистрация</h3>
+                    <a class="b-link b-link_top" href="#" id="login_link"><span class="b-link__inner">Вход</span></a>
+                    <div style="clear:both;"></div>
+                </div>
+
+                <form id="cover__let__form" class=" parent-active" action="/signup" method="post" target="_blank">
+                    <div class="reg-form__row land__pop__row">
+                        <label class="b-label" for="Profile_first_name">
+                            Имя
+                            <span class="required">*</span>
+                        </label>
+                        <div class="input-i input-i_middle  ">
+                            <input size="60" class="input input_small" maxlength="255" name="Profile[first_name]" type="text">
+                        </div>
+                    </div>
+
+                    <div class="reg-form__row land__pop__row">
+                        <label class="b-label" for="Profile_first_name">
+                            Фамилия
+                            <span class="required">*</span>
+                        </label>
+                        <div class="input-i input-i_middle  ">
+                            <input size="60" class="input input_small" maxlength="255" name="Profile[last_name]" type="text">
+                        </div>
+                    </div>
+
+                    <div class="reg-form__row land__pop__row">
+                        <label class="b-label" for="UserLogin_email">
+                            E-mail
+                            <span class="required">*</span>
+                        </label>
+                        <div class="input-i input-i_middle">
+                            <input size="60" maxlength="254" class="input input_small" tabindex="1" name="RegistrationForm[email]"  type="text">
+                        </div>
+                    </div>
+
+                    <div class="reg-form__row land__pop__row">
+                        <label class="b-label " for="RegistrationForm_password">
+                            Пароль
+                            <span class="required">*</span>
+                        </label>
+                        <div class="input-i input-i_middle">
+                            <input class="input input_small" size="60" name="RegistrationForm[password]" id="RegistrationForm_password" type="password" maxlength="128">
+                        </div>
+                    </div>
+
+                    <div class="reg-form__row land__pop__row">
+                        <label class="b-label " for="RegistrationForm_verifyPassword">
+                            Подтверждение пароля
+                            <span class="required">*</span>
+                        </label>
+                        <div class="input-i input-i_middle  ">
+                            <input class="input input_small"  size="60" name="RegistrationForm[verifyPassword]" id="RegistrationForm_verifyPassword" type="password" maxlength="128">
+                        </div>
+                    </div>
+
+                    <div class="reg-form__row land__pop__row">
+                       <div class="reg-form__text">Регистрируясь, вы подтверждаете свое согласие с условиями
+                           <a class="b-link" href="#" id="registration_agree_link">
+                                <span class="b-link__inner">Пользовательского соглашения</span>
+                           </a>
+                       </div>
+                    </div>
+
+                    <div class="reg-form__row land__pop__row">
+                        <input class="btn btn_green" type="submit" name="yt0" value="Зарегистрироваться">
+                    </div>
+                    <div class="reg-form__bottom land__pop__bottom">
+                        <div class="auth-service facebook">
+                        <a class="btn btn_dark-blue auth-link facebook" href="/login/service/facebook"><i class="ico ico_fb-white"></i>Войти через Facebook</a> 
+                        <a class="btn btn_vk-blue metrika" data-goal="reg_users_vk" href="/login/service/vkontakte"><i class="ico ico_vk-white"></i>Войти через Vkontakte</a>
+                           </div>
+                     </div>
+                </form>
+            </div>
+            <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
+        </div>
+        <div class="popup__bg"></div>
+    </div>
+
+    <div class="popup popup_inner jsOpenPopup" id="login_form" style="display: none;">
+        <div class="popup__data land__pop__work5">
+            <div class="scroll">
+                <div class="reg-form__top line land__pop__top ">
+                   <h3 class="reg-form__ttl land__pop__ttl">Вход</h3>
+            <a class="b-link b-link_top" href="#" id="registration_link"><span class="b-link__inner">Регистрация</span></a>
+                    <div style="clear:both;"></div>
+                </div>
+
+                <form id="cover__let__form" class=" parent-active" method="post" action="/login">
+            <div class="reg-form__row land__pop__row">
+                <label class="b-label" for="UserLogin_email">E-mail</label>
+                <div class="input-i input-i_middle  ">
+                    <input maxlength="254" class="input input_small" tabindex="1" name="UserLogin[email]"  type="text">
+                </div>
+            </div>
+            <div class="reg-form__row land__pop__row">
+                <label class="b-label" for="UserLogin_password">Пароль</label>
+                <a class="b-link" href="/recovery"><span class="b-link__inner">Забыли пароль?</span></a>
+                <div class="input-i input-i_middle  ">
+                     <input maxlength="254" class="input input_small" tabindex="2" name="UserLogin[password]" type="password">
+                </div>
+            </div>
+            <div class="reg-form__row">
+                <input id="ytUserLogin_rememberMe" type="hidden" value="0" name="UserLogin[rememberMe]">
+                <input name="UserLogin[rememberMe]" id="UserLogin_rememberMe" value="1" type="checkbox" class="jcf-hidden">        <label for="UserLogin_rememberMe" class="b-label b-label_check">Запомнить меня</label>
+            </div>
+
+            <div class="reg-form__row">
+                <input id="submit_link" class="btn btn_green submit" tabindex="3" type="submit" name="yt0" value="Войти">
+            </div>
+
+            <div class="reg-form__bottom land__pop__bottom2">
+                <div class="auth-service facebook">
+                    <a class="btn btn_dark-blue auth-link facebook" href="/login/service/facebook"><i class="ico ico_fb-white"></i>Войти через Facebook</a>
+                    <a class="btn btn_vk-blue metrika" data-goal="reg_users_vk" href="/login/service/vkontakte"><i class="ico ico_vk-white"></i>Войти через Vkontakte</a>
+                </div>
+            </div>
+        </form>
+            </div>
+            <a class="ico ico_close landing__popups__close jsClosePopup" href="#"></a>
+        </div>
+        <div class="popup__bg"></div>
+    </div>
+
+
+    <div class="popup popup_inner jsOpenPopup" id="terms_popup" style="display: none;">
+    <div class="popup__data land__pop__work3">
+    <div class="scroll">
+        <p>УСЛОВИЕМ УЧАСТИЯ И ПОБЕДЫ НЕ ЯВЛЯЕТСЯ ПОКУПКА КАКОГО-ЛИБО ТОВАРА ИЛИ УСЛУГИ.</p>
+<p>ПОДАЧА ЗАЯВКИ НА УЧАСТИЕ В КОНКУРСЕ ОЗНАЧАЕТ ВАШЕ ПРИНЯТИЕ НАСТОЯЩИХ УСЛОВИЙ ПРОВЕДЕНИЯ КОНКУРСА.</p>
+<p>
+    Конкурс «Грант от Московской Школы Нового Кино» (далее – <strong>«Конкурс»</strong>) – это творческий конкурс,
+    участники которого создают свою собственную версию смонтированного материала из предложенных работ студентов
+    Московской Школы Нового Кино. Судьи выберут победителей среди участников, руководствуясь критериями оценки,
+    установленными настоящими Правилами проведения Конкурса (далее –<strong>«Правила»</strong>). Участнику, чей готовый
+    материал получит наивысшую оценку судей, будет вручен приз, указанный в Правилах. Более подробная информация
+    изложена ниже.
+</p>
+
+
+<h3>1. ОБЯЗАТЕЛЬНОЕ СОГЛАШЕНИЕ:</h3>
+<p>
+    Чтобы стать участником Конкурса, вам необходимо принять его Правила. Поэтому просим вас прочитать настоящие Правила
+    перед тем, как зарегистрироваться в качестве участника, чтобы убедиться, что вы их поняли и принимаете. Вы согласны
+    с тем, что, регистрируясь в качестве участника Конкурса, вы тем самым даете свое согласие на настоящие Правила.
+    Если вы не согласны с настоящими Правилами, вы не должны регистрироваться для участия в Конкурсе. Настоящие Правила
+    составляют юридически обязывающее соглашение между вами и компанией Московская Школа Нового Кино в отношении
+    Конкурса.
+</p>
+<p>
+    В Конкурсе «Грант от Московской Школы Нового Кино» могут принять участие все без исключения люди, чей возраст достиг
+    18 лет и не превысил 35 лет.
+</p>
+<h3>2. ТРЕБОВАНИЯ К УЧАСТНИКАМ:</h3>
+<p>
+    Работники, студенты и должностные лица компании МШНК не имеют права участвовать в данном Конкурсе.
+</p>
+
+
+<h3>3. ОРГАНИЗАТОР И ПАРТНЕРЫ:</h3>
+<p>
+    Организатором Конкурса является ОАНО «МШНК» (ОГРН 1127799008116, адрес местонахождения: 121099, Москва, Проточный
+    переулок д. 14/1, стр. 1 этаж 1 помещение 1, комната 1).
+</p>
+<p>
+    Партнером Конкурса (далее – <strong>«Партнер»</strong>) является ООО "Айтикреативофф" (ОГРН 1127746419580, адрес
+    местонахождения: 127549, г. Москва, ул. Бибиревская, д.2, корп,1)
+</p>
+
+
+<h3>4. ПЕРИОД ПРОВЕДЕНИЯ КОНКУРСА:</h3>
+<p>
+    Конкурс проводится с 26 августа 2014 г. по 26 сентября 2014 г. и включает следующие периоды:
+</p>
+<p>
+    Период приема заявок на участие в Конкурсе: с 26 августа 2014 г. до 23:59 21 сентября 2014г.
+</p>
+<p>Определение победителя – 21 – 24 сентября 2014г.</p>
+<p>Объявление победителя – 25 сентября 2014г.</p>
+<p>Вручение приза – 26 сентября 2014г. Все даты могут быть изменены решением Организатора Конкурса.
+</p>
+
+
+<h3>5. ПРОЦЕДУРА РЕГИСТРАЦИИ:</h3>
+<p>
+    Чтобы зарегистрироваться для участия в Конкурсе, зарегистрируйтесь на сайте tvkinoradio.ru (далее –
+    <strong>«Сайт»</strong>) в течение периода приема заявок на участие в Конкурсе и скачайте конкурсный видеоматериал.
+    Готовый конкурсный материал должен соответствовать изложенным ниже Требованиям к материалу. Для участия в Конкурсе
+    нужно загрузить готовый видеоматериал в свой профиль на Сайте и отправить его через форму обратной связи.
+</p>
+<p>
+    ОДИН УЧАСТНИК МОЖЕТ ПОДАТЬ НЕ БОЛЕЕ ОДНОЙ ЗАЯВКИ. Время отправки определяется по дате отправки в форме обратной
+    связи. Для рассмотрения на Конкурсе, заявки должны быть получены не позднее
+    <strong>23:59 по московскому времени 21 сентября 2014г.</strong> В случае представления заявки, не удовлетворяющей
+    вышеупомянутым критериям, Участник будет дисквалифицирован. Ни МШНК, ни Партнер не принимают на себя
+    ответственность в случае потери, задержки, повреждения, искажения или неправильного размещения заявки,
+    независимо от того, чем это было вызвано. Доказательство отправки формы обратной связи не является
+    доказательством регистрации.
+</p>
+
+
+<h3>6. ТРЕБОВАНИЯ К КОНКУРСНОМУ МАТЕРИАЛУ − ВИДЕОРОЛИКУ:</h3>
+<p>
+    Видеоролик должен удовлетворять следующим критериям:
+</p>
+<p>
+    (a) Видеоролик должен содержать <strong>только тот контент</strong>, который предоставлен Организатором
+    (допускается полное или выборочное использование предоставленного видеоматериала),
+</p>
+<p>
+    (б) Хронометраж конкурсного Видеоролика не должен превышать 10 минут.
+</p>
+
+
+<h3>7. ОЦЕНОЧНАЯ СИСТЕМА:</h3>
+<p>
+    Каждый Видеоролик будет оцениваться по техническим характеристикам и художественным достоинствам экспертным жюри.
+</p>
+
+
+<h3>8. ПРИЗЫ:</h3>
+<p>
+    Победитель в качестве приза получит возможность обучения в Московской Школе Нового Кино на грантовой основе. Грант распространяется на факультет «Режиссуры Монтажа».
+</p>
+
+
+<h3>9. НАЛОГИ:</h3>
+<p>
+    Грант не подлежит налогообложению.
+</p>
+
+
+<h3>10. ДИСКВАЛИФИКАЦИЯ:</h3>
+<p>
+    Помимо иных случаев дисквалификации, установленных настоящими Правилами, МШНК оставляет за собой право отстранить
+    Участника от Конкурса, если МШНК по своему исключительному усмотрению обоснованно полагает, что Участник пытался
+    негативно повлиять на проведение Конкурса путем мошенничества, обмана, иных недобросовестных действий, или досаждая,
+    адресуя оскорбления или угрозы, или причиняя беспокойство другим участникам, МШНК или судьям.
+</p>
+
+
+<h3>11. ПРАВА НА ОБЪЕКТЫ ИНТЕЛЛЕКТУАЛЬНОЙ СОБСТВЕННОСТИ:</h3>
+<p>
+    Стороны соглашаются с тем, что исключительные права на конкурсный материал — Видеоролики — принадлежат МШНК
+    в полном объеме без ограничения по территории использования на весь срок действия исключительного права.
+    МШНК вправе распоряжаться ими всеми существующими или могущими возникнуть в будущем способами, включая, но, не
+    ограничиваясь способами, предусмотренными ст.1270 ГК РФ, включая использования без указания имени участника
+    Конкурса (анонимно), право вносить любые изменения, сокращения, дополнения, комментарии, осуществлять любыми
+    способами редактирование, перемонтаж, наложение другого графического и музыкального оформления и т.п. (никакие
+    изменения, сокращения или дополнения не могут рассматриваться как нарушение прав участников Конкурса на
+    неприкосновенность созданных им объектов интеллектуальной собственности)
+</p>
+<p>
+    Присланные на Конкурс заявки не возвращаются.
+</p>
+
+
+<h3>12. СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ ПЕРСОНАЛЬНЫХ ДАННЫХ:</h3>
+<p>
+    Участники Конкурса соглашаются с тем, что персональные данные, представленные вместе с заявкой, включая имя и
+    фамилию, почтовый адрес, телефонный номер и адрес электронной почты, собираются, записываются, систематизируются,
+    хранятся, уточняются, передаются и используются иным образом Организатором и Партнером. Регистрируясь на Конкурсе,
+    Участники соглашаются на обработку своих персональных данных Организатором и Партнером всеми способами, включая
+    вышеперечисленные.
+</p>
+<p>
+    В случае непредставления Участником данных, требуемых при регистрации, такому Участнику может быть отказано в
+    регистрации. Организатор не несет ответственности за неисполнение обязанностей, связанных с проведением Конкурса,
+    если такое неисполнение произошло вследствие уничтожения персональных данных Участника в результате их отзыва
+    Участником. В случае отзыва персональных данных, указываемых в заявке или иным образом необходимых для проведения
+    Конкурса, Участник может быть дисквалифицирован.
+</p>
+
+
+<h3>13. РЕКЛАМА:</h3>
+<p>
+    Факт участия в Конкурсе подразумевает, что Участники выражают свое безусловное согласие с тем, что их имена,
+    фамилии и фото- и видеоматериалы с их изображением, связанные с участием в Конкурсе, а также интервью и иные
+    материалы о них могут быть использованы Организатором и/или Партнером в рекламных и/или иных коммерческих целях
+    как на территории Российской Федерации, так и за ее пределами в течение неограниченного срока и без выплаты
+    каких-либо вознаграждений.
+</p>
+<p>
+    Участники принимают на себя обязательство принимать участие в фото- и видеосъемках, интервью, прочих
+    мероприятиях, проводимых в указанных целях Организатором и/или Партнером или третьими лицами по их поручению.
+</p>
+
+
+<h3>14. ОТСТРАНЕНИЕ ОТ УЧАСТИЯ В КОНКУРСЕ:</h3>
+<p>
+    Любая ложная информация, предоставленная Участником в рамках Конкурса в отношении его или ее личности,
+    почтового адреса, телефонного номера, адреса электронной почты, обладания каким-либо правом или несоблюдение
+    настоящих Правил, или аналогичное событие, может повлечь за собой немедленное отстранение Участника от участия в
+    Конкурсе.
+</p>
+
+
+<h3>15. ИНТЕРНЕТ И ОТКАЗ ОТ ПРАВ:</h3>
+<p>
+    МШНК не несет ответственность за неправильную работу Сайта конкурса или за задержку, потерю, повреждение,
+    неправильное направление, неполноту, неудобочитаемость, невозможность доставки или уничтожение Видеороликов,
+    вследствие системных ошибок, сбоев, дефектов или порчи компьютера, или неправильной работы системы дистанционной
+    передачи данных, или сбоев в аппаратном или программном обеспечении любого рода, потери или недоступности сетевых
+    подключений, типографских или системных ошибок и сбоев, технических отказов телефонных сетей или линий, кабельных
+    соединений, спутниковой связи, серверов или провайдеров, или компьютерного оборудования, перегрузок в сети Интернет
+    или на Сайте конкурса, или любого сочетания вышеназванных событий, включая иные телекоммуникационные, кабельные,
+    цифровые или спутниковые отказы, в силу которых Участник/пользователь не сможет принять участие/проголосовать,
+    соответственно.
+</p>
+
+
+<h3>17. ПРАВО ОТМЕНЫ, ИЗМЕНЕНИЯ УСЛОВИЙ ИЛИ ДИСКВАЛИФИКАЦИИ:</h3>
+<p>
+    Если, по какой-либо причине, Конкурс не может быть проведен согласно графику, в том числе, вследствие заражения
+    компьютерным вирусом, серьезных аппаратных или программных ошибок, злонамеренного изменения программных средств и
+    документов, несанкционированного вмешательства, мошенничества, технических неисправностей или любых других причин,
+    вследствие которых повреждается или нарушается администрирование, безопасность, равнодоступность, целостность или
+    правильность проведения Конкурса, МШНК оставляет за собой право, по своему исключительному усмотрению, отменить,
+    завершить, внести изменения в сроки проведения или приостановить Конкурс.
+</p>
+
+
+<h3>18. ОБЩИЕ ПОЛОЖЕНИЯ:</h3>
+<p>
+    Настоящие Правила размещаются в сети Интернет на Сайте в течение срока проведения Конкурса. В случае
+    изменения условий Конкурса Организатор размещает уточнения, изменения и дополнения к Правилам на Сайте. Все спорные
+    вопросы относительно настоящего Конкурса и Правил регулируются на основе действующего законодательства Российской
+    Федерации.
+</p>
+</div>
+        <a class="ico ico_close landing__popups__close jsClosePopup"></a>
+    </div>
+    </div>
+
+
+	<div class="hdr__landing__line">
+		<div class="line-cont">
+			<div class="school__logo header-item">
+				<a class="school-logo" target="_blank" href="http://www.newcinemaschool.com"><img src="images/school-logo.png"></a>
+			</div>
+			<div class="TKR__logo header-item">
+				<a class="TKR-logo" target="_blank" href="http://www.tvkinoradio.ru"><img src="images/TKR-logo.png"></a>
+			</div>
+			<div class="landing__social header-item">
+				<a target="_blank" href="http://www.vk.com"><img src="images/vk.png"></a>
+				<a target="_blank" href="http://www.facebook.com"><img src="images/fb.png"></a>
+				<a target="_blank" href="http://www.twitter.com"><img src="images/tw.png"></a>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<section id="section1">
+		<div class="wrapper-landing">
+		 	<div class="hdr__landing">
+	            <div class="timer__banner">
+	                <div class="timer__banner__text">
+	                	<h3>Выиграй грант на январский курс</h3>
+	                    <h1>
+	                       «превизуализация фильма»
+	                   	</h1>
+	                   	<h3>в Московской школе кино</h3>
+	                   	<p> Курс превизуализации научит правильно и четко моделировать сцены, которые планируются при съемке фильма,позволяя экономить на реальной постановке и съёмке. Навыки превизуализации нужны режиссерам, операторам,продюсерам, специалистам VFX и композитинга.</p>
+	                    <span class="timer__title">
+	                        До окончания приема заявок осталось:
+	                    </span>
+	                    <div class="timer">
+
+	                         <!-- Начало панели счетчика -->
+	                        <div id="countdown_dashboard">
+	                            <div id="getting-started"></div>
+	                                <script type="text/javascript">
+	                                    $("#getting-started").countdown("2014/12/24", function(event) {
+	                                      $(this).text(
+	                                        event.strftime('  %D      %H      %M')
+	                                      );
+	                                    });
+	                                </script>
+	                            <div class="dash days_dash">
+
+	                            	<span class="dash_title">дни</span>    
+	                            </div>
+	                          
+	                            <div class="dash days_dash">
+
+	                            	<span class="dash_title">часы</span>
+	                            </div>
+	                             
+	                            <div class="dash days_dash">
+
+	                              	<span class="dash_title">минуты</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="widget__bottom">
+
+	                    	<a class="btn btn_yellow open_reg_form" ><span class="btn__inner">Подать заявку</span></a>
+	                	</div>
+	                	<div class="container__landing">
+
+				            <div class="conditions">
+				                <span class="condition__text">Условия и подробности конкурса
+				                </span>
+				            </div>
+	                	</div> 
+	                </div>       
+	            </div>
+	        </div>
+		</div>
+	</section>
+
+	<section id="section2">
+		 <div class="competition">
+                <span class="competition__text">УСЛОВИЯ КОНКУРСА</span>
+                <p>Участие в конкурсе может принять любой гражданин РФ, достигший возраста 16 лет.</p>
+                <a class="full" id="land_full_inf" href"#">Полные условия конкурса</a>
+                <div class="competition__cont">
+                    <div class="step">
+                        <div class="step1">
+                            <div class="step__title">ШАГ 1</div>
+                            <div class="step__text step_text1">
+                            <p>Войди в свой аккаунт на tvkinoradio.ru или зарегистрируйся на портале через facebook, vkontakte или электронную почту</p>
+                            </div>
+                        </div>
+                        <div class="step1 step2">
+                            <div class="step__title step__title2">ШАГ 2</div>
+                            <div class="step__text step_text2">
+                            	<p>Прочитай литературный отрывок на странице конкурса и подготовь свой вариант раскадровки сцены по нему с кратким описанием кадров в формате <b>— pdf</b></p>
+                            </div>
+                        </div>
+                        <div class="step1 step3">
+                            <div class="step__title step__title3">ШАГ 3</div>
+                            <div class="step__text step_text3">
+                            <p>Загрузи результат на любой видеохостинг и размести в своем профиле на сайте tvkinoradio.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div class="completion">
+                       <p>Конкурсные работы принимаются до 23 декабря включительно.<br>
+                       Объявление победителей состоится 26 декабря. </p>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+                
+
+            </div> 
+	</section>
+	<section id="section3">
+		<div class="sharpe">
+           	<div id="pntik"></div>
+	       	<div class="sharpe__text">
+		        <h3>Победитель конкураса получит грант на январский курс</h3>
+		        <h1>
+		            «превизуализация фильма»
+		        </h1>
+		       	<h3>в Московской школе кино</h3>
+		        <p> Победителя определит экспертное жюри:</p>
+	        </div>
+        </div>
+		<div class="info_landing">
+			<div class="slider__tab">
+	            <div class="slider__img">
+	                <img src="images/peopleimg2.png" />
+	            </div>
+	            <div class="slider__text">
+		            <h1 class="slider__title">Александр Каурых</h1>
+		            <p class="slider__text2">Режиссер, продюсер </p>
+		            <p class="slider__text3">
+			                Куратор курса «Previz фильма», режиссер, продюсер основатель компании Dviz Realtime Inc.
+							Участник международных ассоциаций International Digital Media and Arts Association (USA) 
+							и The Digital Media and Wireless Association of BC (Canada). 
+							Авторизованный преподаватель курса The Master Course In High-End Blocking & Staging 
+							с лицензией от Hollywood Camera Work (USA).
+		      	    </p>
+	            </div>
+	        	<div style="clear:both;"></div>
+	    	</div>
+	    	<div class="slider__tab">
+	            <div class="slider__img">
+	                <img src="images/peopleimg1.png" />
+	            </div>
+	            <div class="slider__text">
+		            <h1 class="slider__title">Ярослав Кемниц</h1>
+		            <p class="slider__text2">Преподаватель курса «Previz фильма» </p>
+		            <p class="slider__text3">
+		                Доктор искусствоведения, доцент Академии медиаобразования, супервайзер спецэффектов. 
+						Автор книги-исследования "Теория спецэффектов".
+		      	    </p>
+	            </div>
+	        	<div style="clear:both;"></div>
+	    	</div>
+	    	
+    	</div>
+    	<div class="literary__title">
+    		<span>Фрагмент литературного текста </br>для превизуализации:</span>
+    	</div>
+    	
+	</section>
+	<section id="section4">
+		<div class="literary__text">
+			<span class="literary__text__icon"></span>
+			<p>
+				Какой-то отдаленный неясный звук появился – не голоса, голоса наверху бубнили по-прежнему, – нет, там, на улице, за высокими приотворенными дверями подъезда. Явственно зазвенели разноцветные стекла в витраже, и явственно завибрировали каменные ступеньки под локтями и задом, словно где-то неподалеку была железная дорога и по ней шел сейчас поезд – тяжелый грузовой состав. Немой вдруг широко раскрыл глаза и повернул голову, настороженно прислушиваясь.<br/>
+					Андрей осторожно подтянул под себя ноги и встал, держа автомат за ремень. Немой сейчас же тоже встал, кося на него одним глазом и все продолжая прислушиваться. Взявши автомат на изготовку, Андрей бесшумно перебежал к дверям и осторожно выглянул. Жаркий пыльный воздух обжег ему лицо. Улица была желта, раскалена и пуста по-прежнему. Только ватной тишины больше не было. Огромный далекий молот с унылой равномерностью бил в мостовую, и удары эти заметно приближались – тяжелые, хрусткие удары, дробящие в щебень булыжник мостовой. В доме напротив со звоном осыпалась расколотая витрина. От неожиданности Андрей отпрянул, но тут же взял себя в руки и, закусив губу, оттянул затвор автомата. Черт меня сюда понес, подумал он краем сознания. 	Молот все приближался, и совершенно непонятно было – откуда, но удары были все тяжелее, все звонче, и была в них какая-то несокрушимая и неотвратимая победительность. Шаги судьбы, мелькнуло в голове у Андрея. Он растерянно оглянулся на Немого. 
+Он испытал шок. Немой стоял, прислонившись плечом к стене, и сосредоточенно орудовал своим тесаком, обрезая ноготь на мизинце левой руки. Вид у него при этом был совершенно равнодушный и даже скучающий. 
+	– Что?! – хрипло спросил Андрей. – Ты что это?..
+Немой посмотрел на него, кивнул и снова занялся своим ногтем. Бумм, бумм, бумм – раздавалось совсем близко, земля под ногами содрогалась. И вдруг наступила тишина. Андрей сейчас же снова выглянул. Он увидел: на ближнем перекрестке, доставая головой до третьего этажа, возвышается темная фигура. Статуя. Старинная металлическая статуя. Тот самый давешний тип с жабьей мордой – только теперь он стоял, напряженно вытянувшись, задрав объемистый подбородок, одна рука заложена за спину, другая – то ли грозя, то ли указуя в небеса – поднята, и выставлен указательный палец…
+Андрей, обмирая, как в дурном сне, смотрел на это бредовое чудовище. Но он знал, что это не бред. Статуй был как статуй – дурацкое бездарное сооружение из металла, покрытое не то окалиной, не то черной окисью, нелепо и не на месте установленное… В горячем воздухе, поднимавшемся от мостовой, очертания его дрожали и колебались точно так же, как очертания домов вдоль улицы. 
+	Андрей почувствовал руку на своем плече и оглянулся – Немой улыбался и успокаивающе кивал ему. Бумм, бумм, бумм – снова раздалось на улице. Немой все держал его за плечо – трепал, гладил, мял мускулы ласковыми пальцами. Андрей резко отстранился и снова выглянул наружу. Статуи не было больше. И снова была тишина.
+			</p>
+			<a class="full" id="land_full_inf" target="_blank" href="print_vertion.html"> Версия для печати</a>
+		</div>
+	</section>
+	<section id="section5">
+		<div class="fr__landing">
+            <div class="fr__banner">
+                <div class="fr__banner__text">
+                    <p>
+                        Отправка конкурсной работы
+                    </p>
+                </div>
+                <form action="upload.php" method="post" enctype="multipart/form-data"> 
+                    <div class="fr__banner__input">
+                        
+                            <div class="input-i input-i_middle">
+                                <input size="60" class="input input_small" placeholder="Ваше имя *" maxlength="255" name="Profile[first_name]" type="text">
+                            </div>
+                            <div class="input-i input-i_middle">
+                                <input size="60" class="input input_small " placeholder="Ваш e-mail*" maxlength="255" name="Profile[first_name]" type="text">
+                            </div>
+                            <div class="input-i input-i_middle">
+                                <input size="60" class="input input_small" placeholder="Номер вашего телефона" maxlength="255" name="Profile[first_name]" type="text">
+                            </div>
+                            
+                    </div>
+                    <p class="fr__banner__singin__text">Вы можете прикрепить конкурсную работу к заявке <br/>или ввести ссылку на работу, размещенную в интернете
+                    </p>
+                    <div class="input-i input-i_middle ">
+                        <input size="60" class="input input_small file__upload"   type="file">
+                    </div>
+                    <div class="input-i input-i_middle">
+                        <input size="60" class="input input_small" placeholder="Ссылка на работу" maxlength="255" name="Profile[first_name]" type="text">
+                    </div>
+                     <div class="widget__bottom">
+                        <a class="btn btn_yellow btn__fr" id="land_submit">
+                            <span class="btn__inner">Отправить заявку</span>
+                        </a>
+                    </div>
+                </form>
+                <span class="fr_conditions">
+                    <p>Отправляя заявку, вы соглашаетесь с</p>
+                    <a class="conditions1">Полными условиями конкурса</a>
+                </span>
+                
+            </div>
+            <div class="fr__title">
+            	<span class="">Появились вопросы?</span>
+                <p>
+                    Задавай их в
+                    <a href="/group/227/status" class="fr__full">группе конкурса</a>
+                    на tvkinoradio.ru</p>
+            </div>
+
+           	<div class="landing__social fr__landing__social">
+			    <a target="_blank" href="http://www.vk.ru"><img src="images/vk.png"></a>
+			    <a target="_blank" href="http://www.facebook.com"><img src="images/fb.png"></a>
+			    <a target="_blank" href="http://www.twitter.com"><img src="images/tw.png"></a>
+                <div style="clear:both;"></div>
+			</div>
+
+        </div>
+
+	</section>
+</body>
+</html>
