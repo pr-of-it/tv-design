@@ -6240,6 +6240,19 @@ font-size: 14px;
   text-decoration: none;
   color: #e74c3c;
 }
+.filter_sale_rent {
+    border-top: 2px solid #ecf0f1;
+    border-bottom: 2px solid #ecf0f1;
+    padding: 14px 0 12px;
+    margin: 0 0 19px;
+}
+.filter_sale_rent__block {
+    display: inline-block;
+    vertical-align: top;
+}
+.filter_sale_rent__item {
+    margin-bottom: 1px;
+}
 .ui-slider {
   border: none;
   background: #ecf0f1;
