@@ -1038,6 +1038,21 @@ $(window).load(function(){
 
 $( document ).ready(function() {
 
+	var i = Math.ceil(Math.random()*5);
+	$('#ny_bubble').css('background-image', 'url(./img/ny_img_'+i+'.png)');
+
+	randomText();
+
+	$('#ny_bubble, #ny_bubble_textbox').click(function(){
+		$('#ny_bubble_textbox').toggleClass('invisible');
+		randomText();
+	});
+
+	function randomText(){
+		var l = Math.floor(Math.random()*4);
+		var text = ['С новым Годом!<br />Желаем вам стабильного эфира,<br /> отзывчивых зрителей и трезвых<br />операторов! 1','С новым Годом!<br />Желаем вам стабильного эфира,<br /> отзывчивых зрителей и трезвых<br />операторов! 2','С новым Годом!<br />Желаем вам стабильного эфира,<br /> отзывчивых зрителей и трезвых<br />операторов! 3','С новым Годом!<br />Желаем вам стабильного эфира,<br /> отзывчивых зрителей и трезвых<br />операторов! 4','С новым Годом!<br />Желаем вам стабильного эфира,<br /> отзывчивых зрителей и трезвых<br />операторов! 5'];
+		$('#ny_bubble_textbox > p').html(text[l]);	
+	}
 
     $(document).on('mouseover', '#open-map', function(e) {
         $('.map-popup').css({
