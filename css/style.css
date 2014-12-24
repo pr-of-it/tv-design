@@ -15717,12 +15717,12 @@ background-repeat: no-repeat;
 }
 #ny_bubble{
   position: absolute;
-  width: 468px;
-  height: 122px;
-  right: calc(50% + 386px);
-  top: 53px;
+  width: 299px;
+  height: 78px;
+  right: calc(50% - 149px);
+  top: 51px;
   z-index: 10;
-  background-image: url(../img/ny_img_2.png);
+  background-image: url(../img/ny_img_1.png);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -15731,12 +15731,12 @@ background-repeat: no-repeat;
 }
 #ny_bubble_textbox{
   position: absolute;
-  width: 351px;
-  height: 133px;
+  width: 249px;
+  height: 108px;
   z-index:11;
-  top:10px;
-  right: calc(50% + 237px);;
-  background-image: url(../img/ny_bubble_bg.png);
+  top:5px;
+  left: 50%;
+  background-image: url(../img/ny_bubble_bg_1.png);
   background-repeat: no-repeat;
   cursor: pointer;
   -webkit-touch-callout: none;
@@ -15745,12 +15745,6 @@ background-repeat: no-repeat;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-#ny_bubble_text{
-  position: relative;
-  text-align: center;
-  padding: 15px 12px 15px 26px;
-  line-height: 20px;
 }
 
 =======
