@@ -15861,4 +15861,22 @@ background-repeat: no-repeat;
 
 .widget_construct:hover { background-color:#35495e; border-color:#35495e; }
 .widget_construct:hover .text-construct, .widget_construct:hover .t1 { color:#ffffff; }
+
+.news-control { width:100%; padding:15px 7px; box-sizing: border-box; border-top:solid 2px #ecf0f1; border-bottom:solid 2px #ecf0f1; margin-bottom:30px; font-size:14px; color:#34495e; }
+.news-control .news-prev .icon, .news-control .news-next .icon { width:10px; height:15px; background: url("../img/icons.png") no-repeat; position: absolute; top:9px; }
+.news-control .news-prev .icon { background-position: -325px -331px; left:0; }
+.news-control .news-next .icon { background-position: -337px -331px; right:0; }
+.news-control .news-prev, .news-control .news-next { width:250px; display: inline-block; box-sizing: border-box; position: relative; height:33px; cursor:pointer; }
+.news-control .news-prev { margin-right:102px; padding-left:28px; }
+.news-control .news-next { padding-right: 28px; }
+.news-control .news-title { margin-bottom: -4px; }
+.news-control .news-date { font-size:12px; color:#a7a9ac; }
+.news-control .news-popup { width:426px; height:99px; display: none; padding: 8px 28px 8px 8px; box-sizing: border-box; border:solid 2px #ecf0f1; box-shadow: 12px 12px 0 0 rgba(0,0,0,0.35); -webkit-box-shadow: 12px 12px 0 0 rgba(0,0,0,0.35); -moz-box-shadow: 12px 12px 0 0 rgba(0,0,0,0.35); border-radius:8px; -webkit-border-radius:8px; -moz-border-radius:8px; background: #fff; position: absolute; top:0; z-index: 1; }
+.news-control .news-prev .news-popup { left:150px; }
+.news-control .news-next .news-popup { right:150px; }
+.news-control .news-prev:hover .news-popup, .news-control .news-next:hover .news-popup { display:block; }
+.news-control .news-popup img { float:left; margin-right: 15px; }
+.news-control .news-popup .date { color:#a7a9ac; }
+.news-control .news-popup .title { font-size:16px; font-weight: bold; margin-bottom: 6px; }
+.news-control .news-popup .text { text-align:justify; }
 >>>>>>> FETCH_1HEAD
