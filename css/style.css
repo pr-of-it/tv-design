@@ -15879,4 +15879,10 @@ background-repeat: no-repeat;
 .news-control .news-popup .date { color:#a7a9ac; }
 .news-control .news-popup .title { font-size:16px; font-weight: bold; margin-bottom: 6px; }
 .news-control .news-popup .text { text-align:justify; }
+.alarm-box { width:100%; padding: 20px; margin-bottom: 25px; box-sizing: border-box; line-height: 19px; background: #f9fafd; color:#a7a9ac; font-size:14px; border:solid 2px #1abc9c; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; }
+.alarm-box p { font-size: 16px; margin-bottom: 5px; font-weight: bold; }
+.alarm-box .text { margin-bottom:10px; }
+.alarm-box .close-b { width:14px; height:14px; background: url("../img/icons.png") no-repeat -112px -303px; position: absolute; right:20px; cursor: pointer; display: none; }
+.alarm-box:hover .close-b { display:block; }
+.alarm-box .b-label { font-size: 12px !important; color:#a7a9ac; }
 >>>>>>> FETCH_1HEAD
